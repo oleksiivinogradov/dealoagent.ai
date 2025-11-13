@@ -1,6 +1,7 @@
 
   # DealoAgent.ai - Landing Page
 
+
   AI-powered CRM platform for modern B2B sales teams.
 
   This is the landing page for DealoAgent.ai. The original project is available at https://www.figma.com/design/N2hJtGMJsAbI6gd445px81/AI-CRM-Logo-and-Website.
