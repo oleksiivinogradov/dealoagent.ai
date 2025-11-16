@@ -109,20 +109,8 @@ export default function App() {
         "Native integrations with Microsoft 365, Gmail, and Zoho",
         "Complete data isolation per account for security and compliance",
         "SOC 2 ready architecture with encrypted data storage",
-        "Choose your AI provider: OpenAI, Google Gemini, or Anthropic Claude",
-        "On-premise deployment options for maximum data control",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "Smart Automation & Workflows",
-      description: "Automate the busywork. From email synchronization to website monitoring, let AI handle routine tasks so your team focuses on closing.",
-      features: [
         "Real-time webhook notifications for instant message processing",
-        "Scheduled competitor website scraping and change detection",
-        "Automatic attachment processing and insight extraction",
-        "Token refresh and connection management handled automatically",
-        "Proactive alerts when opportunities or threats emerge",
+        "On-premise deployment options for maximum data control",
       ],
     },
     {
@@ -790,9 +778,16 @@ export default function App() {
           </div>
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            {features.map((feature, index) => (
+            {features.slice(0, 6).map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
+          </div>
+          
+          {/* Center the last feature card */}
+          <div className="mt-6 sm:mt-8 flex justify-center">
+            <div className="w-full md:w-1/2">
+              <FeatureCard {...features[6]} />
+            </div>
           </div>
 
           {/* Bottom CTA */}
