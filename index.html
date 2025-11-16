@@ -34,6 +34,18 @@
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      // Check if we're redirecting from a 404 page
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
 
   <body>
