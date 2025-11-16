@@ -35,7 +35,9 @@ jobs:
         run: npm run build
       
       - name: Copy public assets to build
-        run: cp public/*.png public/*.ico public/*.webmanifest public/coming-soon.html build/ 2>/dev/null || true
+        run: |
+          cp public/*.png public/*.ico public/*.webmanifest public/coming-soon.html build/ 2>/dev/null || true
+          cp public/404.html public/.nojekyll public/CNAME public/privacy_policy.html build/ 2>/dev/null || true
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
