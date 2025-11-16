@@ -25,7 +25,11 @@ import {
   Linkedin,
   Menu,
   X,
+  Calendar,
+  Clock,
+  BookOpen,
 } from "lucide-react";
+import blogPosts from "./data/blogPosts.json";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,58 +43,98 @@ export default function App() {
   const features = [
     {
       icon: Search,
-      title: "Competitor Intelligence",
-      description: "B2B competitor analysis powered by AI that gives you the competitive edge.",
+      title: "AI-Powered Competitive Intelligence",
+      description: "Stay ahead of competitors without manual research. Our AI automatically tracks competitor moves across all channels and delivers actionable insights.",
       features: [
-        "Analyze competitors using email intelligence",
-        "Automated outreach campaigns with AI optimization",
-        "Scan and extract insights from attachments",
-        "Auto-generated competitor comparison tables",
-      ],
-    },
-    {
-      icon: FileSearch,
-      title: "Communication Hub",
-      description: "Centralize and analyze all your team's communication channels in one place.",
-      features: [
-        "Download and save employee emails automatically",
-        "Integrate messenger chats across platforms",
-        "AI-powered conversation analysis",
-        "Smart tagging and categorization",
+        "Automatically extract pricing & features from competitor emails and proposals",
+        "Real-time website monitoring for product changes and updates",
+        "AI-generated comparison tables with strengths/weaknesses analysis",
+        "Sentiment tracking from competitor interactions",
+        "Weekly intelligence briefings with actionable recommendations",
       ],
     },
     {
       icon: MessageSquare,
-      title: "Chat-Based CRM Interface",
-      description: "Speak with your CRM like you speak with friends - no complicated UIs needed.",
+      title: "Unified Communication Intelligence",
+      description: "Never miss context again. Connect all your communication channels and let AI turn scattered conversations into a complete customer knowledge base.",
       features: [
-        "Natural language commands for any workflow",
-        "Design and execute custom sales processes through chat",
-        "No training required - just ask what you need",
-        "Integrated internet search to avoid switching to browser and back",
-        "One window for any tasks",
-      ],
-    },
-    {
-      icon: Mail,
-      title: "AI Outreach Engine",
-      description: "Create personalized, high-converting messages using your conversation history.",
-      features: [
-        "Generate contextual outreach messages",
-        "Learn from past successful conversations",
-        "A/B testing and optimization suggestions",
-        "Multi-channel campaign automation",
+        "Centralize email, Microsoft Teams, and messenger conversations",
+        "Semantic search across all messages and attachments",
+        "Automatic conversation-to-deal matching and categorization",
+        "AI-powered relationship health scoring from communication patterns",
+        "Extract key insights from PDFs, presentations, and documents automatically",
       ],
     },
     {
       icon: Bot,
-      title: "Full AI Sales Agent",
-      description: "The future of sales automation - coming soon to transform your workflow.",
+      title: "Natural Language CRM",
+      description: "Forget complex CRM interfaces. Just chat with your AI copilot to manage deals, find information, and execute workflows in seconds.",
       features: [
-        "Autonomous sales representative",
-        "24/7 lead qualification and nurturing",
-        "Intelligent pipeline management",
-        "Predictive deal scoring and insights",
+        "Ask questions in plain English - get instant answers from your data",
+        "No manual data entry - AI fills CRM from emails and conversations",
+        "Design custom sales processes through simple conversation",
+        "Built-in web search for real-time market intelligence",
+        "One chat interface for every sales task - no app switching",
+      ],
+    },
+    {
+      icon: Mail,
+      title: "Context-Aware Outreach Generator",
+      description: "Stop sending generic emails. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
+      features: [
+        "AI drafts emails using full conversation history and client context",
+        "Learn from your best-performing messages and replicate success",
+        "Personalize at scale across hundreds of prospects simultaneously",
+        "Multi-channel sequences across email and messaging platforms",
+        "Human approval workflow - you stay in control",
+      ],
+    },
+    {
+      icon: TrendingUp,
+      title: "Intelligent Deal Management",
+      description: "Let AI guide you to close faster. Get proactive recommendations, risk alerts, and next-best-action suggestions for every deal in your pipeline.",
+      features: [
+        "AI identifies at-risk deals from conversation sentiment and engagement",
+        "Automated deal stage progression based on communication signals",
+        "Priority scoring to focus on highest-value opportunities",
+        "Predictive close date estimates using historical patterns",
+        "Proactive coaching on what to say and when to follow up",
+      ],
+    },
+    {
+      icon: Shield,
+      title: "Enterprise-Grade Integration & Security",
+      description: "Deploy with confidence. Connect to your existing tools with enterprise security, multi-tenant isolation, and full data control.",
+      features: [
+        "Native integrations with Microsoft 365, Gmail, and Zoho",
+        "Complete data isolation per account for security and compliance",
+        "SOC 2 ready architecture with encrypted data storage",
+        "Choose your AI provider: OpenAI, Google Gemini, or Anthropic Claude",
+        "On-premise deployment options for maximum data control",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "Smart Automation & Workflows",
+      description: "Automate the busywork. From email synchronization to website monitoring, let AI handle routine tasks so your team focuses on closing.",
+      features: [
+        "Real-time webhook notifications for instant message processing",
+        "Scheduled competitor website scraping and change detection",
+        "Automatic attachment processing and insight extraction",
+        "Token refresh and connection management handled automatically",
+        "Proactive alerts when opportunities or threats emerge",
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: "Advanced Analytics & Insights",
+      description: "Understand what's working and why. Track team performance, message effectiveness, and pipeline health with AI-powered analytics.",
+      features: [
+        "Conversation analytics showing message sentiment trends over time",
+        "Win/loss analysis with AI-identified success factors",
+        "Team performance metrics and coaching opportunities",
+        "Transparent AI usage tracking and cost management",
+        "Custom reports through natural language queries",
       ],
     },
   ];
@@ -738,24 +782,43 @@ export default function App() {
                 Features
               </span>
             </div>
-            <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Our AI-powered platform combines cutting-edge technology with proven 
-              sales methodologies to help you close more deals, faster. Speak with 
-              your CRM like you speak with friends - chat-based interaction opens 
-              any workflow you can imagine.
+            <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
+              Everything you need to transform your sales process with AI. From intelligent 
+              competitor tracking to automated outreach, DealoAgent combines powerful capabilities 
+              with an interface so simple, you just chat with it.
             </p>
           </div>
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            {features.slice(0, 4).map((feature, index) => (
+            {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
           </div>
-          
-          {/* Center the last feature card */}
-          <div className="mt-6 sm:mt-8 flex justify-center">
-            <div className="w-full md:w-1/2">
-              <FeatureCard {...features[4]} />
+
+          {/* Bottom CTA */}
+          <div className="mt-12 sm:mt-16 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 sm:px-6 py-2 sm:py-3 mb-6">
+              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
+              <span className="text-sm sm:text-base text-gray-700">
+                All features work together seamlessly through <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-semibold">one AI-powered chat interface</span>
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+              >
+                Try All Features Free
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+              >
+                Schedule a Demo
+              </Button>
             </div>
           </div>
         </div>
@@ -1136,6 +1199,86 @@ export default function App() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section className="py-12 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 sm:mb-16 text-center">
+            <div className="mb-4 sm:mb-6">
+              <span className="inline-block rounded-full bg-purple-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-purple-700">
+                Latest Insights
+              </span>
+            </div>
+            <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
+              Real stories and proven strategies from teams transforming their sales with AI
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.slice(0, 3).map((post) => (
+              <a
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white hover:border-blue-300 hover:shadow-2xl transition-all"
+              >
+                {/* Image */}
+                <div className="relative h-48 sm:h-56 overflow-hidden">
+                  <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block rounded-full bg-blue-600 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm text-white shadow-lg">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <h3 className="mb-3 sm:mb-4 text-xl sm:text-2xl text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-600 line-clamp-3 flex-1">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500 border-t border-gray-100 pt-4">
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span>{new Date(post.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-2 text-blue-600 font-medium group-hover:gap-3 transition-all">
+                    Read story
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-8 sm:mt-12 text-center">
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => window.location.href = '/blog'}
+              className="gap-2"
+            >
+              <BookOpen className="h-5 w-5" />
+              View All Stories
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-gray-200 bg-white py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1167,7 +1310,7 @@ export default function App() {
               <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">About</a></li>
-                <li><a href="/coming-soon.html" className="hover:text-blue-600">Blog</a></li>
+                <li><a href="/blog" className="hover:text-blue-600">Blog</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">Careers</a></li>
                 <li><a href="mailto:alex@dealoagent.ai" className="hover:text-blue-600">Contact</a></li>
               </ul>
