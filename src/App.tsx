@@ -1308,6 +1308,7 @@ export default function App() {
                 <li><a href="/blog" className="hover:text-blue-600">Blog</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">Careers</a></li>
                 <li><a href="mailto:alex@dealoagent.ai" className="hover:text-blue-600">Contact</a></li>
+                <li><a href="/privacy_policy.html" className="hover:text-blue-600">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
