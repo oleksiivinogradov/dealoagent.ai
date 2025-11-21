@@ -152,10 +152,10 @@ export default function App() {
                 Talk to Sales
               </Button>
               <Button 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Request a demo
+                Register Now
               </Button>
             </div>
 
@@ -194,10 +194,10 @@ export default function App() {
                   Talk to Sales
                 </Button>
                 <Button 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                  onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                  onClick={() => window.location.href = 'https://app.dealoagent.ai'}
                 >
-                  Request a demo
+                  Register Now
                 </Button>
               </div>
             </div>
@@ -231,14 +231,19 @@ export default function App() {
               </p>
               
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                  onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
-                >
-                  Request a demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <div className="flex flex-col gap-2">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                    onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                  >
+                    Register Now - Get Free Credits
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <p className="text-xs text-blue-200/80 text-center lg:text-left">
+                    🎁 Limited time: Free credits + Referral rewards available
+                  </p>
+                </div>
                 <div className="flex flex-col items-center sm:items-start gap-1">
                   <Button size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
                     Watch product tour
@@ -519,7 +524,7 @@ export default function App() {
               </div>
 
               <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
+                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
                   Start your research now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -741,7 +746,7 @@ export default function App() {
               </div>
 
               <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
+                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
                   Transform your sales process
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -801,7 +806,7 @@ export default function App() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
                 Try All Features Free
@@ -810,9 +815,9 @@ export default function App() {
               <Button 
                 size="lg"
                 variant="outline"
-                onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Schedule a Demo
+                Start Free Trial
               </Button>
             </div>
           </div>
@@ -1011,7 +1016,7 @@ export default function App() {
                 </li>
               </ul>
 
-              <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
+              <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
                 Start Pro Trial
               </Button>
             </div>
@@ -1071,7 +1076,7 @@ export default function App() {
                     Add <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$50</span> worth of usage tokens anytime
                   </p>
                 </div>
-                <Button className="w-full md:w-auto !px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
+                <Button className="w-full md:w-auto !px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
                   Buy Token Package
                   <Zap className="ml-2 h-4 w-4" />
                 </Button>
@@ -1079,9 +1084,32 @@ export default function App() {
             </div>
           </div>
 
-          <p className="mt-8 sm:mt-12 text-center text-xs sm:text-sm text-gray-500 px-4">
-            All plans include 14-day free trial · No credit card required · Cancel anytime
-          </p>
+          <div className="mt-8 sm:mt-12 space-y-4">
+            <p className="text-center text-xs sm:text-sm text-gray-500 px-4">
+              All plans include 14-day free trial · No credit card required · Cancel anytime
+            </p>
+            <div className="max-w-2xl mx-auto rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-4 sm:p-6">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🎁</span>
+                <div>
+                  <h4 className="mb-2 text-base sm:text-lg font-semibold text-gray-900">
+                    Limited Time: Free Credits + Referral Rewards
+                  </h4>
+                  <p className="text-sm sm:text-base text-gray-700 mb-3">
+                    New users get <strong className="text-purple-600">free credits</strong> to start. Plus, invite friends and earn rewards through our referral system - both you and your referrals get bonus credits!
+                  </p>
+                  <Button 
+                    size="sm"
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                    onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                  >
+                    Claim Your Free Credits Now
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1102,14 +1130,19 @@ export default function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-100"
-              onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
-            >
-              Request a demo
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex flex-col gap-2">
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-gray-100"
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+              >
+                Register Now - Get Free Credits
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <p className="text-xs text-blue-200/60 text-center">
+                🎁 Limited time offer: Free credits + Referral system rewards
+              </p>
+            </div>
             <Button 
               size="lg" 
               variant="outline" 

@@ -47,10 +47,10 @@ function Navigation() {
               Talk to Sales
             </Button>
             <Button 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-              onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+              onClick={() => window.location.href = 'https://app.dealoagent.ai'}
             >
-              Request a demo
+              Register Now
             </Button>
           </div>
 
@@ -90,10 +90,10 @@ function Navigation() {
                 Talk to Sales
               </Button>
               <Button 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Request a demo
+                Register Now
               </Button>
             </div>
           </div>

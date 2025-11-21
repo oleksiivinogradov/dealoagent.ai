@@ -336,9 +336,9 @@ export default function BlogPost() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => window.location.href = 'mailto:alex@dealoagent.ai'}
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Get in Touch
+                Start Free Trial
               </Button>
             </div>
           </div>
@@ -355,14 +355,19 @@ export default function BlogPost() {
             Join hundreds of teams using DealoAgent to close more deals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-              onClick={() => window.location.href = 'mailto:alex@dealoagent.ai?subject=Demo Request'}
-            >
-              Request a Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="flex flex-col gap-2">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+              >
+                Register Now - Get Free Credits
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <p className="text-xs text-blue-200/60 text-center">
+                🎁 Limited time: Free credits + Referral rewards
+              </p>
+            </div>
             <Button
               size="lg"
               variant="outline"

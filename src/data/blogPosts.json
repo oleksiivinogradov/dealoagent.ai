@@ -1,5 +1,196 @@
 [
   {
+    "id": "figma-sales-transformation-dealoagent",
+    "slug": "how-figma-sales-team-could-close-more-deals-with-ai",
+    "title": "How Figma's Enterprise Sales Team Could Close More Deals with AI Intelligence",
+    "subtitle": "A hypothetical deep dive: What if Figma's sales team used DealoAgent to automate competitive analysis against Adobe and Penpot while personalizing outreach at scale?",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2024-11-21",
+    "readTime": "10 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=600&fit=crop",
+    "excerpt": "Imagine if Figma's enterprise sales team adopted DealoAgent.AI to automate competitor tracking against Adobe and Penpot, personalize outreach across thousands of design-led prospects, and cut deal cycles by 40%. This hypothetical case study explores exactly how DealoAgent's features would transform their workflow.",
+    "tags": [
+      "Case Study",
+      "B2B SaaS",
+      "Sales Intelligence",
+      "AI",
+      "Figma",
+      "Design Tools"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Figma's enterprise sales team could leverage DealoAgent.AI. While Figma and its market challenges are real, this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "Figma has revolutionized the design world, becoming the standard for collaborative interface design. However, the enterprise sales landscape is shifting. Adobe is fighting back with aggressive bundling, and open-source alternatives like Penpot are gaining traction in developer-heavy organizations. Figma's sales reps face a complex challenge: navigating large enterprise deals where procurement is scrutinizing every SaaS subscription, and competitors are constantly trying to undercut them."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Scaling Personalization in a Crowded Market"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet Marcus, a Strategic Account Executive at Figma. He manages a territory of large financial services and media companies. His day is a constant battle against noise. He has 60 active opportunities, and for every one of them, he needs to know:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Who are they currently using?** (Adobe XD? Sketch? Legacy on-prem tools?)",
+          "**What are their specific pain points?** (Developer handoff? Design system consistency? Security compliance?)",
+          "**Who are the key decision-makers?** (Design Directors vs. CIOs have very different concerns)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Without an intelligent system, Marcus spends 4 hours a day just researching. He digs through LinkedIn, reads annual reports, and scours old email threads to find a hook. When he finally reaches out, his emails often sound generic because he simply doesn't have the time to hyper-personalize for every stakeholder."
+      },
+      {
+        "type": "quote",
+        "text": "I know I could close 30% more deals if I could just send the right message to the right person at the right time. But with 60 accounts, I'm forced to use templates. And templates don't close million-dollar enterprise deals.",
+        "author": "Hypothetical scenario: Strategic AE at Figma"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Sales Copilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical scenario, Figma deploys DealoAgent.AI to empower Marcus and his team. DealoAgent connects to their email, Slack, and CRM, acting as an always-on intelligence layer. Here is how it changes the game:"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Automated Competitive Intelligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "One morning, Marcus receives an email from a prospect at a global bank. It's a short reply: \"We're looking at other options that might be more cost-effective for our developers.\" Marcus might miss the subtle signal, but DealoAgent doesn't."
+      },
+      {
+        "type": "paragraph",
+        "text": "**DealoAgent analyzes the email and instantly flags:**"
+      },
+      {
+        "type": "numbered-list",
+        "items": [
+          "**Competitor Alert**: Identifies \"cost-effective for developers\" as a high-probability signal for **Penpot** (open-source, free for self-hosting).",
+          "**Contextual Insight**: Pulls up recent data showing 3 other financial firms raised similar objections before switching to Penpot for non-designers.",
+          "**Actionable Intel**: Suggests a battle card focusing on Figma's \"Dev Mode\" ROI and security compliance—features Penpot lacks in enterprise environments."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of panicking or sending a generic \"let's chat\" email, Marcus uses DealoAgent to draft a response that directly addresses the developer cost concern, highlighting how Figma's Dev Mode actually *saves* engineering time (which is far more expensive than software licenses)."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Hyper-Personalized Outreach at Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Figma launches a new feature for advanced prototyping. Marcus needs to notify his 60 accounts. Traditionally, he'd send a mass blast via marketing automation—which gets a 2% open rate from busy executives."
+      },
+      {
+        "type": "paragraph",
+        "text": "**With DealoAgent, Marcus initiates a \"Smart Campaign\":**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "DealoAgent scans past conversations with each account.",
+          "For Account A (Media), it frames the feature as \"solving your complex animation bottlenecks.\"",
+          "For Account B (Fintech), it frames it as \"streamlining compliance reviews in prototypes.\"",
+          "It drafts 60 unique, context-aware emails in minutes, not days."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The result? A 35% reply rate because every recipient feels the message was written specifically for them and their previous challenges."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. The Chat-Based Command Center"
+      },
+      {
+        "type": "paragraph",
+        "text": "Marcus is on a call with his VP of Sales. \"What's the status of the Global Bank deal? Are we blocked by security?\""
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of fumbling through Salesforce tabs, Marcus types into DealoAgent: *\"Summarize the Global Bank deal status and list any security objections from the last month.\"*"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent instantly responds: *\"Deal Stage: Negotiation. Security Review: Passed on Oct 12th, but CISO raised a new question about data residency yesterday. Suggested action: Send the EU Data Residency one-pager.\"*"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Impact: Efficiency Meets Effectiveness"
+      },
+      {
+        "type": "paragraph",
+        "text": "By implementing DealoAgent, Figma's enterprise sales team could see dramatic improvements:"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Research Time",
+            "value": "-75%",
+            "description": "Reduced from 4 hours/day to 1 hour/day"
+          },
+          {
+            "label": "Response Rate",
+            "value": "3x",
+            "description": "Due to hyper-personalization"
+          },
+          {
+            "label": "Competitive Win Rate",
+            "value": "+22%",
+            "description": "Against low-cost alternatives"
+          },
+          {
+            "label": "Deal Velocity",
+            "value": "+40%",
+            "description": "Faster answers to objections"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a company like Figma, where the product is best-in-class but the market is becoming noisier, the competitive advantage isn't just in features—it's in how you sell. DealoAgent provides the intelligence layer that turns every sales rep into a strategic advisor, armed with the perfect context for every interaction."
+      },
+      {
+        "type": "cta",
+        "title": "Ready to Upgrade Your Sales Team?",
+        "description": "See how DealoAgent can bring this same intelligence to your organization.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "notion-sales-transformation-dealoagent",
     "slug": "how-notion-sales-team-could-transform-with-ai-intelligence",
     "title": "How Notion's Sales Team Could Transform Revenue with AI-Powered Intelligence",
@@ -12,7 +203,13 @@
     "featured": true,
     "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
     "excerpt": "Imagine if Notion's enterprise sales team adopted DealoAgent.AI to automate competitor tracking, personalize outreach across 1,000+ enterprise prospects, and cut deal cycles in half. This hypothetical case study explores exactly how DealoAgent's features would transform their workflow.",
-    "tags": ["Case Study", "B2B SaaS", "Sales Intelligence", "AI", "Notion"],
+    "tags": [
+      "Case Study",
+      "B2B SaaS",
+      "Sales Intelligence",
+      "AI",
+      "Notion"
+    ],
     "content": [
       {
         "type": "paragraph",
@@ -305,8 +502,8 @@
         "title": "See DealoAgent in Action",
         "description": "Join hundreds of B2B sales teams using AI to close more deals, faster.",
         "primaryButton": {
-          "text": "Request a Demo",
-          "url": "mailto:alex@dealoagent.ai?subject=Demo Request"
+          "text": "Register Now - Get Free Credits",
+          "url": "https://app.dealoagent.ai"
         },
         "secondaryButton": {
           "text": "Start Free Trial",
@@ -316,4 +513,3 @@
     ]
   }
 ]
-
