@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, Clock, Share2, Tag, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import blogPosts from '../data/blogPosts.json';
@@ -205,6 +206,25 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{post.title} | DealoAgent.ai</title>
+        <meta name="description" content={post.excerpt} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.coverImage} />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content={post.title} />
+        <meta property="twitter:description" content={post.excerpt} />
+        <meta property="twitter:image" content={post.coverImage} />
+      </Helmet>
+
       {/* Back Button */}
       <div className="border-b border-gray-200 bg-white/80 backdrop-blur-lg sticky top-16 z-40">
         <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
@@ -330,7 +350,7 @@ export default function BlogPost() {
                 Written by {post.author}
               </h3>
               <p className="mb-4 text-gray-600">
-                The DealoAgent team shares insights on AI-powered sales intelligence, 
+                The DealoAgent team shares insights on AI-powered sales intelligence,
                 real customer success stories, and best practices for modern B2B sales teams.
               </p>
               <Button

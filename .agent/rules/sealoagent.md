@@ -4,7 +4,53 @@ trigger: always_on
 
 You operating with web site dealoagent.ai Your goal to create SEO friendly site which push to sale product. Feel free to propose any ideas, actions to grow SEO visibility and target to correct users. 
 
-If you made blog posts and user did not provided special instruction, posts must follow those rules: 1. companies may be real but posts must be hypotetical, like let say manager (may be real manager) use DealoAgent for case (real case). After migrate to DealoAgent manager do case by other AI style way and reach .... 2. case must be more personalized and more deep into what and how DealoAgent optimized
+## Blog Post Creation Rules
+
+When creating blog posts, follow these requirements:
+
+### Content Guidelines
+1. **Companies may be real** but posts must be **hypothetical scenarios**
+   - Example: "Let say manager [real manager name] at [real company] uses DealoAgent for [real use case]"
+   - After migrating to DealoAgent, show how the manager would approach the case using AI-powered methods
+   - Must reach specific, measurable outcomes
+
+2. **Deep personalization required**
+   - Cases must be highly personalized and detailed
+   - Dive deep into **what** DealoAgent optimized and **how** it achieved results
+   - Include specific metrics, workflows, and transformation details
+   - Avoid generic statements - use concrete examples
+
+### Technical Requirements (CRITICAL for SEO/Social Media)
+
+3. **Blog Post Data Structure** (`src/data/blogPosts.json`)
+   - Each blog post MUST include:
+     - `id`: Unique identifier (kebab-case)
+     - `slug`: URL-friendly slug matching the id
+     - `title`: Compelling, descriptive title (use company name if applicable)
+     - `subtitle`: Detailed subtitle explaining the scenario
+     - `author`: "DealoAgent Team"
+     - `publishDate`: ISO date format (YYYY-MM-DD)
+     - `readTime`: Estimated read time (e.g., "11 min read")
+     - `category`: "Case Study" for hypothetical scenarios
+     - `featured`: Set to `true` for prominent posts
+     - `coverImage`: **REQUIRED** - High-quality image URL (1200x630px recommended)
+       - Use Unsplash or similar for professional images
+       - Must be absolute URL (https://) for social media previews
+       - Each post MUST have a UNIQUE cover image
+     - `excerpt`: Compelling 2-3 sentence summary for social previews
+     - `tags`: Array of relevant tags (e.g., ["Case Study", "B2B SaaS", "AI", "Company Name"])
+     - `content`: Array of content blocks (paragraphs, headings, lists, quotes, metrics, CTAs)
+
+4. **Social Media Preview Requirements**
+   - After adding a new post to `blogPosts.json`, the build script automatically generates static HTML
+   - Run `npm run build` to generate `/build/blog/[slug]/index.html` with unique meta tags
+   - Each blog post will have unique Open Graph and Twitter Card tags
+   - LinkedIn, Facebook, and Twitter will show the correct `coverImage` as preview
+
+5. **Build Process**
+   - Always run `npm run build` after adding new blog posts
+   - Verify generated HTML in `build/blog/[slug]/index.html`
+   - Test social previews using LinkedIn Post Inspector before sharing
 
 Site designed to be placed in github public space and using github pages to create accessible version. 
 
@@ -14,7 +60,7 @@ DealoAgent.ai is an AI-native sales CRM that turns your existing communication d
 
 On top of this foundation, DealoAgent.ai runs deep competitive intelligence. It reads incoming emails, proposals, and attachments from prospects and vendors, extracts pricing, features, and terms, and builds living comparison tables of your competitors — without any manual copy-paste. Your sales team sees where your offer wins or loses in seconds and can adapt messaging instantly instead of digging through old threads or spreadsheets.
 
-For outreach, DealoAgent.ai uses past conversations and outcomes to generate personalized, context-aware messages for each lead or account. It learns what worked before, keeps tone and language consistent with your brand, and can draft full sequences for follow-ups and re-activation campaigns. The result is more relevant communication with less routine work and fewer “cold” messages that feel generic.
+For outreach, DealoAgent.ai uses past conversations and outcomes to generate personalized, context-aware messages for each lead or account. It learns what worked before, keeps tone and language consistent with your brand, and can draft full sequences for follow-ups and re-activation campaigns. The result is more relevant communication with less routine work and fewer "cold" messages that feel generic.
 
 Over time, DealoAgent.ai evolves into a full AI sales agent, not just a reporting layer. It helps prioritize leads, suggests next best actions, highlights risky deals based on conversation signals, and can eventually handle parts of the communication loop end-to-end. You keep full control and visibility; the AI does the heavy lifting across analysis, outreach, and coaching so your human team can focus on closing deals and building relationships.
 ## Features

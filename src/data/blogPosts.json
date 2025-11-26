@@ -1,5 +1,146 @@
 [
   {
+    "id": "miro-sales-transformation-dealoagent",
+    "slug": "how-miro-sales-team-could-uncover-enterprise-revenue-with-ai",
+    "title": "How Miro's Sales Team Could Uncover Enterprise Revenue with DealoAgent",
+    "subtitle": "A hypothetical deep dive: Converting freemium giants to enterprise contracts using AI-driven signal detection and competitive intelligence.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2024-11-26",
+    "readTime": "11 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&h=600&fit=crop",
+    "excerpt": "Miro has conquered the world of whiteboarding, but converting millions of free users to enterprise contracts is a massive challenge. This hypothetical case study explores how DealoAgent's signal detection and competitive intelligence could help Miro's sales team identify high-value targets hidden in the noise.",
+    "tags": [
+      "Case Study",
+      "B2B SaaS",
+      "Sales Intelligence",
+      "AI",
+      "Miro",
+      "PLG"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Miro's enterprise sales team could leverage DealoAgent.AI. While Miro and its market challenges are real, this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "Miro is the poster child for Product-Led Growth (PLG). With over 60 million users, their viral loop is legendary. But for their enterprise sales team, this volume is a double-edged sword. They are drowning in signups. Identifying which of those thousands of free users are actually ready for an Enterprise plan—and which are just students or casual users—is like finding a needle in a haystack. Meanwhile, competitors like Mural and Lucidchart are aggressively targeting the same large accounts."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The Freemium Black Hole"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet Sarah, an Enterprise Account Executive at Miro. Her territory includes 200 large accounts. She knows that employees at these companies are using Miro for free, but she doesn't know *who* they are, *what* they are working on, or *if* they have budget. She spends her days blindly emailing generic \"Upgrade to Enterprise\" messages to IT directors who ignore her."
+      },
+      {
+        "type": "quote",
+        "text": "I have 500 people at 'BigCorp' using Miro for free. I know there's a six-figure deal there. But I can't see them. I don't know if they are happy or if they are testing Mural. I'm flying blind.",
+        "author": "Hypothetical scenario: Enterprise AE at Miro"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: Turning Noise into Signals"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical scenario, Miro deploys DealoAgent to bridge the gap between product usage and sales outreach. DealoAgent connects to support tickets, sales emails, and even billing inquiries to build a 360-degree view of every account."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Signal Detection: Finding the Buyers"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent analyzes thousands of incoming messages and flags \"Enterprise Signals\" that human reps miss:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Security Inquiries**: A user asking support about \"SSO\" or \"Data Residency\" is no longer just a support ticket—it's a hot lead for Sarah.",
+          "**Admin Frustration**: A team lead asking how to \"manage permissions\" for 50 users is a prime candidate for an Enterprise upgrade.",
+          "**Competitor Mentions**: A billing email asking \"why is this more expensive than Lucid?\" triggers an immediate alert."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Competitive Intelligence on Autopilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sarah gets an alert: \"High Risk: 3 users at TargetAccount have mentioned 'Mural' in support chats this week.\" DealoAgent instantly provides a battle card: \"Miro vs. Mural: Enterprise Security & Integrations.\" Sarah reaches out proactively, not with a generic sales pitch, but with a helpful guide on Miro's superior security features, neutralizing the competitor before the deal is lost."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Contextual Outreach at Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of a cold email, DealoAgent drafts a message for Sarah to send to the IT Director at BigCorp: \"Hi [Name], I noticed 3 different teams at BigCorp asked about SSO this week. We also see you're managing 500+ free users. Would you be open to a 15-min chat about consolidating these into a secure Enterprise workspace?\""
+      },
+      {
+        "type": "paragraph",
+        "text": "This isn't spam. It's relevant, timely, and helpful."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Enterprise Conversion",
+            "value": "+35%",
+            "description": "From free/team plans"
+          },
+          {
+            "label": "Churn Reduction",
+            "value": "-20%",
+            "description": "By catching competitor signals early"
+          },
+          {
+            "label": "Avg Deal Size",
+            "value": "+25%",
+            "description": "Upselling security & admin features"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For PLG giants like Miro, the money is in the enterprise. But you can't harvest it with manual labor alone. DealoAgent provides the intelligence layer that turns a chaotic swarm of free users into a structured pipeline of enterprise opportunities."
+      },
+      {
+        "type": "cta",
+        "title": "Turn Your User Base into Revenue",
+        "description": "See how DealoAgent can help you spot enterprise opportunities.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "figma-sales-transformation-dealoagent",
     "slug": "how-figma-sales-team-could-close-more-deals-with-ai",
     "title": "How Figma's Enterprise Sales Team Could Close More Deals with AI Intelligence",
