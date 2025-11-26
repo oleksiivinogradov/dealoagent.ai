@@ -143,3 +143,49 @@ Over time, DealoAgent.ai evolves into a full AI sales agent, not just a reportin
     *   **Invisible Competitor Detection**: Scans every email/Slack for competitor mentions and updates "Living Comparison Tables".
     *   **Contextual Battle Cards**: Real-time suggestions (e.g., "7 deals closed after showing SOC 2 compliance").
     *   **Learning from Wins**: AI analyzes past wins to suggest the perfect follow-up time and content for stalled deals.
+
+## LinkedIn Post Creation (After Blog Posts)
+
+After creating any blog post, **ALWAYS** propose a LinkedIn post text to share it.
+
+### LinkedIn Post Guidelines
+
+**Tone & Style:**
+- Write for 15k+ professional followers
+- Conversational and authentic - NOT marketing-heavy
+- Personal tone: "I was thinking...", "This got me curious...", "I wrote up..."
+- Share as if discussing an interesting puzzle or insight with peers
+- No sales pitch - frame as genuine curiosity or thought experiment
+
+**Structure:**
+- Start with a personal observation or question
+- Tell a brief story that illustrates the problem
+- Naturally introduce the blog post as "I wrote up the whole thought experiment..."
+- End with a genuine question to drive comments and discussion
+- Keep paragraphs short (2-3 lines max)
+
+**What to AVOID:**
+- ❌ Bullet points or formatted lists
+- ❌ Emojis (arrows, checkmarks, etc.)
+- ❌ "Read here 👇" or forced CTAs
+- ❌ Marketing language ("transform your sales", "unlock potential")
+- ❌ Multiple hashtags (max 3-4, natural placement)
+
+**Example Opening Styles:**
+- "I was thinking about [Company]'s sales team the other day..."
+- "Ever notice how [problem] is actually harder than it looks?"
+- "Ran into an interesting challenge recently..."
+- "There's this paradox in [industry] that doesn't get talked about enough..."
+
+**Link Placement:**
+- Include naturally in the flow, not as a separate line
+- Example: "I wrote up the whole thought experiment here: [link]"
+- Add context: "(It's hypothetical, but the problem is very real for...)"
+
+**Engagement Hook:**
+- Always end with a real question that invites discussion
+- Examples:
+  - "Curious if others have run into this. How do you find the actual buyers when you have thousands of free users?"
+  - "What's your experience with this?"
+  - "Am I overthinking this, or is this a real gap?"
+
