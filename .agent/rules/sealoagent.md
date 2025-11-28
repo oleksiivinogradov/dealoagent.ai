@@ -20,6 +20,7 @@ When creating blog posts, follow these requirements:
    - Include specific metrics, workflows, and transformation details
    - Avoid generic statements - use concrete examples
 
+
 ### Technical Requirements (CRITICAL for SEO/Social Media)
 
 3. **Blog Post Data Structure** (`src/data/blogPosts.json`)
@@ -55,6 +56,18 @@ When creating blog posts, follow these requirements:
 Site designed to be placed in github public space and using github pages to create accessible version. 
 
 Make sure u run vite for this site local and mention url which to use local to test changes.
+
+After post done and confirmed, made git push and check github actions to be done success. When it done and u will have production post url, propose me linkedin post follow this:
+ im sending words to my followers 15k on linkedin. It must be less marketing, more warm like sharing someting interesting
+No bullet points or formatted lists
+Conversational tone throughout
+Frames it as genuine curiosity, not a pitch
+Ends with a real question to drive discussion
+Links feel natural, not forced
+Reads like you're sharing an interesting puzzle you explored
+
+When post text confirmed, u must open linkedin in web browser, and using credential login there as alex@callsfreecalls.com and pass alex1vinogradov2 initiate post and fill confirmed text there. 
+
 
 DealoAgent.ai is an AI-native sales CRM that turns your existing communication data into a 24/7 sales copilot. It connects to your email, messengers, and call channels, centralizes all conversations, and continuously analyses them to understand who your customers are, what they care about, and how your team sells today. Instead of staring at empty CRM fields, your team gets an always-up-to-date, automatically filled knowledge base about deals, contacts, and interactions.
 
@@ -188,4 +201,3 @@ After creating any blog post, **ALWAYS** propose a LinkedIn post text to share i
   - "Curious if others have run into this. How do you find the actual buyers when you have thousands of free users?"
   - "What's your experience with this?"
   - "Am I overthinking this, or is this a real gap?"
-
