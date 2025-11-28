@@ -4,8 +4,9 @@ import { Button } from './ui/button';
 import blogPosts from '../data/blogPosts.json';
 
 export default function Blog() {
-  const featuredPost = blogPosts.find(post => post.featured);
-  const otherPosts = blogPosts.filter(post => !post.featured);
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+  const featuredPost = sortedPosts[0];
+  const otherPosts = sortedPosts;
 
   return (
     <div className="min-h-screen bg-white">
@@ -13,17 +14,17 @@ export default function Blog() {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-20">
         <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/30 blur-3xl" />
-        
+
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-6 py-3 backdrop-blur-sm">
             <Tag className="h-5 w-5 text-blue-400" />
             <span className="text-lg text-blue-100">Insights & Case Studies</span>
           </div>
-          
+
           <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl text-white">
             DealoAgent Blog
           </h1>
-          
+
           <p className="text-xl text-blue-100/80 max-w-2xl mx-auto">
             Real stories, proven strategies, and insights on AI-powered sales intelligence
           </p>
@@ -39,7 +40,7 @@ export default function Blog() {
                 Featured Story
               </span>
             </div>
-            
+
             <Link to={`/blog/${featuredPost.slug}`} className="group">
               <div className="grid gap-8 lg:grid-cols-2 rounded-3xl border-2 border-blue-200 bg-white p-8 hover:border-blue-400 hover:shadow-2xl transition-all">
                 {/* Image */}
@@ -61,7 +62,7 @@ export default function Blog() {
                   <h2 className="mb-4 text-3xl lg:text-4xl text-gray-900 group-hover:text-blue-600 transition-colors">
                     {featuredPost.title}
                   </h2>
-                  
+
                   <p className="mb-6 text-lg text-gray-600">
                     {featuredPost.excerpt}
                   </p>
@@ -93,7 +94,7 @@ export default function Blog() {
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-12 text-3xl text-gray-900">Latest Articles</h2>
-            
+
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {otherPosts.map((post) => (
                 <Link
@@ -120,7 +121,7 @@ export default function Blog() {
                     <h3 className="mb-3 text-xl text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    
+
                     <p className="mb-4 text-gray-600 line-clamp-3 flex-1">
                       {post.excerpt}
                     </p>

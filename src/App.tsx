@@ -137,7 +137,7 @@ export default function App() {
               <Logo variant="dark" />
               <AIBadge />
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
               <a href="#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
@@ -145,13 +145,13 @@ export default function App() {
               <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
               <Button variant="ghost" className="hidden xl:flex" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
-              <Button 
+              <Button
                 variant="outline"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
               >
                 Talk to Sales
               </Button>
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
@@ -187,13 +187,13 @@ export default function App() {
                 <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
                 <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
                 <Button variant="ghost" className="justify-start" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
-                <Button 
+                <Button
                   variant="outline"
                   onClick={() => window.open('https://t.me/alex12alex', '_blank')}
                 >
                   Talk to Sales
                 </Button>
-                <Button 
+                <Button
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                   onClick={() => window.location.href = 'https://app.dealoagent.ai'}
                 >
@@ -210,7 +210,7 @@ export default function App() {
         {/* Gradient orbs */}
         <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/30 blur-3xl" />
-        
+
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-8 sm:pb-24">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Left Content */}
@@ -219,21 +219,21 @@ export default function App() {
                 <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 text-blue-400" />
                 <span className="text-sm sm:text-xl text-blue-100">AI-Powered sales solved ✅</span>
               </div>
-              
+
               <h1 className="mb-4 sm:mb-6 text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
                 Close deals faster with AI-driven sales intelligence
               </h1>
-              
+
               <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80">
-                DealoAgent combines competitor analysis, automated outreach, and 
-                AI-powered insights to supercharge your B2B sales process. Work 
+                DealoAgent combines competitor analysis, automated outreach, and
+                AI-powered insights to supercharge your B2B sales process. Work
                 smarter, close faster, grow bigger.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
                 <div className="flex flex-col gap-2">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                     onClick={() => window.location.href = 'https://app.dealoagent.ai'}
                   >
@@ -251,7 +251,7 @@ export default function App() {
                   <span className="text-xs text-blue-200/60">Coming soon</span>
                 </div>
               </div>
-              
+
               <div className="mt-6 sm:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-8">
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl">
@@ -275,7 +275,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             {/* Right Content - Hero Image with Floating Cards */}
             <div className="relative hidden lg:block">
               {/* Main hero image */}
@@ -286,7 +286,7 @@ export default function App() {
                   className="w-full h-auto"
                 />
               </div>
-              
+
               {/* Floating UI Cards - Desktop only */}
               <FloatingCard
                 icon={Target}
@@ -295,7 +295,7 @@ export default function App() {
                 delay={0.2}
                 className="absolute -left-8 -top-10 w-56"
               />
-              
+
               <FloatingCard
                 icon={TrendingUp}
                 title="Conversion Rate"
@@ -304,7 +304,7 @@ export default function App() {
                 delay={0.4}
                 className="absolute -right-8 -top-10 w-64"
               />
-              
+
               <MetricCard
                 label="Deal velocity"
                 value="18 days"
@@ -312,7 +312,7 @@ export default function App() {
                 delay={0.6}
                 className="absolute -left-4 bottom-32 w-48"
               />
-              
+
               <FloatingCard
                 icon={MessageSquare}
                 title="AI Outreach Generated"
@@ -320,7 +320,7 @@ export default function App() {
                 delay={0.8}
                 className="absolute -right-4 bottom-20 w-60"
               />
-              
+
               {/* AI Badge floating */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <AIBadge className="shadow-2xl shadow-purple-500/50" />
@@ -354,7 +354,7 @@ export default function App() {
               </span>
             </div>
             <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              From competitor analysis to VC research — see how DealoAgent compiles comprehensive 
+              From competitor analysis to VC research — see how DealoAgent compiles comprehensive
               reports from emails, calls, messengers, and documents into one intelligent workflow.
             </p>
           </div>
@@ -366,7 +366,7 @@ export default function App() {
                 <span className="text-2xl sm:text-3xl flex-shrink-0">😤</span>
                 <h3 className="text-red-900 text-xl sm:text-2xl break-words">How it works now</h3>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
@@ -459,7 +459,7 @@ export default function App() {
                 <span className="text-2xl sm:text-3xl flex-shrink-0">😊</span>
                 <h3 className="text-green-900 text-xl sm:text-2xl break-words">With DealoAgent<span className="text-blue-600">.AI</span></h3>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
@@ -554,7 +554,7 @@ export default function App() {
               </span>
             </div>
             <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              See how DealoAgent transforms manual, complex sales processes 
+              See how DealoAgent transforms manual, complex sales processes
               into intelligent, automated workflows that scale.
             </p>
           </div>
@@ -566,7 +566,7 @@ export default function App() {
                 <span className="text-2xl sm:text-3xl flex-shrink-0">😫</span>
                 <h3 className="text-orange-900 text-xl sm:text-2xl break-words">How it works now</h3>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
@@ -659,7 +659,7 @@ export default function App() {
                 <span className="text-2xl sm:text-3xl flex-shrink-0">🚀</span>
                 <h3 className="text-blue-900 text-xl sm:text-2xl break-words">With DealoAgent<span className="text-blue-600">.AI</span></h3>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
@@ -776,8 +776,8 @@ export default function App() {
               </span>
             </div>
             <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Everything you need to transform your sales process with AI. From intelligent 
-              competitor tracking to automated outreach, DealoAgent combines powerful capabilities 
+              Everything you need to transform your sales process with AI. From intelligent
+              competitor tracking to automated outreach, DealoAgent combines powerful capabilities
               with an interface so simple, you just chat with it.
             </p>
           </div>
@@ -787,7 +787,7 @@ export default function App() {
               <FeatureCard key={index} {...feature} />
             ))}
           </div>
-          
+
           {/* Center the last feature card */}
           <div className="mt-6 sm:mt-8 flex justify-center">
             <div className="w-full md:w-1/2">
@@ -804,7 +804,7 @@ export default function App() {
               </span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
@@ -812,7 +812,7 @@ export default function App() {
                 Try All Features Free
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
@@ -845,29 +845,29 @@ export default function App() {
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Analyze</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Our AI scans your emails, attachments, and communications to understand 
+                Our AI scans your emails, attachments, and communications to understand
                 your market, competitors, and opportunities.
               </p>
             </div>
-            
+
             <div className="text-center px-4">
               <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
                 <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Automate</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Generate personalized outreach messages, comparison tables, and follow-ups 
+                Generate personalized outreach messages, comparison tables, and follow-ups
                 based on past conversations and data.
               </p>
             </div>
-            
+
             <div className="text-center px-4">
               <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
                 <Target className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Accelerate</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Close deals faster with AI-powered insights, automated workflows, 
+                Close deals faster with AI-powered insights, automated workflows,
                 and intelligent recommendations.
               </p>
             </div>
@@ -886,7 +886,7 @@ export default function App() {
               Join thousands of sales teams achieving unprecedented growth
             </p>
           </div>
-          
+
           <div className="grid gap-4 sm:gap-8 grid-cols-2 md:grid-cols-4">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
               <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
@@ -940,7 +940,7 @@ export default function App() {
                   <span className="text-sm sm:text-base text-gray-600">/month</span>
                 </div>
               </div>
-              
+
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
                   <span className="text-blue-600">$2</span> usage tokens included
@@ -978,7 +978,7 @@ export default function App() {
                   Most Popular
                 </Badge>
               </div>
-              
+
               <div className="mb-4 sm:mb-6">
                 <h3 className="mb-2 text-xl sm:text-2xl">Pro</h3>
                 <div className="flex items-baseline gap-2">
@@ -986,7 +986,7 @@ export default function App() {
                   <span className="text-sm sm:text-base text-gray-600">/month</span>
                 </div>
               </div>
-              
+
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
                   <span className="text-blue-600">$12</span> usage tokens included
@@ -1030,7 +1030,7 @@ export default function App() {
                   <span className="text-sm sm:text-base text-gray-600">/month</span>
                 </div>
               </div>
-              
+
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
                   <span className="text-blue-600">$70</span> usage tokens included
@@ -1098,7 +1098,7 @@ export default function App() {
                   <p className="text-sm sm:text-base text-gray-700 mb-3">
                     New users get <strong className="text-purple-600">free credits</strong> to start. Plus, invite friends and earn rewards through our referral system - both you and your referrals get bonus credits!
                   </p>
-                  <Button 
+                  <Button
                     size="sm"
                     className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
                     onClick={() => window.location.href = 'https://app.dealoagent.ai'}
@@ -1117,7 +1117,7 @@ export default function App() {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-12 sm:py-24">
         <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/30 blur-3xl" />
-        
+
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mb-4 sm:mb-6">
             <span className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
@@ -1125,14 +1125,14 @@ export default function App() {
             </span>
           </div>
           <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80 px-4">
-            Join thousands of sales teams already using DealoAgent to close more deals. 
+            Join thousands of sales teams already using DealoAgent to close more deals.
             Start your free trial today - no credit card required.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
             <div className="flex flex-col gap-2">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
@@ -1143,16 +1143,16 @@ export default function App() {
                 🎁 Limited time offer: Free credits + Referral system rewards
               </p>
             </div>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white/20 bg-white/10 text-white hover:bg-white/20"
               onClick={() => window.open('https://t.me/alex12alex', '_blank')}
             >
               Talk to sales
             </Button>
           </div>
-          
+
           <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-blue-200/60 px-4">
             14-day free trial · No credit card required · Cancel anytime
           </p>
@@ -1194,23 +1194,23 @@ export default function App() {
                   <p className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-base sm:text-lg">
                     Founder & CEO
                   </p>
-                  
+
                   <p className="mb-6 text-sm sm:text-base text-gray-700">
-                    AI Leader with proven ability to deliver advanced AI systems from concept to production. 
-                    Built UnitAI from scratch in 3 months—a full AI agent suite for Unity developers. Deep 
-                    Learning Specialization certified with expertise in LLMs, RAG, agentic memory, and 
+                    AI Leader with proven ability to deliver advanced AI systems from concept to production.
+                    Built UnitAI from scratch in 3 months—a full AI agent suite for Unity developers. Deep
+                    Learning Specialization certified with expertise in LLMs, RAG, agentic memory, and
                     full-stack AI product development.
                   </p>
 
                   <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
-                    <a 
+                    <a
                       href="mailto:alex@dealoagent.ai"
                       className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm text-gray-700 transition-all hover:border-blue-400 hover:bg-blue-50"
                     >
                       <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
                       alex@dealoagent.ai
                     </a>
-                    <a 
+                    <a
                       href="https://www.linkedin.com/in/oleksiivinogradov"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1241,55 +1241,57 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.slice(0, 3).map((post) => (
-              <a
-                key={post.id}
-                href={`/blog/${post.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white hover:border-blue-300 hover:shadow-2xl transition-all"
-              >
-                {/* Image */}
-                <div className="relative h-48 sm:h-56 overflow-hidden">
-                  <img
-                    src={post.coverImage}
-                    alt={post.title}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-block rounded-full bg-blue-600 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm text-white shadow-lg">
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex flex-1 flex-col p-6 sm:p-8">
-                  <h3 className="mb-3 sm:mb-4 text-xl sm:text-2xl text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-600 line-clamp-3 flex-1">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500 border-t border-gray-100 pt-4">
-                    <div className="flex items-center gap-1 sm:gap-2">
-                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
-                      <span>{new Date(post.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                    </div>
-                    <div className="flex items-center gap-1 sm:gap-2">
-                      <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
-                      <span>{post.readTime}</span>
+          <div className="flex overflow-x-auto pb-8 gap-6 sm:gap-8 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 hide-scrollbar">
+            {[...blogPosts]
+              .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+              .map((post) => (
+                <a
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="group flex flex-col min-w-[300px] sm:min-w-[350px] md:min-w-[400px] snap-center overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white hover:border-blue-300 hover:shadow-2xl transition-all"
+                >
+                  {/* Image */}
+                  <div className="relative h-48 sm:h-56 overflow-hidden">
+                    <img
+                      src={post.coverImage}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-block rounded-full bg-blue-600 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm text-white shadow-lg">
+                        {post.category}
+                      </span>
                     </div>
                   </div>
 
-                  <div className="mt-4 flex items-center gap-2 text-blue-600 font-medium group-hover:gap-3 transition-all">
-                    Read story
-                    <ArrowRight className="h-4 w-4" />
+                  {/* Content */}
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
+                    <h3 className="mb-3 sm:mb-4 text-xl sm:text-2xl text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+
+                    <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-600 line-clamp-3 flex-1">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500 border-t border-gray-100 pt-4">
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span>{new Date(post.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                      </div>
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex items-center gap-2 text-blue-600 font-medium group-hover:gap-3 transition-all">
+                      Read story
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
           </div>
 
           <div className="mt-8 sm:mt-12 text-center">
@@ -1323,7 +1325,7 @@ export default function App() {
                 &copy; 2025 DealoAgent. All rights reserved.
               </p>
             </div>
-            
+
             <div className="text-center sm:text-left">
               <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">Product</h4>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
@@ -1333,7 +1335,7 @@ export default function App() {
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">Roadmap</a></li>
               </ul>
             </div>
-            
+
             <div className="text-center sm:text-left">
               <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
