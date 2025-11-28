@@ -28,7 +28,10 @@ npm run build
 # 2. Post-build script generates static HTML files:
 #    - build/blog/how-miro-sales-team-could-uncover-enterprise-revenue-with-ai/index.html
 #    - build/blog/how-figma-sales-team-could-close-more-deals-with-ai/index.html
-#    - build/blog/how-notion-sales-team-could-transform-with-ai-intelligence/index.html
+#    - ...
+# 3. Sitemap generator creates:
+#    - build/sitemap.xml (includes all blog posts)
+#    - build/robots.txt
 \`\`\`
 
 ### Adding New Blog Posts
