@@ -89,6 +89,20 @@ blogPosts.forEach(post => {
         `<meta property="twitter:url" content="https://dealoagent.ai/blog/${post.slug}" />`
     );
 
+    // Add canonical link
+    const canonicalUrl = `https://dealoagent.ai/blog/${post.slug}`;
+    if (html.includes('<link rel="canonical"')) {
+        html = html.replace(
+            /<link rel="canonical" href=".*?" \/>/,
+            `<link rel="canonical" href="${canonicalUrl}" />`
+        );
+    } else {
+        html = html.replace(
+            /<\/head>/,
+            `    <link rel="canonical" href="${canonicalUrl}" />\n  </head>`
+        );
+    }
+
     // Write the HTML file
     fs.writeFileSync(path.join(postDir, 'index.html'), html);
     console.log(`✓ Generated: /blog/${post.slug}/index.html`);

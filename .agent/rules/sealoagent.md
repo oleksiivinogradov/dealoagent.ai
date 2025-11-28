@@ -68,6 +68,7 @@ Reads like you're sharing an interesting puzzle you explored
 
 When post text confirmed, u must open linkedin in web browser, and using credential login there as alex@callsfreecalls.com and pass alex1vinogradov2 initiate post and fill confirmed text there. 
 
+Founder email is alex@dealoagent.ai 
 
 DealoAgent.ai is an AI-native sales CRM that turns your existing communication data into a 24/7 sales copilot. It connects to your email, messengers, and call channels, centralizes all conversations, and continuously analyses them to understand who your customers are, what they care about, and how your team sells today. Instead of staring at empty CRM fields, your team gets an always-up-to-date, automatically filled knowledge base about deals, contacts, and interactions.
 
