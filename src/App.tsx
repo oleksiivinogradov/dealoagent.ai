@@ -245,12 +245,13 @@ export default function App() {
                     🎁 Limited time: Free credits + Referral rewards available
                   </p>
                 </div>
-                <div className="flex flex-col items-center sm:items-start gap-1">
+                {/* Watch product tour button - hidden */}
+                {/* <div className="flex flex-col items-center sm:items-start gap-1">
                   <Button size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
                     Watch product tour
                   </Button>
                   <span className="text-xs text-blue-200/60">Coming soon</span>
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-6 sm:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-8">
