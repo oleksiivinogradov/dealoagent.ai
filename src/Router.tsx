@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import App from './App';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import PitchDeck from './pages/PitchDeck';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -31,7 +32,7 @@ function Navigation() {
             <Logo variant="dark" />
             <AIBadge />
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             <a href="/#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
@@ -40,13 +41,13 @@ function Navigation() {
             <a href="/#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
             <a href="/blog" className="text-gray-700 hover:text-gray-900">Blog</a>
             <Button variant="ghost" className="hidden xl:flex" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
-            <Button 
+            <Button
               variant="outline"
               onClick={() => window.open('https://t.me/alex12alex', '_blank')}
             >
               Talk to Sales
             </Button>
-            <Button 
+            <Button
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
               onClick={() => window.location.href = 'https://app.dealoagent.ai'}
             >
@@ -83,13 +84,13 @@ function Navigation() {
               <a href="/#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
               <a href="/blog" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
               <Button variant="ghost" className="justify-start" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
-              <Button 
+              <Button
                 variant="outline"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
               >
                 Talk to Sales
               </Button>
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
@@ -117,6 +118,7 @@ function AppContent() {
   const location = useLocation();
   const isBlogRoute = location.pathname.startsWith('/blog');
 
+
   return (
     <>
       {isBlogRoute && <Navigation />}
@@ -125,6 +127,7 @@ function AppContent() {
         <Route path="/" element={<App />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/pitchdeck" element={<PitchDeck />} />
       </Routes>
     </>
   );
