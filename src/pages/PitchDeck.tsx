@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Mail, MessageSquare, Users, BarChart, Zap, Globe, Shield, Clock, Target, ArrowRight, CheckCircle, TrendingUp, DollarSign, Layout, Cpu, Calendar, User, Mic, Server, CreditCard, PlusCircle, Briefcase, Link, Video, Linkedin, Search, FileText, Heart, Layers, Database, Minus, Send, Phone } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Mail, MessageSquare, Users, BarChart, Zap, Globe, Shield, Clock, Target, ArrowRight, CheckCircle, TrendingUp, DollarSign, Layout, Cpu, Calendar, User, Mic, Server, CreditCard, PlusCircle, Briefcase, Link, Video, Linkedin, Search, FileText, Heart, Layers, Database, Minus, Send, Phone, Download } from 'lucide-react';
 import { pitchDeckSlides, PitchSlide } from '../data/pitchDeckData';
 import { Logo, AIBadge } from '../components/Logo';
 import { Button } from '../components/ui/button';
@@ -12,6 +12,7 @@ const iconMap: Record<string, any> = {
 export default function PitchDeck() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isFullscreen, setIsFullscreen] = useState(false);
+    const [isPrinting, setIsPrinting] = useState(false);
 
     const slide = pitchDeckSlides[currentSlide];
 
@@ -55,6 +56,14 @@ export default function PitchDeck() {
             document.exitFullscreen();
             setIsFullscreen(false);
         }
+    };
+
+    const handleDownloadPDF = () => {
+        setIsPrinting(true);
+        setTimeout(() => {
+            window.print();
+            setTimeout(() => setIsPrinting(false), 1000);
+        }, 100);
     };
 
     // Background Logic
@@ -111,7 +120,7 @@ export default function PitchDeck() {
                     <div className="relative">
                         <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-30 blur-2xl"></div>
                         <img
-                            src="/src/assets/91f0865d322b601ece4b8e907c5b04462763af93.png"
+                            src="/pitch-deck-visuals/founder-photo.png"
                             alt="Oleksii Vinogradov - Founder"
                             className="relative rounded-3xl w-80 h-80 object-cover border-4 border-white shadow-2xl"
                         />
@@ -240,181 +249,325 @@ export default function PitchDeck() {
     };
 
     return (
-        <div className={`min-h-screen w-full overflow-hidden transition-colors duration-500 ${bgClass} flex flex-col`}>
-
-            {/* Slide Content */}
-            {slide.id === 1 ? (
-                // COVER SLIDE - Centered Layout
-                <div className="flex-1 flex flex-col items-center justify-center p-16 text-center animate-fade-in-scale">
-                    {/* Gradient Orbs */}
-                    <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl animate-pulse" />
-                    <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
-                    <div className="relative z-10 flex flex-col items-center gap-12">
-                        {/* Centered Logo */}
-                        <div className="flex items-center gap-6 scale-150">
-                            <Logo variant="light" className="text-7xl" />
-                            <AIBadge className="w-20 h-20" />
-                        </div>
-
-                        {/* Subtitle */}
-                        <h2 className="text-4xl text-blue-200 font-light tracking-wide max-w-4xl leading-relaxed">
-                            {slide.sectionA.subtitle}
-                        </h2>
-                    </div>
-                </div>
-            ) : (
-                // REGULAR SLIDES - Z-Pattern Grid
-                <>
-                    <div className="flex-1 relative px-16 pt-16 pb-28 grid grid-cols-2 grid-rows-[auto_1fr] gap-x-16 gap-y-8 max-w-[1600px] mx-auto w-full h-full">
-
-                        {/* ZONE A: Top-Left (Title) */}
-                        <div className="flex flex-col justify-start animate-fade-in-up">
-                            <h1 className="text-6xl font-bold leading-tight mb-4">
-                                {slide.sectionA.title}
-                            </h1>
-                            {slide.sectionA.subtitle && (
-                                <p className={`text-3xl ${textSecondary} font-light`}>
-                                    {slide.sectionA.subtitle}
-                                </p>
-                            )}
-                        </div>
-
-                        {/* ZONE B: Top-Right (Key Value / Logo) */}
-                        <div className="flex flex-col items-end justify-start text-right animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                            {slide.sectionB.type === 'logo' ? (
-                                <div className="flex items-center gap-3 scale-110 origin-right">
-                                    <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-4xl" />
-                                    <AIBadge className="w-12 h-12" />
-                                </div>
-                            ) : (
-                                <h2 className={`text-3xl font-semibold ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'} max-w-xl leading-snug`}>
-                                    {slide.sectionB.content}
-                                </h2>
-                            )}
-                        </div>
-
-                        {/* ZONE C: Bottom-Left (Supporting Content) */}
-                        <div className="flex flex-col justify-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            {slide.sectionC.type === 'bullets' && slide.sectionC.items && (
-                                <div className="space-y-6">
-                                    {slide.sectionC.items.map((item, idx) => {
-                                        const Icon = item.icon ? iconMap[item.icon] : ArrowRight;
-                                        return (
-                                            <div key={idx} className="flex items-center gap-4 group">
-                                                <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
-                                                    <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
-                                                </div>
-                                                <span className={`text-2xl ${textPrimary} font-medium`}>{item.text}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            )}
-
-                            {slide.sectionC.type === 'contact' && slide.sectionC.content && (
-                                <div className="space-y-4">
-                                    {slide.sectionC.content.map((line, idx) => {
-                                        // Parse format: "Icon|URL|Label" or "URL|Label" or just "Label"
-                                        const parts = line.split('|');
-
-                                        if (parts.length === 3) {
-                                            // Icon|URL|Label format
-                                            const iconName = parts[0];
-                                            const url = parts[1];
-                                            const label = parts[2];
-                                            const Icon = iconMap[iconName] || Globe;
-
-                                            return (
-                                                <a
-                                                    key={idx}
-                                                    href={url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-3 group"
-                                                >
-                                                    <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
-                                                        <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
-                                                    </div>
-                                                    <span className={`text-2xl ${isDarkSlide ? 'text-blue-300 group-hover:text-blue-200' : 'text-blue-600 group-hover:text-blue-700'} transition-colors`}>
-                                                        {label}
-                                                    </span>
-                                                </a>
-                                            );
-                                        } else if (parts.length === 2) {
-                                            // URL|Label format (legacy)
-                                            const url = parts[0];
-                                            const label = parts[1];
-
-                                            return (
-                                                <a
-                                                    key={idx}
-                                                    href={url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className={`text-2xl ${isDarkSlide ? 'text-blue-300 hover:text-blue-200' : 'text-blue-600 hover:text-blue-700'} transition-colors underline decoration-2 underline-offset-4 block`}
-                                                >
-                                                    {label}
-                                                </a>
-                                            );
-                                        }
-
-                                        // Plain text
-                                        return (
-                                            <p key={idx} className={`text-2xl ${textSecondary}`}>{line}</p>
-                                        );
-                                    })}
-                                </div>
-                            )}
-                        </div>
-
-                        {/* ZONE D: Bottom-Right (Visuals) */}
-                        <div className="flex items-center justify-center animate-fade-in-scale pb-16" style={{ animationDelay: '0.3s' }}>
-                            {renderVisual(slide)}
-                        </div>
-
-                    </div>
-
-                    {/* Persistent Bottom-Right Logo - Absolute positioned relative to flex-1 container */}
-                    <div className="absolute bottom-8 right-8 z-50 opacity-70 hover:opacity-100 transition-opacity">
-                        <div className="flex items-center gap-2 scale-75 origin-bottom-right">
-                            <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-2xl" />
-                            <AIBadge className="w-8 h-8" />
-                        </div>
-                    </div>
-                </>
+        <>
+            {/* Print-only view - All slides */}
+            {isPrinting && (
+                <style>{`
+                    @media print {
+                        @page {
+                            size: landscape;
+                            margin: 0;
+                        }
+                        body {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .print-slide {
+                            page-break-after: always;
+                            width: 100vw;
+                            height: 100vh;
+                            position: relative;
+                        }
+                        .print-slide:last-child {
+                            page-break-after: auto;
+                        }
+                        .no-print {
+                            display: none !important;
+                        }
+                    }
+                `}</style>
             )}
 
+            {isPrinting ? (
+                // Render all slides for PDF
+                <div>
+                    {pitchDeckSlides.map((slideData) => {
+                        const isDarkSlide = [1, 5, 7, 8, 13, 18].includes(slideData.id);
+                        const bgClass = isDarkSlide ? 'bg-[#0D1E44]' : 'bg-white';
+                        const textPrimary = isDarkSlide ? 'text-white' : 'text-slate-900';
+                        const textSecondary = isDarkSlide ? 'text-blue-200' : 'text-slate-600';
 
-            {/* Navigation Bar */}
-            <div className={`h-16 border-t ${isDarkSlide ? 'border-white/10 bg-[#0D1E44]' : 'border-slate-200 bg-white'} flex items-center justify-between px-8`}>
-                <div className="flex items-center gap-4">
-                    <Button variant="ghost" size="sm" onClick={prevSlide} disabled={currentSlide === 0} className={textSecondary}>
-                        <ChevronLeft className="w-5 h-5 mr-2" /> Prev
-                    </Button>
+                        return (
+                            <div key={slideData.id} className={`print-slide ${bgClass} flex flex-col`}>
+                                {slideData.id === 1 ? (
+                                    // COVER SLIDE
+                                    <div className="flex-1 flex flex-col items-center justify-center p-16 text-center">
+                                        <div className="flex flex-col items-center gap-12">
+                                            <div className="flex items-center gap-6 scale-150">
+                                                <Logo variant="light" className="text-7xl" />
+                                                <AIBadge className="w-20 h-20" />
+                                            </div>
+                                            <h2 className="text-4xl text-blue-200 font-light tracking-wide max-w-4xl leading-relaxed">
+                                                {slideData.sectionA.subtitle}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    // REGULAR SLIDES
+                                    <>
+                                        <div className="flex-1 relative px-16 pt-16 pb-28 grid grid-cols-2 grid-rows-[auto_1fr] gap-x-16 gap-y-8 max-w-[1600px] mx-auto w-full h-full">
+                                            {/* Zone A */}
+                                            <div className="flex flex-col justify-start">
+                                                <h1 className="text-6xl font-bold leading-tight mb-4">{slideData.sectionA.title}</h1>
+                                                {slideData.sectionA.subtitle && (
+                                                    <p className={`text-3xl ${textSecondary} font-light`}>{slideData.sectionA.subtitle}</p>
+                                                )}
+                                            </div>
+
+                                            {/* Zone B */}
+                                            <div className="flex flex-col items-end justify-start text-right">
+                                                {slideData.sectionB.type === 'logo' ? (
+                                                    <div className="flex items-center gap-3 scale-110 origin-right">
+                                                        <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-4xl" />
+                                                        <AIBadge className="w-12 h-12" />
+                                                    </div>
+                                                ) : (
+                                                    <h2 className={`text-3xl font-semibold ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'} max-w-xl leading-snug`}>
+                                                        {slideData.sectionB.content}
+                                                    </h2>
+                                                )}
+                                            </div>
+
+                                            {/* Zone C */}
+                                            <div className="flex flex-col justify-center">
+                                                {slideData.sectionC.type === 'bullets' && slideData.sectionC.items && (
+                                                    <div className="space-y-6">
+                                                        {slideData.sectionC.items.map((item, idx) => {
+                                                            const Icon = item.icon ? iconMap[item.icon] : ArrowRight;
+                                                            return (
+                                                                <div key={idx} className="flex items-center gap-4">
+                                                                    <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'}`}>
+                                                                        <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
+                                                                    </div>
+                                                                    <span className={`text-2xl ${textPrimary} font-medium`}>{item.text}</span>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                )}
+                                                {slideData.sectionC.type === 'contact' && slideData.sectionC.content && (
+                                                    <div className="space-y-4">
+                                                        {slideData.sectionC.content.map((line, idx) => {
+                                                            const parts = line.split('|');
+                                                            if (parts.length === 3) {
+                                                                const Icon = iconMap[parts[0]] || Globe;
+                                                                return (
+                                                                    <div key={idx} className="flex items-center gap-3">
+                                                                        <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'}`}>
+                                                                            <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
+                                                                        </div>
+                                                                        <span className={`text-2xl ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`}>{parts[2]}</span>
+                                                                    </div>
+                                                                );
+                                                            }
+                                                            return <p key={idx} className={`text-2xl ${textSecondary}`}>{line}</p>;
+                                                        })}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* Zone D - Render visual */}
+                                            <div className="flex items-center justify-center pb-16">
+                                                {renderVisual(slideData)}
+                                            </div>
+                                        </div>
+
+                                        {/* Logo */}
+                                        <div className="absolute bottom-8 right-8 z-50 opacity-70">
+                                            <div className="flex items-center gap-2 scale-75 origin-bottom-right">
+                                                <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-2xl" />
+                                                <AIBadge className="w-8 h-8" />
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
+            ) : (
+                // Normal presentation view
+                <div className={`min-h-screen w-full overflow-hidden transition-colors duration-500 ${bgClass} flex flex-col`}>
 
-                <div className="flex items-center gap-4">
-                    <span className={`text-sm font-medium ${textSecondary}`}>
-                        Slide {currentSlide + 1} of {pitchDeckSlides.length}
-                    </span>
-                    <div className="w-48 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-blue-600 transition-all duration-300"
-                            style={{ width: `${((currentSlide + 1) / pitchDeckSlides.length) * 100}%` }}
-                        />
+                    {/* Slide Content */}
+                    {slide.id === 1 ? (
+                        // COVER SLIDE - Centered Layout
+                        <div className="flex-1 flex flex-col items-center justify-center p-16 text-center animate-fade-in-scale">
+                            {/* Gradient Orbs */}
+                            <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl animate-pulse" />
+                            <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+
+                            <div className="relative z-10 flex flex-col items-center gap-12">
+                                {/* Centered Logo */}
+                                <div className="flex items-center gap-6 scale-150">
+                                    <Logo variant="light" className="text-7xl" />
+                                    <AIBadge className="w-20 h-20" />
+                                </div>
+
+                                {/* Subtitle */}
+                                <h2 className="text-4xl text-blue-200 font-light tracking-wide max-w-4xl leading-relaxed">
+                                    {slide.sectionA.subtitle}
+                                </h2>
+                            </div>
+                        </div>
+                    ) : (
+                        // REGULAR SLIDES - Z-Pattern Grid
+                        <>
+                            <div className="flex-1 relative px-16 pt-16 pb-28 grid grid-cols-2 grid-rows-[auto_1fr] gap-x-16 gap-y-8 max-w-[1600px] mx-auto w-full h-full">
+
+                                {/* ZONE A: Top-Left (Title) */}
+                                <div className="flex flex-col justify-start animate-fade-in-up">
+                                    <h1 className="text-6xl font-bold leading-tight mb-4">
+                                        {slide.sectionA.title}
+                                    </h1>
+                                    {slide.sectionA.subtitle && (
+                                        <p className={`text-3xl ${textSecondary} font-light`}>
+                                            {slide.sectionA.subtitle}
+                                        </p>
+                                    )}
+                                </div>
+
+                                {/* ZONE B: Top-Right (Key Value / Logo) */}
+                                <div className="flex flex-col items-end justify-start text-right animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                                    {slide.sectionB.type === 'logo' ? (
+                                        <div className="flex items-center gap-3 scale-110 origin-right">
+                                            <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-4xl" />
+                                            <AIBadge className="w-12 h-12" />
+                                        </div>
+                                    ) : (
+                                        <h2 className={`text-3xl font-semibold ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'} max-w-xl leading-snug`}>
+                                            {slide.sectionB.content}
+                                        </h2>
+                                    )}
+                                </div>
+
+                                {/* ZONE C: Bottom-Left (Supporting Content) */}
+                                <div className="flex flex-col justify-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                                    {slide.sectionC.type === 'bullets' && slide.sectionC.items && (
+                                        <div className="space-y-6">
+                                            {slide.sectionC.items.map((item, idx) => {
+                                                const Icon = item.icon ? iconMap[item.icon] : ArrowRight;
+                                                return (
+                                                    <div key={idx} className="flex items-center gap-4 group">
+                                                        <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
+                                                            <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
+                                                        </div>
+                                                        <span className={`text-2xl ${textPrimary} font-medium`}>{item.text}</span>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
+
+                                    {slide.sectionC.type === 'contact' && slide.sectionC.content && (
+                                        <div className="space-y-4">
+                                            {slide.sectionC.content.map((line, idx) => {
+                                                // Parse format: "Icon|URL|Label" or "URL|Label" or just "Label"
+                                                const parts = line.split('|');
+
+                                                if (parts.length === 3) {
+                                                    // Icon|URL|Label format
+                                                    const iconName = parts[0];
+                                                    const url = parts[1];
+                                                    const label = parts[2];
+                                                    const Icon = iconMap[iconName] || Globe;
+
+                                                    return (
+                                                        <a
+                                                            key={idx}
+                                                            href={url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex items-center gap-3 group"
+                                                        >
+                                                            <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
+                                                                <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
+                                                            </div>
+                                                            <span className={`text-2xl ${isDarkSlide ? 'text-blue-300 group-hover:text-blue-200' : 'text-blue-600 group-hover:text-blue-700'} transition-colors`}>
+                                                                {label}
+                                                            </span>
+                                                        </a>
+                                                    );
+                                                } else if (parts.length === 2) {
+                                                    // URL|Label format (legacy)
+                                                    const url = parts[0];
+                                                    const label = parts[1];
+
+                                                    return (
+                                                        <a
+                                                            key={idx}
+                                                            href={url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className={`text-2xl ${isDarkSlide ? 'text-blue-300 hover:text-blue-200' : 'text-blue-600 hover:text-blue-700'} transition-colors underline decoration-2 underline-offset-4 block`}
+                                                        >
+                                                            {label}
+                                                        </a>
+                                                    );
+                                                }
+
+                                                // Plain text
+                                                return (
+                                                    <p key={idx} className={`text-2xl ${textSecondary}`}>{line}</p>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* ZONE D: Bottom-Right (Visuals) */}
+                                <div className="flex items-center justify-center animate-fade-in-scale pb-16" style={{ animationDelay: '0.3s' }}>
+                                    {renderVisual(slide)}
+                                </div>
+
+                            </div>
+
+                            {/* Persistent Bottom-Right Logo - Absolute positioned relative to flex-1 container */}
+                            <div className="absolute bottom-8 right-8 z-50 opacity-70 hover:opacity-100 transition-opacity">
+                                <div className="flex items-center gap-2 scale-75 origin-bottom-right">
+                                    <Logo variant={isDarkSlide ? 'light' : 'dark'} className="text-2xl" />
+                                    <AIBadge className="w-8 h-8" />
+                                </div>
+                            </div>
+                        </>
+                    )}
+
+
+                    {/* Navigation Bar */}
+                    <div className={`h-16 border-t ${isDarkSlide ? 'border-white/10 bg-[#0D1E44]' : 'border-slate-200 bg-white'} flex items-center justify-between px-8`}>
+                        <div className="flex items-center gap-4">
+                            <Button variant="ghost" size="sm" onClick={prevSlide} disabled={currentSlide === 0} className={textSecondary}>
+                                <ChevronLeft className="w-5 h-5 mr-2" /> Prev
+                            </Button>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <span className={`text-sm font-medium ${textSecondary}`}>
+                                Slide {currentSlide + 1} of {pitchDeckSlides.length}
+                            </span>
+                            <div className="w-48 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                <div
+                                    className="h-full bg-blue-600 transition-all duration-300"
+                                    style={{ width: `${((currentSlide + 1) / pitchDeckSlides.length) * 100}%` }}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <Button variant="ghost" size="sm" onClick={handleDownloadPDF} className={textSecondary}>
+                                <Download className="w-5 h-5 mr-2" />
+                                Download PDF
+                            </Button>
+                            <Button variant="ghost" size="sm" onClick={nextSlide} disabled={currentSlide === pitchDeckSlides.length - 1} className={textSecondary}>
+                                Next <ChevronRight className="w-5 h-5 ml-2" />
+                            </Button>
+                            <Button variant="ghost" size="sm" onClick={toggleFullscreen} className={textSecondary}>
+                                {isFullscreen ? 'Exit' : 'Fullscreen'}
+                            </Button>
+                        </div>
                     </div>
                 </div>
-
-                <div className="flex items-center gap-4">
-                    <Button variant="ghost" size="sm" onClick={nextSlide} disabled={currentSlide === pitchDeckSlides.length - 1} className={textSecondary}>
-                        Next <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
-                    <Button variant="ghost" size="sm" onClick={toggleFullscreen} className={textSecondary}>
-                        {isFullscreen ? 'Exit' : 'Fullscreen'}
-                    </Button>
-                </div>
-            </div>
-        </div>
+            )}
+        </>
     );
 }
