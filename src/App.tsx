@@ -5,6 +5,7 @@ import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { CitationSection } from "./components/CitationSection";
+import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import founderImage from "figma:asset/91f0865d322b601ece4b8e907c5b04462763af93.png";
 import { useState } from "react";
 import {
@@ -345,6 +346,9 @@ export default function App() {
           </div>
         </section>
       )}
+
+      {/* Before/After Slider Section */}
+      <BeforeAfterSlider />
 
       {/* Problem/Solution Section - Multi-Channel Research Reports */}
       <section id="use-cases" className="pt-4 pb-12 sm:py-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
@@ -1313,6 +1317,8 @@ export default function App() {
 
       {/* Citation Section */}
       <CitationSection />
+
+
 
       {/* Footer */}
       <footer className="border-t border-gray-200 bg-white py-8 sm:py-12">
