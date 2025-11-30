@@ -127,6 +127,18 @@ export default function App() {
         "Custom reports through natural language queries",
       ],
     },
+    {
+      icon: Users,
+      title: "Team Roles & Employee Access",
+      description: "Manage your sales team with granular permissions. Assign roles, track individual performance, and ensure secure access for every employee.",
+      features: [
+        "Role-based access control (RBAC) for admins, managers, and reps",
+        "Secure employee login with single sign-on (SSO) support",
+        "Individual performance tracking and activity logs",
+        "Easy onboarding and offboarding of team members",
+        "Customizable permission sets for different departments",
+      ],
+    },
   ];
 
   return (
@@ -789,16 +801,9 @@ export default function App() {
           </div>
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            {features.slice(0, 6).map((feature, index) => (
+            {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
-          </div>
-
-          {/* Center the last feature card */}
-          <div className="mt-6 sm:mt-8 flex justify-center">
-            <div className="w-full md:w-1/2">
-              <FeatureCard {...features[6]} />
-            </div>
           </div>
 
           {/* Bottom CTA */}
@@ -1344,6 +1349,7 @@ export default function App() {
                 <li><a href="#pricing" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">Security</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">Roadmap</a></li>
+                <li><a href="/login" className="hover:text-blue-600">Employee Login</a></li>
               </ul>
             </div>
 

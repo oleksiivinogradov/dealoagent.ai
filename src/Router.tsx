@@ -4,6 +4,7 @@ import App from './App';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import PitchDeck from './pages/PitchDeck';
+import Login from './pages/Login';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -128,6 +129,7 @@ function AppContent() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/pitchdeck" element={<PitchDeck />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
