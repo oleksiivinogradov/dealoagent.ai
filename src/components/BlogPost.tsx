@@ -166,7 +166,7 @@ export default function BlogPost() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                  onClick={() => window.location.href = block.primaryButton!.url}
+                  onClick={() => window.open(block.primaryButton!.url, '_blank')}
                 >
                   {block.primaryButton.text}
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -176,7 +176,7 @@ export default function BlogPost() {
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={() => window.location.href = block.secondaryButton!.url}
+                  onClick={() => window.open(block.secondaryButton!.url, '_blank')}
                 >
                   {block.secondaryButton.text}
                 </Button>
@@ -356,7 +356,7 @@ export default function BlogPost() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
               >
                 Start Free Trial
               </Button>
@@ -379,7 +379,7 @@ export default function BlogPost() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
               >
                 Register Now - Get Free Credits
                 <ArrowRight className="ml-2 h-4 w-4" />

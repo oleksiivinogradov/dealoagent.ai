@@ -5,12 +5,15 @@ import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import PitchDeck from './pages/PitchDeck';
 import Login from './pages/Login';
+import RecruitingUseCase from './pages/RecruitingUseCase';
+import SoftwareSalesUseCase from './pages/SoftwareSalesUseCase';
+import UseCases from './pages/UseCases';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-function Navigation() {
+export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -130,6 +133,9 @@ function AppContent() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/pitchdeck" element={<PitchDeck />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/usecases" element={<UseCases />} />
+        <Route path="/usecases/recruiting" element={<RecruitingUseCase />} />
+        <Route path="/usecases/softwaresales" element={<SoftwareSalesUseCase />} />
       </Routes>
     </>
   );
