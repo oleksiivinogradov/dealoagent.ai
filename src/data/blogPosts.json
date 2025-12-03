@@ -1,5 +1,166 @@
 [
   {
+    "id": "recruiting-agency-transformation-dealoagent",
+    "slug": "how-recruiting-agencies-scale-without-headcount-ai",
+    "title": "How Recruiting Agencies Can Scale 10x Without Hiring More Recruiters",
+    "subtitle": "A hypothetical deep dive: Transforming a boutique agency into a placement machine using AI agents for sourcing, screening, and sales.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2024-12-03",
+    "readTime": "9 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=630&fit=crop",
+    "excerpt": "Recruiting is a volume game, but manual admin caps every recruiter's potential. In this hypothetical case study, we explore how a boutique agency uses DealoAgent to automate the 'boring' 70% of the job—parsing CVs, screening candidates, and nurturing clients—allowing them to double placements without adding headcount.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "Staffing",
+      "AI",
+      "Automation"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how a recruiting agency could leverage DealoAgent.AI. While the challenges of the staffing industry are real, this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "Recruiting is often called a 'people business,' but for the average agency recruiter, it feels more like a 'data entry business.' Between formatting resumes, logging calls in the CRM, chasing candidates for missing details, and sending generic business development emails, the actual time spent *recruiting*—building relationships and assessing talent—is often less than 30% of the week."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Ceiling: Why 'TalentFlow Agency' Couldn't Grow"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet 'TalentFlow Agency,' a hypothetical boutique firm with 10 recruiters specializing in tech placements. They hit a revenue ceiling. To make more placements, they thought they had to hire more recruiters. But hiring recruiters is expensive, and ramp-up time is long. Their margins were getting squeezed."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sarah, a Senior Recruiter at TalentFlow, was drowning. She received 50+ CVs a day via email, LinkedIn, and job boards. Each one was a PDF or Word doc that had to be manually parsed, compared against vacancy requirements, and entered into the database. If a candidate's CV was missing a key skill (e.g., 'React Native experience'), she had to email them and wait. Half the time, she just skipped the candidate because she didn't have time to ask."
+      },
+      {
+        "type": "quote",
+        "text": "I'm rejecting good candidates because their CVs aren't perfect and I don't have time to call them to clarify. And on the sales side, I'm ignoring potential clients because I'm too busy doing admin work for my current roles.",
+        "author": "Hypothetical scenario: Senior Recruiter at TalentFlow"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Recruiter's Assistant"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical scenario, TalentFlow deploys DealoAgent to break the linear relationship between headcount and revenue. They connect DealoAgent to their email, VoIP system, and LinkedIn accounts."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Automated Sourcing & Smart Gap Filling"
+      },
+      {
+        "type": "paragraph",
+        "text": "Now, when Sarah receives a CV via email, she doesn't open it. DealoAgent intercepts it."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Instant Parsing**: The AI extracts all skills, experience, and contact info.",
+          "**Gap Analysis**: It compares the profile against the open vacancy. It notices the candidate has 'React' but doesn't mention 'React Native' (which is required).",
+          "**Auto-Outreach**: Instead of Sarah typing an email, DealoAgent automatically replies: 'Hi [Name], thanks for applying. I see great React experience. Do you have any commercial experience with React Native that isn't listed? If so, could you share a quick detail?'"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The candidate replies 'Yes, I used it for 6 months at my last gig.' DealoAgent updates the profile, marks the candidate as 'Qualified,' and schedules a screening call for Sarah. Sarah wakes up to a calendar of qualified interviews, not an inbox of unread PDFs."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Intelligent Interview Prep"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before the call, Sarah doesn't need to re-read the CV for 10 minutes. DealoAgent sends her a 'Cheat Sheet' in Slack:"
+      },
+      {
+        "type": "quote",
+        "text": "Candidate: John Doe. Strongest match: Backend Node.js. Potential Weakness: Short tenure at last 2 jobs (ask about this). Missing Info: Salary expectations. Suggested Question: 'Walk me through why you left Company X after only 8 months.'",
+        "author": "DealoAgent AI Briefing"
+      },
+      {
+        "type": "paragraph",
+        "text": "During the call, DealoAgent transcribes the conversation. When John mentions his salary expectation, the AI automatically updates the field in the database. Sarah can focus entirely on listening and selling the role."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Sales on Autopilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Michael, the Sales Lead, used to spend hours hunting for companies hiring. Now, DealoAgent monitors job boards and company news."
+      },
+      {
+        "type": "paragraph",
+        "text": "When 'TechCorp' posts a job for a 'Senior DevOps Engineer,' DealoAgent alerts Michael and drafts an email: 'Hi [Hiring Manager], saw you're looking for a DevOps lead. We just wrapped up a search for a similar role and have 2 silver-medalist candidates who are available immediately and have exactly the AWS + Kubernetes stack you need. Want to see their profiles?'"
+      },
+      {
+        "type": "paragraph",
+        "text": "This isn't a cold call; it's a value-add. Michael sends 50 of these hyper-relevant emails a week, resulting in 10 new job orders."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Impact: Scaling Without Headcount"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Placement Rate",
+            "value": "+45%",
+            "description": "More time spent on closing, less on admin"
+          },
+          {
+            "label": "Time to Submit",
+            "value": "-60%",
+            "description": "Candidates processed and screened faster"
+          },
+          {
+            "label": "Client Acquisition",
+            "value": "2x",
+            "description": "Due to proactive, candidate-led BD"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For agencies like TalentFlow, the bottleneck isn't the market; it's operational friction. By using DealoAgent to handle the data-heavy parts of recruiting, they effectively gave every recruiter a 24/7 assistant. They scaled their output without scaling their costs."
+      },
+      {
+        "type": "cta",
+        "title": "Automate Your Agency",
+        "description": "See how DealoAgent can help you place more candidates with less work.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "miro-sales-transformation-dealoagent",
     "slug": "how-miro-sales-team-could-uncover-enterprise-revenue-with-ai",
     "title": "How Miro's Sales Team Could Uncover Enterprise Revenue with DealoAgent",
