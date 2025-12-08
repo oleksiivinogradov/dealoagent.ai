@@ -8,6 +8,7 @@ You operating with web site dealoagent.ai Your goal to create SEO friendly site 
 
 When creating blog posts, follow these requirements:
 
+
 ### Content Guidelines
 1. **Companies may be real** but posts must be **hypothetical scenarios**
    - Example: "Let say manager [real manager name] at [real company] uses DealoAgent for [real use case]"
@@ -38,6 +39,7 @@ When creating blog posts, follow these requirements:
        - Use Unsplash or similar for professional images
        - Must be absolute URL (https://) for social media previews
        - Each post MUST have a UNIQUE cover image
+       - **MANDATORY**: You MUST generate a NEW, UNIQUE image for every blog post using your image generation tool.
      - `excerpt`: Compelling 2-3 sentence summary for social previews
      - `tags`: Array of relevant tags (e.g., ["Case Study", "B2B SaaS", "AI", "Company Name"])
      - `content`: Array of content blocks (paragraphs, headings, lists, quotes, metrics, CTAs)
@@ -65,6 +67,9 @@ Frames it as genuine curiosity, not a pitch
 Ends with a real question to drive discussion
 Links feel natural, not forced
 Reads like you're sharing an interesting puzzle you explored
+
+Add 3 random tags from list: #innovation #management #digitalmarketing #technology #creativity #futurism #startups #marketing #socialmedia #socialnetworking #motivation 
+#personaldevelopment #jobinterviews #sustainability #personalbranding #education #productivity #travel #sales #socialentrepreneurship 
 
 When post text confirmed, u must open linkedin in web browser, and using credential login there as alex@callsfreecalls.com and pass alex1vinogradov2 initiate post and fill confirmed text there. 
 
@@ -126,38 +131,6 @@ Over time, DealoAgent.ai evolves into a full AI sales agent, not just a reportin
 
 ## Possible Use Cases & Hypothetical Scenarios
 
-### 1. Multi-Channel Research Reports (Automation Case)
-*   **Problem**: Manual research takes 2-3 weeks. Sources are scattered (web, email, docs). Outreach is disconnected.
-*   **DealoAgent Solution**:
-    *   Define research goal -> AI identifies targets -> AI orchestrates outreach.
-    *   AI tracks conversations across all channels.
-    *   AI extracts insights from all files/messages.
-    *   **Result**: Comprehensive report in 2-3 hours (95% time saved).
-
-### 2. Sales Process Support (Scaling Case)
-*   **Problem**: Sales reps limited to 10-20 clients due to memory/context overload. "Cold" generic messages.
-*   **DealoAgent Solution**:
-    *   AI maintains full context of every client and product.
-    *   AI prepares outreach automatically based on specific goals.
-    *   AI performs "social engineering" to keep contacts hot.
-    *   **Result**: Capacity scales to 1000+ clients per rep.
-
-### 3. Hypothetical Case: Enterprise Sales Transformation (e.g., Figma)
-*   **Scenario**: Strategic Account Executive managing 60 large accounts.
-*   **Challenge**: Generic outreach due to lack of time; missing competitor signals (e.g., "cost-effective" = Penpot).
-*   **DealoAgent Application**:
-    *   **Automated Competitive Intel**: Flags vague objections as specific competitor signals and suggests battle cards.
-    *   **Smart Campaigns**: Personalizes feature launch emails for 60 unique stakeholders based on past pain points.
-    *   **Chat Command Center**: "Summarize deal status" queries replace digging through CRM tabs.
-
-### 4. Hypothetical Case: Competitive Displacement (e.g., Notion)
-*   **Scenario**: Enterprise team fighting invisible competitors (Confluence, Coda) in 800+ deals.
-*   **Challenge**: Competitors mentioned in 40% of deals but often missed in email volume.
-*   **DealoAgent Application**:
-    *   **Invisible Competitor Detection**: Scans every email/Slack for competitor mentions and updates "Living Comparison Tables".
-    *   **Contextual Battle Cards**: Real-time suggestions (e.g., "7 deals closed after showing SOC 2 compliance").
-    *   **Learning from Wins**: AI analyzes past wins to suggest the perfect follow-up time and content for stalled deals.
-
 ## LinkedIn Post Creation (After Blog Posts)
 
 After creating any blog post, **ALWAYS** propose a LinkedIn post text to share it.
@@ -197,6 +170,8 @@ After creating any blog post, **ALWAYS** propose a LinkedIn post text to share i
 - Add context: "(It's hypothetical, but the problem is very real for...)"
 
 **Engagement Hook:**
+- **Financial Incentive (MANDATORY)**: You MUST include this specific offer to drive comments:
+  - "Comment on this LinkedIn post and I will add $2 to your DealoAgent balance."
 - Always end with a real question that invites discussion
 - Examples:
   - "Curious if others have run into this. How do you find the actual buyers when you have thousands of free users?"
