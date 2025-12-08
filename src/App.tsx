@@ -33,6 +33,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import blogPosts from "./data/blogPosts.json";
+import { navigateToApp } from "./analytics";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -159,7 +160,7 @@ export default function App() {
               <a href="#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
               <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-              <Button variant="ghost" className="hidden xl:flex" onClick={() => window.open('https://app.dealoagent.ai', '_blank')}>Sign In</Button>
+              <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
               <Button
                 variant="outline"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
@@ -168,7 +169,7 @@ export default function App() {
               </Button>
               <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
+                onClick={() => navigateToApp('register')}
               >
                 Register Now
               </Button>
@@ -201,7 +202,7 @@ export default function App() {
                 <a href="#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
                 <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
                 <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-                <Button variant="ghost" className="justify-start" onClick={() => window.open('https://app.dealoagent.ai', '_blank')}>Sign In</Button>
+                <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
                 <Button
                   variant="outline"
                   onClick={() => window.open('https://t.me/alex12alex', '_blank')}
@@ -210,7 +211,7 @@ export default function App() {
                 </Button>
                 <Button
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                  onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
+                  onClick={() => navigateToApp('register')}
                 >
                   Register Now
                 </Button>
@@ -250,7 +251,7 @@ export default function App() {
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                    onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
+                    onClick={() => navigateToApp('register')}
                   >
                     Register Now - Get Free Credits
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -546,7 +547,7 @@ export default function App() {
               </div>
 
               <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.open('https://app.dealoagent.ai', '_blank')}>
+                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => navigateToApp('register')}>
                   Start your research now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -768,7 +769,7 @@ export default function App() {
               </div>
 
               <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.open('https://app.dealoagent.ai', '_blank')}>
+                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => navigateToApp('register')}>
                   Transform your sales process
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

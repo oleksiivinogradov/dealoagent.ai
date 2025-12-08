@@ -13,6 +13,7 @@ import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { navigateToApp } from "./analytics";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ export function Navigation() {
             <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
             <a href="/#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
             <a href="/blog" className="text-gray-700 hover:text-gray-900">Blog</a>
-            <Button variant="ghost" className="hidden xl:flex" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
+            <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
             <Button
               variant="outline"
               onClick={() => window.open('https://t.me/alex12alex', '_blank')}
@@ -54,7 +55,7 @@ export function Navigation() {
             </Button>
             <Button
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-              onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+              onClick={() => navigateToApp('register')}
             >
               Register Now
             </Button>
@@ -88,7 +89,7 @@ export function Navigation() {
               <a href="/#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="/#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
               <a href="/blog" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-              <Button variant="ghost" className="justify-start" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>Sign In</Button>
+              <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
               <Button
                 variant="outline"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
@@ -97,7 +98,7 @@ export function Navigation() {
               </Button>
               <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                onClick={() => navigateToApp('register')}
               >
                 Register Now
               </Button>
