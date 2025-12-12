@@ -21,6 +21,23 @@ When creating blog posts, follow these requirements:
    - Include specific metrics, workflows, and transformation details
    - Avoid generic statements - use concrete examples
 
+### Use Case Specific Rules (Recruiting & VC Research)
+
+3. **Company & Role Alignment**
+   - **Real Companies**: When fulfilling a request for a use case (e.g., Recruiting or VC Research), you MUST select a **real company** from that specific industry.
+     - *Recruiting*: Talent agencies, staffing firms.
+     - *VC Research*: Venture capital firms, investment funds.
+   - **Role Selection**: You MUST select one specific role defined in the corresponding use case page (`pages/RecruitingUseCase.tsx` or `pages/VCResearchUseCase.tsx`).
+     - *Recruiting Roles*: Recruiter, Sales/BizDev, or CEO/Owner.
+     - *VC Roles*: Investment Analyst or General Partner/CEO.
+     - *Persona Match**: The blog post's protagonist MUST strictly match the selected role.
+
+4. **Scenario Adherence (Before/After)**
+   - You MUST structure the narrative using the specific **Before vs. After** points defined for the selected role in the use case source file.
+   - **Before**: Explicitly describe the pain points listed in the "Before DealoAgent" section (e.g., "Manual CV Processing", "Operational Black Box").
+   - **After**: transformation must match the "After DealoAgent" points (e.g., "Automated Parsing", "Conversational Intelligence").
+   - Use these exact points to construct the problem/solution arc of the story.
+
 
 ### Technical Requirements (CRITICAL for SEO/Social Media)
 

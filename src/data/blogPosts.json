@@ -1,5 +1,162 @@
 [
   {
+    "id": "propel-recruiting-automation-success",
+    "slug": "how-propel-recruitment-cut-screening-time-70-percent-dealoagent",
+    "title": "How Propel Recruitment Could Cut Candidate Screening Time by 70% with AI",
+    "subtitle": "A hypothetical deep dive: How Managing Consultant Zac Evans could transform Propel's candidate processing from manual chaos to automated precision.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2025-12-12",
+    "readTime": "8 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/propel-recruitment.png",
+    "excerpt": "Propel Recruitment is a leader in the digital sector, but high volume means high admin. In this hypothetical case study, we explore how their team could use DealoAgent to automate CV parsing, gap analysis, and interview prep—freeing up consultants to focus on what they do best: building relationships.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "Propel",
+      "AI",
+      "Automation"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Propel Recruitment could leverage DealoAgent.AI. Propel is a real, leading digital recruitment agency in London, but this scenario involving their team is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "In the fast-paced world of digital recruitment, speed and precision are everything. Agencies like **Propel** have built a reputation on connecting world-class tech talent with innovative companies. But behind the scenes, even the most efficient agencies battle a common enemy: administrative friction."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The Admin Avalanche"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Zac Evans**, a Managing Consultant at Propel. Zac specializes in placing high-level commercial and technical talent. He has the network and the expertise, but his time is constantly under siege by the sheer volume of data processing required to manage his pipeline."
+      },
+      {
+        "type": "paragraph",
+        "text": "For Zac, a typical week often starts with a 'Resume Wall'—hundreds of applications from various job boards and operational inefficiencies that slow down his actual recruiting work:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Manual CV Processing**: Candidates send PDFs, Word docs, or Notion links. Zac has to manually open each one, convert the mental data, and compare it against the vacancy's skill matrix.",
+          "**Fragmented Data Collection**: Essential information is scattered. Zac finds himself chasing candidates across emails, LinkedIn messages, and WhatsApp just to fill in basic gaps in their profiles. It's an endless cycle of 'admin ping-pong' that delays submissions.",
+          "**Redundant Interviews**: Because data is fragmented, Zac sometimes wastes valuable time during screening calls asking questions that the candidate might have already answered in a cover letter or a previous email thread he couldn't immediately find.",
+          "**Research Nightmare**: To truly understand a candidate's fit, Zac needs to dig into their background—checking GitHub repos, portfolio links, or past employers. Doing this manually for every applicant is overwhelming and often skipped due to time constraints."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I want to spend my time advising clients and coaching candidates, not battling with formatting issues or chasing missing phone numbers. The admin work is the bottle-neck that keeps me from closing more deals.",
+        "author": "Hypothetical scenario: Managing Consultant at Propel"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Intelligent Recruitment Partner"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Propel integrates **DealoAgent** to act as an intelligent layer on top of their communications. It doesn't replace the recruiter; it removes the friction."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Automated Parsing & Contextual Awareness"
+      },
+      {
+        "type": "paragraph",
+        "text": "Now, when a candidate application lands in Zac's inbox, DealoAgent takes immediate action."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Automated Parsing**: The system instantly reads documents in any format—PDF, Docx, or inline text—and converts them into a structured candidate profile. It connects this profile to the specific vacancy Zac is working on."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Smart Gap Filling"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent doesn't just store data; it understands it. If a vacancy requires 'Enterprise Sales Experience' and the CV is ambiguous, the AI detects this gap."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Fix**: DealoAgent automatically drafts a specific follow-up question to the candidate: *'Hi [Name], your profile looks great. Could you briefly clarify your experience with enterprise-level contract negotiations? We need this to move you to the next stage.'* This ensures 100% profile completeness before Zac even reviews it."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Intelligent Interview Prep & Deep Insights"
+      },
+      {
+        "type": "paragraph",
+        "text": "When it's time for the screening call, Zac is no longer flying blind or scrambling for notes."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Cheat Sheet**: Moments before the call, DealoAgent presents a concise briefing. It highlights the candidate's strengths, potential concerns based on their history (e.g., 'Short tenure at last role'), and suggests **intelligent interview questions** tailored to stress-test those specific areas."
+      },
+      {
+        "type": "paragraph",
+        "text": "Furthermore, DealoAgent has already performed a **Deep Research** sweep, summarizing the candidate's digital footprint and flagging any impressive portfolio pieces or inconsistencies. Zac enters the call fully prepared to have a high-value conversation."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Screening Efficiency",
+            "value": "+70%",
+            "description": "Reduction in manual CV processing time"
+          },
+          {
+            "label": "Profile Completeness",
+            "value": "100%",
+            "description": "No more missing data points or skills"
+          },
+          {
+            "label": "Placement Speed",
+            "value": "2x",
+            "description": "Faster submission-to-interview ratio"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a high-performing agency like Propel, the goal isn't just to work harder—it's to work smarter. By offloading the 'Research Nightmare' and 'Data Janitor' tasks to DealoAgent, consultants like Zac Evans can focus on the human element that truly drives recruitment success: intuition, relationship building, and closing."
+      },
+      {
+        "type": "cta",
+        "title": "Upgrade Your Recruitment Workflow",
+        "description": "See how DealoAgent can give your consultants superpowers.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "vc-research-transformation-dealoagent",
     "slug": "how-vc-firms-automate-diligence-and-deal-flow-ai",
     "title": "How Venture Capital Firms Can Automate Diligence and Deal Flow with AI",
@@ -9,7 +166,7 @@
     "publishDate": "2024-12-05",
     "readTime": "10 min read",
     "category": "Case Study",
-    "featured": true,
+    "featured": false,
     "coverImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=630&fit=crop",
     "excerpt": "Venture Capital is a game of signal vs. noise. In this hypothetical case study, we explore how a leading VC firm uses DealoAgent to automate the manual grunt work of due diligence, track portfolio health in real-time, and identify breakout startups before they even pitch.",
     "tags": [

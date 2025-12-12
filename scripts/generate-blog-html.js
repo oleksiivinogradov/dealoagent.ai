@@ -53,9 +53,13 @@ blogPosts.forEach(post => {
         `<meta property="og:description" content="${post.excerpt}" />`
     );
 
+    const imageUrl = post.coverImage.startsWith('/')
+        ? `https://dealoagent.ai${post.coverImage}`
+        : post.coverImage;
+
     html = html.replace(
         /<meta property="og:image" content=".*?" \/>/,
-        `<meta property="og:image" content="${post.coverImage}" />`
+        `<meta property="og:image" content="${imageUrl}" />`
     );
 
     html = html.replace(
@@ -81,7 +85,7 @@ blogPosts.forEach(post => {
 
     html = html.replace(
         /<meta property="twitter:image" content=".*?" \/>/,
-        `<meta property="twitter:image" content="${post.coverImage}" />`
+        `<meta property="twitter:image" content="${imageUrl}" />`
     );
 
     html = html.replace(

@@ -42,6 +42,12 @@ interface MetricData {
   description: string;
 }
 
+const formatText = (text: string) => {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+};
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -65,9 +71,11 @@ export default function BlogPost() {
     switch (block.type) {
       case 'paragraph':
         return (
-          <p key={index} className="mb-6 text-lg leading-relaxed text-gray-700">
-            {block.text}
-          </p>
+          <p
+            key={index}
+            className="mb-6 text-lg leading-relaxed text-gray-700"
+            dangerouslySetInnerHTML={{ __html: formatText(block.text || '') }}
+          />
         );
 
       case 'heading':
@@ -89,7 +97,10 @@ export default function BlogPost() {
       case 'quote':
         return (
           <blockquote key={index} className="my-8 border-l-4 border-blue-600 bg-blue-50 pl-6 pr-6 py-6 italic rounded-r-lg">
-            <p className="text-xl text-gray-800 mb-3">"{block.text}"</p>
+            <p
+              className="text-xl text-gray-800 mb-3"
+              dangerouslySetInnerHTML={{ __html: `"${formatText(block.text || '')}"` }}
+            />
             {block.author && (
               <footer className="text-base text-gray-600 not-italic">
                 — {block.author}
@@ -104,7 +115,7 @@ export default function BlogPost() {
             {block.items?.map((item, i) => (
               <li key={i} className="text-lg text-gray-700 relative pl-2">
                 <span className="absolute -left-4 text-blue-600">•</span>
-                <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                <span dangerouslySetInnerHTML={{ __html: formatText(item) }} />
               </li>
             ))}
           </ul>
@@ -115,7 +126,7 @@ export default function BlogPost() {
           <ol key={index} className="mb-6 space-y-4 pl-6 list-decimal">
             {block.items?.map((item, i) => (
               <li key={i} className="text-lg text-gray-700 pl-2">
-                <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                <span dangerouslySetInnerHTML={{ __html: formatText(item) }} />
               </li>
             ))}
           </ol>
