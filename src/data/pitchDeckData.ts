@@ -344,10 +344,14 @@ export const pitchDeckSlides: PitchSlide[] = [
         sectionC: {
             type: 'bullets',
             items: [
-                { text: 'Apollo: Good database, weak AI intel', icon: 'Minus' },
-                { text: 'HubSpot: Great CRM, manual workflow', icon: 'Minus' },
-                { text: 'Clay: Good data, no full sales agent', icon: 'Minus' },
-                { text: 'DealoAgent: All-in-one AI Workflow', icon: 'CheckCircle' }
+                { text: 'Apollo: Strong database, weak conversational AI', icon: 'Minus' },
+                { text: 'HubSpot: Enterprise standard, but slow and manual', icon: 'Minus' },
+                { text: 'Clay: Excellent enrichment, not a sales workflow', icon: 'Minus' },
+                { text: 'Folk: Modern contact manager, lacks deep sales AI', icon: 'Minus' },
+                { text: 'Attio: Flexible data, requires manual build-out', icon: 'Minus' },
+                { text: 'Amplemarket: Good outreach, siloed from CRM data', icon: 'Minus' },
+                { text: 'Close: High velocity calling, weak AI reasoning', icon: 'Minus' },
+                { text: 'DealoAgent: Unified AI Sales Agent & CRM', icon: 'CheckCircle' }
             ]
         },
         sectionD: {

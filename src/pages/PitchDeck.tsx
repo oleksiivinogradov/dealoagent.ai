@@ -93,7 +93,6 @@ export default function PitchDeck() {
             10: '/pitch-deck-visuals/slide-10-pricing.png',
             11: '/pitch-deck-visuals/slide-11-traction.png',
             12: '/pitch-deck-visuals/slide-12-funnel.png',
-            13: '/pitch-deck-visuals/slide-13-competition.png',
             14: '/pitch-deck-visuals/slide-14-architecture.png',
             15: '/pitch-deck-visuals/slide-15-roadmap.png',
             17: '/pitch-deck-visuals/slide-17-fundraising.png',
@@ -221,6 +220,56 @@ export default function PitchDeck() {
             );
         }
 
+        // Special handling for Competition slide (13) - Comparison Table
+        if (slide.id === 13) {
+            return (
+                <div className="w-full h-full flex flex-col items-center justify-center p-4">
+                    <div className="w-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
+                        <div className="grid grid-cols-4 bg-white/5 border-b border-white/10">
+                            <div className="p-4 text-sm font-semibold text-slate-400">Capability</div>
+                            <div className="p-4 text-sm font-bold text-blue-400 text-center bg-blue-500/10">DealoAgent</div>
+                            <div className="p-4 text-sm font-semibold text-slate-500 text-center">Legacy CRM</div>
+                            <div className="p-4 text-sm font-semibold text-slate-500 text-center">Outreach</div>
+                        </div>
+
+                        {[
+                            { name: 'Unified Conversations', dealo: true, crm: false, outreach: false },
+                            { name: 'Competitor Intelligence', dealo: true, crm: false, outreach: false },
+                            { name: 'Auto-fill CRM', dealo: true, crm: false, outreach: false },
+                            { name: 'Contextual Outreach', dealo: true, crm: false, outreach: true },
+                            { name: 'Deal Health', dealo: true, crm: true, outreach: false },
+                        ].map((row, i) => (
+                            <div key={i} className="grid grid-cols-4 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
+                                <div className="p-4 text-sm font-medium text-slate-300 flex items-center">{row.name}</div>
+                                <div className="p-4 flex items-center justify-center bg-blue-500/5">
+                                    {row.dealo ? <CheckCircle className="w-6 h-6 text-blue-400" /> : <Minus className="w-5 h-5 text-slate-600" />}
+                                </div>
+                                <div className="p-4 flex items-center justify-center border-l border-white/5">
+                                    {row.crm ? <CheckCircle className="w-5 h-5 text-slate-500" /> : <Minus className="w-5 h-5 text-slate-600" />}
+                                </div>
+                                <div className="p-4 flex items-center justify-center border-l border-white/5">
+                                    {row.outreach ? <CheckCircle className="w-5 h-5 text-slate-500" /> : <Minus className="w-5 h-5 text-slate-600" />}
+                                </div>
+                            </div>
+                        ))}
+
+                        <div className="p-4 grid grid-cols-4 bg-white/5">
+                            <div className="text-xs text-slate-500 col-span-1 flex items-center">Key Players</div>
+                            <div className="text-xs text-slate-500 text-center col-span-1 flex items-center justify-center">Us</div>
+                            <div className="text-xs text-slate-500 text-center flex flex-col items-center justify-center">
+                                <span>HubSpot, Salesforce</span>
+                                <span>Attio, Folk, Close</span>
+                            </div>
+                            <div className="text-xs text-slate-500 text-center flex flex-col items-center justify-center">
+                                <span>Apollo, Clay</span>
+                                <span>Amplemarket</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
         if (type === 'chart' && chartType === 'timeline') {
             return (
                 <div className="w-full h-full flex items-center justify-center p-8">
@@ -261,12 +310,22 @@ export default function PitchDeck() {
                         body {
                             margin: 0;
                             padding: 0;
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
+                        }
+                        * {
+                            -webkit-print-color-adjust: exact !important;
+                            print-color-adjust: exact !important;
+                            animation: none !important;
+                            transition: none !important;
                         }
                         .print-slide {
                             page-break-after: always;
                             width: 100vw;
                             height: 100vh;
                             position: relative;
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
                         }
                         .print-slide:last-child {
                             page-break-after: auto;
@@ -283,7 +342,7 @@ export default function PitchDeck() {
                 <div>
                     {pitchDeckSlides.map((slideData) => {
                         const isDarkSlide = [1, 5, 7, 8, 13, 18].includes(slideData.id);
-                        const bgClass = isDarkSlide ? 'bg-[#0D1E44]' : 'bg-white';
+                        const bgClass = isDarkSlide ? 'bg-[#0D1E44] text-white' : 'bg-white text-slate-900';
                         const textPrimary = isDarkSlide ? 'text-white' : 'text-slate-900';
                         const textSecondary = isDarkSlide ? 'text-blue-200' : 'text-slate-600';
 
@@ -291,8 +350,12 @@ export default function PitchDeck() {
                             <div key={slideData.id} className={`print-slide ${bgClass} flex flex-col`}>
                                 {slideData.id === 1 ? (
                                     // COVER SLIDE
-                                    <div className="flex-1 flex flex-col items-center justify-center p-16 text-center">
-                                        <div className="flex flex-col items-center gap-12">
+                                    <div className="flex-1 flex flex-col items-center justify-center p-16 text-center relative overflow-hidden">
+                                        {/* Gradient Orbs */}
+                                        <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
+                                        <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl" />
+
+                                        <div className="relative z-10 flex flex-col items-center gap-12">
                                             <div className="flex items-center gap-6 scale-150">
                                                 <Logo variant="light" className="text-7xl" />
                                                 <AIBadge className="w-20 h-20" />
@@ -300,6 +363,116 @@ export default function PitchDeck() {
                                             <h2 className="text-4xl text-blue-200 font-light tracking-wide max-w-4xl leading-relaxed">
                                                 {slideData.sectionA.subtitle}
                                             </h2>
+                                        </div>
+                                    </div>
+                                ) : slideData.id === 13 ? (
+                                    // COMPETITIVE LANDSCAPE SLIDE (Custom Full Layout)
+                                    <div className="flex-1 flex flex-col items-center justify-start p-16 w-full max-w-[1800px] mx-auto">
+                                        <div className="text-center mb-12">
+                                            <h1 className="text-5xl font-bold text-white mb-4">Competitive Landscape</h1>
+                                            <p className="text-2xl text-blue-200 font-light">Why DealoAgent wins against fragmented stacks</p>
+                                        </div>
+
+                                        <div className="w-full bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                                            {/* Table Header */}
+                                            <div className="grid grid-cols-4 bg-[#0D1E44]/80 border-b border-white/10">
+                                                <div className="p-6 text-lg font-semibold text-slate-400 flex items-center">Feature</div>
+                                                <div className="relative p-6 border-x border-white/10 bg-gradient-to-b from-blue-600/20 to-transparent">
+                                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                                                    <div className="flex flex-col items-center gap-2">
+                                                        <div className="flex items-center gap-2">
+                                                            <Logo variant="light" className="text-2xl" />
+                                                            <AIBadge className="w-6 h-6" />
+                                                        </div>
+                                                        <span className="text-xs text-blue-300 font-mono tracking-wider">ALL-IN-ONE AGENT</span>
+                                                    </div>
+                                                </div>
+                                                <div className="p-6 flex flex-col items-center justify-center border-r border-white/5 bg-white/[0.02]">
+                                                    <span className="text-lg font-bold text-white">Legacy & Modern CRM</span>
+                                                    <div className="text-xs text-slate-500 mt-2 text-center leading-relaxed">
+                                                        HubSpot • Salesforce<br />Attio • Folk • Close
+                                                    </div>
+                                                </div>
+                                                <div className="p-6 flex flex-col items-center justify-center bg-white/[0.02]">
+                                                    <span className="text-lg font-bold text-white">Outreach & Data</span>
+                                                    <div className="text-xs text-slate-500 mt-2 text-center leading-relaxed">
+                                                        Apollo • Clay<br />Amplemarket
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Table Body */}
+                                            <div className="divide-y divide-white/5">
+                                                {[
+                                                    {
+                                                        feature: "Core Function",
+                                                        dealo: "Active AI Agent",
+                                                        crm: "Passive Database",
+                                                        outreach: "Templates & Lists",
+                                                        icon: Zap
+                                                    },
+                                                    {
+                                                        feature: "Data Entry",
+                                                        dealo: "100% Automated",
+                                                        crm: "Manual / Manual Link",
+                                                        outreach: "Syncs to CRM (limited)",
+                                                        icon: Database
+                                                    },
+                                                    {
+                                                        feature: "Competitor Intel",
+                                                        dealo: "Extracts from Convo & Docs",
+                                                        crm: "None (Text Field)",
+                                                        outreach: "None / Basic Intent",
+                                                        icon: Shield
+                                                    },
+                                                    {
+                                                        feature: "Context Source",
+                                                        dealo: "Email, Calls, Msgs, PDFs",
+                                                        crm: "Email Only (usually)",
+                                                        outreach: "Cold Email Only",
+                                                        icon: MessageSquare
+                                                    },
+                                                    {
+                                                        feature: "Workflow",
+                                                        dealo: "Chat-first (Natural Language)",
+                                                        crm: "Forms & Tabs UI",
+                                                        outreach: "Sequences & Tables",
+                                                        icon: Layout
+                                                    }
+                                                ].map((row, idx) => (
+                                                    <div key={idx} className="grid grid-cols-4 hover:bg-white/5 transition-colors group">
+                                                        <div className="p-6 flex items-center gap-4 border-r border-white/5">
+                                                            <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                                                                <row.icon className="w-6 h-6" />
+                                                            </div>
+                                                            <span className="text-lg text-white font-medium">{row.feature}</span>
+                                                        </div>
+
+                                                        {/* DealoAgent Column */}
+                                                        <div className="p-6 flex items-center justify-center border-x border-blue-500/30 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors relative">
+                                                            <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-blue-500/50 to-transparent"></div>
+                                                            <div className="absolute inset-y-0 right-0 w-[1px] bg-gradient-to-b from-purple-500/50 to-transparent"></div>
+                                                            <span className="text-lg font-bold text-blue-100 text-center">{row.dealo}</span>
+                                                            <CheckCircle className="w-5 h-5 text-green-400 ml-3 absolute right-4 opacity-50" />
+                                                        </div>
+
+                                                        {/* CRM Column */}
+                                                        <div className="p-6 flex items-center justify-center border-r border-white/5 text-center">
+                                                            <span className="text-lg text-slate-400">{row.crm}</span>
+                                                        </div>
+
+                                                        {/* Outreach Column */}
+                                                        <div className="p-6 flex items-center justify-center text-center">
+                                                            <span className="text-lg text-slate-400">{row.outreach}</span>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <div className="p-6 bg-white/5 border-t border-white/10 text-center">
+                                                <p className="text-slate-400 text-sm">
+                                                    <span className="text-blue-400 font-semibold">The Gap:</span> While others focus on <i>storing</i> data or <i>sending</i> emails, DealoAgent focuses on <b>understanding the deal</b> to drive it forward.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 ) : (
@@ -410,6 +583,116 @@ export default function PitchDeck() {
                                 </h2>
                             </div>
                         </div>
+                    ) : slide.id === 13 ? (
+                        // COMPETITIVE LANDSCAPE SLIDE (Custom Full Layout)
+                        <div className="flex-1 flex flex-col items-center justify-start p-16 animate-fade-in-up w-full max-w-[1800px] mx-auto">
+                            <div className="text-center mb-12">
+                                <h1 className="text-5xl font-bold text-white mb-4">Competitive Landscape</h1>
+                                <p className="text-2xl text-blue-200 font-light">Why DealoAgent wins against fragmented stacks</p>
+                            </div>
+
+                            <div className="w-full bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                                {/* Table Header */}
+                                <div className="grid grid-cols-4 bg-[#0D1E44]/80 border-b border-white/10">
+                                    <div className="p-6 text-lg font-semibold text-slate-400 flex items-center">Feature</div>
+                                    <div className="relative p-6 border-x border-white/10 bg-gradient-to-b from-blue-600/20 to-transparent">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                                        <div className="flex flex-col items-center gap-2">
+                                            <div className="flex items-center gap-2">
+                                                <Logo variant="light" className="text-2xl" />
+                                                <AIBadge className="w-6 h-6" />
+                                            </div>
+                                            <span className="text-xs text-blue-300 font-mono tracking-wider">ALL-IN-ONE AGENT</span>
+                                        </div>
+                                    </div>
+                                    <div className="p-6 flex flex-col items-center justify-center border-r border-white/5 bg-white/[0.02]">
+                                        <span className="text-lg font-bold text-white">Legacy & Modern CRM</span>
+                                        <div className="text-xs text-slate-500 mt-2 text-center leading-relaxed">
+                                            HubSpot • Salesforce<br />Attio • Folk • Close
+                                        </div>
+                                    </div>
+                                    <div className="p-6 flex flex-col items-center justify-center bg-white/[0.02]">
+                                        <span className="text-lg font-bold text-white">Outreach & Data</span>
+                                        <div className="text-xs text-slate-500 mt-2 text-center leading-relaxed">
+                                            Apollo • Clay<br />Amplemarket
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Table Body */}
+                                <div className="divide-y divide-white/5">
+                                    {[
+                                        {
+                                            feature: "Core Function",
+                                            dealo: "Active AI Agent",
+                                            crm: "Passive Database",
+                                            outreach: "Templates & Lists",
+                                            icon: Zap
+                                        },
+                                        {
+                                            feature: "Data Entry",
+                                            dealo: "100% Automated",
+                                            crm: "Manual / Manual Link",
+                                            outreach: "Syncs to CRM (limited)",
+                                            icon: Database
+                                        },
+                                        {
+                                            feature: "Competitor Intel",
+                                            dealo: "Extracts from Convo & Docs",
+                                            crm: "None (Text Field)",
+                                            outreach: "None / Basic Intent",
+                                            icon: Shield
+                                        },
+                                        {
+                                            feature: "Context Source",
+                                            dealo: "Email, Calls, Msgs, PDFs",
+                                            crm: "Email Only (usually)",
+                                            outreach: "Cold Email Only",
+                                            icon: MessageSquare
+                                        },
+                                        {
+                                            feature: "Workflow",
+                                            dealo: "Chat-first (Natural Language)",
+                                            crm: "Forms & Tabs UI",
+                                            outreach: "Sequences & Tables",
+                                            icon: Layout
+                                        }
+                                    ].map((row, idx) => (
+                                        <div key={idx} className="grid grid-cols-4 hover:bg-white/5 transition-colors group">
+                                            <div className="p-6 flex items-center gap-4 border-r border-white/5">
+                                                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                                                    <row.icon className="w-6 h-6" />
+                                                </div>
+                                                <span className="text-lg text-white font-medium">{row.feature}</span>
+                                            </div>
+
+                                            {/* DealoAgent Column */}
+                                            <div className="p-6 flex items-center justify-center border-x border-blue-500/30 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors relative">
+                                                <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-blue-500/50 to-transparent"></div>
+                                                <div className="absolute inset-y-0 right-0 w-[1px] bg-gradient-to-b from-purple-500/50 to-transparent"></div>
+                                                <span className="text-lg font-bold text-blue-100 text-center">{row.dealo}</span>
+                                                <CheckCircle className="w-5 h-5 text-green-400 ml-3 absolute right-4 opacity-50" />
+                                            </div>
+
+                                            {/* CRM Column */}
+                                            <div className="p-6 flex items-center justify-center border-r border-white/5 text-center">
+                                                <span className="text-lg text-slate-400">{row.crm}</span>
+                                            </div>
+
+                                            {/* Outreach Column */}
+                                            <div className="p-6 flex items-center justify-center text-center">
+                                                <span className="text-lg text-slate-400">{row.outreach}</span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="p-6 bg-white/5 border-t border-white/10 text-center">
+                                    <p className="text-slate-400 text-sm">
+                                        <span className="text-blue-400 font-semibold">The Gap:</span> While others focus on <i>storing</i> data or <i>sending</i> emails, DealoAgent focuses on <b>understanding the deal</b> to drive it forward.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     ) : (
                         // REGULAR SLIDES - Z-Pattern Grid
                         <>
@@ -444,15 +727,17 @@ export default function PitchDeck() {
                                 {/* ZONE C: Bottom-Left (Supporting Content) */}
                                 <div className="flex flex-col justify-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                                     {slide.sectionC.type === 'bullets' && slide.sectionC.items && (
-                                        <div className="space-y-6">
+                                        <div className={slide.sectionC.items.length > 5 ? "space-y-3" : "space-y-6"}>
                                             {slide.sectionC.items.map((item, idx) => {
                                                 const Icon = item.icon ? iconMap[item.icon] : ArrowRight;
+                                                const items = slide.sectionC.items || [];
+                                                const isLongList = items.length > 5;
                                                 return (
                                                     <div key={idx} className="flex items-center gap-4 group">
-                                                        <div className={`p-3 rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
-                                                            <Icon className={`w-6 h-6 ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
+                                                        <div className={`${isLongList ? 'p-2' : 'p-3'} rounded-xl ${isDarkSlide ? 'bg-white/10' : 'bg-blue-50'} group-hover:scale-110 transition-transform`}>
+                                                            <Icon className={`${isLongList ? 'w-5 h-5' : 'w-6 h-6'} ${isDarkSlide ? 'text-blue-300' : 'text-blue-600'}`} />
                                                         </div>
-                                                        <span className={`text-2xl ${textPrimary} font-medium`}>{item.text}</span>
+                                                        <span className={`${isLongList ? 'text-lg' : 'text-2xl'} ${textPrimary} font-medium leading-tight`}>{item.text}</span>
                                                     </div>
                                                 );
                                             })}
