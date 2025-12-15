@@ -1,5 +1,5 @@
 import { Logo, AIBadge } from "./components/Logo";
-import { FloatingCard, MetricCard } from "./components/FloatingCard";
+import { FloatingCard, MetricCard, ChatBubble } from "./components/FloatingCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
@@ -37,6 +37,7 @@ import { navigateToApp } from "./analytics";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeBubble, setActiveBubble] = useState(0);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -294,7 +295,7 @@ export default function App() {
             </div>
 
             {/* Right Content - Hero Image with Floating Cards */}
-            <div className="relative hidden lg:block">
+            <div className="relative mt-12 lg:mt-0">
               {/* Main hero image */}
               <div className="relative z-0 rounded-3xl overflow-hidden">
                 <ImageWithFallback
@@ -305,37 +306,54 @@ export default function App() {
               </div>
 
               {/* Floating UI Cards - Desktop only */}
-              <FloatingCard
-                icon={Target}
-                title="Lead Score"
-                value="94%"
-                delay={0.2}
-                className="absolute -left-8 -top-10 w-56"
+
+              {/* Top Left - Competitive Analysis */}
+              <ChatBubble
+                question="Is our pricing higher than Competitor X?"
+                answer="Competitor X is cheaper on entry tier, but 20% more expensive for enterprise. Summary: We win on scale."
+                isActive={activeBubble === 0}
+                onComplete={() => setActiveBubble(1)}
+                className="absolute -left-2 -top-8 sm:-left-12 sm:top-4 z-20 scale-75 sm:scale-100 origin-bottom-left"
               />
 
-              <FloatingCard
-                icon={TrendingUp}
-                title="Conversion Rate"
-                subtitle="Last 30 days"
-                value="+34%"
-                delay={0.4}
-                className="absolute -right-8 -top-10 w-64"
+              {/* Top Right - Pipeline Visualization */}
+              <ChatBubble
+                question="Visualize my pipeline velocity"
+                answer={
+                  <div className="space-y-2">
+                    <p>Pipeline velocity increased by 35% this month.</p>
+                    <div className="flex h-16 items-end gap-1 px-1 border-b border-white/10 pb-1">
+                      <div className="w-4 bg-blue-500/30 h-[40%] rounded-t-sm" />
+                      <div className="w-4 bg-blue-500/40 h-[60%] rounded-t-sm" />
+                      <div className="w-4 bg-blue-500/60 h-[50%] rounded-t-sm" />
+                      <div className="w-4 bg-blue-500/80 h-[80%] rounded-t-sm" />
+                      <div className="w-4 bg-blue-500 h-[100%] rounded-t-sm relative group">
+                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white text-blue-900 text-[10px] font-bold px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                          +35%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                }
+                isActive={activeBubble === 1}
+                onComplete={() => setActiveBubble(2)}
+                className="absolute -right-2 -top-4 sm:-right-16 sm:top-12 z-10 scale-75 sm:scale-100 origin-bottom-right"
               />
 
-              <MetricCard
-                label="Deal velocity"
-                value="18 days"
-                trend="+12% faster"
-                delay={0.6}
-                className="absolute -left-4 bottom-32 w-48"
-              />
-
-              <FloatingCard
-                icon={MessageSquare}
-                title="AI Outreach Generated"
-                value="247"
-                delay={0.8}
-                className="absolute -right-4 bottom-20 w-60"
+              {/* Bottom Left - Deal Research */}
+              <ChatBubble
+                question="Why is the Deal with ACME stuck?"
+                answer={
+                  <span>
+                    Their CTO mentioned <span className="text-red-300 font-semibold">"budget freeze"</span> in a podcast yesterday.
+                    <div className="mt-2 rounded bg-white/10 p-2 text-[10px] border-l-2 border-green-400">
+                      <span className="text-green-300 font-semibold uppercase">Suggestion:</span> Offer Q1 delayed payment.
+                    </div>
+                  </span>
+                }
+                isActive={activeBubble === 2}
+                onComplete={() => setActiveBubble(0)}
+                className="absolute -left-2 -bottom-12 sm:-left-12 sm:-bottom-16 z-20 scale-75 sm:scale-100 origin-top-left"
               />
 
               {/* AI Badge floating */}
