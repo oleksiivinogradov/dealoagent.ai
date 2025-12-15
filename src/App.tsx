@@ -1,5 +1,5 @@
 import { Logo, AIBadge } from "./components/Logo";
-import { FloatingCard, MetricCard, ChatBubble } from "./components/FloatingCard";
+import { ChatBubble } from "./components/FloatingCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
