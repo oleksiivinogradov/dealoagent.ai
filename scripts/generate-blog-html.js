@@ -107,6 +107,48 @@ blogPosts.forEach(post => {
         );
     }
 
+    // Generate HTML content for SEO
+    const renderContent = (content) => {
+        return content.map(block => {
+            switch (block.type) {
+                case 'paragraph':
+                    return `<p>${block.text}</p>`;
+                case 'heading':
+                    return `<h${block.level}>${block.text}</h${block.level}>`;
+                case 'list':
+                    return `<ul>${block.items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+                case 'quote':
+                    return `<blockquote>${block.text}<footer>- ${block.author}</footer></blockquote>`;
+                case 'metrics':
+                    return `<div class="metrics">${block.data.map(m => `<div><h3>${m.label}</h3><p>${m.value}</p><p>${m.description}</p></div>`).join('')}</div>`;
+                case 'cta':
+                    return `<div class="cta"><h3>${block.title}</h3><p>${block.description}</p><a href="${block.primaryButton.url}">${block.primaryButton.text}</a></div>`;
+                default:
+                    return '';
+            }
+        }).join('\n');
+    };
+
+    const postContentHtml = `
+        <article>
+            <h1>${post.title}</h1>
+            <h2>${post.subtitle}</h2>
+            <div class="metadata">
+                <p>By ${post.author} | ${post.publishDate} | ${post.readTime}</p>
+                <img src="${imageUrl}" alt="${post.title}" />
+            </div>
+            <div class="content">
+                ${renderContent(post.content)}
+            </div>
+        </article>
+    `;
+
+    // Inject content into proper container for SEO (replacing empty root)
+    html = html.replace(
+        /<div id="root"><\/div>/,
+        `<div id="root">${postContentHtml}</div>`
+    );
+
     // Write the HTML file
     fs.writeFileSync(path.join(postDir, 'index.html'), html);
     console.log(`✓ Generated: /blog/${post.slug}/index.html`);
