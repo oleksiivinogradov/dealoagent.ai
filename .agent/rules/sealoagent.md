@@ -187,8 +187,12 @@ After creating any blog post, **ALWAYS** propose a LinkedIn post text to share i
 - Add context: "(It's hypothetical, but the problem is very real for...)"
 
 **Engagement Hook:**
-- **Financial Incentive (MANDATORY)**: You MUST include this specific offer to drive comments:
+- **Financial Incentive (MANDATORY)**: You MUST include an offer to drive comments. To avoid sounding automated, randomly select one of these variations:
   - "Comment on this LinkedIn post and I will add $2 to your DealoAgent balance."
+  - "Drop a comment below, and I'll credit $2 to your DealoAgent account to try it out."
+  - "If you join the discussion in the comments, I'll add a $2 credit to your balance."
+  - "I'm adding $2 to the DealoAgent balance of anyone who shares their take below."
+  - "Leave your thoughts in the comments — I'm giving a $2 credit to everyone who chimes in."
 - Always end with a real question that invites discussion
 - Examples:
   - "Curious if others have run into this. How do you find the actual buyers when you have thousands of free users?"
