@@ -4,7 +4,7 @@ interface FeatureCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  features: string[];
+  features: (string | { text: string; icon: LucideIcon })[];
   className?: string;
 }
 
@@ -22,26 +22,36 @@ export function FeatureCard({ icon: Icon, title, description, features, classNam
         <p className="mb-6 text-gray-600 leading-relaxed text-sm sm:text-base">{description}</p>
 
         <div className="space-y-3">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-3 rounded-xl bg-white/60 p-3 border border-indigo-100 hover:border-indigo-300 hover:bg-white hover:shadow-sm transition-all">
-              <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100">
-                <svg
-                  className="h-3 w-3 text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+          {features.map((feature, index) => {
+            const isObject = typeof feature === 'object' && feature !== null;
+            const text = isObject ? feature.text : feature;
+            const ItemIcon = isObject ? feature.icon : null;
+
+            return (
+              <div key={index} className="flex items-start gap-3 rounded-xl bg-white/60 p-3 border border-indigo-100 hover:border-indigo-300 hover:bg-white hover:shadow-sm transition-all">
+                <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100">
+                  {ItemIcon ? (
+                    <ItemIcon className="h-3 w-3 text-indigo-600" />
+                  ) : (
+                    <svg
+                      className="h-3 w-3 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  )}
+                </div>
+                <span className="text-sm text-gray-700 leading-snug">{text}</span>
               </div>
-              <span className="text-sm text-gray-700 leading-snug">{feature}</span>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
