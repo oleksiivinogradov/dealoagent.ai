@@ -1,5 +1,163 @@
 [
   {
+    "id": "robert-half-sales-transformation-dealoagent",
+    "slug": "how-robert-half-sales-team-could-triple-pipeline-with-ai",
+    "title": "How Robert Half's Sales Team Could Triple Their Pipeline with AI",
+    "subtitle": "A hypothetical deep dive: Transforming generic outreach into hyper-personalized client acquisition for one of the world's largest staffing firms.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2025-12-17",
+    "readTime": "8 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/robert_half_sales_manager.png",
+    "excerpt": "Robert Half defines the staffing industry, but even the biggest players face the 'spray and pray' trap. In this hypothetical case study, we explore how their Business Development Managers could use DealoAgent to automate prospecting, personalize outreach at scale, and never miss a follow-up—turning cold calls into warm relationships.",
+    "tags": [
+      "Case Study",
+      "Staffing",
+      "Sales Intelligence",
+      "AI",
+      "Robert Half"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how a Business Development Manager at Robert Half could leverage DealoAgent.AI. Robert Half is a real, industry-leading staffing firm, but this scenario involving 'Mark' is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "In the staffing world, **Robert Half** requires no introduction. As the world's first and largest specialized staffing firm, they set the standard. But for the individual Business Development Managers (BDMs) on the front lines, the brand name alone doesn't guarantee meetings. The market is saturated, and specialized talent shortages make client acquisition a fierce battle."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The 'Spray and Pray' Trap"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Mark**, a hypothetical Senior Business Development Manager at a busy Robert Half branch. Mark is driven and experienced, but his day is consumed by manual friction. To hit his KPIs, he needs to bring in new job orders constantly."
+      },
+      {
+        "type": "paragraph",
+        "text": "However, his workflow is stuck in the past:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Manual Prospecting**: Mark spends hours every morning manually hunting for companies hiring finance or tech professionals. It's a slow, hit-or-miss process finding the right hiring manager.",
+          "**Generic Outreach**: Because he needs to hit high activity targets (calls/emails per day), he falls into the 'spray and pray' trap. He sends generic emails to unmatched lists. Personalization is impossible at that scale, so response rates are low.",
+          "**Lost Context**: When a lead finally replies two weeks later, Mark often scrambles. 'Did I speak to this guy's colleague last year?' He walks into calls blindly, having to ask basic questions he should already know the answers to.",
+          "**Missed Follow-ups**: Mark relies on sticky notes and memory to manage his pipeline. Valuable leads constantly slip through the cracks because he simply forgets to circle back at the right time."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I feel like I'm running on a treadmill. I'm making 50 calls a day, sending 100 emails, but it feels like I'm just making noise, not building relationships. I need to be smarter, not just louder.",
+        "author": "Hypothetical scenario: Mark, Senior BDM at Robert Half"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Sales Copilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Mark's branch integrates **DealoAgent** to empower their sales team. It doesn't replace the relationship building; it automates the groundwork."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. AI-Driven Targeting & Prospecting"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mark helps himself to a coffee and opens DealoAgent. He doesn't need to hunt. The AI has already identified 20 companies in his territory that just posted job openings matching his candidate roster."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Smart Matching**: DealoAgent highlights *why* they are a match: 'Company X just raised Series B and is hiring 3 Financial Controllers. You have 2 candidates who match this profile perfectly.'"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Hyper-Personalization at Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of sending a template, Mark asks DealoAgent to help. The AI drafts outreach messages that are **hyper-personalized**."
+      },
+      {
+        "type": "quote",
+        "text": "Subject: Your Financial Controller Search vs. [Candidate Name]\n\nHi [Hiring Manager], saw the news about your Series B—congrats! I noticed you're building out the finance function. I'm representing a Controller who just exited a similar stage SaaS company and managed a successful audit. Would you like to see their blinded profile?",
+        "author": "DealoAgent Drafted Email"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mark reviews, tweaks one line, and sends. He does this for 20 high-quality targets in 30 minutes, achieving a level of quality that used to take all day."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Unified Intelligence & Smart Re-engagement"
+      },
+      {
+        "type": "paragraph",
+        "text": "A dormant lead from 6 months ago, 'TechSolutions', suddenly visits the Robert Half website. DealoAgent alerts Mark immediately."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Cheat Sheet**: Before Mark picks up the phone, DealoAgent gives him a summary: 'You spoke to Sarah (CEO) last May. They were freezing hiring then. They just posted a CTO role.' Mark calls with full context, turning a cold call into a warm solutions consultation."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Pipeline Velocity",
+            "value": "3x",
+            "description": "More qualified meetings per week"
+          },
+          {
+            "label": "Response Rate",
+            "value": "+40%",
+            "description": "Due to hyper-relevant messaging"
+          },
+          {
+            "label": "Client Retention",
+            "value": "+25%",
+            "description": "Never missing a follow-up or check-in"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a brand like Robert Half, the difference between a good year and a great year is sales efficiency. By using DealoAgent to eliminate the 'spray and pray' approach, Mark moves from being a telemarketer to being a strategic talent advisor. He spends less time searching and more time selling."
+      },
+      {
+        "type": "cta",
+        "title": "Supercharge Your Sales Team",
+        "description": "See how DealoAgent can fill your pipeline with high-intent leads.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "accel-analyst-transformation-dealoagent",
     "slug": "how-accel-analyst-automates-diligence-with-dealoagent",
     "title": "How an Investment Analyst at Accel Could Automate Due Diligence with AI",
