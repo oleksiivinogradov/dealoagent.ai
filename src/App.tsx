@@ -48,50 +48,38 @@ export default function App() {
   const features = [
     {
       icon: Search,
-      title: "AI-Powered Competitive Intelligence",
-      description: "Stay ahead of competitors without manual research. Our AI automatically tracks competitor moves across all channels and delivers actionable insights.",
+      title: "Deep Multi-Source Research & Analysis",
+      description: "Automate complex information gathering across multiple hops. Whether for Competitor Analysis, VC Due Diligence, or HR Screening, AI fills in the gaps from documents and conversations.",
       features: [
-        "Automatically extract pricing & features from competitor emails and proposals",
-        "Real-time website monitoring for product changes and updates",
-        "AI-generated comparison tables with strengths/weaknesses analysis",
-        "Sentiment tracking from competitor interactions",
-        "Weekly intelligence briefings with actionable recommendations",
+        "Extract structured data from emails, proposals, and complex documents automatically",
+        "Directly scrape target websites and auto-summarize key information",
+        "Build comprehensive comparison tables for Competitors, Candidates, or Startups",
+        "Handle multi-channel interactions and extract text from any attached file type",
+        "Automatically draft outreach messages to request missing specific information",
       ],
     },
-    {
-      icon: MessageSquare,
-      title: "Unified Communication Intelligence",
-      description: "Never miss context again. Connect all your communication channels and let AI turn scattered conversations into a complete customer knowledge base.",
-      features: [
-        "Centralize email, Microsoft Teams, and messenger conversations",
-        "Semantic search across all messages and attachments",
-        "Automatic conversation-to-deal matching and categorization",
-        "AI-powered relationship health scoring from communication patterns",
-        "Extract key insights from PDFs, presentations, and documents automatically",
-      ],
-    },
+
     {
       icon: Bot,
       title: "Natural Language CRM",
       description: "Forget complex CRM interfaces. Just chat with your AI copilot to manage deals, find information, and execute workflows in seconds.",
       features: [
-        "Ask questions in plain English - get instant answers from your data",
+        "Ask questions in plain native language - get instant answers from your data",
         "No manual data entry - AI fills CRM from emails and conversations",
-        "Design custom sales processes through simple conversation",
-        "Built-in web search for real-time market intelligence",
-        "One chat interface for every sales task - no app switching",
+        "One chat interface for any task - no app switching or copy-pasting",
+        "Execute complex workflows with a single command",
       ],
     },
     {
       icon: Mail,
       title: "Context-Aware Outreach Generator",
-      description: "Stop sending generic emails. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
+      description: "Stop sending generic emails or messages. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
       features: [
         "AI drafts emails using full conversation history and client context",
+        "Use deep research to find hidden facts about leads and use them in outreach",
         "Learn from your best-performing messages and replicate success",
-        "Personalize at scale across hundreds of prospects simultaneously",
         "Multi-channel sequences across email and messaging platforms",
-        "Human approval workflow - you stay in control",
+        "Navigate and teach AI your personal preferences to improve future generations",
       ],
     },
     {
@@ -100,10 +88,10 @@ export default function App() {
       description: "Let AI guide you to close faster. Get proactive recommendations, risk alerts, and next-best-action suggestions for every deal in your pipeline.",
       features: [
         "AI identifies at-risk deals from conversation sentiment and engagement",
-        "Automated deal stage progression based on communication signals",
+        "AI investigates lost conversations to generate refresh messages automatically",
         "Priority scoring to focus on highest-value opportunities",
-        "Predictive close date estimates using historical patterns",
-        "Proactive coaching on what to say and when to follow up",
+        "With AI automation you can close 100x more deals",
+        "Build warm relationships with decision makers using context from every interaction",
       ],
     },
     {
@@ -126,8 +114,7 @@ export default function App() {
         "Conversation analytics showing message sentiment trends over time",
         "Win/loss analysis with AI-identified success factors",
         "Team performance metrics and coaching opportunities",
-        "Transparent AI usage tracking and cost management",
-        "Custom reports through natural language queries",
+        "Create custom reports with charts, tables, and infographics to visualize any information",
       ],
     },
     {
@@ -137,7 +124,6 @@ export default function App() {
       features: [
         "Role-based access control (RBAC) for admins, managers, and reps",
         "Secure employee login with single sign-on (SSO) support",
-        "Individual performance tracking and activity logs",
         "Easy onboarding and offboarding of team members",
         "Customizable permission sets for different departments",
       ],
@@ -825,7 +811,11 @@ export default function App() {
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
             {features.map((feature, index) => (
-              <FeatureCard key={index} {...feature} />
+              <FeatureCard
+                key={index}
+                {...feature}
+                className={index === features.length - 1 && features.length % 2 !== 0 ? "md:col-span-2 md:w-[calc(50%-1rem)] md:mx-auto" : ""}
+              />
             ))}
           </div>
 
