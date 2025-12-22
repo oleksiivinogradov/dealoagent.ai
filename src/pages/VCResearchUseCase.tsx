@@ -67,7 +67,7 @@ export default function VCResearchUseCase() {
                                                 <strong>Instant Landscapes:</strong> I ask "Show me the competitive map for [Startup]" and get a detailed comparison table with strengths and weaknesses in seconds.
                                             </li>
                                             <li>
-                                                <strong>Deep AI Research:</strong> The AI autonomously researches every lead, analyzing founders' backgrounds, market size, and competitor landscapes to generate a detailed investment thesis before I even open the pitch deck.
+                                                <strong>Deep AI Research:</strong> AI autonomously searches for 'hidden facts' and mentions about founders across 750M+ verified email records and public web data to build a 100% personalized investment thesis and background report.
                                             </li>
                                             <li>
                                                 <strong>Native Language Communication:</strong> I simply chat with the AI to get real-time insights. "Show me the competitive landscape" or "Draft a follow-up" - it understands context and executes instantly.

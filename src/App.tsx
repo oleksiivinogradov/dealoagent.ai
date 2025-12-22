@@ -72,6 +72,17 @@ export default function App() {
 
   const features = [
     {
+      icon: Target,
+      title: "B2B Lead Sourcing & Intelligence",
+      description: "Find high-quality leads and build deep relationships using verified commercial databases and AI-driven deep research.",
+      features: [
+        { text: "Integrated database with 750M+ verified business emails for precision lead sourcing", icon: Database },
+        { text: "AI-powered 'hidden' web search to uncover lead mentions and obscure facts across the web", icon: Globe },
+        { text: "Build 100% personalized outreach that transforms cold leads into warm relationships", icon: Heart },
+        { text: "Automatic enrichment of CRM records with real-time contact and company data", icon: ScanSearch },
+      ],
+    },
+    {
       icon: Search,
       title: "Deep Multi-Source Research & Analysis",
       description: "Automate complex information gathering across multiple hops. Whether for Competitor Analysis, VC Due Diligence, or HR Screening, AI fills in the gaps from documents and conversations.",
@@ -101,7 +112,7 @@ export default function App() {
       description: "Stop sending generic emails or messages. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
       features: [
         { text: "AI drafts emails using full conversation history and client context", icon: PenTool },
-        { text: "Use deep research to find hidden facts about leads and use them in outreach", icon: ScanSearch },
+        { text: "Use AI 'hidden' Google search to find hidden facts about leads for 100% personalized outreach", icon: ScanSearch },
         { text: "Learn from your best-performing messages and replicate success", icon: TrendingUp },
         { text: "Multi-channel sequences across email and messaging platforms", icon: Share2 },
         { text: "Navigate and teach AI your personal preferences to improve future generations", icon: UserCog },

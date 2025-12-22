@@ -149,10 +149,10 @@ export default function RecruitingUseCase() {
                                         <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
                                             <li>
-                                                <strong>AI-Driven Targeting:</strong> DealoAgent identifies companies matching our niche who just posted relevant jobs, delivering a daily list of high-intent leads.
+                                                <strong>AI-Driven Targeting:</strong> DealoAgent identifies high-intent leads using integrated databases with 750M+ verified emails and tracks companies matching your niche who just posted relevant jobs.
                                             </li>
                                             <li>
-                                                <strong>Hyper-Personalization:</strong> The AI drafts outreach messages that reference the prospect's specific open roles, company news, and even suggests our top candidates who fit.
+                                                <strong>Hyper-Personalization:</strong> AI uses 'hidden facts' search to uncover lead mentions online, creating 100% personalized messages that reference specific roles, company news, and our top candidates.
                                             </li>
                                             <li>
                                                 <strong>Unified Intelligence:</strong> Every email, call, and LinkedIn message is analyzed. I get a "cheat sheet" before every interaction with full context and suggested talking points.
