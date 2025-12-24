@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import RecruitingUseCase from './pages/RecruitingUseCase';
 import SoftwareSalesUseCase from './pages/SoftwareSalesUseCase';
 import VCResearchUseCase from './pages/VCResearchUseCase';
+import CallCenterUseCase from './pages/CallCenterUseCase';
 import UseCases from './pages/UseCases';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
@@ -139,6 +140,7 @@ function AppContent() {
         <Route path="/usecases/recruiting" element={<RecruitingUseCase />} />
         <Route path="/usecases/softwaresales" element={<SoftwareSalesUseCase />} />
         <Route path="/usecases/vcresearch" element={<VCResearchUseCase />} />
+        <Route path="/usecases/callcenter" element={<CallCenterUseCase />} />
       </Routes>
     </>
   );
