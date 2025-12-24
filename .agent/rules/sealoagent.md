@@ -10,6 +10,8 @@ When creating blog posts, follow these requirements:
 
 
 ### Content Guidelines
+CRITICAL - do not repeat companies and persons in posts.
+
 1. **Companies may be real** but posts must be **hypothetical scenarios**
    - Example: "Let say manager [real manager name] at [real company] uses DealoAgent for [real use case]"
    - After migrating to DealoAgent, show how the manager would approach the case using AI-powered methods
