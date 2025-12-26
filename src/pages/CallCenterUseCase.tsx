@@ -13,6 +13,7 @@ import {
     Headphones
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => void }) {
     const phrases = [
@@ -74,6 +75,11 @@ export default function CallCenterUseCase() {
 
     return (
         <div className="min-h-screen bg-white">
+            <Helmet>
+                <title>AI for Call Centers & BPOs - DealoAgent.ai</title>
+                <meta name="description" content="AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage." />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/callcenter" />
+            </Helmet>
             <Navigation />
 
             <main className="pt-20">

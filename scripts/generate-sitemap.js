@@ -61,6 +61,12 @@ const generateSitemap = () => {
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>${BASE_URL}/usecases/callcenter</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>${BASE_URL}/pitchdeck</loc>
         <lastmod>${today}</lastmod>
         <changefreq>monthly</changefreq>

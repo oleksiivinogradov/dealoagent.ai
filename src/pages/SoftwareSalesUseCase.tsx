@@ -1,10 +1,16 @@
 import { Navigation } from "../Router";
 import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function SoftwareSalesUseCase() {
     return (
         <div className="min-h-screen bg-white">
+            <Helmet>
+                <title>AI for Software Sales - DealoAgent.ai</title>
+                <meta name="description" content="Accelerate your sales cycle and win more deals with AI-powered intelligence for managers and executives." />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/softwaresales" />
+            </Helmet>
             <Navigation />
 
             <main className="pt-20">

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import { Button } from './ui/button';
 import blogPosts from '../data/blogPosts.json';
+import { Helmet } from "react-helmet-async";
 
 export default function Blog() {
   const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
@@ -10,6 +11,12 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>DealoAgent Blog - AI Sales Insights & Case Studies</title>
+        <meta name="description" content="Explore the latest insights on AI-powered sales intelligence, real customer success stories of recruiting agencies, venture capitals and software sales." />
+        <link rel="canonical" href="https://dealoagent.ai/blog" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-20">
         <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl" />

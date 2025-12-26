@@ -1,10 +1,16 @@
 import { Navigation } from "../Router";
 import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function RecruitingUseCase() {
     return (
         <div className="min-h-screen bg-white">
+            <Helmet>
+                <title>AI for Recruiting Agencies - DealoAgent.ai</title>
+                <meta name="description" content="Automate candidate screening, parsing, and outreach with DealoAgent.ai. See how recruiters save 70% of admin time." />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/recruiting" />
+            </Helmet>
             <Navigation />
 
             <main className="pt-20">

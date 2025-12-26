@@ -234,6 +234,8 @@ export default function BlogPost() {
         <meta property="twitter:title" content={post.title} />
         <meta property="twitter:description" content={post.excerpt} />
         <meta property="twitter:image" content={post.coverImage} />
+
+        <link rel="canonical" href={`https://dealoagent.ai/blog/${post.slug}`} />
       </Helmet>
 
       {/* Back Button */}
