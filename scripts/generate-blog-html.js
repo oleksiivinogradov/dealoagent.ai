@@ -32,24 +32,24 @@ blogPosts.forEach(post => {
 
     // Update title
     html = html.replace(
-        /<title>.*?<\/title>/,
+        /<title>[\s\S]*?<\/title>/,
         `<title>${post.title} | DealoAgent.ai</title>`
     );
 
     // Update description
     html = html.replace(
-        /<meta name="description" content=".*?" \/>/,
+        /<meta name="description"[\s\S]*?\/>/,
         `<meta name="description" content="${post.excerpt}" />`
     );
 
     // Update OG tags
     html = html.replace(
-        /<meta property="og:title" content=".*?" \/>/,
+        /<meta property="og:title"[\s\S]*?\/>/,
         `<meta property="og:title" content="${post.title}" />`
     );
 
     html = html.replace(
-        /<meta property="og:description" content=".*?" \/>/,
+        /<meta property="og:description"[\s\S]*?\/>/,
         `<meta property="og:description" content="${post.excerpt}" />`
     );
 
@@ -58,38 +58,38 @@ blogPosts.forEach(post => {
         : post.coverImage;
 
     html = html.replace(
-        /<meta property="og:image" content=".*?" \/>/,
+        /<meta property="og:image"[\s\S]*?\/>/,
         `<meta property="og:image" content="${imageUrl}" />`
     );
 
     html = html.replace(
-        /<meta property="og:url" content=".*?" \/>/,
+        /<meta property="og:url"[\s\S]*?\/>/,
         `<meta property="og:url" content="https://dealoagent.ai/blog/${post.slug}" />`
     );
 
     html = html.replace(
-        /<meta property="og:type" content=".*?" \/>/,
+        /<meta property="og:type"[\s\S]*?\/>/,
         `<meta property="og:type" content="article" />`
     );
 
     // Update Twitter tags
     html = html.replace(
-        /<meta property="twitter:title" content=".*?" \/>/,
+        /<meta property="twitter:title"[\s\S]*?\/>/,
         `<meta property="twitter:title" content="${post.title}" />`
     );
 
     html = html.replace(
-        /<meta property="twitter:description" content=".*?" \/>/,
+        /<meta property="twitter:description"[\s\S]*?\/>/,
         `<meta property="twitter:description" content="${post.excerpt}" />`
     );
 
     html = html.replace(
-        /<meta property="twitter:image" content=".*?" \/>/,
+        /<meta property="twitter:image"[\s\S]*?\/>/,
         `<meta property="twitter:image" content="${imageUrl}" />`
     );
 
     html = html.replace(
-        /<meta property="twitter:url" content=".*?" \/>/,
+        /<meta property="twitter:url"[\s\S]*?\/>/,
         `<meta property="twitter:url" content="https://dealoagent.ai/blog/${post.slug}" />`
     );
 
@@ -97,7 +97,7 @@ blogPosts.forEach(post => {
     const canonicalUrl = `https://dealoagent.ai/blog/${post.slug}`;
     if (html.includes('<link rel="canonical"')) {
         html = html.replace(
-            /<link rel="canonical" href=".*?" \/>/,
+            /<link rel="canonical"[\s\S]*?\/>/,
             `<link rel="canonical" href="${canonicalUrl}" />`
         );
     } else {
