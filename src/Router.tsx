@@ -10,6 +10,7 @@ import SoftwareSalesUseCase from './pages/SoftwareSalesUseCase';
 import VCResearchUseCase from './pages/VCResearchUseCase';
 import CallCenterUseCase from './pages/CallCenterUseCase';
 import UseCases from './pages/UseCases';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -141,6 +142,7 @@ function AppContent() {
         <Route path="/usecases/softwaresales" element={<SoftwareSalesUseCase />} />
         <Route path="/usecases/vcresearch" element={<VCResearchUseCase />} />
         <Route path="/usecases/callcenter" element={<CallCenterUseCase />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </>
   );
