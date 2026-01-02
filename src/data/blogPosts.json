@@ -35,24 +35,24 @@
       },
       {
         "type": "paragraph",
-        "text": "Meet **David**, a hypothetical VP of Operations at TaskUs. David is responsible for a major fintech client account with 500+ agents. His clients demand perfection, but his current tools only give him a keyhole view of performance."
+        "text": "Meet **Arjay Angodung**, a VP of Operations at TaskUs. Arjay is responsible for major client accounts and delivering operational excellence. His clients demand perfection, but his current tools only give him a keyhole view of performance."
       },
       {
         "type": "paragraph",
-        "text": "David's operational reality is plagued by blind spots:"
+        "text": "Arjay's operational reality is plagued by blind spots:"
       },
       {
         "type": "list",
         "items": [
           "**1% QA Sample Liability**: His Quality Assurance team can realistically listen to only 1-2% of calls. This means 98% of interactions go unchecked. He lies awake at night worrying about the one compliance breach buried in that 98% that could cost the account.",
           "**Biased QA Scoring**: When agents are scored, it's often subjective. One QA analyst might be lenient, another strict. This inconsistency frustrates agents and makes 'performance improvement plans' hard to enforce.",
-          "**Unclear Seat Utilization**: David knows some agents are underutilized while others are burning out, but the data is aggregated and delayed. He struggles to prove true 'Occupancy' efficiency to his client during QBRs."
+          "**Unclear Seat Utilization**: Arjay knows some agents are underutilized while others are burning out, but the data is aggregated and delayed. He struggles to prove true 'Occupancy' efficiency to his client during QBRs."
         ]
       },
       {
         "type": "quote",
         "text": "We are flying a jumbo jet with a dashboard that only updates once a week. I need to know what's happening on the floor right now, not what happened last Monday.",
-        "author": "Hypothetical scenario: David, VP of Operations at TaskUs"
+        "author": "Hypothetical scenario: Arjay Angodung, VP of Operations at TaskUs"
       },
       {
         "type": "heading",
@@ -61,7 +61,7 @@
       },
       {
         "type": "paragraph",
-        "text": "In this hypothetical transformation, David deploys **DealoAgent** across his sites. It integrates directly with the telephony switch, analyzing the audio stream of every single call in real-time."
+        "text": "In this hypothetical transformation, Arjay deploys **DealoAgent** across his sites. It integrates directly with the telephony switch, analyzing the audio stream of every single call in real-time."
       },
       {
         "type": "heading",
@@ -74,7 +74,7 @@
       },
       {
         "type": "paragraph",
-        "text": "**The Safety Net**: If an agent misses a mandatory 'Mini-Miranda' disclosure or uses a prohibited phrase, the system flags it instantly. David's dashboard lights up, and a supervisor can intervene before the call even ends. The liability risk drops to near zero."
+        "text": "**The Safety Net**: If an agent misses a mandatory 'Mini-Miranda' disclosure or uses a prohibited phrase, the system flags it instantly. Arjay's dashboard lights up, and a supervisor can intervene before the call even ends. The liability risk drops to near zero."
       },
       {
         "type": "heading",
@@ -83,7 +83,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Subjectivity is eliminated. DealoAgent scores every agent on the same criteria every time. David can now see exactly who his top performers are based on distinct metrics like 'Script Adherence' and 'Customer Sentiment Adjustment', not just who the supervisors like best."
+        "text": "Subjectivity is eliminated. DealoAgent scores every agent on the same criteria every time. Arjay can now see exactly who his top performers are based on distinct metrics like 'Script Adherence' and 'Customer Sentiment Adjustment', not just who the supervisors like best."
       },
       {
         "type": "paragraph",
@@ -96,16 +96,16 @@
       },
       {
         "type": "paragraph",
-        "text": "During a tense QBR with the client, they ask: 'Why was Average Handle Time high last Tuesday?' Instead of emailing a data analyst and waiting 4 hours, David opens DealoAgent and asks:"
+        "text": "During a tense QBR with the client, they ask: 'Why was Average Handle Time high last Tuesday?' Instead of emailing a data analyst and waiting 4 hours, Arjay opens DealoAgent and asks:"
       },
       {
         "type": "quote",
         "text": "Show me the top call drivers for last Tuesday impacting AHT > 10 minutes.",
-        "author": "David's Query"
+        "author": "Arjay's Query"
       },
       {
         "type": "paragraph",
-        "text": "The AI instantly correlates the data: *'AHT spike caused by system outage on the payment gateway (34% of calls). Agents were waiting for the system to load.'* David shows the chart to the client immediately, proving it wasn't an agent performance issue."
+        "text": "The AI instantly correlates the data: *'AHT spike caused by system outage on the payment gateway (34% of calls). Agents were waiting for the system to load.'* Arjay shows the chart to the client immediately, proving it wasn't an agent performance issue."
       },
       {
         "type": "heading",
