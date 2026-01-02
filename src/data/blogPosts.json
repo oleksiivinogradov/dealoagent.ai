@@ -1,5 +1,162 @@
 [
   {
+    "id": "taskus-operations-qa-transformation",
+    "slug": "how-taskus-operations-could-eliminate-qa-blindspots",
+    "title": "How a TaskUs VP of Operations Could Eliminate QA Blind Spots with AI",
+    "subtitle": "A hypothetical deep dive: Moving from 1% QA sampling to 100% full-coverage intelligence.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-01-02",
+    "readTime": "9 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/taskus_site_director_dashboard.png",
+    "excerpt": "TaskUs is known for tech-forward outsourcing, but scaling QA remains a challenge. In this hypothetical case study, we see how 'David', a VP of Operations, could use DealoAgent to audit 100% of calls, remove compliance risks, and empower his site directors with natural language BI.",
+    "tags": [
+      "Case Study",
+      "Call Center",
+      "TaskUs",
+      "AI",
+      "Quality Assurance"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how a VP of Operations at TaskUs could leverage DealoAgent.AI. TaskUs is a real, industry-leading digital outsourcer, but this scenario involving 'David' is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**TaskUs** has built a reputation as the BPO for the world's most innovative tech companies. They handle complex, high-stakes interactions where quality isn't just a metric—it's the product. But for the operational leaders managing thousands of agents across multiple geos, maintaining consistent quality at scale is a constant battle against the 'Review Gap'."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The 1% Visibility Trap"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **David**, a hypothetical VP of Operations at TaskUs. David is responsible for a major fintech client account with 500+ agents. His clients demand perfection, but his current tools only give him a keyhole view of performance."
+      },
+      {
+        "type": "paragraph",
+        "text": "David's operational reality is plagued by blind spots:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**1% QA Sample Liability**: His Quality Assurance team can realistically listen to only 1-2% of calls. This means 98% of interactions go unchecked. He lies awake at night worrying about the one compliance breach buried in that 98% that could cost the account.",
+          "**Biased QA Scoring**: When agents are scored, it's often subjective. One QA analyst might be lenient, another strict. This inconsistency frustrates agents and makes 'performance improvement plans' hard to enforce.",
+          "**Unclear Seat Utilization**: David knows some agents are underutilized while others are burning out, but the data is aggregated and delayed. He struggles to prove true 'Occupancy' efficiency to his client during QBRs."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "We are flying a jumbo jet with a dashboard that only updates once a week. I need to know what's happening on the floor right now, not what happened last Monday.",
+        "author": "Hypothetical scenario: David, VP of Operations at TaskUs"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Automated Intelligence Floor"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, David deploys **DealoAgent** across his sites. It integrates directly with the telephony switch, analyzing the audio stream of every single call in real-time."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. 100% QA Audit & Compliance Firewall"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent doesn't sample; it listens to everything. It transcribes and scores 100% of calls against the client's specific rubric."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Safety Net**: If an agent misses a mandatory 'Mini-Miranda' disclosure or uses a prohibited phrase, the system flags it instantly. David's dashboard lights up, and a supervisor can intervene before the call even ends. The liability risk drops to near zero."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Objective, Data-Driven Coaching"
+      },
+      {
+        "type": "paragraph",
+        "text": "Subjectivity is eliminated. DealoAgent scores every agent on the same criteria every time. David can now see exactly who his top performers are based on distinct metrics like 'Script Adherence' and 'Customer Sentiment Adjustment', not just who the supervisors like best."
+      },
+      {
+        "type": "paragraph",
+        "text": "He identifies that 'Agent Sarah' has found a unique way to de-escalate angry callers. He extracts her transcript and turns it into a training module for the whole floor in minutes."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Natural Language Operations (No SQL Required)"
+      },
+      {
+        "type": "paragraph",
+        "text": "During a tense QBR with the client, they ask: 'Why was Average Handle Time high last Tuesday?' Instead of emailing a data analyst and waiting 4 hours, David opens DealoAgent and asks:"
+      },
+      {
+        "type": "quote",
+        "text": "Show me the top call drivers for last Tuesday impacting AHT > 10 minutes.",
+        "author": "David's Query"
+      },
+      {
+        "type": "paragraph",
+        "text": "The AI instantly correlates the data: *'AHT spike caused by system outage on the payment gateway (34% of calls). Agents were waiting for the system to load.'* David shows the chart to the client immediately, proving it wasn't an agent performance issue."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "QA Coverage",
+            "value": "100%",
+            "description": "Every single minute audited"
+          },
+          {
+            "label": "Compliance Risk",
+            "value": "-95%",
+            "description": "Near-total elimination of fines"
+          },
+          {
+            "label": "Client Trust",
+            "value": "Max",
+            "description": "Total transparency in reporting"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a BPO leader like David, DealoAgent changes the game from 'surviving the volume' to 'engineering the quality'. By removing blind spots and automating the audit process, TaskUs can deliver a level of transparency and reliability that legacy competitors simply can't match."
+      },
+      {
+        "type": "cta",
+        "title": "Eliminate Your Blind Spots",
+        "description": "See how DealoAgent can audit 100% of your calls today.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "randstad-recruiter-christmas-miracle",
     "slug": "how-randstad-recruiter-saved-christmas-with-ai",
     "title": "The Christmas Miracle: How a Randstad Recruiter Could Wrap Up Q4 Early with AI",
