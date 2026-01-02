@@ -56,6 +56,8 @@ import {
   LogIn,
   UserPlus,
   Settings2,
+  MousePointerClick,
+  FileText,
 } from "lucide-react";
 import blogPosts from "./data/blogPosts.json";
 import { navigateToApp } from "./analytics";
@@ -116,6 +118,17 @@ export default function App() {
         { text: "Learn from your best-performing messages and replicate success", icon: TrendingUp },
         { text: "Multi-channel sequences across email and messaging platforms", icon: Share2 },
         { text: "Navigate and teach AI your personal preferences to improve future generations", icon: UserCog },
+      ],
+    },
+    {
+      icon: MousePointerClick,
+      title: "Intelligent Web Automation",
+      description: "Take control of the web. Our Chrome extension acts as your digital hand, automating LinkedIn networking, form submissions, and complex browser workflows.",
+      features: [
+        { text: "Scale LinkedIn operations: auto-connect, message, and extract data", icon: Linkedin },
+        { text: "Smart form filling: populates fields using context from your documents", icon: FileText },
+        { text: "Batch processing: automate repetitive actions across any website", icon: Workflow },
+        { text: "Secure Chrome extension integration for seamless browser control", icon: Puzzle },
       ],
     },
     {
