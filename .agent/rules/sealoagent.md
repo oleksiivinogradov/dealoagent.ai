@@ -12,9 +12,12 @@ When creating blog posts, follow these requirements:
 ### Content Guidelines
 CRITICAL - do not repeat companies and persons in posts.
 
-1. **Companies may be real** but posts must be **hypothetical scenarios**
-   - Example: "Let say manager [real manager name] at [real company] uses DealoAgent for [real use case]"
-   - After migrating to DealoAgent, show how the manager would approach the case using AI-powered methods
+1. **Companies and Persons MUST be real**
+   - **Companies**: Select a real company from the specific industry.
+   - **Persons**: The protagonist MUST be a **real person** currently holding the relevant position at that company.
+     - **MANDATORY**: You MUST verify their existence and role on **LinkedIn** before writing the post. If you cannot find them on LinkedIn, choose a different person/company.
+     - Use their **full name** and **exact title**.
+   - **Scenario**: The scenario itself remains **hypothetical** (e.g., "How Arjay Angodung could use DealoAgent...").
    - Must reach specific, measurable outcomes
 
 2. **Deep personalization required**
@@ -162,6 +165,7 @@ After creating any blog post, **ALWAYS** propose a LinkedIn post text to share i
 - Personal tone: "I was thinking...", "This got me curious...", "I wrote up..."
 - Share as if discussing an interesting puzzle or insight with peers
 - No sales pitch - frame as genuine curiosity or thought experiment
+- **CRITICAL**: When referencing the hypothetical scenario, you MUST mention the specific persona's full name and position as defined in the blog post (e.g., "I wrote up a hypothetical scenario about how Arjay Angodung, a VP of Operations at TaskUs..."). Do not just say "a VP of Operations". Mentioning the real person is key for engagement.
 
 **Structure:**
 - Start with a personal observation or question
