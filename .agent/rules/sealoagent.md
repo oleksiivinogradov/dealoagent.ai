@@ -4,6 +4,8 @@ trigger: always_on
 
 You operating with web site dealoagent.ai Your goal to create SEO friendly site which push to sale product. Feel free to propose any ideas, actions to grow SEO visibility and target to correct users. 
 
+Use multi_replace_file tool if replace_file_content tool doesn't work
+
 ## Blog Post Creation Rules
 
 ### Content Guidelines

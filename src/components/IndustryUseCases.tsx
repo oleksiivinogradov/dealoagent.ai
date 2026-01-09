@@ -35,14 +35,14 @@ export function IndustryUseCases() {
                         </Button>
                     </div>
 
-                    {/* Software Sales Card */}
+                    {/* SaaS Sales Card */}
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">💻</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">Software Sales</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">SaaS Sales</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            Accelerate deal cycles and improve forecast accuracy. Empower sales managers and CEOs with real-time intelligence and automated CRM updates.
+                            Scale ARR and Pipeline Velocity. Empower Reps with automated outreach and Founders with a real-time Telegram Command Center for total oversight.
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
