@@ -102,13 +102,10 @@ After creating a blog post, **ALWAYS** propose a LinkedIn post text.
 - End with real question to drive discussion.
 - Short paragraphs (2-3 lines).
 
-**Engagement Hook (Financial Incentive - MANDATORY):**
-- Randomly select one:
-  - "Comment on this LinkedIn post and I will add  to your DealoAgent balance."
-  - "Drop a comment below, and I'll credit  to your DealoAgent account to try it out."
-  - "If you join the discussion in the comments, I'll add a  credit to your balance."
-  - "I'm adding  to the DealoAgent balance of anyone who shares their take below."
-  - "Leave your thoughts in the comments — I'm giving a  credit to everyone who chimes in."
+**Engagement Hook (Workflow Advice - MANDATORY):**
+- Ask users to share their existing workflow "walls" (pain points/blockers).
+- Promise to share free advice on how it can be automated with AI in return.
+- Example: "Share your current workflow bottlenecks below, and I'll break down exactly how AI could automate them for you."
 
 **Tags:**
 - Add 3 random tags: #innovation #management #digitalmarketing #technology #creativity #futurism #startups #marketing #socialmedia #socialnetworking #motivation #personaldevelopment #jobinterviews #sustainability #personalbranding #education #productivity #travel #sales #socialentrepreneurship

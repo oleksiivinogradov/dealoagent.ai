@@ -1,5 +1,163 @@
 [
   {
+    "id": "retool-sales-vp-transformation-dealoagent",
+    "slug": "how-retool-sales-vp-scales-results-with-ai",
+    "title": "How Tom Wagner (VP Sales at Retool) Could Scale Results with AI",
+    "subtitle": "A hypothetical deep dive: Eliminating competitive blind spots and automating sales control for a developer-first SaaS giant.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-01-09",
+    "readTime": "9 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/retool_sales_vp.png",
+    "excerpt": "VP of Sales leads like Tom Wagner at Retool need absolute clarity to scale fast. In this hypothetical case study, we explore how he could use DealoAgent to gain automated competitive intel, real-time deal control, and empower his team to close 100x more deals without micromanagement.",
+    "tags": [
+      "Case Study",
+      "SaaS Sales",
+      "Retool",
+      "AI",
+      "Sales Leadership"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Tom Wagner, VP of Sales at Retool, could leverage DealoAgent.AI. Retool is a real, high-growth SaaS platform for building internal tools, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Retool** has revolutionized how developers build internal software, scaling rapidly to become a critical part of the modern tech stack. For a sales leader steering this rocket ship, the challenge isn't just closing deals—it's maintaining velocity and visibility as the team explodes in size."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Scaling Without Blind Spots"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Tom Wagner**, the VP of Sales at Retool. Tom is a veteran leader who knows how to build high-performance teams. But as Retool expands into the Enterprise, the complexity of managing a large, distributed sales organization creates inevitable data gaps."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario revolve around 'Black Box' sales:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Competitive Blindness**: In a crowded dev-tools market, competitors change pricing or launch features weekly. Tom discovers these shifts only when a rep says, 'We lost the deal because [Competitor X] offered this.' By then, it's too late.",
+          "**The 'Why' Gap**: Metrics tell Tom *that* a deal was lost, but not *why*. Was it a technical gap? Pricing? A poor demo? Limitations in CRM data mean he has to rely on anecdotal evidence from reps, which is often biased.",
+          "**Manual Management**: To maintain quality, Tom and his directors have to manually review calls and enforce playbook compliance. It's a full-time job that doesn't scale, leaving 90% of interactions unreviewed.",
+          "**Reactive Strategy**: Strategic pivots happen too slowly because they rely on quarterly post-mortems. Tom wants to pivot *instantly* based on live market feedback."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I don't want to drive by looking in the rear-view mirror. I need a real-time HUD that tells me what's happening on the road right now.",
+        "author": "Hypothetical scenario: Tom Wagner, VP of Sales at Retool"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Automated Intelligence Engine"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Tom integrates **DealoAgent** as the intelligence layer for his sales organization. It connects to every email, call, and calendar invite, turning raw noise into structured strategy."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Automated Competitive Intelligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tom no longer waits for lost-deal reports to learn about the market. DealoAgent monitors every conversation for competitor mentions."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: One morning, DealoAgent alerts Tom: *'Competitor Y has started offering a 50% discount to Series B startups. This was mentioned in 14 calls this week.'* Tom instantly spins up a counter-playbook and pushes it to the team by lunch. They save 5 deals that same week."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Real-Time Deal Control"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent acts as a 24/7 sales coach. It monitors deal health based on *sentiment* and *momentum*, not just what the rep types in Salesforce."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Save**: An enterprise deal worth $100k is stalled. The rep thinks everything is fine. DealoAgent flags it to Tom: *'Key decision maker hasn't replied in 12 days. Sentiment in last email was hesitant.'* Tom pings the rep to intervene with an executive sponsor email, unblocking the deal."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. The 'Source of Truth' for Strategy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of guessing what features prospects want, Tom asks DealoAgent:"
+      },
+      {
+        "type": "quote",
+        "text": "What are the top 3 feature requests blocking Enterprise deals this quarter?",
+        "author": "Tom's Query"
+      },
+      {
+        "type": "paragraph",
+        "text": "The AI scans thousands of call transcripts and returns hard data: *'1. SSO implementation (40% of blocked deals). 2. On-premise deployment options. 3. Granular permissioning.'* Tom walks into the Product meeting with irrefutable evidence, aligning the roadmap to revenue."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Win Rate",
+            "value": "+15%",
+            "description": "Due to faster competitive adjustments"
+          },
+          {
+            "label": "Manager Time",
+            "value": "Saved",
+            "description": "Automated QA & pipeline reviews"
+          },
+          {
+            "label": "Strategy Speed",
+            "value": "Real-time",
+            "description": "Pivot daily instead of quarterly"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a sales leader at a company like Retool, velocity is everything. DealoAgent provides the visibility to move fast *without* breaking things. By effectively 'cloning' Tom's strategic oversight across every deal, Retool can scale its sales culture as fast as its code."
+      },
+      {
+        "type": "cta",
+        "title": "Scale Your Sales Engine",
+        "description": "See how DealoAgent can give you executive visibility over every deal.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "balderton-capital-partner-transformation-dealoagent",
     "slug": "how-balderton-capital-partner-scales-oversight-with-ai",
     "title": "How a General Partner at Balderton Capital Could Scale Oversight with AI",
