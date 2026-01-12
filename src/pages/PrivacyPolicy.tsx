@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
             <Helmet>
                 <title>Privacy Policy - DealoAgent.ai</title>
                 <meta name="description" content="Privacy Policy for DealoAgent.ai and DealoAgent Web Automation Extension. Learn how we collect, use, and protect your data." />
-                <link rel="canonical" href="https://dealoagent.ai/privacy-policy" />
+                <link rel="canonical" href="https://dealoagent.ai/privacy-policy/" />
             </Helmet>
 
             <Navigation />

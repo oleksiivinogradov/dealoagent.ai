@@ -9,7 +9,7 @@ export default function VCResearchUseCase() {
             <Helmet>
                 <title>AI for Venture Capital - DealoAgent.ai</title>
                 <meta name="description" content="Transform deal flow and due diligence with AI. Automate research, scoring, and market analysis for VC firms." />
-                <link rel="canonical" href="https://dealoagent.ai/usecases/vcresearch" />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/vcresearch/" />
             </Helmet>
             <Navigation />
 

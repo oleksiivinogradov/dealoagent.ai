@@ -31,43 +31,43 @@ const generateSitemap = () => {
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/blog</loc>
+        <loc>${BASE_URL}/blog/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/usecases</loc>
+        <loc>${BASE_URL}/usecases/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/usecases/recruiting</loc>
+        <loc>${BASE_URL}/usecases/recruiting/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/usecases/softwaresales</loc>
+        <loc>${BASE_URL}/usecases/softwaresales/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/usecases/vcresearch</loc>
+        <loc>${BASE_URL}/usecases/vcresearch/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/usecases/callcenter</loc>
+        <loc>${BASE_URL}/usecases/callcenter/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>${BASE_URL}/pitchdeck</loc>
+        <loc>${BASE_URL}/pitchdeck/</loc>
         <lastmod>${today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -76,7 +76,7 @@ const generateSitemap = () => {
     blogPosts.forEach(post => {
         sitemap += `
     <url>
-        <loc>${BASE_URL}/blog/${post.slug}</loc>
+        <loc>${BASE_URL}/blog/${post.slug}/</loc>
         <lastmod>${post.publishDate || today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

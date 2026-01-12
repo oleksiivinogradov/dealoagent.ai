@@ -8,7 +8,7 @@ export default function UseCases() {
             <Helmet>
                 <title>Industry Use Cases - DealoAgent.ai</title>
                 <meta name="description" content="Discover how DealoAgent.ai transforms sales, recruiting, and research workflows across different industries with AI-powered intelligence." />
-                <link rel="canonical" href="https://dealoagent.ai/usecases" />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/" />
             </Helmet>
             <Navigation />
             <main className="pt-20">

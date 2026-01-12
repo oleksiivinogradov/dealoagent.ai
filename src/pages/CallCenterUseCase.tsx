@@ -78,7 +78,7 @@ export default function CallCenterUseCase() {
             <Helmet>
                 <title>AI for Call Centers & BPOs - DealoAgent.ai</title>
                 <meta name="description" content="AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage." />
-                <link rel="canonical" href="https://dealoagent.ai/usecases/callcenter" />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/callcenter/" />
             </Helmet>
             <Navigation />
 

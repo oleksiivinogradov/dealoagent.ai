@@ -9,7 +9,7 @@ export default function SoftwareSalesUseCase() {
             <Helmet>
                 <title>AI for SaaS Sales - DealoAgent.ai</title>
                 <meta name="description" content="Scale your ARR, automate competitor research, and control your sales pipeline from anywhere with DealoAgent.ai." />
-                <link rel="canonical" href="https://dealoagent.ai/usecases/softwaresales" />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/softwaresales/" />
             </Helmet>
             <Navigation />
 

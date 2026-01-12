@@ -14,7 +14,7 @@ export default function Blog() {
       <Helmet>
         <title>DealoAgent Blog - AI Sales Insights & Case Studies</title>
         <meta name="description" content="Explore the latest insights on AI-powered sales intelligence, real customer success stories of recruiting agencies, venture capitals and software sales." />
-        <link rel="canonical" href="https://dealoagent.ai/blog" />
+        <link rel="canonical" href="https://dealoagent.ai/blog/" />
       </Helmet>
 
       {/* Hero Section */}

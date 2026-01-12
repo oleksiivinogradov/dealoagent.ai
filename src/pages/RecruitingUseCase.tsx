@@ -9,7 +9,7 @@ export default function RecruitingUseCase() {
             <Helmet>
                 <title>AI for Recruiting Agencies - DealoAgent.ai</title>
                 <meta name="description" content="Automate candidate screening, parsing, and outreach with DealoAgent.ai. See how recruiters save 70% of admin time." />
-                <link rel="canonical" href="https://dealoagent.ai/usecases/recruiting" />
+                <link rel="canonical" href="https://dealoagent.ai/usecases/recruiting/" />
             </Helmet>
             <Navigation />
 
