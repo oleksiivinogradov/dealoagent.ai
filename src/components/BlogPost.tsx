@@ -251,41 +251,45 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Hero Image */}
-      <div className="relative h-96 overflow-hidden bg-gray-900">
+      {/* Hero Section with Content */}
+      <div className="relative min-h-[600px] flex flex-col justify-end overflow-hidden bg-gray-900 pb-24">
+        {/* Background Image & Overlay */}
         <img
           src={post.coverImage}
           alt={post.title}
-          className="h-full w-full object-cover opacity-80"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent" />
 
-      {/* Article Content - Medium Style */}
-      <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <header className="-mt-32 relative z-10 mb-12">
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 w-full pt-32">
           {/* Category Badge */}
           <div className="mb-6">
-            <span className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm text-white shadow-lg">
+            <span className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm text-white shadow-lg font-medium tracking-wide">
               {post.category}
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
             {post.title}
           </h1>
 
           {/* Subtitle */}
           {post.subtitle && (
-            <p className="mb-8 text-xl sm:text-2xl text-gray-200">
+            <p className="mb-8 text-xl sm:text-2xl text-gray-200 leading-relaxed max-w-3xl drop-shadow-md">
               {post.subtitle}
             </p>
           )}
+        </div>
+      </div>
 
+      {/* Article Content - Medium Style */}
+      <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {/* Header - Overlapping Meta Card */}
+        <header className="-mt-20 relative z-20 mb-16">
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-4 rounded-2xl bg-white/95 backdrop-blur-sm p-6 shadow-xl">
+          <div className="flex flex-wrap items-center gap-4 rounded-2xl bg-white/95 backdrop-blur-sm p-6 shadow-2xl ring-1 ring-gray-100">
             {/* Author */}
             <div className="flex items-center gap-3">
               <img
@@ -294,16 +298,17 @@ export default function BlogPost() {
                 className="h-12 w-12 rounded-full border-2 border-blue-200"
               />
               <div>
-                <div className="font-medium text-gray-900">{post.author}</div>
+                <div className="font-bold text-gray-900">{post.author}</div>
+                <div className="text-xs text-blue-600 font-medium">DealoAgent Team</div>
               </div>
             </div>
 
-            <div className="hidden sm:block h-8 w-px bg-gray-300" />
+            <div className="hidden sm:block h-8 w-px bg-gray-200" />
 
             {/* Date & Time */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
+                <Calendar className="h-4 w-4 text-gray-400" />
                 <span>
                   {new Date(post.publishDate).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -313,7 +318,7 @@ export default function BlogPost() {
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
+                <Clock className="h-4 w-4 text-gray-400" />
                 <span>{post.readTime}</span>
               </div>
             </div>
@@ -323,7 +328,7 @@ export default function BlogPost() {
                 variant="ghost"
                 size="sm"
                 onClick={handleShare}
-                className="gap-2"
+                className="gap-2 text-gray-600 hover:text-blue-600"
               >
                 <Share2 className="h-4 w-4" />
                 Share
