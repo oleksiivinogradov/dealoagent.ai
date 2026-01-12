@@ -9,6 +9,7 @@ import RecruitingUseCase from './pages/RecruitingUseCase';
 import SoftwareSalesUseCase from './pages/SoftwareSalesUseCase';
 import VCResearchUseCase from './pages/VCResearchUseCase';
 import CallCenterUseCase from './pages/CallCenterUseCase';
+import VoipUseCase from './pages/VoipUseCase';
 import UseCases from './pages/UseCases';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { Logo, AIBadge } from "./components/Logo";
@@ -142,6 +143,7 @@ function AppContent() {
         <Route path="/usecases/softwaresales" element={<SoftwareSalesUseCase />} />
         <Route path="/usecases/vcresearch" element={<VCResearchUseCase />} />
         <Route path="/usecases/callcenter" element={<CallCenterUseCase />} />
+        <Route path="/usecases/voip" element={<VoipUseCase />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </>

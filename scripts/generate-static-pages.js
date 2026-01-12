@@ -41,6 +41,11 @@ const pages = [
         description: 'AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage.'
     },
     {
+        path: 'usecases/voip',
+        title: 'AI for VoIP Wholesale Business - DealoAgent.ai',
+        description: 'AI-Native Business Intelligence for VoIP Wholesale. Optimize routing, monitor ASR/ACD, and prevent margin leakage.'
+    },
+    {
         path: 'login',
         title: 'Sign In - DealoAgent.ai',
         description: 'Sign in to your DealoAgent.ai account.'

@@ -88,8 +88,26 @@ export function IndustryUseCases() {
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>
+
+                    {/* VoIP Wholesale Card */}
+                    <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
+                        <div className="mb-4 sm:mb-6 flex items-center gap-3">
+                            <span className="text-2xl sm:text-3xl flex-shrink-0">📡</span>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">VoIP Wholesale</h3>
+                        </div>
+                        <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
+                            AI-Native Traffic Management. Real-time ASR/ACD alerts, automated LCR optimization, and natural language margin analysis.
+                        </p>
+                        <Button
+                            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
+                            onClick={() => window.location.href = '/usecases/voip'}
+                        >
+                            Learn More
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
