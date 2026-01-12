@@ -66,6 +66,8 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeBubble, setActiveBubble] = useState(0);
 
+
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -129,41 +131,6 @@ export default function App() {
         { text: "Smart form filling: populates fields using context from your documents", icon: FileText },
         { text: "Batch processing: automate repetitive actions across any website", icon: Workflow },
         { text: "Secure Chrome extension integration for seamless browser control", icon: Puzzle },
-      ],
-    },
-    {
-      icon: TrendingUp,
-      title: "Intelligent Deal Management",
-      description: "Let AI guide you to close faster. Get proactive recommendations, risk alerts, and next-best-action suggestions for every deal in your pipeline.",
-      features: [
-        { text: "AI identifies at-risk deals from conversation sentiment and engagement", icon: AlertTriangle },
-        { text: "AI investigates lost conversations to generate refresh messages automatically", icon: History },
-        { text: "Priority scoring to focus on highest-value opportunities", icon: Trophy },
-        { text: "With AI automation you can close 100x more deals", icon: Rocket },
-        { text: "Build warm relationships with decision makers using context from every interaction", icon: Heart },
-      ],
-    },
-    {
-      icon: Shield,
-      title: "Enterprise-Grade Integration & Security",
-      description: "Deploy with confidence. Connect to your existing tools with enterprise security, multi-tenant isolation, and full data control.",
-      features: [
-        { text: "Native integrations with Microsoft 365, Gmail, and Zoho", icon: Puzzle },
-        { text: "Complete data isolation per account for security and compliance", icon: Lock },
-        { text: "SOC 2 ready architecture with encrypted data storage", icon: ShieldCheck },
-        { text: "Real-time webhook notifications for instant message processing", icon: Webhook },
-        { text: "On-premise deployment options for maximum data control", icon: Server },
-      ],
-    },
-    {
-      icon: BarChart3,
-      title: "Advanced Analytics & Insights",
-      description: "Understand what's working and why. Track team performance, message effectiveness, and pipeline health with AI-powered analytics.",
-      features: [
-        { text: "Conversation analytics showing message sentiment trends over time", icon: MessageCircle },
-        { text: "Win/loss analysis with AI-identified success factors", icon: PieChart },
-        { text: "Team performance metrics and coaching opportunities", icon: Trophy },
-        { text: "Create custom reports with charts, tables, and infographics to visualize any information", icon: FilePieChart },
       ],
     },
     {
@@ -269,17 +236,15 @@ export default function App() {
             <div className="z-10 text-center lg:text-left">
               <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-sm">
                 <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 text-blue-400" />
-                <span className="text-sm sm:text-xl text-blue-100">AI-Powered sales solved ✅</span>
+                <span className="text-sm sm:text-xl text-blue-100">Your Full-Stack AI Partner</span>
               </div>
 
               <h1 className="mb-4 sm:mb-6 text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                Close deals faster with AI-driven sales intelligence
+                Speaks and Looks Like Your Industry
               </h1>
 
               <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80">
-                DealoAgent combines competitor analysis, automated outreach, and
-                AI-powered insights to supercharge your B2B sales process. Work
-                smarter, close faster, grow bigger.
+                Combine a fully customizable CRM with a native AI business assistant. Construct your workspace with your own industry language and workflows, adapting the interface and intelligence to match exactly how you work.
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
@@ -292,9 +257,7 @@ export default function App() {
                     Register Now - Get Free Credits
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <p className="text-xs text-blue-200/80 text-center lg:text-left">
-                    🎁 Limited time: Free credits + Referral rewards available
-                  </p>
+
                 </div>
                 {/* Watch product tour button - hidden */}
                 {/* <div className="flex flex-col items-center sm:items-start gap-1">
@@ -305,28 +268,7 @@ export default function App() {
                 </div> */}
               </div>
 
-              <div className="mt-6 sm:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-8">
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl">
-                    10,000+
-                  </div>
-                  <p className="text-xs sm:text-sm text-blue-200/70">Active users</p>
-                </div>
-                <div className="hidden sm:block h-12 w-px bg-white/20" />
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl">
-                    $2.5M+
-                  </div>
-                  <p className="text-xs sm:text-sm text-blue-200/70">Deals closed</p>
-                </div>
-                <div className="hidden sm:block h-12 w-px bg-white/20" />
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl">
-                    127%
-                  </div>
-                  <p className="text-xs sm:text-sm text-blue-200/70">ROI increase</p>
-                </div>
-              </div>
+
             </div>
 
             {/* Right Content - Hero Image with Floating Cards */}
@@ -342,19 +284,18 @@ export default function App() {
 
               {/* Floating UI Cards - Desktop only */}
 
-              {/* Top Left - Competitive Analysis */}
-              <ChatBubble
-                question="Is our pricing higher than Competitor X?"
-                answer="Competitor X is cheaper on entry tier, but 20% more expensive for enterprise. Summary: We win on scale."
-                isActive={activeBubble === 0}
-                onComplete={() => setActiveBubble(1)}
-                className="absolute -left-2 -top-8 sm:-left-12 sm:top-4 z-20 scale-75 sm:scale-100 origin-bottom-left"
-              />
+              {/* Floating UI Cards - Desktop only */}
 
-              {/* Top Right - Pipeline Visualization */}
+              {/* Single Rotating Chat Bubble - Bottom Right */}
               <ChatBubble
-                question="Visualize my pipeline velocity"
-                answer={
+                key={activeBubble} // Force re-mount to ensure clean animation restart
+                question={[
+                  "Is our pricing higher than Competitor X?",
+                  "Visualize my pipeline velocity",
+                  "Why is the Deal with ACME stuck?"
+                ][activeBubble]}
+                answer={[
+                  "Competitor X is cheaper on entry tier, but 20% more expensive for enterprise. Summary: We win on scale.",
                   <div className="space-y-2">
                     <p>Pipeline velocity increased by 35% this month.</p>
                     <div className="flex h-16 items-end gap-1 px-1 border-b border-white/10 pb-1">
@@ -368,32 +309,48 @@ export default function App() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                }
-                isActive={activeBubble === 1}
-                onComplete={() => setActiveBubble(2)}
-                className="absolute -right-2 -top-4 sm:-right-16 sm:top-12 z-10 scale-75 sm:scale-100 origin-bottom-right"
-              />
-
-              {/* Bottom Left - Deal Research */}
-              <ChatBubble
-                question="Why is the Deal with ACME stuck?"
-                answer={
+                  </div>,
                   <span>
                     Their CTO mentioned <span className="text-red-300 font-semibold">"budget freeze"</span> in a podcast yesterday.
                     <div className="mt-2 rounded bg-white/10 p-2 text-[10px] border-l-2 border-green-400">
                       <span className="text-green-300 font-semibold uppercase">Suggestion:</span> Offer Q1 delayed payment.
                     </div>
                   </span>
-                }
-                isActive={activeBubble === 2}
-                onComplete={() => setActiveBubble(0)}
-                className="absolute -left-2 -bottom-12 sm:-left-12 sm:-bottom-16 z-20 scale-75 sm:scale-100 origin-top-left"
+                ][activeBubble]}
+                isActive={true}
+                onComplete={() => setActiveBubble((prev) => (prev + 1) % 3)}
+                className="absolute -right-2 -bottom-12 sm:-right-12 sm:-bottom-8 z-20 scale-75 sm:scale-100 origin-bottom-right"
               />
 
               {/* AI Badge floating */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <AIBadge className="shadow-2xl shadow-purple-500/50" />
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Bar - Moved to separate block below main hero */}
+          <div className="mt-16 sm:mt-24 border-t border-white/10 pt-8 sm:pt-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 md:gap-24">
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
+                  10,000+
+                </div>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">Active users</p>
+              </div>
+              <div className="hidden sm:block h-12 w-px bg-white/20" />
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
+                  $2.5M+
+                </div>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">Deals closed</p>
+              </div>
+              <div className="hidden sm:block h-12 w-px bg-white/20" />
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
+                  127%
+                </div>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">ROI increase</p>
               </div>
             </div>
           </div>
@@ -420,427 +377,7 @@ export default function App() {
       {/* Use Cases (per industry) Section */}
       <IndustryUseCases />
 
-      {/* Problem/Solution Section - Multi-Channel Research Reports */}
-      <section id="research-reports" className="pt-4 pb-12 sm:py-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 sm:mb-12 text-center">
-            <div className="mb-4 sm:mb-6">
-              <span className="inline-block rounded-full bg-red-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-red-700">
-                Multi-Channel Research Reports
-              </span>
-            </div>
-            <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              From competitor analysis to VC research — see how DealoAgent compiles comprehensive
-              reports from emails, calls, messengers, and documents into one intelligent workflow.
-            </p>
-          </div>
 
-          <div className="grid gap-4 sm:gap-6 lg:gap-8 lg:grid-cols-2">
-            {/* Left: How it works now (Frustrated) */}
-            <div className="rounded-2xl sm:rounded-3xl border-2 border-red-200 bg-red-50/50 p-4 sm:p-6 md:p-8 overflow-hidden">
-              <div className="mb-4 sm:mb-6 flex items-center gap-3">
-                <span className="text-2xl sm:text-3xl flex-shrink-0">😤</span>
-                <h3 className="text-red-900 text-xl sm:text-2xl break-words">How it works now</h3>
-              </div>
-
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">🔍</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Research sources manually across multiple platforms</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">📧</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Conduct outreach via email, calls, and messengers separately</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">💬</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Track conversations across scattered channels and tools</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">📎</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Collect PDFs, images, and files from different sources</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">👀</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Manually review and extract insights from all materials</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">📊</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Compile everything into a report by hand</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-red-100">
-                      <span className="text-lg sm:text-xl">🔄</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Repeat the entire process for each new research...</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 sm:mt-6 rounded-xl bg-red-100 p-3 sm:p-4">
-                <p className="text-center text-xs sm:text-sm text-red-800 break-words">
-                  ⏱️ <span>Average time: 2-3 weeks per report</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Right: With DealoAgentAI (Happy) */}
-            <div className="rounded-2xl sm:rounded-3xl border-2 border-green-200 bg-green-50/50 p-4 sm:p-6 md:p-8 overflow-hidden">
-              <div className="mb-4 sm:mb-6 flex items-center gap-3">
-                <span className="text-2xl sm:text-3xl flex-shrink-0">😊</span>
-                <h3 className="text-green-900 text-xl sm:text-2xl break-words">With DealoAgent<span className="text-blue-600">.AI</span></h3>
-              </div>
-
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-green-100">
-                      <span className="text-lg sm:text-xl">📤</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Define your research goal and provide context (documents, websites, or brief)</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-green-100">
-                      <span className="text-lg sm:text-xl">🤖</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">AI identifies targets and orchestrates multi-channel outreach automatically</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-green-100">
-                      <span className="text-lg sm:text-xl">💬</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Conversations happen via email, calls, and messengers — all tracked in one place</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-green-100">
-                      <span className="text-lg sm:text-xl">✨</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">AI extracts insights from PDFs, images, and messages across all channels</p>
-                  </div>
-                </div>
-
-                <div className="mt-6 sm:mt-8 flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-green-100">
-                      <span className="text-lg sm:text-xl">🎯</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Done! Review your comprehensive multi-channel research report</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 sm:mt-6 rounded-xl bg-green-100 p-3 sm:p-4">
-                <p className="text-center text-xs sm:text-sm text-green-800 break-words">
-                  ⚡ <span>Average time: 2-3 hours fully automated</span>
-                </p>
-              </div>
-
-              <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => navigateToApp('register')}>
-                  Start your research now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom stat */}
-          <div className="mt-8 sm:mt-12 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 sm:px-6 py-2 sm:py-3">
-              <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
-              <span className="text-sm sm:text-base text-gray-700">
-                Save <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">95% of your time</span> on multi-channel research
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problem/Solution Section - Sales Process Support */}
-      <section className="py-12 sm:pt-4 sm:pb-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 sm:mb-12 text-center">
-            <div className="mb-4 sm:mb-6">
-              <span className="inline-block rounded-full bg-orange-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-orange-700">
-                Sales Process Support
-              </span>
-            </div>
-            <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              See how DealoAgent transforms manual, complex sales processes
-              into intelligent, automated workflows that scale.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:gap-6 lg:gap-8 lg:grid-cols-2">
-            {/* Left: How it works now (Frustrated) */}
-            <div className="rounded-2xl sm:rounded-3xl border-2 border-orange-200 bg-orange-50/50 p-4 sm:p-6 md:p-8 overflow-hidden">
-              <div className="mb-4 sm:mb-6 flex items-center gap-3">
-                <span className="text-2xl sm:text-3xl flex-shrink-0">😫</span>
-                <h3 className="text-orange-900 text-xl sm:text-2xl break-words">How it works now</h3>
-              </div>
-
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">🧠</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Remember a lot of data about clients and their company manually</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">💬</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Make conversations back and forth, possibly missing a lot of context</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">🎭</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Must do hand-made social engineering for each client</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">👥</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">As a result, very small quantity of clients can be served</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">📉</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Quality of sales is very poor due to information overload</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">💰</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Salary expenses are too high for low output</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100">
-                      <span className="text-lg sm:text-xl">🤯</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Existing CRMs just add more complexity instead of helping</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 sm:mt-6 rounded-xl bg-orange-100 p-3 sm:p-4">
-                <p className="text-center text-xs sm:text-sm text-orange-800 break-words">
-                  📊 <span>Average capacity: 10-20 clients per sales rep</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Right: With DealoAgentAI (Happy) */}
-            <div className="rounded-2xl sm:rounded-3xl border-2 border-blue-200 bg-blue-50/50 p-4 sm:p-6 md:p-8 overflow-hidden">
-              <div className="mb-4 sm:mb-6 flex items-center gap-3">
-                <span className="text-2xl sm:text-3xl flex-shrink-0">🚀</span>
-                <h3 className="text-blue-900 text-xl sm:text-2xl break-words">With DealoAgent<span className="text-blue-600">.AI</span></h3>
-              </div>
-
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">🤖</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">AI sees all context: client info, contact person, past conversations (email/messengers), and your product</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">✍️</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">AI prepares outreach messages automatically, focusing on what you ask it to do</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">📈</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">AI investigates past successful deals and proposes improvements</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">🔥</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Model does social engineering to keep contacts hot all the time, even when sales aren't happening now</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">📊</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">One sales rep can serve 100x more customers with AI assistance</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">💎</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">Automated sales agent becomes possible, saving massive expenses</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
-                      <span className="text-lg sm:text-xl">💬</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm sm:text-base text-gray-700 break-words">You interact with AI using regular chat style - no complicated UIs to configure and use</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 sm:mt-6 rounded-xl bg-blue-100 p-3 sm:p-4">
-                <p className="text-center text-xs sm:text-sm text-blue-800 break-words">
-                  ⚡ <span>Average capacity: 1,000+ clients per sales rep</span>
-                </p>
-              </div>
-
-              <div className="mt-4 sm:mt-6">
-                <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => navigateToApp('register')}>
-                  Transform your sales process
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom stat */}
-          <div className="mt-8 sm:mt-12 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-4 sm:px-6 py-2 sm:py-3">
-              <Users className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600" />
-              <span className="text-sm sm:text-base text-gray-700">
-                Scale to <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">100x more clients</span> with the same team size
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Features Grid */}
       <section id="features" className="py-12 sm:pt-4 sm:pb-24 bg-gradient-to-b from-white to-gray-50">
@@ -852,9 +389,7 @@ export default function App() {
               </span>
             </div>
             <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Everything you need to transform your sales process with AI. From intelligent
-              competitor tracking to automated outreach, DealoAgent combines powerful capabilities
-              with an interface so simple, you just chat with it.
+              Your Full-Stack AI Partner. Speaks and Looks Like Your Industry. Combine a fully customizable CRM with a native AI business assistant. Construct your workspace with your own industry language and workflows, adapting the interface and intelligence to match exactly how you work.
             </p>
           </div>
 
