@@ -19,7 +19,6 @@ import {
   Target,
   Zap,
   BarChart3,
-  Shield,
   Sparkles,
   CheckCircle2,
   Linkedin,
@@ -40,24 +39,15 @@ import {
   ScanSearch,
   Share2,
   UserCog,
-  AlertTriangle,
-  History,
-  Rocket,
   Heart,
   Puzzle,
-  Lock,
-  ShieldCheck,
-  Webhook,
-  Server,
-  PieChart,
-  Trophy,
-  FilePieChart,
   Key,
   LogIn,
   UserPlus,
   Settings2,
   MousePointerClick,
   FileText,
+  Handshake,
 } from "lucide-react";
 import blogPosts from "./data/blogPosts.json";
 import { navigateToApp } from "./analytics";
@@ -162,7 +152,9 @@ export default function App() {
               <a href="#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
               <a href="#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
               <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
+              <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
+              <a href="#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
               <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
               <Button
                 variant="outline"
@@ -205,6 +197,7 @@ export default function App() {
                 <a href="#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
                 <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
                 <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
+                <a href="#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
                 <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
                 <Button
                   variant="outline"
@@ -764,6 +757,86 @@ export default function App() {
           <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-blue-200/60 px-4">
             14-day free trial · No credit card required · Cancel anytime
           </p>
+        </div>
+      </section>
+
+      {/* Partners Teaser Section */}
+      <section id="partners" className="bg-slate-50 py-12 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-slate-900 p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 h-64 w-64 rounded-full bg-blue-600/20 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 -mb-10 -ml-10 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl"></div>
+
+            <div className="relative z-10">
+              <div className="max-w-3xl mx-auto">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2">
+                  <Handshake className="h-4 w-4 text-blue-400" />
+                  <span className="text-sm font-medium text-blue-100">Partnership Program</span>
+                </div>
+                <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
+                  Grow with DealoAgent
+                </h2>
+                <p className="text-lg text-blue-100/80 mb-8">
+                  Whether you're a System Integrator, Reseller, or Affiliate, we have a program designed for your success. Earn high commissions and offer the most advanced AI CRM to your clients.
+                </p>
+
+                {/* Comparison Table */}
+                <div className="overflow-hidden rounded-xl border border-blue-500/30 bg-slate-800/50 backdrop-blur-sm mb-8 mx-auto max-w-2xl">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-sm text-blue-100/80">
+                      <thead className="bg-blue-500/10 text-xs uppercase text-blue-200">
+                        <tr>
+                          <th className="px-4 py-3 font-semibold">Benefit</th>
+                          <th className="px-4 py-3 font-bold text-blue-400">DealoAgent</th>
+                          <th className="px-4 py-3">Others</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-blue-500/20">
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-white">Rev Share (Y1)</td>
+                          <td className="px-4 py-3 font-bold text-blue-400">30%</td>
+                          <td className="px-4 py-3">20%</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-white">Rev Share (Y2/Y3)</td>
+                          <td className="px-4 py-3 font-bold text-blue-400">20% / 10%</td>
+                          <td className="px-4 py-3">-</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-white">Flat Bounty</td>
+                          <td className="px-4 py-3 font-bold text-blue-400">$60 / $10</td>
+                          <td className="px-4 py-3">-</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-white">Multi-Tier Referral</td>
+                          <td className="px-4 py-3 font-bold text-blue-400">Yes (Earn from network)</td>
+                          <td className="px-4 py-3">-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-white text-blue-900 hover:bg-gray-100 min-w-[160px]"
+                    onClick={() => window.location.href = '/partners'}
+                  >
+                    Explore Programs
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white/20 bg-white/10 text-white hover:bg-white/20 min-w-[160px]"
+                    onClick={() => window.open('https://t.me/alex12alex', '_blank')}
+                  >
+                    Contact Partner Team
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

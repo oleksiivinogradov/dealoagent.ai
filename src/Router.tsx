@@ -12,6 +12,7 @@ import CallCenterUseCase from './pages/CallCenterUseCase';
 import VoipUseCase from './pages/VoipUseCase';
 import UseCases from './pages/UseCases';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import { PartnersPage } from './pages/PartnersPage';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -47,7 +48,9 @@ export function Navigation() {
             <a href="/#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
             <a href="/#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
             <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
+            <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
             <a href="/#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
+            <a href="/#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
             <a href="/blog" className="text-gray-700 hover:text-gray-900">Blog</a>
             <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
             <Button
@@ -91,6 +94,7 @@ export function Navigation() {
               <a href="/#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
               <a href="/#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="/#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
+              <a href="/#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
               <a href="/blog" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
               <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
               <Button
@@ -144,6 +148,7 @@ function AppContent() {
         <Route path="/usecases/vcresearch" element={<VCResearchUseCase />} />
         <Route path="/usecases/callcenter" element={<CallCenterUseCase />} />
         <Route path="/usecases/voip" element={<VoipUseCase />} />
+        <Route path="/partners" element={<PartnersPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </>
