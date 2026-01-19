@@ -2835,5 +2835,162 @@
         }
       }
     ]
+  },
+  {
+    "id": "ibasis-ceo-margin-protection-ai",
+    "slug": "how-ibasis-ceo-eliminates-margin-leakage-with-ai",
+    "title": "How Patrick George (CEO at iBasis) Could Eliminate Margin Leakage with AI",
+    "subtitle": "A hypothetical deep dive: Automating routing decisions and margin protection for a global Tier 1 carrier.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-01-19",
+    "readTime": "8 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/ibasis_ceo_voip_dashboard.png",
+    "excerpt": "For a CEO like Patrick George at iBasis, managing global interconnection margins is a high-stakes game. In this hypothetical case study, we explore how he could use DealoAgent to gain real-time ASR visibility, stop margin leakage instantly, and scale partner relationships without adding headcount.",
+    "tags": [
+      "Case Study",
+      "VoIP",
+      "iBasis",
+      "AI",
+      "Telecommunications"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Patrick George, CEO of iBasis, could leverage DealoAgent.AI. iBasis is a real, world-leading provider of communications solutions, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**iBasis** connects the world, serving as a critical bridge for mobile operators and digital businesses globally. When you are moving billions of minutes and data packets, even a fraction of a cent in margin variance per minute can equate to millions in lost revenue. For a CEO, the challenge is ensuring that this massive engine runs efficiently without getting bogged down in the complexity of thousands of interconnects."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The Margin Fog"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Patrick George**, the CEO of iBasis. Patrick is a strategic leader focused on growth and innovation. But in the wholesale voice and data world, operational details matter. A sudden drop in ASR (Answer Seizure Ratio) on a key route or a vendor increasing rates without notice can bleed profits instantly."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario revolve around 'Blind Spots':"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**The Language Barrier**: Typical CRMs don't speak 'VoIP'. They track 'Opportunities', but Patrick needs to track 'Ports', 'ACD' (Average Call Duration), and 'Interconnection Agreements'. He and his team are stuck extracting data into spreadsheets to make sense of it.",
+          "**Strategic Latency**: Patrick wants to focus on high-level carrier partnerships, but he often gets pulled into firefighting operational issues because he lacks a real-time view of his traffic managers' performance.",
+          "**Margin Leakage**: With thousands of rate sheets processing weekly, it’s practically impossible for humans to catch every negative margin instance immediately. The gap between a vendor raising a rate and iBasis updating its routing table is where money is lost."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I don't need another generic dashboard. I need a system that understands that if ASR drops by 10% in Brazil, we are losing money *right now*.",
+        "author": "Hypothetical scenario: Patrick George, CEO of iBasis"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Control Tower"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Patrick integrates **DealoAgent** as the central nervous system for iBasis's commercial operations. It connects natively to softswitches and billing streams, bridging the gap between technical data and business decisions."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Natural Language Business Intelligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "Patrick no longer relies on static weekly CSV reports. He simply asks DealoAgent:"
+      },
+      {
+        "type": "quote",
+        "text": "Show me the bottom 5 destinations by margin this week, and identifying which vendors are causing the ACD drop.",
+        "author": "Patrick's Query"
+      },
+      {
+        "type": "paragraph",
+        "text": "The AI instantly queries the millions of CDRs (Call Detail Records) and returns a plain English summary: *'Bottom destination is Vietnam Mobile. Vendor X dropped ACD by 20% on Tuesday. We are currently routing 15% of traffic there.'* Patrick can order an immediate routing shift from his phone."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Stopping the Leakage"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent acts as an automated auditor. It monitors every rate sheet update and compares it against live traffic margins."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Save**: A partner sends a rate increase effective immediately due to a regulatory change. Usually, this might sit in an inbox for 2 days. DealoAgent parses the email, spots the negative margin impact against current routing, and instantly flags the routing team: *'CRITICAL: Vendor Y rates to France Mobile upped by 0.02. Margin now negative. Reroute advised.'*"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. AI Leadership & Team Oversight"
+      },
+      {
+        "type": "paragraph",
+        "text": "Patrick manages a global team. DealoAgent gives him a 'God's eye view' of their effectiveness without micromanagement. He can see which Traffic Managers are proactively optimizing routes and which are letting tickets stagnate."
+      },
+      {
+        "type": "paragraph",
+        "text": "When a new major interconnect deal is being negotiated, DealoAgent surfaces historical data on that partner's quality performance, giving Patrick's team the leverage they need to negotiate better terms."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Margin Leakage",
+            "value": "0%",
+            "description": "Instant detection of negative margin routes"
+          },
+          {
+            "label": "Decision Speed",
+            "value": "Real-time",
+            "description": "Natural language queries replace CSV mining"
+          },
+          {
+            "label": "Profitability",
+            "value": "+12%",
+            "description": "Due to optimized routing and faster rate updates"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a global carrier leader like Patrick George, speed is the currency. DealoAgent transforms iBasis from a company that reacts to market changes to one that anticipates them. By making the network 'intelligent', Patrick ensures that every minute of traffic passing through iBasis is profitable."
+      },
+      {
+        "type": "cta",
+        "title": "Optimize Your Traffic",
+        "description": "See how DealoAgent can stop margin leakage in your network.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
   }
 ]
