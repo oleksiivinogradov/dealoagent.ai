@@ -48,7 +48,7 @@ export default function Blog() {
               </span>
             </div>
 
-            <Link to={`/blog/${featuredPost.slug}`} className="group">
+            <Link to={`/blog/${featuredPost.slug}/`} className="group">
               <div className="grid gap-8 lg:grid-cols-2 rounded-3xl border-2 border-blue-200 bg-white p-8 hover:border-blue-400 hover:shadow-2xl transition-all">
                 {/* Image */}
                 <div className="relative overflow-hidden rounded-2xl">
@@ -106,7 +106,7 @@ export default function Blog() {
               {otherPosts.map((post) => (
                 <Link
                   key={post.id}
-                  to={`/blog/${post.slug}`}
+                  to={`/blog/${post.slug}/`}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white hover:border-blue-300 hover:shadow-xl transition-all"
                 >
                   {/* Image */}

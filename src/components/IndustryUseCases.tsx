@@ -28,7 +28,7 @@ export function IndustryUseCases() {
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/recruiting'}
+                            onClick={() => window.location.href = '/usecases/recruiting/'}
                         >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -46,7 +46,7 @@ export function IndustryUseCases() {
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/softwaresales'}
+                            onClick={() => window.location.href = '/usecases/softwaresales/'}
                         >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -64,7 +64,7 @@ export function IndustryUseCases() {
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/vcresearch'}
+                            onClick={() => window.location.href = '/usecases/vcresearch/'}
                         >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -82,7 +82,7 @@ export function IndustryUseCases() {
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/callcenter'}
+                            onClick={() => window.location.href = '/usecases/callcenter/'}
                         >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -100,7 +100,7 @@ export function IndustryUseCases() {
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/voip'}
+                            onClick={() => window.location.href = '/usecases/voip/'}
                         >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4" />

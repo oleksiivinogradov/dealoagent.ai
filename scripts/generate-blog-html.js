@@ -64,7 +64,7 @@ blogPosts.forEach(post => {
 
     html = html.replace(
         /<meta property="og:url"[\s\S]*?\/>/,
-        `<meta property="og:url" content="https://dealoagent.ai/blog/${post.slug}" />`
+        `<meta property="og:url" content="https://dealoagent.ai/blog/${post.slug}/" />`
     );
 
     html = html.replace(
@@ -90,11 +90,11 @@ blogPosts.forEach(post => {
 
     html = html.replace(
         /<meta property="twitter:url"[\s\S]*?\/>/,
-        `<meta property="twitter:url" content="https://dealoagent.ai/blog/${post.slug}" />`
+        `<meta property="twitter:url" content="https://dealoagent.ai/blog/${post.slug}/" />`
     );
 
     // Add canonical link
-    const canonicalUrl = `https://dealoagent.ai/blog/${post.slug}`;
+    const canonicalUrl = `https://dealoagent.ai/blog/${post.slug}/`;
     if (html.includes('<link rel="canonical"')) {
         html = html.replace(
             /<link rel="canonical"[\s\S]*?\/>/,

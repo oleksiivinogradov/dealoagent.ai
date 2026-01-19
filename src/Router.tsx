@@ -48,10 +48,10 @@ export function Navigation() {
             <a href="/#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
             <a href="/#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
             <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
-            <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
+
             <a href="/#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
             <a href="/#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-            <a href="/blog" className="text-gray-700 hover:text-gray-900">Blog</a>
+            <a href="/blog/" className="text-gray-700 hover:text-gray-900">Blog</a>
             <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
             <Button
               variant="outline"
@@ -95,7 +95,7 @@ export function Navigation() {
               <a href="/#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
               <a href="/#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
               <a href="/#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-              <a href="/blog" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
+              <a href="/blog/" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
               <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
               <Button
                 variant="outline"

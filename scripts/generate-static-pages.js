@@ -72,7 +72,7 @@ pages.forEach(page => {
     html = html.replace(/<meta name="description"[\s\S]*?\/>/, `<meta name="description" content="${page.description}" />`);
 
     // Update Canonical
-    const canonicalUrl = `https://dealoagent.ai/${page.path}`;
+    const canonicalUrl = `https://dealoagent.ai/${page.path}/`;
     html = html.replace(/<link rel="canonical"[\s\S]*?\/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
 
     // Update OG Tags
