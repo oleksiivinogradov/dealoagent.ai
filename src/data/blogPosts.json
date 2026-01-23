@@ -1,5 +1,150 @@
 [
   {
+    "id": "robert-half-talent-manager-recruiting-transformation",
+    "slug": "how-emma-franck-robert-half-transforms-recruiting-with-ai",
+    "title": "How Emma Franck (Talent Acquisition Manager at Robert Half) Could Transform Recruiting with AI",
+    "subtitle": "A hypothetical deep dive: Eliminating manual parsing and ensuring 100% profile completeness for a top talent leader.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-01-23",
+    "readTime": "8 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/emma_franck_robert_half.png",
+    "excerpt": "Talent Acquisition Managers like Emma Franck at Robert Half face a daily deluge of resumes and fragmented data. In this hypothetical case study, we explore how she could use DealoAgent to automate candidate parsing, ensure 100% profile completeness, and focus purely on placing top talent.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "Robert Half",
+      "AI",
+      "Talent Acquisition"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Emma Franck, a Talent Acquisition Manager at Robert Half, could leverage DealoAgent.AI. Robert Half is a real, industry-leading staffing agency, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Robert Half** is synonymous with professional staffing. For a Talent Acquisition Manager, the brand brings a massive volume of applicants. But volume is a double-edged sword. Without the right tools, the dream of finding the perfect candidate turns into an administrative nightmare of PDF parsing, missing data, and endless follow-up emails."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Buried in the Admin Avalanche"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Emma Franck**, a Talent Acquisition Manager at Robert Half. Emma is dedicated to connecting top professionals with their dream roles. But her day is often consumed by the friction of manual recruiting processes."
+      },
+      {
+        "type": "paragraph",
+        "text": "Her primary pain points in this hypothetical scenario revolve around data chaos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Manual CV Processing**: Candidates send resumes in every conceivable format—Word, PDF, image scans. Emma spends hours manually extracting skills and experience to standardize them for her clients.",
+          "**Fragmented Data Collection**: Essential details like notice periods or salary expectations are scattered across emails, LinkedIn messages, and quick phone notes. Emma constantly chases this info, never quite sure if a profile is truly 'client-ready'.",
+          "**Redundant Interviews**: Because data is missing, she wastes precious interview minutes asking basic questions like 'Are you willing to relocate?'—questions that should have been answered before the call.",
+          "**Research Nightmare**: Vetting a candidate's background manually involves dozens of open tabs. It's overwhelming and time-consuming."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I didn't get into recruiting to be a data entry clerk. I want to spend my time talking to people, not formatting their resumes.",
+        "author": "Hypothetical scenario: Emma Franck, Talent Acquisition Manager at Robert Half"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Automated Recruiting Coordinator"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Emma activates **DealoAgent**. It acts as her always-on recruiting assistant, handling the heavy lifting of data and process."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Automated Parsing & Ingestion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Emma forwards a messy batch of 50 resumes to DealoAgent. Instantly, the AI ingests them, standardizes the formatting, extracts key skills, and populates the applicant tracking system. What took hours now takes minutes."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Smart Gap Filling"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent notices that a promising candidate, 'Alex', hasn't specified his visa status. Instead of Emma having to remember to ask, the AI automatically prompts the candidate via a quick, friendly message to fill in the blank."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Result**: By the time Emma sits down for the interview, the profile is 100% complete. She knows exactly what Alex can do and what he needs."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Intelligent Interview Prep"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before the call, DealoAgent analyzes Alex's entire digital footprint and the job description. It generates a bespoke interview guide for Emma: *'Ask about the gap in 2023 - LinkedIn shows a freelance project. Verify his specific experience with React Native vs. React.'*"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Admin Time",
+            "value": "-70%",
+            "description": "Reduction in manual data entry"
+          },
+          {
+            "label": "Profile Quality",
+            "value": "100%",
+            "description": "Completeness of candidate files"
+          },
+          {
+            "label": "Placements",
+            "value": "2x",
+            "description": "Due to focus on high-value conversations"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a talent leader like Emma Franck, time is the most valuable currency. DealoAgent doesn't just save time; it upgrades the entire recruiting interaction. By automating the 'boring stuff,' it frees her to do what she does best: build relationships and change lives."
+      },
+      {
+        "type": "cta",
+        "title": "Automate Your Recruiting",
+        "description": "See how DealoAgent can handle the admin so you can handle the talent.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "retool-sales-vp-transformation-dealoagent",
     "slug": "how-retool-sales-vp-scales-results-with-ai",
     "title": "How Tom Wagner (VP Sales at Retool) Could Scale Results with AI",
