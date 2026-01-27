@@ -1,0 +1,1276 @@
+{
+    "nav": {
+        "useCases": "Przypadki użycia",
+        "features": "Funkcje",
+        "pricing": "Cennik",
+        "team": "Zespół",
+        "partners": "Partnerzy",
+        "signIn": "Zaloguj się",
+        "talkToSales": "Kontakt",
+        "register": "Zarejestruj się"
+    },
+    "hero": {
+        "badge": "Twój Pełny Partner AI",
+        "title": "Mówi i Wygląda Jak Twoja Branża",
+        "subtitle": "Połącz w pełni konfigurowalny CRM z natywnym asystentem biznesowym AI. Zbuduj swoją przestrzeń roboczą używając własnego języka branżowego i przepływów pracy, dostosowując interfejs i inteligencję dokładnie do sposobu, w jaki pracujesz.",
+        "cta": {
+            "register": "Zarejestruj się - Odbierz darmowe kredyty",
+            "watch": "Obejrzyj prezentację",
+            "comingSoon": "Wkrótce",
+            "seamless": "Wszystkie funkcje współpracują płynnie poprzez <1>jeden interfejs czatu oparty na AI</1>",
+            "tryFree": "Wypróbuj wszystkie funkcje za darmo",
+            "startTrial": "Rozpocznij darmowy okres próbny"
+        },
+        "stats": {
+            "users": "Aktywnych użytkowników",
+            "deals": "Zamkniętych transakcji",
+            "roi": "Wzrost ROI"
+        }
+    },
+    "features": {
+        "title": "Funkcje, które przynoszą wyniki",
+        "subtitle": "Wszystko, czego potrzebujesz, aby zautomatyzować przepływ pracy w sprzedaży",
+        "intelligence": {
+            "title": "Wywiad konkurencyjny",
+            "description": "Wyodrębnianie cen/funkcji z e-maili; monitorowanie stron; tabele porównawcze AI; śledzenie nastrojów."
+        },
+        "unified": {
+            "title": "Zintegrowana komunikacja",
+            "description": "Centralizacja Email/Teams/Chat; wyszukiwanie semantyczne; automatyczne dopasowywanie transakcji; ocena relacji."
+        },
+        "crm": {
+            "title": "CRM w języku naturalnym",
+            "description": "Interfejs czatu do wszystkich zadań; brak ręcznego wprowadzania; projektowanie procesów przez czat."
+        },
+        "outreach": {
+            "title": "Outreach kontekstowy",
+            "description": "AI tworzy spersonalizowane e-maile na podstawie historii; uczy się na sukcesach; sekwencje wielokanałowe."
+        }
+    },
+    "featureCards": {
+        "sourcing": {
+            "title": "Pozyskiwanie i wywiad B2B",
+            "description": "Znajdź wysokiej jakości leady i buduj głębokie relacje, korzystając ze zweryfikowanych baz danych komercyjnych i głębokich badań AI.",
+            "items": [
+                "Zintegrowana baza danych z ponad 750 mln zweryfikowanych e-maili biznesowych",
+                "Wyszukiwanie AI w 'ukrytym' internecie w celu odkrycia wzmianek o leadach",
+                "Twórz w 100% spersonalizowany outreach, który zmienia zimne kontakty w relacje",
+                "Automatyczne wzbogacanie rekordów CRM danymi o kontaktach i firmach w czasie rzeczywistym"
+            ]
+        },
+        "research": {
+            "title": "Głębokie badania wieloźródłowe",
+            "description": "Zautomatyzuj zbieranie informacji. Czy to analiza konkurencji, Due Diligence VC czy screening HR - AI wypełnia luki z dokumentów i rozmów.",
+            "items": [
+                "Automatyczne wyodrębnianie ustrukturyzowanych danych z e-maili i dokumentów",
+                "Bezpośrednie pobieranie danych ze stron docelowych i podsumowywanie informacji",
+                "Tworzenie kompleksowych tabel porównawczych dla konkurentów lub kandydatów",
+                "Obsługa interakcji wielokanałowych i wyodrębnianie tekstu z załączników",
+                "Automatyczne tworzenie wiadomości w celu zapytania o brakujące informacje"
+            ]
+        },
+        "crm": {
+            "title": "CRM w języku naturalnym",
+            "description": "Zapomnij o skomplikowanych interfejsach CRM. Po prostu rozmawiaj ze swoim asystentem AI, aby zarządzać transakcjami i znajdować informacje w kilka sekund.",
+            "items": [
+                "Zadawaj pytania w swoim języku - otrzymuj natychmiastowe odpowiedzi z danych",
+                "Brak ręcznego wprowadzania danych - AI wypełnia CRM z e-maili i rozmów",
+                "Jeden interfejs czatu do każdego zadania - bez przełączania aplikacji",
+                "Wykonywanie złożonych procedur za pomocą jednego polecenia"
+            ]
+        },
+        "outreach": {
+            "title": "Generator outreachu kontekstowego",
+            "description": "Przestań wysyłać ogólne wiadomości. Generuj hiperspersonalizowane wiadomości, które odwołują się do przeszłych rozmów i potrzeb klientów.",
+            "items": [
+                "AI tworzy projekty e-maili, wykorzystując pełną historię rozmów i kontekst klienta",
+                "Wykorzystanie 'ukrytego' wyszukiwania Google do znalezienia faktów o leadach",
+                "Uczenie się na podstawie Twoich najlepszych wiadomości i powielanie sukcesu",
+                "Sekwencje wielokanałowe w e-mailach i komunikatorach",
+                "Naucz AI swoich osobistych preferencji, aby ulepszyć przyszłe generacje"
+            ]
+        },
+        "automation": {
+            "title": "Inteligentna automatyzacja sieci",
+            "description": "Przejmij kontrolę nad siecią. Nasze rozszerzenie Chrome działa jak Twoja cyfrowa ręka, automatyzując networking na LinkedIn i wypełnianie formularzy.",
+            "items": [
+                "Skalowanie operacji LinkedIn: automatyczne łączenie, wiadomości i pobieranie danych",
+                "Inteligentne wypełnianie formularzy: wykorzystuje kontekst z Twoich dokumentów",
+                "Przetwarzanie wsadowe: automatyzacja powtarzalnych czynności na dowolnej stronie",
+                "Bezpieczna integracja rozszerzenia Chrome dla płynnej kontroli przeglądarki"
+            ]
+        },
+        "roles": {
+            "title": "Role zespołowe i dostęp",
+            "description": "Zarządzaj swoim zespołem sprzedaży za pomocą szczegółowych uprawnień. Przypisuj role, śledź indywidualne wyniki i zapewnij bezpieczny dostęp.",
+            "items": [
+                "Kontrola dostępu oparta na rolach (RBAC) dla administratorów i menedżerów",
+                "Bezpieczne logowanie pracowników z obsługą jednokrotnego logowania (SSO)",
+                "Łatwe wdrażanie i usuwanie członków zespołu",
+                "Konfigurowalne zestawy uprawnień dla różnych działów"
+            ]
+        }
+    },
+    "difference": {
+        "title": "Poczuj różnicę",
+        "subtitle": "Zobacz, jak DealoAgent zmienia Twój przepływ pracy w sprzedaży ze złożonego i ręcznego na prosty i konwersacyjny.",
+        "newApproach": "NOWE PODEJŚCIE",
+        "oldApproach": "STARE PODEJŚCIE",
+        "ui": {
+            "dashboard": "Pulpit",
+            "leads": "Leady",
+            "reports": "Raporty",
+            "advancedSearch": "Szukanie zaawansowane",
+            "dataView": "Widok danych",
+            "emailEditor": "Edytor e-mail",
+            "connectionTimeout": "Limit czasu połączenia",
+            "refreshMessage": "Odśwież stronę i spróbuj ponownie."
+        }
+    },
+    "howItWorks": {
+        "badge": "Jak to działa",
+        "title": "Od wiedzy do finalizacji w trzech prostych krokach",
+        "steps": {
+            "analyze": {
+                "title": "Analizuj",
+                "description": "Nasza AI skanuje Twoje e-maile, załączniki i komunikację, aby zrozumieć Twój rynek, konkurencję i możliwości."
+            },
+            "automate": {
+                "title": "Automatyzuj",
+                "description": "Generuj spersonalizowane wiadomości, tabele porównawcze i follow-upy na podstawie przeszłych rozmów i danych."
+            },
+            "accelerate": {
+                "title": "Przyspieszaj",
+                "description": "Zamykaj transakcje szybciej dzięki wglądom AI, zautomatyzowanym procesom i inteligentnym rekomendacjom."
+            }
+        }
+    },
+    "results": {
+        "title": "Wyniki mówią same za siebie",
+        "subtitle": "Dołącz do tysięcy zespołów sprzedażowych osiągających bezprecedensowy wzrost",
+        "stats": {
+            "researchTime": "Czas zaoszczędzony na badaniach",
+            "dealVelocity": "Szybsze zamykanie transakcji",
+            "responseRate": "Wzrost wskaźnika odpowiedzi",
+            "dealsClosed": "Łącznie zamkniętych transakcji"
+        }
+    },
+    "pricing": {
+        "badge": "Cennik",
+        "subtitle": "Wybierz plan odpowiedni dla siebie. Wszystkie plany zawierają tokeny AI do wykorzystania.",
+        "perMonth": "/miesiąc",
+        "tokensIncluded": "tokenów użycia w pakiecie",
+        "popular": "Najpopularniejszy",
+        "free": {
+            "title": "Free",
+            "cta": "Rozpocznij za darmo",
+            "features": [
+                "Podstawowa analiza konkurencji",
+                "Do 10 wiadomości generowanych przez AI",
+                "Wsparcie e-mailowe",
+                "Interfejs CRM oparty na czacie"
+            ]
+        },
+        "pro": {
+            "title": "Pro",
+            "cta": "Rozpocznij próbny Pro",
+            "features": [
+                "Zaawansowany wywiad konkurencyjny",
+                "Nielimitowane wiadomości AI",
+                "Skanowanie i analityka załączników",
+                "Integracja z e-mailem i czatem",
+                "Wsparcie priorytetowe"
+            ]
+        },
+        "enterprise": {
+            "title": "Enterprise",
+            "cta": "Kontakt ze sprzedażą",
+            "features": [
+                "Wszystko w pakiecie Pro",
+                "Pełny Agent Sprzedaży AI (wkrótce)",
+                "Niestandardowe integracje",
+                "Dedykowany opiekun klienta",
+                "Wsparcie premium 24/7"
+            ]
+        },
+        "addon": {
+            "title": "Potrzebujesz więcej tokenów?",
+            "subtitle": "Dodaj tokeny o wartości <1>$50</1> w dowolnym momencie",
+            "cta": "Kup pakiet tokenów"
+        },
+        "note": "Wszystkie plany zawierają 14-dniowy okres próbny · Karta nie jest wymagana · Anuluj w dowolnym momencie",
+        "promo": {
+            "title": "Oferta ograniczona: Darmowe kredyty + Nagrody za polecenia",
+            "text": "Nowi użytkownicy otrzymują <1>darmowe kredyty</1> na start. Zaproś znajomych i zdobywaj nagrody - bonusy otrzymujesz Ty i Twoi poleceni!",
+            "cta": "Odbierz darmowe kredyty teraz"
+        }
+    },
+    "readiness": {
+        "badge": "Gotowy na wzrost?",
+        "subtitle": "Dołącz do tysięcy zespołów sprzedażowych, które już używają DealoAgent do zamykania większej liczby transakcji. Rozpocznij darmowy okres próbny dzisiaj.",
+        "registerCta": "Zarejestruj się - Odbierz kredyty",
+        "salesCta": "Porozmawiaj ze sprzedażą",
+        "promoText": "🎁 Oferta limitowana: Darmowe kredyty + Nagrody z systemu poleceń",
+        "footerNote": "14-dniowy okres próbny · Karta nie jest wymagana · Anuluj w dowolnym momencie"
+    },
+    "partners": {
+        "badge": "Program Partnerski",
+        "title": "Rozwijaj się z DealoAgent",
+        "description": "Niezależnie od tego, czy jesteś integratorem systemów, resellerem czy partnerem afiliacyjnym, mamy program zaprojektowany dla Twojego sukcesu. Zarabiaj wysokie prowizje i oferuj najbardziej zaawansowany CRM AI swoim klientom.",
+        "table": {
+            "headers": {
+                "benefit": "Korzyść",
+                "dealoAgent": "DealoAgent",
+                "others": "Inni"
+            },
+            "rows": {
+                "revShareY1": "Udział w przychodach (Rok 1)",
+                "revShareY2Y3": "Udział w przychodach (Rok 2/3)",
+                "flatBounty": "Stała nagroda",
+                "multiTierReferral": "Wielopoziomowy system poleceń",
+                "multiTierValue": "Tak (Zarabiaj z sieci)"
+            }
+        }
+    },
+    "industryUseCases": {
+        "title": "Przypadki Użycia (wg branż)",
+        "subtitle": "Odkryj, jak DealoAgent zmienia operacje w konkretnych branżach.",
+        "learnMore": "Dowiedz się więcej",
+        "recruiting": {
+            "title": "Rekrutacja",
+            "description": "Usprawnij pozyskiwanie kandydatów, screening i zarządzanie klientami. Zobacz, jak rekruterzy i właściciele agencji wykorzystują AI do zwiększenia zatrudnienia."
+        },
+        "saas": {
+            "title": "Sprzedaż SaaS",
+            "description": "Skaluj ARR i szybkość lejka. Wyposaż przedstawicieli w zautomatyzowany outreach, a założycieli w centrum dowodzenia w czasie rzeczywistym na Telegramie."
+        },
+        "vc": {
+            "title": "Venture Capital",
+            "description": "Zautomatyzuj due diligence i monitorowanie portfela. Daj analitykom supermoce i pomóż partnerom nie przegapić jednorożca."
+        },
+        "callCenter": {
+            "title": "Call Center",
+            "description": "Ocena agentów oparta na AI, wykrywanie odchyleń od skryptu i analiza emocji. Prosta integracja bez kosztów."
+        },
+        "voip": {
+            "title": "Hurt VoIP",
+            "description": "Zarządzanie ruchem AI-Native. Alerty ASR/ACD w czasie rzeczywistym, zautomatyzowana optymalizacja LCR i analiza marży w języku naturalnym."
+        }
+    },
+    "team": {
+        "badge": "Zespół",
+        "subtitle": "Poznaj zespół budujący przyszłość sprzedaży z AI",
+        "founder": {
+            "role": "Założyciel i CEO",
+            "name": "Oleksii Vinogradov",
+            "bio": "Lider AI z udokumentowaną zdolnością dostarczania zaawansowanych systemów AI od koncepcji do produkcji. Zbudował UnitAI od podstaw w 3 miesiące - pełny pakiet agentów AI dla deweloperów Unity. Certyfikowany specjalista Deep Learning z ekspertyzą w LLM, RAG, pamięci agentowej i rozwoju produktów AI full-stack."
+        },
+        "contact": "Kontakt z Zespołem Partnerskim",
+        "explore": "Przeglądaj Programy"
+    },
+    "blog": {
+        "badge": "Najnowsze spostrzeżenia",
+        "subtitle": "Prawdziwe historie i sprawdzone strategie zespołów transformujących sprzedaż dzięki AI",
+        "readStory": "Czytaj historię",
+        "viewAll": "Zobacz wszystkie historie",
+        "hero": {
+            "badge": "Spostrzeżenia i Case Studies",
+            "title": "Blog DealoAgent",
+            "description": "Prawdziwe historie, sprawdzone strategie i wiedza o sprzedaży wspieranej przez AI"
+        },
+        "featured": {
+            "label": "Polecana historia",
+            "readMore": "Czytaj całość"
+        },
+        "latest": {
+            "title": "Najnowsze artykuły"
+        },
+        "newsletter": {
+            "title": "Bądź na bieżąco",
+            "description": "Otrzymuj najnowsze informacje o sprzedaży AI prosto na swoją skrzynkę",
+            "button": "Zapisz się do newslettera"
+        }
+    },
+    "footer": {
+        "description": "Platforma CRM oparta na AI dla nowoczesnych zespołów sprzedaży B2B.",
+        "copyright": "© 2025 DealoAgent. Wszelkie prawa zastrzeżone.",
+        "product": {
+            "title": "Produkt",
+            "features": "Funkcje",
+            "pricing": "Cennik",
+            "security": "Bezpieczeństwo",
+            "roadmap": "Roadmapa",
+            "login": "Logowanie pracownika"
+        },
+        "company": {
+            "title": "Firma",
+            "about": "O nas",
+            "blog": "Blog",
+            "careers": "Kariera",
+            "contact": "Kontakt",
+            "privacy": "Polityka prywatności"
+        }
+    },
+    "recruitingUseCase": {
+        "helmet": {
+            "title": "AI dla Agencji Rekrutacyjnych - DealoAgent.ai",
+            "description": "Zautomatyzuj screening kandydatów, parsing i outreach z DealoAgent.ai. Zobacz, jak rekruterzy oszczędzają 70% czasu na administracji."
+        },
+        "header": {
+            "title": "AI dla Agencji Rekrutacyjnych",
+            "description": "Zobacz, jak DealoAgent zmienia proces rekrutacji dla rekruterów, zespołów sprzedaży i właścicieli agencji."
+        },
+        "roles": {
+            "recruiter": {
+                "badge": "Rekruter",
+                "title": "Skup się na kandydatach, nie na administracji",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ręczne przetwarzanie CV:</strong> Kandydaci wysyłają pliki PDF lub Docs, które muszę ręcznie konwertować i porównywać z wymaganiami wakatu.",
+                        "1": "<strong>Rozproszone zbieranie danych:</strong> Szukam informacji w e-mailach, komunikatorach i rozmowach, aby wypełnić formularze wakatów. To niekończące się ręczne cykle i nigdy nie wiem, czy profil jest naprawdę kompletny.",
+                        "2": "<strong>Zbędne rozmowy kwalifikacyjne:</strong> Tracę czas na wywiady głosowe, zadając pytania o informacje, które kandydat już podał, ale je przegapiłem.",
+                        "3": "<strong>Koszmar researchu:</strong> Ręczne sprawdzanie przeszłości kandydatów jest czasochłonne i przytłaczające."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Zautomatyzowany parsing:</strong> Wszystkie dokumenty są konwertowane na bieżąco z e-maili, komunikatorów lub czatów i natychmiast łączone z kandydatem.",
+                        "1": "<strong>Inteligentne uzupełnianie luk:</strong> AI generuje konkretne pytania, aby uzupełnić brakujące szczegóły wakatu (nawet dla kandydatów, którzy ignorują punkty), zapewniając 100% kompletności.",
+                        "2": "<strong>Inteligentne przygotowanie do wywiadu:</strong> AI analizuje wszystkie wcześniejsze informacje, aby zasugerować DOKŁADNE pytania, których potrzebuję. Transkrypcje połączeń głosowych automatycznie uzupełniają wszelkie niejasne informacje.",
+                        "3": "<strong>Głębokie wglądy:</strong> Zintegrowany głęboki research automatycznie dodaje specjalne punkty skupienia do raportu kandydata."
+                    }
+                },
+                "quote": "\"I dobra wiadomość: nie trzeba czekać na zgodę zarządu ani długie decyzje integracyjne. Po prostu zacząłem używać go sam i działa jak magia.\"",
+                "testimonial": {
+                    "name": "Sarah Jenkins",
+                    "role": "Rekruter w agencji TalentFlow",
+                    "text": "\"To jak posiadanie zespołu 5 asystentów pracujących 24/7. Mój wskaźnik obsadzeń podwoił się w zaledwie 3 miesiące.\""
+                }
+            },
+            "sales": {
+                "badge": "Sprzedaż i Rozwój Biznesu",
+                "title": "Przewidywalny pipeline, spersonalizowany outreach",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ręczne poszukiwanie klientów:</strong> Spędzałem godziny na ręcznym wyszukiwaniu firm zatrudniających na role, które obsługujemy. To był powolny proces prób i błędów.",
+                        "1": "<strong>Szablonowy outreach:</strong> Aby wyrobić normę, musiałem wysyłać ogólne e-maile \"na chybił trafił\". Personalizacja była niemożliwa przy dużej skali, więc wskaźniki odpowiedz były niskie.",
+                        "2": "<strong>Utracony kontekst:</strong> Kiedy lead w końcu odpisywał, gorączkowo szukałem starych notatek lub e-maili. Często wchodziłem na rozmowy na ślepo, zapominając o kluczowych szczegółach sprzed miesięcy.",
+                        "3": "<strong>Pominięte follow-upy:</strong> Polegałem na pamięci lub karteczkach, by przypomnieć sobie o kontakcie. Cenne leady ciągle przepadały."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Targetowanie oparte na AI:</strong> DealoAgent identyfikuje leady o wysokim potencjale, korzystając ze zintegrowanych baz danych z ponad 750 mln zweryfikowanych e-maili i śledzi firmy pasujące do Twojej niszy, które właśnie opublikowały odpowiednie oferty pracy.",
+                        "1": "<strong>Hiper-personalizacja:</strong> AI wykorzystuje wyszukiwanie \"ukrytych faktów\", aby znaleźć wzmianki o leadzie w Internecie, tworząc w 100% spersonalizowane wiadomości, które nawiązują do konkretnych ról, wiadomości firmowych i naszych najlepszych kandydatów.",
+                        "2": "<strong>Zjednoczona inteligencja:</strong> Każdy e-mail, rozmowa i wiadomość na LinkedIn są analizowane. Otrzymuję \"ściągawkę\" przed każdą interakcją z pełnym kontekstem i sugerowanymi tematami rozmów.",
+                        "3": "<strong>Inteligentne ponowne zaangażowanie:</strong> System powiadamia mnie, gdy \"uśpiony\" lead wykazuje sygnały zakupowe (np. odwiedza naszą stronę lub publikuje nową rolę) i przygotowuje idealną wiadomość na wznowienie kontaktu."
+                    }
+                },
+                "quote": "\"I dobra wiadomość: nie trzeba czekać na zgodę zarządu ani długie decyzje integracyjne. Po prostu zacząłem używać go sam i działa jak magia.\"",
+                "testimonial": {
+                    "name": "Michael Chen",
+                    "role": "Lider Sprzedaży w agencji TalentFlow",
+                    "text": "\"Przeszedłem od gonienia za leadami do zarządzania stałym strumieniem kwalifikowanych spotkań. Moje premie nigdy nie były wyższe.\""
+                }
+            },
+            "ceo": {
+                "badge": "CEO / Właściciel Agencji",
+                "title": "Skalowanie bez zwiększania zatrudnienia",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Operacyjna czarna skrzynka:</strong> Polegałem na cotygodniowych raportach ręcznych, aby zrozumieć, co się dzieje. Zanim zobaczyłem dane, często było już za późno na naprawę problemów.",
+                        "1": "<strong>Ślepe punkty w wydajności:</strong> Trudno było odróżnić pozorowaną pracę od rzeczywistego postępu. Nie mogłem łatwo stwierdzić, kto osiąga wyniki, a kto potrzebuje pomocy, bez przekopywania się przez logi CRM.",
+                        "2": "<strong>Reaktywne zarządzanie:</strong> Korygowanie podejścia pracownika wymagało obecności na rozmowach lub przeglądania losowych e-maili. Zawsze reagowałem na problemy, zamiast im zapobiegać.",
+                        "3": "<strong>Sfragmentowany nadzór:</strong> Dane sprzedażowe i rekrutacyjne były rozdzielone, co uniemożliwiało uzyskanie jednolitego obrazu kondycji agencji."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Inteligencja konwersacyjna:</strong> Po prostu rozmawiam z AI, aby uzyskać aktualizacje statusu w czasie rzeczywistym. \"Pokaż pipeline sprzedaży\" lub \"Wizualizuj aktywność zespołu\" natychmiast generuje wykresy i raporty.",
+                        "1": "<strong>Przejrzystość wydajności:</strong> AI identyfikuje najlepszych pracowników i tych, którzy mają trudności, na podstawie rzeczywistych wyników rozmów, a nie tylko metryk aktywności.",
+                        "2": "<strong>Skalowalny coaching:</strong> Mogę natychmiast korygować kurs. AI analizuje style komunikacji i wskazuje obszary do indywidualnej poprawy, pozwalając mi na udzielanie konkretnych, terminowych informacji zwrotnych.",
+                        "3": "<strong>Proaktywne przywództwo:</strong> Trzymam rękę na pulsie każdego potencjalnego klienta i pracownika 24/7. Mogę dostrzegać trendy i kierować statkiem z pewnością popartą danymi."
+                    }
+                },
+                "quote": "\"A najlepsza część? Nie wymagano specjalnego wdrożenia technicznego. Po prostu podłączyliśmy nasze kanały komunikacji i od razu zaczęło to przynosić wartość.\"",
+                "testimonial": {
+                    "name": "Elena Rodriguez",
+                    "role": "CEO agencji TalentFlow",
+                    "text": "\"DealoAgent dał nam dźwignię operacyjną potrzebną do wzrostu. To najlepsza inwestycja, jaką zrobiłam dla mojego biznesu.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Przyszła mapa drogowa",
+            "title": "Wkrótce w DealoAgent",
+            "subtitle": "Stale wprowadzamy innowacje. Oto krótki podgląd potężnych funkcji, które są obecnie w naszym procesie rozwoju.",
+            "features": {
+                "screening": {
+                    "title": "Całodobowy Bot AI do Screeningu",
+                    "description": "Zawsze aktywny asystent, który weryfikuje wiedzę kandydatów i przeprowadza screening 24/7, zapewniając, że nigdy nie przegapisz najlepszych talentów."
+                },
+                "questions": {
+                    "title": "Inteligentny Generator Pytań",
+                    "description": "AI analizuje szczegóły wakatu, aby automatycznie generować precyzyjne, specyficzne dla roli pytania do wywiadu w celu oceny umiejętności technicznych i miękkich."
+                },
+                "avatar": {
+                    "title": "Wywiady z Awatarem AI",
+                    "description": "Przeprowadzaj wstępne rozmowy wideo z realistycznym awatarem AI, który naturalnie wchodzi w interakcje z kandydatami, oszczędzając Twojemu zespołowi godziny rozmów."
+                },
+                "analysis": {
+                    "title": "Zaawansowana Analiza Profilu",
+                    "description": "Głęboka analiza odpowiedzi kandydatów w celu wykrycia potencjalnych oszustw, oceny inteligencji emocjonalnej i budowania kompleksowych profili psychologicznych."
+                }
+            }
+        },
+        "cta": {
+            "title": "Gotowy na transformację swojej agencji rekrutacyjnej?",
+            "button": "Zacznij Teraz"
+        }
+    },
+    "saasUseCase": {
+        "helmet": {
+            "title": "AI dla Sprzedaży SaaS - DealoAgent.ai",
+            "description": "Skaluj swoje ARR, automatyzuj analizę konkurencji i kontroluj swój pipeline sprzedaży z dowolnego miejsca dzięki DealoAgent.ai."
+        },
+        "header": {
+            "title": "AI dla Zespołów Sprzedaży SaaS",
+            "description": "Skaluj swoje ARR, automatyzuj analizę konkurencji i kontroluj swój pipeline z dowolnego miejsca."
+        },
+        "roles": {
+            "rep": {
+                "badge": "Przedstawiciel Handlowy (SDR/AE)",
+                "title": "100x Więcej Ugod, Zautomatyzowany Outreach",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ręczne poszukiwanie klientów:</strong> Marnowałem godziny na LinkedIn, ręcznie szukając leadów. Prędkość mojego pipeline'u była bardzo niska.",
+                        "1": "<strong>Podejście \"na chybił trafił\":</strong> Aby wyrobić normę, wysyłałem ogólne e-maile z niskim wskaźnikiem otwarć. Personalizacja na dużą skalę była niemożliwa.",
+                        "2": "<strong>Piekło wprowadzania danych do CRM:</strong> Aktualizacja CRM zajmowała więcej czasu niż sprzedaż. Opuszczałem follow-upy i nieumyślnie powodowałem odejścia klientów.",
+                        "3": "<strong>Ograniczona przepustowość:</strong> Mogłem skutecznie obsługiwać tylko kilkudziesięciu potencjalnych klientów. Skalowanie oznaczało wypalenie."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>AI Outreach i Research:</strong> AI znajduje MQL/SQL, bada ich i tworzy hiper-spersonalizowane sekwencje. Ja tylko zatwierdzam i zamykam.",
+                        "1": "<strong>100x Większy Wolumen Transakcji:</strong> Pracuję ze znacznie większą liczbą potencjalnych klientów. Asystent AI wykonuje czarną robotę, pozwalając mi zamykać 100x więcej transakcji.",
+                        "2": "<strong>Inteligencja Kontekstowa:</strong> Przed każdym demo otrzymuję \"ściągawkę\" z wiadomościami o firmie potencjalnego klienta i jego stosem technologicznym.",
+                        "3": "<strong>Zautomatyzowane Follow-upy:</strong> Żaden lead nie umyka. AI zarządza całym moim lejkiem i automatycznie pielęgnuje leady."
+                    }
+                },
+                "quote": "\"Moja norma jest przekraczana każdego miesiąca. Skupiam się na zamykaniu, podczas gdy AI zajmuje się poszukiwaniem i badaniem.\"",
+                "testimonial": {
+                    "name": "Michael Chen",
+                    "role": "SDR w TechGrowth",
+                    "text": "\"Umówiłem 5x więcej demo przy mniejszym wysiłku. To jak posiadanie dedykowanego zespołu badawczego.\""
+                }
+            },
+            "founder": {
+                "badge": "Założyciel",
+                "title": "Kontroluj Wyniki Firmy z Dowolnego Miejsca",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Przywiązany do Biurka:</strong> Musiałem być przyklejony do laptopa, żeby sprawdzać dashboardy. Jeśli podróżowałem, traciłem widoczność.",
+                        "1": "<strong>Opóźnione Aktualizacje:</strong> Zawsze goniłem zespół o aktualizacje statusu na Slacku. \"Czy zamknęliśmy tę transakcję Enterprise?\"",
+                        "2": "<strong>Zgadywanie:</strong> Skalowanie oznaczało chaos. Nie wiedziałem, czy nasz nowy przekaz trafia, czy po prostu przepalamy pieniądze na złe kanały.",
+                        "3": "<strong>Reaktywność:</strong> O niewykonaniu celów dowiadywałem się dopiero pod koniec miesiąca, kiedy było już za późno na naprawę."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Centrum Dowodzenia w Telegramie:</strong> Kontroluję wyniki firmy z Telegrama lub WWW. \"Pokaż dzisiejsze ARR\" daje natychmiastową odpowiedź.",
+                        "1": "<strong>Zdalny Puls:</strong> Niezależnie od tego, czy jestem na konferencji, czy w podróży, mam podgląd w czasie rzeczywistym na każdą transakcję i metrykę.",
+                        "2": "<strong>Kontrola przez Asystenta AI:</strong> Mogę polecić AI \"Priorytetyzuj transakcje Q3\" lub \"Uruchom kampanię ponownego zaangażowania\" bezpośrednio z czatu.",
+                        "3": "<strong>Proaktywne Alerty:</strong> AI natychmiast powiadamia mnie, jeśli kluczowe wskaźniki spadną, więc mogę natychmiast interweniować."
+                    }
+                },
+                "quote": "\"Prowadzę mój SaaS z telefonu. Asystent AI działa jak mój COO, trzymając wszystko na właściwym torze.\"",
+                "testimonial": {
+                    "name": "David Miller",
+                    "role": "Założyciel SaaSFlow",
+                    "text": "\"Wolność kontrolowania wzrostu mojej firmy z dowolnego miejsca jest bezcenna. To prawdziwa autonomia.\""
+                }
+            },
+            "ceo": {
+                "badge": "CEO",
+                "title": "Zautomatyzowana Analiza Konkurencji i Kontrola Zespołu",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ślepota Konkurencyjna:</strong> Konkurenci zmieniali ceny lub wprowadzali nowe funkcje, a my dowiadywaliśmy się o tym tygodnie później, gdy traciliśmy transakcję.",
+                        "1": "<strong>Sprzedaż jako Czarna Skrzynka:</strong> Nie wiedziałem, *dlaczego* przegrywamy. Cena? Produkt? Umiejętności sprzedażowe? CRM nie mówił prawdy.",
+                        "2": "<strong>Ręczne Zarządzanie:</strong> Zarządzanie zespołem sprzedaży było pracą na pełny etat — przeglądanie rozmów, sprawdzanie aktywności i egzekwowanie procesów.",
+                        "3": "<strong>Powolna Adaptacja:</strong> Zmiany na rynku zachodziły szybciej, niż mogliśmy zareagować. Nasza strategia była zawsze przestarzała."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Zautomatyzowany Wywiad:</strong> AI monitoruje konkurencję codziennie. Automatycznie otrzymuję tabele porównawcze, aktualizacje funkcji i zmiany cen.",
+                        "1": "<strong>Kontrola w Czasie Rzeczywistym:</strong> Mam zautomatyzowaną kontrolę nad wynikami sprzedaży. AI monitoruje rozmowy i kieruje zespołem, aby postępował zgodnie z naszą strategią.",
+                        "2": "<strong>Źródło Pomysłów:</strong> Możliwości badawcze AI dają mi stały strumień nowych pomysłów i luk rynkowych do wykorzystania.",
+                        "3": "<strong>Strategiczna Dominacja:</strong> Widzę dokładnie, dlaczego wygrywamy lub przegrywamy. Mogę natychmiast zmienić strategię w oparciu o rzeczywiste dane rynkowe."
+                    }
+                },
+                "quote": "\"Wygrywamy z konkurentami 10x większymi od nas, ponieważ jesteśmy szybsi i mądrzejsi. DealoAgent to nasza tajna broń.\"",
+                "testimonial": {
+                    "name": "Jennifer Wu",
+                    "role": "CEO w CloudScale",
+                    "text": "\"DealoAgent daje mi jasność i kontrolę, których potrzebuję, aby skutecznie przewodzić. Jest niezbędny.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Przyszła Mapa Drogowa",
+            "title": "Wkrótce w DealoAgent dla SaaS",
+            "subtitle": "Stale wprowadzamy innowacje. Oto krótki podgląd potężnych funkcji, które są obecnie w naszym procesie rozwoju.",
+            "features": {
+                "negotiation": {
+                    "title": "Zautomatyzowany Bot Negocjacyjny",
+                    "description": "AI, które może prowadzić wstępne rundy negocjacji, odpowiadać na pytania o ceny i planować spotkania, zwalniając czas Twoim handlowcom."
+                },
+                "revenue": {
+                    "title": "Przewidywanie Przychodu AI",
+                    "description": "Prognozuj kwartał z 99% dokładnością. AI analizuje nastroje transakcji i prędkość lejka, aby dokładnie przewidzieć, co zostanie zamknięte."
+                },
+                "avatar": {
+                    "title": "Trening Sprzedaży z Awatarem",
+                    "description": "Nowi handlowcy ćwiczą rozmowy z realistycznym awatarem klienta AI, który zgłasza obiekcje i daje informacje zwrotne."
+                },
+                "churn": {
+                    "title": "Przewidywanie Odejść (Churn)",
+                    "description": "Analizuj wzorce użytkowania i nastroje w komunikacji, aby zidentyfikować zagrożonych klientów, zanim odejdą."
+                }
+            }
+        },
+        "cta": {
+            "title": "Gotowy na hiperskalowanie sprzedaży SaaS?",
+            "button": "Zacznij Teraz"
+        }
+    },
+    "vcUseCase": {
+        "helmet": {
+            "title": "AI dla Venture Capital - DealoAgent.ai",
+            "description": "Przekształć przepływ transakcji i due diligence dzięki AI. Zautomatyzuj badania, punktację i analizę rynku dla firm VC."
+        },
+        "header": {
+            "title": "AI dla Venture Capital",
+            "description": "Zobacz, jak DealoAgent przekształca przepływ transakcji i due diligence dla analityków i partnerów."
+        },
+        "roles": {
+            "analyst": {
+                "badge": "Analityk Inwestycyjny",
+                "title": "Dogłębna analiza w minuty, nie dni",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ręczne wprowadzanie danych:</strong> Spędzam godziny na kopiowaniu danych z prezentacji i e-maili do naszego CRM. Jest to żmudne i podatne na błędy.",
+                        "1": "<strong>Pochatkowany przepływ transakcji:</strong> Trudno mi tworzyć kompleksowe raporty o potencjalnych lub istniejących startupach z portfela. Informacje są rozproszone w e-mailach, komunikatorach i prezentacjach, co uniemożliwia uzyskanie jednolitego widoku bez godzin ręcznej kompilacji.",
+                        "2": "<strong>Powolne Due Diligence:</strong> Budowanie pełnego krajobrazu konkurencyjnego zajmuje mi tygodnie szukania w Google i czytania raportów.",
+                        "3": "<strong>Pobieżne badania:</strong> Przy dużym wolumenie transakcji mogę robić tylko powierzchowne sprawdzenia. Często pomijam krytyczne szczegóły o założycielach, dynamice rynku i ukrytych konkurentach z braku czasu na głębokie analizy.",
+                        "4": "<strong>Skomplikowane narzędzia:</strong> Nasz CRM wymaga skomplikowanych filtrów i kliknięć, aby cokolwiek znaleźć. Spędzam więcej czasu na zarządzaniu oprogramowaniem niż na analizie transakcji."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Zautomatyzowane pobieranie:</strong> Po prostu przesyłam prezentacje do AI. Wyciąga dane o zespole, wielkości rynku i trakcji oraz automatycznie wypełnia CRM.",
+                        "1": "<strong>Zautomatyzowany wywiad i outreach:</strong> AI agreguje dane ze wszystkich kanałów i automatycznie tworzy e-maile outreachowe lub wiadomości z konkretnymi pytaniami, aby uzupełnić brakujące informacje, zapewniając kompleksowe raporty bez ręcznego wysiłku.",
+                        "2": "<strong>Natychmiastowe krajobrazy:</strong> Pytam \"Pokaż mapę konkurencji dla [Startup]\" i otrzymuję szczegółową tabelę porównawczą z mocnymi i słabymi stronami w kilka sekund.",
+                        "3": "<strong>Głębokie badania AI:</strong> AI autonomicznie szuka \"ukrytych faktów\" i wzmianek o założycielach w 750M+ zweryfikowanych rekordach e-mail i publicznych danych webowych, aby zbudować w 100% spersonalizowaną tezę inwestycyjną i raport o przeszłości.",
+                        "4": "<strong>Komunikacja w języku naturalnym:</strong> Po prostu rozmawiam z AI, aby uzyskać wgląd w czasie rzeczywistym. \"Pokaż krajobraz konkurencyjny\" lub \"Przygotuj follow-up\" - rozumie kontekst i wykonuje natychmiast."
+                    }
+                },
+                "quote": "\"Teraz mogę objąć 5x więcej startupów bez pracy w weekendy. Głębia wglądu, którą otrzymuję natychmiast, jest taka, jakbym miał zespół badaczy.\"",
+                "testimonial": {
+                    "name": "David Kim",
+                    "role": "Starszy Analityk w Apex Ventures",
+                    "text": "\"Samo zautomatyzowane mapowanie konkurencji oszczędza mi 10 godzin tygodniowo. To zmienia zasady gry dla naszego przepływu transakcji.\""
+                }
+            },
+            "partner": {
+                "badge": "Partner Generalny / CEO",
+                "title": "Widzieć całą planszę, nigdy nie przegapić \"jednorożca\"",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Operacyjna czarna skrzynka:</strong> Polegałem na cotygodniowych raportach ręcznych, aby zrozumieć, nad czym pracują moi analitycy. Zanim zobaczyłem dane, gorące okazje były już zimne.",
+                        "1": "<strong>Ślepe punkty w wydajności:</strong> Trudno było odróżnić pozorowaną pracę od rzeczywistego pozyskiwania transakcji. Nie mogłem łatwo stwierdzić, którzy analitycy przynoszą jakościowe leady bez przekopywania się przez wątki e-mailowe.",
+                        "2": "<strong>Reaktywne zarządzanie:</strong> Korygowanie tezy inwestycyjnej analityka wymagało obecności na rozmowach lub przeglądania losowych notatek. Zawsze reagowałem na stracone szanse, zamiast im zapobiegać.",
+                        "3": "<strong>Sfragmentowany nadzór:</strong> Dane o przepływie transakcji i due diligence były rozdzielone, co uniemożliwiało uzyskanie jednolitego obrazu kondycji pipeline'u firmy."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Inteligencja konwersacyjna:</strong> Po prostu rozmawiam z AI, aby uzyskać aktualizacje statusu w czasie rzeczywistym. \"Pokaż pipeline transakcji\" lub \"Wizualizuj aktywność analityków\" natychmiast generuje wykresy i raporty.",
+                        "1": "<strong>Przejrzystość wydajności:</strong> AI identyfikuje najlepszych pracowników i tych mających trudności na podstawie rzeczywistej jakości transakcji i wyników outreachu, a nie tylko metryk aktywności.",
+                        "2": "<strong>Skalowalny coaching:</strong> Mogę natychmiast korygować kurs. AI analizuje notatki inwestycyjne i wskazuje obszary do indywidualnej poprawy, pozwalając mi na udzielanie konkretnych, terminowych informacji zwrotnych.",
+                        "3": "<strong>Proaktywne przywództwo:</strong> Trzymam rękę na pulsie każdej transakcji i analityka 24/7. Mogę dostrzegać trendy i kierować firmą z pewnością popartą danymi."
+                    }
+                },
+                "quote": "\"To jak posiadanie Szefa Sztabu, który nigdy nie śpi. Zamykamy lepsze transakcje, ponieważ działamy szybciej i z większym przekonaniem.\"",
+                "testimonial": {
+                    "name": "James Sterling",
+                    "role": "Partner Generalny w Sterling Capital",
+                    "text": "\"DealoAgent daje nam niesprawiedliwą przewagę. Widzimy wzorce, które inni pomijają.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Przyszła Mapa Drogowa",
+            "title": "Wkrótce w DealoAgent",
+            "subtitle": "Budujemy system operacyjny dla następnej generacji venture capital.",
+            "features": {
+                "scoring": {
+                    "title": "Zautomatyzowana punktacja pitch decków",
+                    "description": "AI natychmiast ocenia każdą prezentację pod kątem Twojej konkretnej tezy inwestycyjnej i wskazuje kluczowe ryzyka."
+                },
+                "termsheet": {
+                    "title": "Generator Term Sheetów",
+                    "description": "Twórz standardowe term sheety w kilka sekund na podstawie parametrów transakcji i standardów rynkowych."
+                },
+                "headhunting": {
+                    "title": "Headhunting Założycieli",
+                    "description": "AI identyfikuje potencjalnych założycieli po raz drugi, zanim jeszcze założą firmę, śledząc ich ruchy zawodowe i sygnały."
+                },
+                "prediction": {
+                    "title": "Przewidywanie Rynku",
+                    "description": "Analiza predykcyjna identyfikująca wschodzące trendy rynkowe i sektory, zanim staną się one głównym nurtem."
+                }
+            }
+        },
+        "cta": {
+            "title": "Gotowy na ulepszenie swojej firmy inwestycyjnej?",
+            "button": "Zacznij Teraz"
+        }
+    },
+    "callCenterUseCase": {
+        "helmet": {
+            "title": "AI dla Call Center i BPO - DealoAgent.ai",
+            "description": "Inteligencja Contact Center oparta na AI. Zmniejsz AHT, zwiększ FCR i zoptymalizuj Occupancy przy 100% pokryciu QA."
+        },
+        "header": {
+            "badge": "Nowość: AI dla BPO i Contact Center",
+            "title": "Inteligencja Contact Center oparta na AI",
+            "description": "Zmniejsz AHT, zwiększ FCR i zoptymalizuj Occupancy. 100% pokrycia QA, aby zredukować Shrinkage i poprawić Adherence."
+        },
+        "technical": {
+            "title": "Architektura Płynnej Integracji",
+            "description": "Nagrywanie z zerowym opóźnieniem i bez utraty jakości. Bez niestandardowych API i skomplikowanych zmian w infrastrukturze — po prostu umieść rejestrator, zarejestruj go w DealoAgent i działasz.",
+            "nodes": {
+                "pbx": {
+                    "title": "Voice PBX",
+                    "description": "Twoja obecna telefonia"
+                },
+                "ixc": {
+                    "title": "IXC Softswitch",
+                    "description": "Urządzenie nagrywające High-fidelity",
+                    "tag": "Bez utraty jakości"
+                },
+                "terminator": {
+                    "title": "Terminator Głosu",
+                    "description": "Routing ruchu SIP"
+                },
+                "ai": {
+                    "title": "DealoAgent AI",
+                    "description": "Przetwarzanie, Rozumienie i Punktacja"
+                }
+            }
+        },
+        "features": {
+            "title": "Głęboka Analityka Połączeń i QA",
+            "description": "Zautomatyzuj kontrolę jakości, aby kontrolować 100% interakcji. Optymalizuj AHT i steruj FCR za pomocą danych.",
+            "grid": {
+                "adherence": {
+                    "title": "Adherence i Asystent w Czasie Rzeczywistym",
+                    "description": "Taktyczne scenariusze na żywo kierują agentami, aby skócić czas obsługi (Wrap-up) i zwiększyć CSAT/NPS."
+                },
+                "qa": {
+                    "title": "100% Kontroli QA i Compliance",
+                    "description": "Pełny audyt każdej interakcji. Oznaczanie zakazanego języka i zapewnienie przestrzegania skryptu we wszystkich rozmowach."
+                },
+                "coaching": {
+                    "title": "Zautomatyzowany Coaching",
+                    "description": "Skróć czas wdrożenia dzięki automatycznemu coachingowi, który identyfikuje odchylenia AHT i zwycięskie frazy."
+                },
+                "bpo": {
+                    "title": "Inteligencja BPO",
+                    "description": "Rozmawiaj ze swoimi danymi, aby odkryć przyczyny Shrinkage i trendy Occupancy. \"Pokaż agentów z wysokim czasem oczekiwania\"."
+                }
+            }
+        },
+        "leaderboard": {
+            "badge": "Tablica Liderów Zespołu na Żywo",
+            "title": "Grywalizuj wydajność dzięki przejrzystym metrykom",
+            "description": "Natychmiast identyfikuj swoich najlepszych pracowników. DealoAgent śledzi niuansowe metryki, takie jak \"Przestrzeganie Skryptu\" i \"Wskaźnik Zadowolenia Klienta\", aby dać Ci prawdziwy obraz produktywności poza samą liczbą połączeń.",
+            "weeklyTitle": "Najlepsi Pracownicy Tygodnia",
+            "metrics": {
+                "satisfaction": "Najwyższy Wskaźnik Zadowolenia",
+                "deviation": "Najniższe Odchylenie od Skryptu",
+                "average": "Najlepszy Średni Wynik"
+            },
+            "review": {
+                "title": "Przegląd Wydajności Agenta",
+                "session": "ID Sesji: #8821 • Agent 498",
+                "score": "Wynik: 0.45 (Zadowolony)",
+                "scriptDeviation": "Odchylenie od Skryptu",
+                "criticalAlert": "Alert Krytyczny",
+                "uplift": "Wzrost FCR i CSAT",
+                "satisfiedRate": "Wskaźnik Zadowolenia",
+                "ahtBreakdown": "Rozkład AHT (min)",
+                "agentTalk": "Czas Rozmowy Agenta",
+                "customerTalk": "Czas Rozmowy Klienta",
+                "emotionMix": "Miks Emocji (>10%)",
+                "agentEmotions": "Emocje Agenta",
+                "customerEmotions": "Emocje Klienta",
+                "neutral": "Neutralne",
+                "happy": "Szczęśliwe",
+                "sad": "Smutne"
+            }
+        },
+        "dashboard": {
+            "badge": "BI w Języku Naturalnym",
+            "title": "Zbuduj swój własny pulpit",
+            "description": "Przestań czekać na analityków danych. Po prostu poproś DealoAgent o wizualizację dowolnej metryki, trendu lub anomalii w kilka sekund.",
+            "phrases": [
+                "Pokaż agentów z największym odchyleniem od skryptu w tym tygodniu...",
+                "Wykres korelacji między czasem oczekiwania a CSAT...",
+                "Kto jest najlepszym pracownikiem w kampanii retencyjnej?",
+                "Wylistuj rozmowy, w których pominięto 'compliance' w ostatniej godzinie..."
+            ],
+            "responses": [
+                "Oto 5 najlepszych agentów z największym odchyleniem od skryptu (>5%):",
+                "Oto analiza korelacji Czasu Oczekiwania vs CSAT (Ostatnie 30 dni):",
+                "Top 3 Pracowników w Kampanii Retencyjnej wg Wskaźnika Utrzymania:",
+                "Znaleziono 4 rozmowy z pominięciem klauzuli 'Mini-Miranda' w ostatniej godzinie:"
+            ],
+            "placeholder": "Zapytaj o cokolwiek...",
+            "criticalAlert": "Krytyczny Alert Zgodności",
+            "criticalMessage": "Rozmowa ID #9923, #9911, #8843 pominięto obowiązkową klauzulę.",
+            "you": "TY"
+        },
+        "roles": {
+            "agent": {
+                "badge": "Agent",
+                "title": "Upodmiotowiony, a nie monitorowany",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Lęk przed QA:</strong> Ciągle martwiłem się, że pominę obowiązkową klauzulę lub oświadczenie o zgodności.",
+                        "1": "<strong>Zmęczenie Eskalacjami:</strong> Bez scenariusza zamierałem, gdy klienci się złościli, co prowadziło do długiego czasu oczekiwania i eskalacji.",
+                        "2": "<strong>Opóźniony Coaching:</strong> Otrzymywałem informacje zwrotne o moich rozmowach tygodnie później, gdy kontekst był już utracony.",
+                        "3": "<strong>Niepewność KPI:</strong> Nie znałem swojego statusu AHT ani CSAT aż do miesięcznego przeglądu."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>Zabezpieczenia w Czasie Rzeczywistym:</strong> System natychmiast ostrzega mnie, jeśli pominę wymóg skryptu, więc mogę to naprawić na żywo podczas rozmowy.",
+                        "1": "<strong>Zwycięskie Scenariusze:</strong> Otrzymuję sugestie na żywo, jak zmienić \"neutralne\" interakcje w \"szczęśliwe\", zwiększając mój CSAT.",
+                        "2": "<strong>Codzienne Mikro-Cele:</strong> Widzę moje cele FCR i AHT w czasie rzeczywistym, wraz z klipami moich najlepszych momentów.",
+                        "3": "<strong>Zautomatyzowany Coaching:</strong> AI identyfikuje moje konkretne mocne strony i luki, oferując krótkie wskazówki coachingowe każdego ranka."
+                    }
+                },
+                "quote": "\"Czuję się znacznie pewniej wiedząc, że system mnie wspiera. Moje wyniki satysfakcji klienta wzrosły o 30% w pierwszym miesiącu.\""
+            },
+            "owner": {
+                "badge": "Właściciel BPO / CEO",
+                "title": "Pełna widoczność, zero martwych stref",
+                "before": {
+                    "title": "Przed DealoAgent",
+                    "items": {
+                        "0": "<strong>Ryzyko próbki QA 1%:</strong> QA mogło odsłuchać tylko 1% rozmów. Mieliśmy ogromną martwą strefę w 99% interakcji.",
+                        "1": "<strong>Ekspozycja na Martwe Strefy:</strong> O naruszeniach zgodności lub użyciu zakazanego języka dowiadywaliśmy się dopiero, gdy klient złożył skargę.",
+                        "2": "<strong>Stronnicza Punktacja QA:</strong> Przeglądy wydajności były subiektywne i niespójne, oparte na losowych próbkach rozmów.",
+                        "3": "<strong>Niejasne Wykorzystanie Miejsc:</strong> Trudno było śledzić rzeczywiste Occupancy i uzasadnić efektywność zatrudnienia przed klientami."
+                    }
+                },
+                "after": {
+                    "title": "Z DealoAgent",
+                    "items": {
+                        "0": "<strong>100% Audytu QA:</strong> AI ocenia i audytuje KAŻDĄ pojedynczą rozmowę. Wiemy dokładnie, co dzieje się w czasie rzeczywistym na całej sali.",
+                        "1": "<strong>Zapora Compliance:</strong> Możemy przeszukiwać wszystkie transkrypcje pod kątem \"ryzykownych obietnic\" lub konkretnych zakazanych terminów, aby ograniczyć odpowiedzialność.",
+                        "2": "<strong>Wgląd w Occupancy i Shrinkage:</strong> Tablice liderów oparte na \"AHT\" i \"Adherence\" pozwalają nam nagradzać prawdziwą produktywność.",
+                        "3": "<strong>Zapytania BPO w Języku Naturalnym:</strong> Mogę zapytać \"Pokaż trend szczęśliwych klientów w tym miesiącu\" i uzyskać natychmiastowy wykres do udostępnienia interesariuszom."
+                    }
+                },
+                "quote": "\"Przeszliśmy od reaktywnej kontroli szkód do proaktywnej inżynierii jakości. Operacje są wreszcie przejrzyste.\""
+            }
+        },
+        "cta": {
+            "title": "Gotowy na ulepszenie swojego Call Center?",
+            "button": "Zacznij Teraz"
+        }
+    },
+    "voipUseCase": {
+        "helmet": {
+            "title": "AI dla Biznesu Hurtowego VoIP - DealoAgent.ai",
+            "description": "Natywna Analityka Biznesowa AI dla Hurtowego VoIP. Optymalizuj routing, monitoruj ASR/ACD i zapobiegaj wyciekom marży."
+        },
+        "header": {
+            "badge": "Nowość: Analityka Biznesowa VoIP",
+            "title": "Natywna Logika AI dla Hurtu VoIP",
+            "description": "Zatrzymaj wyciek marży i optymalizuj routing natychmiast. Monitoruj ASR, ACD i PDD w czasie rzeczywistym za pomocą języka naturalnego."
+        },
+        "technical": {
+            "title": "Architektura Bezproblemowej Integracji",
+            "description": "Bez sprzętu. Integruj się bezpośrednio ze strumieniami CDR i bilingami softswitcha dla widoczności w czasie rzeczywistym.",
+            "nodes": {
+                "pbx": {
+                    "title": "Centrala PBX",
+                    "description": "Originator / Połączenia Przychodzące"
+                },
+                "routing": {
+                    "title": "Routing i Biling VoIP",
+                    "description": "Softswitch / Biling",
+                    "tag": "Bez Utraty Jakości"
+                },
+                "sip": {
+                    "title": "Routing Ruchu SIP",
+                    "description": "Połączenia Wychodzące / Terminatorzy"
+                },
+                "ai": {
+                    "title": "DealoAgent AI",
+                    "description": "Analiza Finansowa i Logika Alertów"
+                }
+            }
+        },
+        "dashboard": {
+            "badge": "BI w Języku Naturalnym",
+            "title": "Lista Życzeń Biznesu VoIP",
+            "description": "\"Pokaż mi, gdzie straciłem najwięcej ruchu\", \"Gdzie ACD wzrósł w ostatniej godzinie top-5.\" Natychmiastowe odpowiedzi dla Twoich decyzji.",
+            "placeholder": "Zapytaj o cokolwiek...",
+            "phrases": {
+                "0": "Pokaż mi, gdzie straciłem najwięcej ruchu...",
+                "1": "Gdzie ACD wzrósł w ostatniej godzinie top-5...",
+                "2": "Wymień top-10 celów do sprawdzenia terminatorów...",
+                "3": "Przeanalizuj spadek marży na Brazil Mobile..."
+            },
+            "responses": {
+                "0": "Wykryto spadek ASR o 45% dla ruchu od Originator A do UK Mobile w ostatnich 15 min.",
+                "1": "Top 5 tras wg wzrostu ACD (Ostatnia godzina):\n1. Germany Mobile (TalkTime) +15%\n2. France Fixed (Orange) +12%...",
+                "2": "Rekomendowani Terminatorzy dla celów docelowych (na podstawie marży i jakości):",
+                "3": "Analiza Marży dla Brazil Mobile (Ostatnie 24h):"
+            }
+        },
+        "trafficManager": {
+            "badge": "Menedżer Ruchu",
+            "title": "Aktywne Zarządzanie Ruchem",
+            "before": {
+                "title": "Przed DealoAgent",
+                "items": {
+                    "0": "<strong>Ślepota ASR/ACD:</strong> Dowiadywałem się o przerwanych połączeniach tylko wtedy, gdy partnerzy narzekali lub wolumen sprzedaży gwałtownie spadał.",
+                    "1": "<strong>Limit Przepustowości:</strong> Mogłem efektywnie zarządzać relacjami i routingiem maksymalnie dla 7-10 firm.",
+                    "2": "<strong>Ręczny Routing:</strong> Próby ręcznego dostosowywania list LCR i tabel routingu zajmowały godziny każdego dnia.",
+                    "3": "<strong>Opóźnione Rozwiązywanie Problemów:</strong> Badanie problemów PDD wymagało ręcznego przekopywania się przez logi i pliki CSV."
+                }
+            },
+            "after": {
+                "title": "Z DealoAgent",
+                "items": {
+                    "0": "<strong>Alerty w Czasie Rzeczywistym:</strong> System natychmiast wysyła ping, jeśli ASR spadnie na kluczowej trasie, więc mogę od razu zmienić dostawcę.",
+                    "1": "<strong>Skala do 100+ Partnerów:</strong> Automatyzacja pozwala mi bez wysiłku zarządzać ponad 100 aktywnymi połączeniami.",
+                    "2": "<strong>Głęboka Inteligencja Relacji:</strong> AI znajduje ukryte fakty o setkach menedżerów partnerów, pomagając budować ciepłe relacje na dużą skalę.",
+                    "3": "<strong>Integracja Softswitch:</strong> Wszystkie dane podłączone do strumieni danych softswitcha w czasie rzeczywistym dla natychmiastowej widoczności.",
+                    "4": "<strong>Automatyczna Optymalizacja LCR:</strong> AI sugeruje zmiany w routingu na podstawie statystyk jakości i marży w czasie rzeczywistym."
+                }
+            },
+            "quote": "\"Mój ASR poprawił się o 15%, ponieważ w końcu widzę, gdzie ruch spada w czasie rzeczywistym.\""
+        },
+        "owner": {
+            "badge": "Właściciel Firmy VoIP / CEO",
+            "title": "Pełna Widoczność Marży",
+            "before": {
+                "title": "Przed DealoAgent",
+                "items": {
+                    "0": "<strong>Nie Mówi Moim Językiem:</strong> Generyczne CRM nie rozumieją 'ASR', 'ACD' ani 'Portów', zmuszając nas do używania bałaganiarskich arkuszy kalkulacyjnych.",
+                    "1": "<strong>Ślepe Punkty Zarządzania:</strong> Spędzałem za dużo czasu na ściganiu menedżerów ruchu o aktualizacje zamiast skupiać się na strategii.",
+                    "2": "<strong>Wyciek Marży:</strong> Traciliśmy pieniądze na trasach z ujemną marżą często dlatego, że ręczne aktualizacje stawek były zbyt wolne."
+                }
+            },
+            "after": {
+                "title": "Z DealoAgent",
+                "items": {
+                    "0": "<strong>Ekosystem Natywny dla VoIP:</strong> Cała platforma mówi w języku VoIP—od umów 'Interconnection' po przetwarzanie 'Rate Sheet'—mój zespół pracuje 2x szybciej.",
+                    "1": "<strong>Nadzór Pracowników AI:</strong> Mam podgląd na wydajność każdego menedżera ruchu w czasie rzeczywistym.",
+                    "2": "<strong>Połączone Dane:</strong> Wszystkie dane finansowe i routingowe podłączone do strumieni softswitcha dla dokładności jednego źródła prawdy.",
+                    "3": "<strong>Śledzenie Marży w Czasie Rzeczywistym:</strong> Widzę dokładny zysk na minutę dla każdego celu, gwarantując brak ruchu z ujemną marżą."
+                }
+            },
+            "quote": "\"Całkowicie wyeliminowaliśmy trasy z ujemną marżą i zwiększyliśmy ogólną rentowność o 20% w pierwszym kwartale.\""
+        },
+        "cta": {
+            "title": "Gotowy na skalowanie swojego biznesu VoIP?",
+            "button": "Zacznij Teraz"
+        }
+    },
+    "useCasesIndex": {
+        "helmet": {
+            "title": "Scenariusze Użycia w Branży - DealoAgent.ai",
+            "description": "Odkryj, jak DealoAgent.ai przekształca procesy sprzedaży, rekrutacji i badań w różnych branżach dzięki inteligencji zasilanej sztuczną inteligencją."
+        }
+    },
+    "login": {
+        "title": "Zaloguj się",
+        "subtitle": "Uzyskaj dostęp do panelu DealoAgent",
+        "employeeLogin": "Logowanie pracownika",
+        "enterCredentials": "Wprowadź dane logowania, aby uzyskać dostęp",
+        "emailLabel": "Adres email",
+        "emailPlaceholder": "imie@firma.com",
+        "passwordLabel": "Hasło",
+        "forgotPassword": "Nie pamiętasz hasła?",
+        "signInButton": "Zaloguj się",
+        "signingIn": "Logowanie...",
+        "noAccount": "Nie masz konta?",
+        "contactAdmin": "Skontaktuj się z administratorem"
+    },
+    "partnersPage": {
+        "hero": {
+            "badge": "Program Partnerski DealoAgent",
+            "title": "Partnerstwo z AI CRM,",
+            "titleGradient": "który sprzedaje się sam",
+            "description": "Dołącz do najszybciej rozwijającego się ekosystemu sprzedaży AI. Niezależnie od tego, czy jesteś integratorem systemów, resellerem czy partnerem afiliacyjnym, zapewniamy technologię i zachęty do wzrostu.",
+            "cta": {
+                "becomePartner": "Zostań Partnerem",
+                "explore": "Przeglądaj Programy"
+            }
+        },
+        "comparison": {
+            "title": "Dlaczego Partnerzy Wybierają DealoAgent",
+            "subtitle": "Zobacz, jak wypadamy na tle konkurencji",
+            "headers": {
+                "benefit": "Korzyść z Programu",
+                "dealo": "DealoAgent",
+                "hubspot": "HubSpot",
+                "apollo": "Apollo.io",
+                "clay": "Clay"
+            },
+            "rows": {
+                "revShareY1": "Udział w przychodach (Rok 1)",
+                "revShareY2": "Udział w przychodach (Rok 2)",
+                "revShareY3": "Udział w przychodach (Rok 3)",
+                "bounty": "Stała premia",
+                "referral": "Wielopoziomowe polecenia",
+                "terms": "Warunki płatności"
+            },
+            "values": {
+                "y1_30": "30%",
+                "y1_20": "20%",
+                "y2_20": "20%",
+                "y3_10": "10%",
+                "bountyVal": "$60 (Enterprise), $10 (Pro)",
+                "bountyClay": "$50 (tylko Pro)",
+                "referralYes": "Tak (Zarabiaj z sieci)",
+                "termsNet30": "Net 30 Miesięcznie",
+                "termsQuarterly": "Kwartalnie",
+                "termsNet90": "Net 90 (Pierwsza), potem miesięcznie",
+                "dash": "-"
+            }
+        },
+        "programs": {
+            "title": "Wybierz swoją ścieżkę partnerstwa",
+            "description": "Zaprojektowaliśmy elastyczne programy dostosowane do Twojego modelu biznesowego.",
+            "solution": {
+                "title": "Partnerzy Wdrożeniowi",
+                "description": "Dla agencji, firm doradczych i integratorów systemów. Wdrażaj DealoAgent u swoich klientów i zarabiaj stały procent plus opłaty za usługi.",
+                "benefits": [
+                    "Udział 30% (R1), 20% (R2), 10% (R3)",
+                    "Przychody z wdrożeń",
+                    "Dedykowany opiekun partnera"
+                ]
+            },
+            "resellers": {
+                "title": "Resellerzy",
+                "description": "Dla dealerów oprogramowania i VAR. Dołącz DealoAgent do swojego portfolio. Wysokie marże i zachęty wolumenowe.",
+                "benefits": [
+                    "Duży potencjał powtarzalnych przychodów",
+                    "Sprzedaż własnych usług wsparcia i integracji"
+                ]
+            },
+            "affiliates": {
+                "title": "Partnerzy Afiliacyjni",
+                "description": "Dla twórców treści i influencerów. Udostępniaj link i zarabiaj za każdą rejestrację. Bez limitów.",
+                "benefits": [
+                    "$60 stałej premii za subskrypcję Enterprise",
+                    "$10 stałej premii za subskrypcję Pro",
+                    "Udział 30% (R1), 20% (R2), 10% (R3)",
+                    "Zarabiaj również z poleceń swojej sieci"
+                ]
+            }
+        },
+        "why": {
+            "title": "Dlaczego DealoAgent?",
+            "description": "Budujemy przyszłość sprzedaży. Nasi partnerzy są dla nas kluczowi i traktujemy ich jak współzałożycieli.",
+            "market": {
+                "title": "Ogromne możliwości rynkowe",
+                "description": "Rynek AI CRM eksploduje. Zostań liderem oferując najbardziej zaawansowane narzędzie."
+            },
+            "retention": {
+                "title": "Wysoka retencja produktu",
+                "description": "Nasza użyteczność sprawia, że przychody rosną i zostają. Użytkownicy kochają sprzedaż przez czat."
+            },
+            "support": {
+                "title": "Wsparcie Partnerskie",
+                "description": "Bezpośredni dostęp do zespołu produktowego, priorytetowe wsparcie dla Twoich klientów i dedykowane zasoby."
+            }
+        },
+        "roi": {
+            "label": "Średnie ROI dla Partnerów w 1. roku",
+            "support": "Priorytetowe Wsparcie Partnera"
+        },
+        "cta": {
+            "title": "Gotowy na wspólny rozwój?",
+            "description": "Złóż wniosek o dołączenie do Sieci Partnerskiej DealoAgent.",
+            "button": "Zostań Partnerem"
+        }
+    },
+    "blogPost": {
+        "back": "Wróć do bloga",
+        "notFound": {
+            "title": "Nie znaleziono artykułu",
+            "button": "Wróć do bloga"
+        },
+        "share": "Udostępnij",
+        "writtenBy": "Autor: {{author}}",
+        "bio": "Zespół DealoAgent dzieli się wiedzą na temat inteligencji sprzedaży AI, historiami sukcesu klientów i najlepszymi praktykami dla nowoczesnych zespołów B2B.",
+        "startTrial": "Rozpocznij darmowy okres próbny",
+        "cta": {
+            "title": "Gotowy na transformację sprzedaży?",
+            "description": "Dołącz do setek zespołów używających DealoAgent do zamykania transakcji",
+            "button": "Zarejestruj się - Odbierz kredyty",
+            "promo": "🎁 Czas ograniczony: Darmowe kredyty + Nagrody za polecenia",
+            "more": "Czytaj więcej historii"
+        }
+    },
+    "industry_validation": {
+        "quote": {
+            "text": "Czy bańka AI istnieje? Przy ogromnych kwotach inwestowanych w infrastrukturę AI, takich jak plan OpenAI na 1,4 biliona dolarów, i Nvidii osiągającej kapitalizację 5 bilionów dolarów, wielu pyta, czy spekulacje i szum nie wywindowały wycen AI powyżej zrównoważonych wartości. Jednak AI nie jest monolitem, a różne obszary wyglądają na przewartościowane w różnym stopniu.",
+            "author": "Andrew Ng",
+            "role": "Pionier AI",
+            "credentials": "Współzałożyciel Coursera, Google Brain"
+        },
+        "analysis": {
+            "title": "Analiza Rynku wg Andrew Ng",
+            "layer": {
+                "title": "Warstwa Aplikacji AI",
+                "description": "Mamy tu do czynienia z niedoinwestowaniem. Potencjał jest wciąż znacznie większy, niż większość sobie uświadamia.",
+                "dealoBadge": "DealoAgent działa w tej warstwie"
+            },
+            "infraInference": {
+                "title": "Infrastruktura AI do wnioskowania",
+                "description": "Ten obszar nadal wymaga znaczących inwestycji."
+            },
+            "infraTraining": {
+                "title": "Infrastruktura AI do trenowania modeli",
+                "description": "Jestem ostrożnym optymistą co do tego sektora, ale tutaj również może występować bańka."
+            }
+        }
+    },
+    "pitchDeck": {
+        "slides": {
+            "1": {
+                "subtitle": "Agent Sprzedaży AI i Analiza Konkurencji"
+            },
+            "2": {
+                "title": "Problem",
+                "content": "Zespoły sprzedażowe toną w nieuporządkowanej komunikacji.",
+                "items": [
+                    "E-maile i załączniki są nieczytane",
+                    "Ręczna praca jest wolna i niespójna",
+                    "Oferty konkurencji giną w wątkach",
+                    "Systemy CRM są pasywne, a nie inteligentne",
+                    "Utracone transakcje z braku widoczności"
+                ],
+                "visual": "Wizualizacja procesu"
+            },
+            "3": {
+                "title": "Kto Cierpi?",
+                "content": "SDR • AE • Założyciele • Menedżerowie",
+                "items": [
+                    "SDR marnują czas na pisanie wiadomości",
+                    "AE tracą okazje przez powolny follow-up",
+                    "Założyciele nie widzą działań konkurencji",
+                    "Menedżerowie nie mogą mierzyć jakości"
+                ],
+                "visual": "Diagram grup użytkowników"
+            },
+            "4": {
+                "title": "Obecne narzędzia zawodzą",
+                "content": "Każdy rozwiązuje małą część — nikt nie rozwiązuje całości.",
+                "items": [
+                    "CRM → Pasywne wprowadzanie danych",
+                    "Narzędzia outreach → Szablony generyczne",
+                    "Wzbogacanie → Brak danych o konkurencji",
+                    "Konwersacyjne AI → Brak synchronizacji z CRM",
+                    "Parsery e-mail → Ograniczony kontekst"
+                ],
+                "chart": "Siatka porównawcza"
+            },
+            "5": {
+                "title": "Nasze Rozwiązanie",
+                "content": "Dwa sposoby pracy: Czat z AI lub pełny pulpit.",
+                "items": [
+                    "Interfejs czatu: Mobilny, działa wszędzie",
+                    "Tradycyjny UI dla zaawansowanych",
+                    "AI wypełnia CRM z rozmów",
+                    "Brak skomplikowanych formularzy na mobile",
+                    "Pełny CRM w Twoim telefonie"
+                ],
+                "image": "Zrzut ekranu interfejsu"
+            },
+            "6": {
+                "title": "Jak to działa",
+                "content": "Dane wejściowe → Przetwarzanie AI → Inteligentny wynik",
+                "items": [
+                    "Wejście: E-maile, PDF, Rozmowy, Czaty",
+                    "AI: Parsowanie, Ekstrakcja, Logika",
+                    "Wyjście: Rekordy CRM, Tabele konkurencji",
+                    "Akcja: Automatyczne generowanie odpowiedzi"
+                ],
+                "visual": "Diagram przepływu"
+            },
+            "7": {
+                "title": "Kluczowe funkcje",
+                "content": "Twój cały proces sprzedaży — zautomatyzowany.",
+                "items": [
+                    "Analiza konkurencji",
+                    "Generowanie outreachu AI",
+                    "Odkrywanie kontaktów",
+                    "Analiza emocji",
+                    "Budowanie rekordów CRM"
+                ],
+                "image": "Zrzut ekranu produktu"
+            },
+            "8": {
+                "title": "Szansa Rynkowa",
+                "content": "TAM: $186B+ | SOM: $22B+",
+                "items": [
+                    "Rynek narzędzi sprzedaży AI eksploduje",
+                    "Rynek CRM jest ogromny i przestarzały",
+                    "Wolumen komunikacji e-mailowej na szczycie",
+                    "Sprzedaż B2B przechodzi na automatyzację"
+                ],
+                "chart": "Wykres wzrostu rynku"
+            },
+            "9": {
+                "title": "Dlaczego Teraz",
+                "content": "AI w końcu może uczynić zespoły sprzedażowe nadludzkimi.",
+                "items": [
+                    "LLM umożliwiają głębokie rozumienie e-maili",
+                    "Praca zdalna = więcej sygnałów cyfrowych",
+                    "Potrzeba efektywności wzrosła",
+                    "Stare narzędzia są zbyt wolne"
+                ],
+                "visual": "Wizualizacja trendu"
+            },
+            "10": {
+                "title": "Model Biznesowy",
+                "content": "Poziomy SaaS + Zużycie AI + Dodatki Enterprise",
+                "items": [
+                    "Free Plan: Ograniczone użycie, wirusowy wzrost",
+                    "Paid Plans: Więcej tokenów i funkcji",
+                    "Upsells: API, Analiza głosu, Integracje",
+                    "Enterprise: Niestandardowe wdrożenie"
+                ],
+                "visual": "Karta cenowa"
+            },
+            "11": {
+                "title": "Trakcja",
+                "content": "Już przetwarzamy tysiące e-maili.",
+                "items": [
+                    "Użycie wewnętrzne i walidacja",
+                    "Programy pilotażowe VoIP/SMS",
+                    "Tysiące wygenerowanych sekwencji",
+                    "Żywe tabele konkurencji",
+                    "Wzrost aktywacji użytkowników"
+                ],
+                "chart": "Wykres wzrostu"
+            },
+            "12": {
+                "title": "Strategia GTM",
+                "content": "Dystrybucja przez założyciela i pętla treści.",
+                "items": [
+                    "LinkedIn (15k+ odbiorców)",
+                    "X / YouTube treści edukacyjne",
+                    "Programy partnerskie i afiliacyjne",
+                    "Wzrost produktowy Freemium",
+                    "Strategiczne integracje"
+                ],
+                "chart": "Lejek sprzedaży"
+            },
+            "13": {
+                "title": "Krajobraz Konkurencji",
+                "content": "Jedyna platforma łącząca CRM + AI Outreach + Competitor Intel.",
+                "items": [
+                    "Apollo: Silna baza, słabe AI konwersacyjne",
+                    "HubSpot: Standard, ale wolny i ręczny",
+                    "Clay: Świetne wzbogacanie, ale nie CRM",
+                    "Folk: Menedżer kontaktów, brak sprzedaży AI",
+                    "Attio: Elastyczne dane, wymaga budowania",
+                    "Amplemarket: Dobry outreach, odizolowany od CRM",
+                    "Close: Dzwonienie, słabe wnioskowanie AI",
+                    "DealoAgent: Ujednolicony Agent Sprzedaży AI"
+                ],
+                "chart": "Macierz 2x2"
+            },
+            "14": {
+                "title": "Technologia",
+                "content": "Skalowalna, bezpieczna infrastruktura AI",
+                "items": [
+                    "Przetwarzanie dokumentów AI",
+                    "Zaawansowany rurociąg LLM",
+                    "Pamięć wektorowa",
+                    "Model analizy emocji",
+                    "Architektura multi-workspace"
+                ],
+                "visual": "Diagram architektury"
+            },
+            "15": {
+                "title": "Mapa Drogowa",
+                "content": "Q4 2025 — Q2 2026",
+                "items": [
+                    "Q4 2025: Core AI Agent & CRM",
+                    "Q1 2026: Zaawansowany Głos i Integracje",
+                    "Q2 2026: Skala Enterprise i API"
+                ],
+                "chart": "Oś czasu"
+            },
+            "16": {
+                "title": "Zespół",
+                "content": "Oleksii Vinogradov",
+                "items": [
+                    "Founder & CEO",
+                    "Lider AI z potwierdzonym doświadczeniem",
+                    "Zbudował UnitAI od zera w 3 miesiące",
+                    "Certyfikowany ekspert Deep Learning, LLM i RAG"
+                ],
+                "image": "Zdjęcie założyciela"
+            },
+            "17": {
+                "title": "Inwestycja",
+                "content": "$500k - $1M SAFE",
+                "items": [
+                    "Przyspieszenie inżynierii ML",
+                    "Rozszerzenie integracji",
+                    "Ulepszenie rurociągu AI",
+                    "Pozyskiwanie klientów"
+                ],
+                "visual": "Wizualizacja"
+            },
+            "18": {
+                "title": "DealoAgent.ai",
+                "visual": "Final Product Hero"
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import App from './App';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
@@ -16,59 +17,77 @@ import { PartnersPage } from './pages/PartnersPage';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
 import { navigateToApp } from "./analytics";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const { t, i18n } = useTranslation();
+
+  // Determine text direction or other lang specific props if needed
+  // const isRTL = i18n.dir() === 'rtl';
+
+  const getPath = (path: string) => {
+    const lang = i18n.language;
+    if (lang === 'en') return path;
+    return `/${lang}${path}`;
+  };
+
+  // Check if we are effectively on the home page (root or /uk or /pl)
+  const isHome = location.pathname === '/' || location.pathname === '/uk' || location.pathname === '/pl' || location.pathname === '/uk/' || location.pathname === '/pl/';
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     if (!isHome) {
-      window.location.href = `/#${id}`;
+      window.location.href = `${getPath('/')}#${id}`;
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
   };
 
+  const handleLinkClick = (path: string) => {
+    window.location.href = getPath(path);
+    setMobileMenuOpen(false);
+  }
+
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-lg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-2">
-          <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={() => window.location.href = '/'}>
+          <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={() => handleLinkClick('/')}>
             <Logo variant="dark" />
             <AIBadge />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="/#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
-            <a href="/#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
-            <a href="/#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
+          <div className="hidden xl:flex items-center gap-4">
+            <LanguageSwitcher />
+            <a href="#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>{t('nav.useCases')}</a>
+            <a href="#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>{t('nav.features')}</a>
+            <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
 
-            <a href="/#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-            <a href="/#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-            <a href="/blog/" className="text-gray-700 hover:text-gray-900">Blog</a>
-            <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
+            <a href="#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
+            <a href="#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
+            <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
             <Button
               variant="outline"
               onClick={() => window.open('https://t.me/alex12alex', '_blank')}
             >
-              Talk to Sales
+              {t('nav.talkToSales')}
             </Button>
             <Button
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
               onClick={() => navigateToApp('register')}
             >
-              Register Now
+              {t('nav.register')}
             </Button>
           </div>
 
           {/* Mobile: Menu button */}
-          <div className="lg:hidden flex-shrink-0">
+          <div className="xl:hidden flex items-center gap-4">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
@@ -87,27 +106,26 @@ export function Navigation() {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="xl:hidden border-t border-gray-200 bg-white">
           <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
             <div className="flex flex-col space-y-4">
-              <a href="/#use-cases" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
-              <a href="/#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
-              <a href="/#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
-              <a href="/#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-              <a href="/#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-              <a href="/blog/" className="text-gray-700 hover:text-gray-900 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-              <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
+              <a href="#use-cases" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'use-cases')}>{t('nav.useCases')}</a>
+              <a href="#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>{t('nav.features')}</a>
+              <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
+              <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
+              <a href="#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
+              <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
               <Button
                 variant="outline"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
               >
-                Talk to Sales
+                {t('nav.talkToSales')}
               </Button>
               <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => navigateToApp('register')}
               >
-                Register Now
+                {t('nav.register')}
               </Button>
             </div>
           </div>
@@ -121,21 +139,31 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
 }
 
-function AppContent() {
-  const location = useLocation();
-  const isBlogRoute = location.pathname.startsWith('/blog');
+function LocalizedRoutes({ lang }: { lang: string }) {
+  const { i18n } = useTranslation();
 
+  useEffect(() => {
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
+
+  // We need to determine if we show navigation inside this wrapper context
+  const location = useLocation();
+  // Simplified check: show navigation on Blog pages
+  const isBlogRoute = location.pathname.includes('/blog');
 
   return (
     <>
       {isBlogRoute && <Navigation />}
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/blog" element={<Blog />} />
@@ -158,8 +186,12 @@ function AppContent() {
 export default function Router() {
   return (
     <BrowserRouter>
-      <AppContent />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/uk/*" element={<LocalizedRoutes lang="uk" />} />
+        <Route path="/pl/*" element={<LocalizedRoutes lang="pl" />} />
+        <Route path="/*" element={<LocalizedRoutes lang="en" />} />
+      </Routes>
     </BrowserRouter>
   );
 }
-

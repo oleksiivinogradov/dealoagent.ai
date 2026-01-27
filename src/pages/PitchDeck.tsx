@@ -1,8 +1,48 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Mail, MessageSquare, Users, BarChart, Zap, Globe, Shield, Clock, Target, ArrowRight, CheckCircle, TrendingUp, DollarSign, Layout, Cpu, Calendar, User, Mic, Server, CreditCard, PlusCircle, Briefcase, Link, Video, Linkedin, Search, FileText, Heart, Layers, Database, Minus, Send, Phone, Download } from 'lucide-react';
-import { pitchDeckSlides, PitchSlide } from '../data/pitchDeckData';
+import { useState, useEffect } from "react";
+import {
+    ChevronLeft,
+    ChevronRight,
+    Mail,
+    Clock,
+    Shield,
+    Layout,
+    TrendingUp,
+    User,
+    Target,
+    BarChart,
+    Search,
+    MessageSquare,
+    FileText,
+    Cpu,
+    Zap,
+    CheckCircle,
+    Phone,
+    ArrowRight,
+    Heart,
+    Users,
+    Database,
+    Globe,
+    CreditCard,
+    PlusCircle,
+    Briefcase,
+    Linkedin,
+    Video,
+    Link,
+    Minus,
+    Layers,
+    Mic,
+    Server,
+    ExternalLink,
+    DollarSign,
+    Calendar,
+    Send,
+    Download
+} from "lucide-react";
 import { Logo, AIBadge } from '../components/Logo';
-import { Button } from '../components/ui/button';
+import { Button } from "@/components/ui/button";
+import { getPitchDeckSlides, PitchSlide } from "@/data/pitchDeckData";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 // Icon Mapping
 const iconMap: Record<string, any> = {
@@ -10,6 +50,8 @@ const iconMap: Record<string, any> = {
 };
 
 export default function PitchDeck() {
+    const { t } = useTranslation();
+    const pitchDeckSlides: PitchSlide[] = getPitchDeckSlides(t);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [isPrinting, setIsPrinting] = useState(false);

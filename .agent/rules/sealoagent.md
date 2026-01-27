@@ -44,7 +44,11 @@ CRITICAL - do not repeat companies and persons in posts.
 
 ### Technical Requirements
 
-5. **Blog Post Data Structure** (`src/data/blogPosts.json`)
+5. **Blog Post Data Structure** (`src/data/blogPosts.json`, `src/data/blogPosts_uk.json`, `src/data/blogPosts_pl.json`)
+   - **MANDATORY**: You MUST create entries in ALL three files:
+     - `src/data/blogPosts.json` (English)
+     - `src/data/blogPosts_uk.json` (Ukrainian translation)
+     - `src/data/blogPosts_pl.json` (Polish translation)
    - Entries MUST include:
      - `id`: Unique kebab-case identifier.
      - `slug`: Matches id.

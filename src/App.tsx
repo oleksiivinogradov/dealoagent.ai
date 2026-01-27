@@ -4,11 +4,12 @@ import { FeatureCard } from "./components/FeatureCard";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
-import { CitationSection } from "./components/CitationSection";
+
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { IndustryUseCases } from "./components/IndustryUseCases";
+import { IndustryValidation } from "./components/IndustryValidation";
 import founderImage from "figma:asset/91f0865d322b601ece4b8e907c5b04462763af93.png";
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   Search,
   Mail,
@@ -50,88 +51,119 @@ import {
   Handshake,
 } from "lucide-react";
 import blogPosts from "./data/blogPosts.json";
+import blogPostsUk from "./data/blogPosts_uk.json";
+import blogPostsPl from "./data/blogPosts_pl.json";
 import { navigateToApp } from "./analytics";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeBubble, setActiveBubble] = useState(0);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
+
+  const currentBlogPosts = useMemo(() => {
+    if (i18n.language === 'uk') return blogPostsUk;
+    if (i18n.language === 'pl') return blogPostsPl;
+    return blogPosts;
+  }, [i18n.language]);
+
+  const getPath = (path: string) => {
+    const lang = i18n.language;
+    if (lang === 'en') return path;
+    return `/${lang}${path}`;
+  };
+
+  const handleLinkClick = (path: string) => {
+    window.location.href = getPath(path);
+  }
 
 
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState(null, '', `#${id}`);
     setMobileMenuOpen(false);
   };
 
   const features = [
     {
       icon: Target,
-      title: "B2B Lead Sourcing & Intelligence",
-      description: "Find high-quality leads and build deep relationships using verified commercial databases and AI-driven deep research.",
+      title: t('featureCards.sourcing.title'),
+      description: t('featureCards.sourcing.description'),
       features: [
-        { text: "Integrated database with 750M+ verified business emails for precision lead sourcing", icon: Database },
-        { text: "AI-powered 'hidden' web search to uncover lead mentions and obscure facts across the web", icon: Globe },
-        { text: "Build 100% personalized outreach that transforms cold leads into warm relationships", icon: Heart },
-        { text: "Automatic enrichment of CRM records with real-time contact and company data", icon: ScanSearch },
+        { text: t('featureCards.sourcing.items.0'), icon: Database },
+        { text: t('featureCards.sourcing.items.1'), icon: Globe },
+        { text: t('featureCards.sourcing.items.2'), icon: Heart },
+        { text: t('featureCards.sourcing.items.3'), icon: ScanSearch },
       ],
     },
     {
       icon: Search,
-      title: "Deep Multi-Source Research & Analysis",
-      description: "Automate complex information gathering across multiple hops. Whether for Competitor Analysis, VC Due Diligence, or HR Screening, AI fills in the gaps from documents and conversations.",
+      title: t('featureCards.research.title'),
+      description: t('featureCards.research.description'),
       features: [
-        { text: "Extract structured data from emails, proposals, and complex documents automatically", icon: Database },
-        { text: "Directly scrape target websites and auto-summarize key information", icon: Globe },
-        { text: "Build comprehensive comparison tables for Competitors, Candidates, or Startups", icon: Table },
-        { text: "Handle multi-channel interactions and extract text from any attached file type", icon: MessageCircle },
-        { text: "Automatically draft outreach messages to request missing specific information", icon: Send },
+        { text: t('featureCards.research.items.0'), icon: Database },
+        { text: t('featureCards.research.items.1'), icon: Globe },
+        { text: t('featureCards.research.items.2'), icon: Table },
+        { text: t('featureCards.research.items.3'), icon: MessageCircle },
+        { text: t('featureCards.research.items.4'), icon: Send },
       ],
     },
 
     {
       icon: Bot,
-      title: "Natural Language CRM",
-      description: "Forget complex CRM interfaces. Just chat with your AI copilot to manage deals, find information, and execute workflows in seconds.",
+      title: t('featureCards.crm.title'),
+      description: t('featureCards.crm.description'),
       features: [
-        { text: "Ask questions in plain native language - get instant answers from your data", icon: MessageCircle },
-        { text: "No manual data entry - AI fills CRM from emails and conversations", icon: Wand2 },
-        { text: "One chat interface for any task - no app switching or copy-pasting", icon: Monitor },
-        { text: "Execute complex workflows with a single command", icon: Workflow },
+        { text: t('featureCards.crm.items.0'), icon: MessageCircle },
+        { text: t('featureCards.crm.items.1'), icon: Wand2 },
+        { text: t('featureCards.crm.items.2'), icon: Monitor },
+        { text: t('featureCards.crm.items.3'), icon: Workflow },
       ],
     },
     {
       icon: Mail,
-      title: "Context-Aware Outreach Generator",
-      description: "Stop sending generic emails or messages. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
+      title: t('featureCards.outreach.title'),
+      description: t('featureCards.outreach.description'),
       features: [
-        { text: "AI drafts emails using full conversation history and client context", icon: PenTool },
-        { text: "Use AI 'hidden' Google search to find hidden facts about leads for 100% personalized outreach", icon: ScanSearch },
-        { text: "Learn from your best-performing messages and replicate success", icon: TrendingUp },
-        { text: "Multi-channel sequences across email and messaging platforms", icon: Share2 },
-        { text: "Navigate and teach AI your personal preferences to improve future generations", icon: UserCog },
+        { text: t('featureCards.outreach.items.0'), icon: PenTool },
+        { text: t('featureCards.outreach.items.1'), icon: ScanSearch },
+        { text: t('featureCards.outreach.items.2'), icon: TrendingUp },
+        { text: t('featureCards.outreach.items.3'), icon: Share2 },
+        { text: t('featureCards.outreach.items.4'), icon: UserCog },
       ],
     },
     {
       icon: MousePointerClick,
-      title: "Intelligent Web Automation",
-      description: "Take control of the web. Our Chrome extension acts as your digital hand, automating LinkedIn networking, form submissions, and complex browser workflows.",
+      title: t('featureCards.automation.title'),
+      description: t('featureCards.automation.description'),
       features: [
-        { text: "Scale LinkedIn operations: auto-connect, message, and extract data", icon: Linkedin },
-        { text: "Smart form filling: populates fields using context from your documents", icon: FileText },
-        { text: "Batch processing: automate repetitive actions across any website", icon: Workflow },
-        { text: "Secure Chrome extension integration for seamless browser control", icon: Puzzle },
+        { text: t('featureCards.automation.items.0'), icon: Linkedin },
+        { text: t('featureCards.automation.items.1'), icon: FileText },
+        { text: t('featureCards.automation.items.2'), icon: Workflow },
+        { text: t('featureCards.automation.items.3'), icon: Puzzle },
       ],
     },
     {
       icon: Users,
-      title: "Team Roles & Employee Access",
-      description: "Manage your sales team with granular permissions. Assign roles, track individual performance, and ensure secure access for every employee.",
+      title: t('featureCards.roles.title'),
+      description: t('featureCards.roles.description'),
       features: [
-        { text: "Role-based access control (RBAC) for admins, managers, and reps", icon: Key },
-        { text: "Secure employee login with single sign-on (SSO) support", icon: LogIn },
-        { text: "Easy onboarding and offboarding of team members", icon: UserPlus },
-        { text: "Customizable permission sets for different departments", icon: Settings2 },
+        { text: t('featureCards.roles.items.0'), icon: Key },
+        { text: t('featureCards.roles.items.1'), icon: LogIn },
+        { text: t('featureCards.roles.items.2'), icon: UserPlus },
+        { text: t('featureCards.roles.items.3'), icon: Settings2 },
       ],
     },
   ];
@@ -142,36 +174,38 @@ export default function App() {
       <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-lg">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-2">
-            <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={() => handleLinkClick('/')}>
               <Logo variant="dark" />
               <AIBadge />
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6">
-              <a href="#use-cases" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
-              <a href="#features" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
-              <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
-              <a href="#pricing" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
-              <a href="#team" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-              <a href="#partners" className="text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-              <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
+            <div className="hidden xl:flex items-center gap-4">
+              <LanguageSwitcher />
+              <a href="#use-cases" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'use-cases')}>{t('nav.useCases')}</a>
+              <a href="#features" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'features')}>{t('nav.features')}</a>
+              <a href="#pricing" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
+              <a href="#team" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
+              <a href="#partners" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
+              <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
               <Button
                 variant="outline"
+                className="text-sm"
                 onClick={() => window.open('https://t.me/alex12alex', '_blank')}
               >
-                Talk to Sales
+                {t('nav.talkToSales')}
               </Button>
               <Button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm"
                 onClick={() => navigateToApp('register')}
               >
-                Register Now
+                {t('nav.register')}
               </Button>
             </div>
 
             {/* Mobile: Menu button */}
-            <div className="lg:hidden flex-shrink-0">
+            <div className="xl:hidden flex items-center gap-4">
+              <LanguageSwitcher />
               <Button
                 variant="ghost"
                 size="sm"
@@ -190,26 +224,26 @@ export default function App() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white">
+          <div className="xl:hidden border-t border-gray-200 bg-white">
             <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
               <div className="flex flex-col space-y-4">
-                <a href="#use-cases" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'use-cases')}>Use cases</a>
-                <a href="#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>Features</a>
-                <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
-                <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>Team</a>
-                <a href="#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>Partners</a>
-                <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>Sign In</Button>
+                <a href="#use-cases" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'use-cases')}>{t('nav.useCases')}</a>
+                <a href="#features" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'features')}>{t('nav.features')}</a>
+                <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
+                <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
+                <a href="#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
+                <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
                 <Button
                   variant="outline"
                   onClick={() => window.open('https://t.me/alex12alex', '_blank')}
                 >
-                  Talk to Sales
+                  {t('nav.talkToSales')}
                 </Button>
                 <Button
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                   onClick={() => navigateToApp('register')}
                 >
-                  Register Now
+                  {t('nav.register')}
                 </Button>
               </div>
             </div>
@@ -229,15 +263,15 @@ export default function App() {
             <div className="z-10 text-center lg:text-left">
               <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-sm">
                 <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 text-blue-400" />
-                <span className="text-sm sm:text-xl text-blue-100">Your Full-Stack AI Partner</span>
+                <span className="text-sm sm:text-xl text-blue-100">{t('hero.badge')}</span>
               </div>
 
               <h1 className="mb-4 sm:mb-6 text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                Speaks and Looks Like Your Industry
+                {t('hero.title')}
               </h1>
 
               <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80">
-                Combine a fully customizable CRM with a native AI business assistant. Construct your workspace with your own industry language and workflows, adapting the interface and intelligence to match exactly how you work.
+                {t('hero.subtitle')}
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
@@ -247,7 +281,7 @@ export default function App() {
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                     onClick={() => navigateToApp('register')}
                   >
-                    Register Now - Get Free Credits
+                    {t('hero.cta.register')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
 
@@ -329,21 +363,21 @@ export default function App() {
                 <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
                   10,000+
                 </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">Active users</p>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.users')}</p>
               </div>
               <div className="hidden sm:block h-12 w-px bg-white/20" />
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
                   $2.5M+
                 </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">Deals closed</p>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.deals')}</p>
               </div>
               <div className="hidden sm:block h-12 w-px bg-white/20" />
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
                   127%
                 </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">ROI increase</p>
+                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.roi')}</p>
               </div>
             </div>
           </div>
@@ -378,11 +412,11 @@ export default function App() {
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
               <span className="inline-block rounded-full bg-blue-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-blue-700">
-                Features
+                {t('features.title')}
               </span>
             </div>
             <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Your Full-Stack AI Partner. Speaks and Looks Like Your Industry. Combine a fully customizable CRM with a native AI business assistant. Construct your workspace with your own industry language and workflows, adapting the interface and intelligence to match exactly how you work.
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -401,7 +435,7 @@ export default function App() {
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 sm:px-6 py-2 sm:py-3 mb-6">
               <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               <span className="text-sm sm:text-base text-gray-700">
-                All features work together seamlessly through <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-semibold">one AI-powered chat interface</span>
+                <Trans i18nKey="features.cta.seamless" components={{ 1: <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-semibold" /> }} />
               </span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -410,7 +444,7 @@ export default function App() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Try All Features Free
+                {t('features.cta.tryFree')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
@@ -418,7 +452,7 @@ export default function App() {
                 variant="outline"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Start Free Trial
+                {t('features.cta.startTrial')}
               </Button>
             </div>
           </div>
@@ -431,11 +465,11 @@ export default function App() {
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
               <span className="inline-block rounded-full bg-purple-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-purple-700">
-                How it works
+                {t('howItWorks.badge')}
               </span>
             </div>
             <h2 className="mb-4 text-2xl sm:text-3xl md:text-4xl px-4">
-              From insight to close in three simple steps
+              {t('howItWorks.title')}
             </h2>
           </div>
 
@@ -444,10 +478,9 @@ export default function App() {
               <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
                 <BarChart3 className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Analyze</h3>
+              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">{t('howItWorks.steps.analyze.title')}</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Our AI scans your emails, attachments, and communications to understand
-                your market, competitors, and opportunities.
+                {t('howItWorks.steps.analyze.description')}
               </p>
             </div>
 
@@ -455,10 +488,9 @@ export default function App() {
               <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
                 <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Automate</h3>
+              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">{t('howItWorks.steps.automate.title')}</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Generate personalized outreach messages, comparison tables, and follow-ups
-                based on past conversations and data.
+                {t('howItWorks.steps.automate.description')}
               </p>
             </div>
 
@@ -466,10 +498,9 @@ export default function App() {
               <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
                 <Target className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">Accelerate</h3>
+              <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl">{t('howItWorks.steps.accelerate.title')}</h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Close deals faster with AI-powered insights, automated workflows,
-                and intelligent recommendations.
+                {t('howItWorks.steps.accelerate.description')}
               </p>
             </div>
           </div>
@@ -481,10 +512,10 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 sm:mb-12 text-center">
             <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl px-4">
-              Results that speak for themselves
+              {t('results.title')}
             </h2>
             <p className="text-base sm:text-xl text-blue-100/80 px-4">
-              Join thousands of sales teams achieving unprecedented growth
+              {t('results.subtitle')}
             </p>
           </div>
 
@@ -493,29 +524,31 @@ export default function App() {
               <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
                 85%
               </div>
-              <p className="text-xs sm:text-base text-blue-100/80">Time saved on research</p>
+              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.researchTime')}</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
               <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
                 3.2x
               </div>
-              <p className="text-xs sm:text-base text-blue-100/80">Faster deal velocity</p>
+              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.dealVelocity')}</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
               <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
                 127%
               </div>
-              <p className="text-xs sm:text-base text-blue-100/80">Increase in response rate</p>
+              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.responseRate')}</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
               <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
                 $2.5M+
               </div>
-              <p className="text-xs sm:text-base text-blue-100/80">Total deals closed</p>
+              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.dealsClosed')}</p>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Pricing Section */}
       <section id="pricing" className="py-12 sm:py-24 bg-gradient-to-b from-white to-gray-50">
@@ -523,11 +556,11 @@ export default function App() {
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
               <span className="inline-block rounded-full bg-blue-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-blue-700">
-                Pricing
+                {t('pricing.badge')}
               </span>
             </div>
             <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Choose the plan that's right for you. All plans include AI tokens for usage.
+              {t('pricing.subtitle')}
             </p>
           </div>
 
@@ -535,40 +568,40 @@ export default function App() {
             {/* Free Tier */}
             <div className="rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white p-6 sm:p-8 hover:border-blue-300 hover:shadow-xl transition-all">
               <div className="mb-4 sm:mb-6">
-                <h3 className="mb-2 text-xl sm:text-2xl">Free</h3>
+                <h3 className="mb-2 text-xl sm:text-2xl">{t('pricing.free.title')}</h3>
                 <div className="flex items-baseline gap-2">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-3xl sm:text-4xl">$0</span>
-                  <span className="text-sm sm:text-base text-gray-600">/month</span>
+                  <span className="text-sm sm:text-base text-gray-600">{t('pricing.perMonth')}</span>
                 </div>
               </div>
 
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
-                  <span className="text-blue-600">$2</span> usage tokens included
+                  <span className="text-blue-600">$2</span> {t('pricing.tokensIncluded')}
                 </p>
               </div>
 
               <ul className="mb-6 sm:mb-8 space-y-3 sm:space-y-4">
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Basic competitor analysis</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.free.features.0')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Up to 10 AI-generated messages</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.free.features.1')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Email support</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.free.features.2')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Chat-based CRM interface</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.free.features.3')}</span>
                 </li>
               </ul>
 
               <Button variant="outline" className="w-full" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
-                Get Started Free
+                {t('pricing.free.cta')}
               </Button>
             </div>
 
@@ -576,93 +609,93 @@ export default function App() {
             <div className="rounded-2xl sm:rounded-3xl border-2 border-blue-500 bg-white p-6 sm:p-8 relative shadow-xl">
               <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2">
                 <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs sm:text-sm">
-                  Most Popular
+                  {t('pricing.popular')}
                 </Badge>
               </div>
 
               <div className="mb-4 sm:mb-6">
-                <h3 className="mb-2 text-xl sm:text-2xl">Pro</h3>
+                <h3 className="mb-2 text-xl sm:text-2xl">{t('pricing.pro.title')}</h3>
                 <div className="flex items-baseline gap-2">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-3xl sm:text-4xl">$10</span>
-                  <span className="text-sm sm:text-base text-gray-600">/month</span>
+                  <span className="text-sm sm:text-base text-gray-600">{t('pricing.perMonth')}</span>
                 </div>
               </div>
 
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
-                  <span className="text-blue-600">$12</span> usage tokens included
+                  <span className="text-blue-600">$12</span> {t('pricing.tokensIncluded')}
                 </p>
               </div>
 
               <ul className="mb-6 sm:mb-8 space-y-3 sm:space-y-4">
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Advanced competitor intelligence</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.pro.features.0')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Unlimited AI messages</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.pro.features.1')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Attachment scanning & analytics</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.pro.features.2')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Email & chat integration</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.pro.features.3')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Priority support</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.pro.features.4')}</span>
                 </li>
               </ul>
 
               <Button className="w-full px-6 has-[>svg]:px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
-                Start Pro Trial
+                {t('pricing.pro.cta')}
               </Button>
             </div>
 
             {/* Enterprise Tier */}
             <div className="rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white p-6 sm:p-8 hover:border-blue-300 hover:shadow-xl transition-all">
               <div className="mb-4 sm:mb-6">
-                <h3 className="mb-2 text-xl sm:text-2xl">Enterprise</h3>
+                <h3 className="mb-2 text-xl sm:text-2xl">{t('pricing.enterprise.title')}</h3>
                 <div className="flex items-baseline gap-2">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-3xl sm:text-4xl">$60</span>
-                  <span className="text-sm sm:text-base text-gray-600">/month</span>
+                  <span className="text-sm sm:text-base text-gray-600">{t('pricing.perMonth')}</span>
                 </div>
               </div>
 
               <div className="mb-4 sm:mb-6 rounded-xl bg-blue-50 p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-blue-900">
-                  <span className="text-blue-600">$70</span> usage tokens included
+                  <span className="text-blue-600">$70</span> {t('pricing.tokensIncluded')}
                 </p>
               </div>
 
               <ul className="mb-6 sm:mb-8 space-y-3 sm:space-y-4">
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Everything in Pro</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.enterprise.features.0')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Full AI Sales Agent (coming soon)</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.enterprise.features.1')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Custom integrations</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.enterprise.features.2')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">Dedicated account manager</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.enterprise.features.3')}</span>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-gray-700">24/7 premium support</span>
+                  <span className="text-sm sm:text-base text-gray-700">{t('pricing.enterprise.features.4')}</span>
                 </li>
               </ul>
 
               <Button variant="outline" className="w-full" onClick={() => window.open('https://t.me/alex12alex', '_blank')}>
-                Contact Sales
+                {t('pricing.enterprise.cta')}
               </Button>
             </div>
           </div>
@@ -672,13 +705,12 @@ export default function App() {
             <div className="rounded-xl sm:rounded-2xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-6 sm:p-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
                 <div className="text-center md:text-left">
-                  <h3 className="mb-2 text-lg sm:text-xl">Need more usage tokens?</h3>
-                  <p className="text-sm sm:text-base text-gray-600">
-                    Add <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$50</span> worth of usage tokens anytime
+                  <h3 className="mb-2 text-lg sm:text-xl">{t('pricing.addon.title')}</h3>
+                  <p className="text-sm sm:text-base text-gray-600" dangerouslySetInnerHTML={{ __html: t('pricing.addon.subtitle').replace('<1>', '<span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">').replace('</1>', '</span>') }}>
                   </p>
                 </div>
                 <Button className="w-full md:w-auto !px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => window.location.href = 'https://app.dealoagent.ai'}>
-                  Buy Token Package
+                  {t('pricing.addon.cta')}
                   <Zap className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -687,24 +719,23 @@ export default function App() {
 
           <div className="mt-8 sm:mt-12 space-y-4">
             <p className="text-center text-xs sm:text-sm text-gray-500 px-4">
-              All plans include 14-day free trial · No credit card required · Cancel anytime
+              {t('pricing.note')}
             </p>
             <div className="max-w-2xl mx-auto rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-4 sm:p-6">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🎁</span>
                 <div>
                   <h4 className="mb-2 text-base sm:text-lg font-semibold text-gray-900">
-                    Limited Time: Free Credits + Referral Rewards
+                    {t('pricing.promo.title')}
                   </h4>
-                  <p className="text-sm sm:text-base text-gray-700 mb-3">
-                    New users get <strong className="text-purple-600">free credits</strong> to start. Plus, invite friends and earn rewards through our referral system - both you and your referrals get bonus credits!
+                  <p className="text-sm sm:text-base text-gray-700 mb-3" dangerouslySetInnerHTML={{ __html: t('pricing.promo.text').replace('<1>', '<strong class="text-purple-600">').replace('</1>', '</strong>') }}>
                   </p>
                   <Button
                     size="sm"
                     className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
                     onClick={() => window.location.href = 'https://app.dealoagent.ai'}
                   >
-                    Claim Your Free Credits Now
+                    {t('pricing.promo.cta')}
                     <ArrowRight className="ml-2 h-3 w-3" />
                   </Button>
                 </div>
@@ -722,12 +753,11 @@ export default function App() {
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mb-4 sm:mb-6">
             <span className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
-              Ready to grow?
+              {t('readiness.badge')}
             </span>
           </div>
           <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80 px-4">
-            Join thousands of sales teams already using DealoAgent to close more deals.
-            Start your free trial today - no credit card required.
+            {t('readiness.subtitle')}
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
@@ -737,11 +767,11 @@ export default function App() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
                 onClick={() => window.location.href = 'https://app.dealoagent.ai'}
               >
-                Register Now - Get Free Credits
+                {t('readiness.registerCta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <p className="text-xs text-blue-200/60 text-center">
-                🎁 Limited time offer: Free credits + Referral system rewards
+                {t('readiness.promoText')}
               </p>
             </div>
             <Button
@@ -750,12 +780,12 @@ export default function App() {
               className="border-white/20 bg-white/10 text-white hover:bg-white/20"
               onClick={() => window.open('https://t.me/alex12alex', '_blank')}
             >
-              Talk to sales
+              {t('readiness.salesCta')}
             </Button>
           </div>
 
           <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-blue-200/60 px-4">
-            14-day free trial · No credit card required · Cancel anytime
+            {t('readiness.footerNote')}
           </p>
         </div>
       </section>
@@ -771,13 +801,13 @@ export default function App() {
               <div className="max-w-3xl mx-auto">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2">
                   <Handshake className="h-4 w-4 text-blue-400" />
-                  <span className="text-sm font-medium text-blue-100">Partnership Program</span>
+                  <span className="text-sm font-medium text-blue-100">{t('partners.badge')}</span>
                 </div>
                 <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-                  Grow with DealoAgent
+                  {t('partners.title')}
                 </h2>
                 <p className="text-lg text-blue-100/80 mb-8">
-                  Whether you're a System Integrator, Reseller, or Affiliate, we have a program designed for your success. Earn high commissions and offer the most advanced AI CRM to your clients.
+                  {t('partners.description')}
                 </p>
 
                 {/* Comparison Table */}
@@ -786,30 +816,30 @@ export default function App() {
                     <table className="w-full text-left text-sm text-blue-100/80">
                       <thead className="bg-blue-500/10 text-xs uppercase text-blue-200">
                         <tr>
-                          <th className="px-4 py-3 font-semibold">Benefit</th>
-                          <th className="px-4 py-3 font-bold text-blue-400">DealoAgent</th>
-                          <th className="px-4 py-3">Others</th>
+                          <th className="px-4 py-3 font-semibold">{t('partners.table.headers.benefit')}</th>
+                          <th className="px-4 py-3 font-bold text-blue-400">{t('partners.table.headers.dealoAgent')}</th>
+                          <th className="px-4 py-3">{t('partners.table.headers.others')}</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-blue-500/20">
                         <tr>
-                          <td className="px-4 py-3 font-medium text-white">Rev Share (Y1)</td>
+                          <td className="px-4 py-3 font-medium text-white">{t('partners.table.rows.revShareY1')}</td>
                           <td className="px-4 py-3 font-bold text-blue-400">30%</td>
                           <td className="px-4 py-3">20%</td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-3 font-medium text-white">Rev Share (Y2/Y3)</td>
+                          <td className="px-4 py-3 font-medium text-white">{t('partners.table.rows.revShareY2Y3')}</td>
                           <td className="px-4 py-3 font-bold text-blue-400">20% / 10%</td>
                           <td className="px-4 py-3">-</td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-3 font-medium text-white">Flat Bounty</td>
+                          <td className="px-4 py-3 font-medium text-white">{t('partners.table.rows.flatBounty')}</td>
                           <td className="px-4 py-3 font-bold text-blue-400">$60 / $10</td>
                           <td className="px-4 py-3">-</td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-3 font-medium text-white">Multi-Tier Referral</td>
-                          <td className="px-4 py-3 font-bold text-blue-400">Yes (Earn from network)</td>
+                          <td className="px-4 py-3 font-medium text-white">{t('partners.table.rows.multiTierReferral')}</td>
+                          <td className="px-4 py-3 font-bold text-blue-400">{t('partners.table.rows.multiTierValue')}</td>
                           <td className="px-4 py-3">-</td>
                         </tr>
                       </tbody>
@@ -821,9 +851,9 @@ export default function App() {
                   <Button
                     size="lg"
                     className="bg-white text-blue-900 hover:bg-gray-100 min-w-[160px]"
-                    onClick={() => window.location.href = '/partners'}
+                    onClick={() => window.location.href = i18n.language === 'en' ? '/partners' : `/${i18n.language}/partners`}
                   >
-                    Explore Programs
+                    {t('team.explore')}
                   </Button>
                   <Button
                     size="lg"
@@ -831,7 +861,7 @@ export default function App() {
                     className="border-white/20 bg-white/10 text-white hover:bg-white/20 min-w-[160px]"
                     onClick={() => window.open('https://t.me/alex12alex', '_blank')}
                   >
-                    Contact Partner Team
+                    {t('team.contact')}
                   </Button>
                 </div>
               </div>
@@ -846,11 +876,11 @@ export default function App() {
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
               <span className="inline-block rounded-full bg-green-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-700">
-                Team
+                {t('team.badge')}
               </span>
             </div>
             <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Meet the team building the future of AI-powered sales
+              {t('team.subtitle')}
             </p>
           </div>
 
@@ -871,16 +901,13 @@ export default function App() {
 
                 {/* Content */}
                 <div className="md:col-span-2 text-center md:text-left">
-                  <h3 className="mb-2 text-xl sm:text-2xl">Oleksii Vinogradov</h3>
+                  <h3 className="mb-2 text-xl sm:text-2xl">{t('team.founder.name')}</h3>
                   <p className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-base sm:text-lg">
-                    Founder & CEO
+                    {t('team.founder.role')}
                   </p>
 
                   <p className="mb-6 text-sm sm:text-base text-gray-700">
-                    AI Leader with proven ability to deliver advanced AI systems from concept to production.
-                    Built UnitAI from scratch in 3 months—a full AI agent suite for Unity developers. Deep
-                    Learning Specialization certified with expertise in LLMs, RAG, agentic memory, and
-                    full-stack AI product development.
+                    {t('team.founder.bio')}
                   </p>
 
                   <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
@@ -914,21 +941,21 @@ export default function App() {
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
               <span className="inline-block rounded-full bg-purple-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-purple-700">
-                Latest Insights
+                {t('blog.badge')}
               </span>
             </div>
             <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-              Real stories and proven strategies from teams transforming their sales with AI
+              {t('blog.subtitle')}
             </p>
           </div>
 
           <div className="flex overflow-x-auto pb-8 gap-6 sm:gap-8 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 hide-scrollbar">
-            {[...blogPosts]
+            {[...currentBlogPosts]
               .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
               .map((post) => (
                 <a
                   key={post.id}
-                  href={`/blog/${post.slug}`}
+                  href={i18n.language === 'en' ? `/blog/${post.slug}` : `/${i18n.language}/blog/${post.slug}`}
                   className="group flex flex-col min-w-[300px] sm:min-w-[350px] md:min-w-[400px] snap-center overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gray-200 bg-white hover:border-blue-300 hover:shadow-2xl transition-all"
                 >
                   {/* Image */}
@@ -967,7 +994,7 @@ export default function App() {
                     </div>
 
                     <div className="mt-4 flex items-center gap-2 text-blue-600 font-medium group-hover:gap-3 transition-all">
-                      Read story
+                      {t('blog.readStory')}
                       <ArrowRight className="h-4 w-4" />
                     </div>
                   </div>
@@ -979,19 +1006,19 @@ export default function App() {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => window.location.href = '/blog'}
+              onClick={() => window.location.href = i18n.language === 'en' ? '/blog' : `/${i18n.language}/blog`}
               className="gap-2"
             >
               <BookOpen className="h-5 w-5" />
-              View All Stories
+              {t('blog.viewAll')}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Citation Section */}
-      <CitationSection />
+      {/* Industry Validation Section */}
+      <IndustryValidation />
 
 
 
@@ -1005,32 +1032,32 @@ export default function App() {
                 <AIBadge />
               </div>
               <p className="mb-4 text-sm sm:text-base text-gray-600">
-                AI-powered CRM platform for modern B2B sales teams.
+                {t('footer.description')}
               </p>
               <p className="text-xs sm:text-sm text-gray-500">
-                &copy; 2025 DealoAgent. All rights reserved.
+                {t('footer.copyright')}
               </p>
             </div>
 
             <div className="text-center sm:text-left">
-              <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">Product</h4>
+              <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">{t('footer.product.title')}</h4>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-                <li><a href="#features" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'features')}>Features</a></li>
-                <li><a href="#pricing" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a></li>
-                <li><a href="/coming-soon.html" className="hover:text-blue-600">Security</a></li>
-                <li><a href="/coming-soon.html" className="hover:text-blue-600">Roadmap</a></li>
-                <li><a href="/login" className="hover:text-blue-600">Employee Login</a></li>
+                <li><a href="#features" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'features')}>{t('footer.product.features')}</a></li>
+                <li><a href="#pricing" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'pricing')}>{t('footer.product.pricing')}</a></li>
+                <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.product.security')}</a></li>
+                <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.product.roadmap')}</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/login'); }} className="hover:text-blue-600">{t('footer.product.login')}</a></li>
               </ul>
             </div>
 
             <div className="text-center sm:text-left">
-              <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
+              <h4 className="mb-3 sm:mb-4 text-base sm:text-lg">{t('footer.company.title')}</h4>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-                <li><a href="/coming-soon.html" className="hover:text-blue-600">About</a></li>
-                <li><a href="/blog" className="hover:text-blue-600">Blog</a></li>
-                <li><a href="/coming-soon.html" className="hover:text-blue-600">Careers</a></li>
-                <li><a href="mailto:alex@dealoagent.ai" className="hover:text-blue-600">Contact</a></li>
-                <li><a href="/privacy-policy" className="hover:text-blue-600">Privacy Policy</a></li>
+                <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.company.about')}</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/blog'); }} className="hover:text-blue-600">{t('footer.company.blog')}</a></li>
+                <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.company.careers')}</a></li>
+                <li><a href="mailto:alex@dealoagent.ai" className="hover:text-blue-600">{t('footer.company.contact')}</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/privacy-policy'); }} className="hover:text-blue-600">{t('footer.company.privacy')}</a></li>
               </ul>
             </div>
           </div>

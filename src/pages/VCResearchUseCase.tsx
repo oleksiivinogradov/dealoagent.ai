@@ -3,12 +3,15 @@ import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
+import { useTranslation } from "react-i18next";
+
 export default function VCResearchUseCase() {
+    const { t } = useTranslation();
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>AI for Venture Capital - DealoAgent.ai</title>
-                <meta name="description" content="Transform deal flow and due diligence with AI. Automate research, scoring, and market analysis for VC firms." />
+                <title>{t('vcUseCase.helmet.title')}</title>
+                <meta name="description" content={t('vcUseCase.helmet.description')} />
                 <link rel="canonical" href="https://dealoagent.ai/usecases/vcresearch/" />
             </Helmet>
             <Navigation />
@@ -18,10 +21,10 @@ export default function VCResearchUseCase() {
                 <div className="bg-indigo-900 py-16 sm:py-24">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl mb-6">
-                            AI for Venture Capital
+                            {t('vcUseCase.header.title')}
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg text-indigo-100">
-                            See how DealoAgent transforms deal flow and due diligence for analysts and partners.
+                            {t('vcUseCase.header.description')}
                         </p>
                     </div>
                 </div>
@@ -32,64 +35,40 @@ export default function VCResearchUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center">
                             <div>
                                 <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-6">
-                                    <span className="font-semibold">The Investment Analyst</span>
+                                    <span className="font-semibold">{t('vcUseCase.roles.analyst.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Deep diligence in minutes, not days
+                                    {t('vcUseCase.roles.analyst.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('vcUseCase.roles.analyst.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Manual Data Entry:</strong> I spend hours copy-pasting data from pitch decks and emails into our CRM. It's tedious and prone to errors.
-                                            </li>
-                                            <li>
-                                                <strong>Fragmented Deal Flow:</strong> I struggle to build comprehensive reports on potential or existing portfolio startups. Information is scattered across emails, messengers, and pitch decks, making it impossible to get a unified view without hours of manual compilation.
-                                            </li>
-                                            <li>
-                                                <strong>Slow Due Diligence:</strong> Building a comprehensive competitive landscape takes me weeks of Googling and reading reports.
-                                            </li>
-                                            <li>
-                                                <strong>Superficial Research:</strong> With high deal volume, I can only do surface-level checks. I often miss critical details about founders, market dynamics, and hidden competitors because I lack the time for deep dives.
-                                            </li>
-                                            <li>
-                                                <strong>Complex Tools:</strong> Our CRM requires complex filters and clicks to find anything. I spend more time managing software than analyzing deals.
-                                            </li>
+                                            {[0, 1, 2, 3, 4].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`vcUseCase.roles.analyst.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('vcUseCase.roles.analyst.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Automated Ingestion:</strong> I just forward pitch decks to the AI. It extracts team, market size, and traction data and fills the CRM automatically.
-                                            </li>
-                                            <li>
-                                                <strong>Automated Intelligence & Outreach:</strong> The AI aggregates data from all channels and automatically creates outreach emails or messages with specific questions to fill missing information, ensuring comprehensive reports with zero manual effort.
-                                            </li>
-                                            <li>
-                                                <strong>Instant Landscapes:</strong> I ask "Show me the competitive map for [Startup]" and get a detailed comparison table with strengths and weaknesses in seconds.
-                                            </li>
-                                            <li>
-                                                <strong>Deep AI Research:</strong> AI autonomously searches for 'hidden facts' and mentions about founders across 750M+ verified email records and public web data to build a 100% personalized investment thesis and background report.
-                                            </li>
-                                            <li>
-                                                <strong>Native Language Communication:</strong> I simply chat with the AI to get real-time insights. "Show me the competitive landscape" or "Draft a follow-up" - it understands context and executes instantly.
-                                            </li>
+                                            {[0, 1, 2, 3, 4].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`vcUseCase.roles.analyst.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="mt-6">
                                         <p className="text-gray-700 italic mb-4">
-                                            "I can now cover 5x more startups without working weekends. The depth of insight I get instantly is like having a team of researchers."
+                                            {t('vcUseCase.roles.analyst.quote')}
                                         </p>
                                         <Button
                                             className="bg-indigo-600 hover:bg-indigo-700 text-white"
                                             onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
                                         >
-                                            Register Now
+                                            {t('vcUseCase.cta.button')}
                                             <ArrowRight className="ml-2 h-4 w-4" />
                                         </Button>
                                     </div>
@@ -113,12 +92,12 @@ export default function VCResearchUseCase() {
                                             className="h-12 w-12 rounded-full object-cover"
                                         />
                                         <div>
-                                            <h4 className="font-bold text-gray-900">David Kim</h4>
-                                            <p className="text-sm text-gray-500">Senior Analyst at Apex Ventures</p>
+                                            <h4 className="font-bold text-gray-900">{t('vcUseCase.roles.analyst.testimonial.name')}</h4>
+                                            <p className="text-sm text-gray-500">{t('vcUseCase.roles.analyst.testimonial.role')}</p>
                                         </div>
                                     </div>
                                     <p className="text-gray-700 italic">
-                                        "The automated competitive mapping alone saves me 10 hours a week. It's a game changer for our deal flow."
+                                        {t('vcUseCase.roles.analyst.testimonial.text')}
                                     </p>
                                 </div>
                             </div>
@@ -132,58 +111,40 @@ export default function VCResearchUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center lg:flex-row-reverse">
                             <div className="lg:order-2">
                                 <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-purple-700 mb-6">
-                                    <span className="font-semibold">General Partner / CEO</span>
+                                    <span className="font-semibold">{t('vcUseCase.roles.partner.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    See the whole board, never miss a unicorn
+                                    {t('vcUseCase.roles.partner.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('vcUseCase.roles.partner.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Operational Black Box:</strong> I relied on weekly manual reports to understand what my analysts were working on. By the time I saw the data, hot deals were already cold.
-                                            </li>
-                                            <li>
-                                                <strong>Performance Blind Spots:</strong> It was hard to distinguish between busy work and actual deal sourcing. I couldn't easily tell which analysts were bringing in quality leads without digging through email threads.
-                                            </li>
-                                            <li>
-                                                <strong>Reactive Management:</strong> Correcting an analyst's investment thesis required sitting in on calls or reviewing random notes. I was always reacting to missed opportunities rather than preventing them.
-                                            </li>
-                                            <li>
-                                                <strong>Fragmented Oversight:</strong> Deal flow and due diligence data were disconnected, making it impossible to get a unified view of the firm's pipeline health.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`vcUseCase.roles.partner.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('vcUseCase.roles.partner.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Conversational Intelligence:</strong> I simply chat with the AI to get real-time status updates. "Show me the deal pipeline" or "Visualize analyst activity" generates instant diagrams and reports.
-                                            </li>
-                                            <li>
-                                                <strong>Performance Clarity:</strong> The AI identifies top performers and those struggling based on actual deal quality and outreach outcomes, not just activity metrics.
-                                            </li>
-                                            <li>
-                                                <strong>Scalable Coaching:</strong> I can instantly correct course. The AI analyzes investment memos and highlights areas for individual improvement, allowing me to provide specific, timely feedback on thesis alignment.
-                                            </li>
-                                            <li>
-                                                <strong>Proactive Leadership:</strong> I have a 24/7 pulse on every deal and analyst. I can spot trends and steer the firm with data-backed confidence.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`vcUseCase.roles.partner.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="mt-6">
                                         <p className="text-gray-700 italic mb-4">
-                                            "It's like having a Chief of Staff who never sleeps. We're closing better deals because we're moving faster and with more conviction."
+                                            {t('vcUseCase.roles.partner.quote')}
                                         </p>
                                         <Button
                                             className="bg-indigo-600 hover:bg-indigo-700 text-white"
                                             onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
                                         >
-                                            Register Now
+                                            {t('vcUseCase.cta.button')}
                                             <ArrowRight className="ml-2 h-4 w-4" />
                                         </Button>
                                     </div>
@@ -207,12 +168,12 @@ export default function VCResearchUseCase() {
                                             className="h-12 w-12 rounded-full object-cover"
                                         />
                                         <div>
-                                            <h4 className="font-bold text-gray-900">James Sterling</h4>
-                                            <p className="text-sm text-gray-500">General Partner at Sterling Capital</p>
+                                            <h4 className="font-bold text-gray-900">{t('vcUseCase.roles.partner.testimonial.name')}</h4>
+                                            <p className="text-sm text-gray-500">{t('vcUseCase.roles.partner.testimonial.role')}</p>
                                         </div>
                                     </div>
                                     <p className="text-gray-700 italic">
-                                        "DealoAgent gives us an unfair advantage. We see the patterns others miss."
+                                        {t('vcUseCase.roles.partner.testimonial.text')}
                                     </p>
                                 </div>
                             </div>
@@ -225,13 +186,13 @@ export default function VCResearchUseCase() {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-6">
-                                <span className="font-semibold">Future Roadmap</span>
+                                <span className="font-semibold">{t('vcUseCase.roadmap.badge')}</span>
                             </div>
                             <h2 className="text-3xl font-bold text-gray-900">
-                                Coming Soon to DealoAgent
+                                {t('vcUseCase.roadmap.title')}
                             </h2>
                             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                                We're building the operating system for the next generation of venture capital.
+                                {t('vcUseCase.roadmap.subtitle')}
                             </p>
                         </div>
 
@@ -243,9 +204,9 @@ export default function VCResearchUseCase() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Automated Pitch Deck Scoring</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{t('vcUseCase.roadmap.features.scoring.title')}</h3>
                                 <p className="text-gray-600">
-                                    AI instantly scores every deck against your specific investment thesis and highlights key risks.
+                                    {t('vcUseCase.roadmap.features.scoring.description')}
                                 </p>
                             </div>
 
@@ -256,9 +217,9 @@ export default function VCResearchUseCase() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Term Sheet Generator</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{t('vcUseCase.roadmap.features.termsheet.title')}</h3>
                                 <p className="text-gray-600">
-                                    Draft standard term sheets in seconds based on deal parameters and market standards.
+                                    {t('vcUseCase.roadmap.features.termsheet.description')}
                                 </p>
                             </div>
 
@@ -269,9 +230,9 @@ export default function VCResearchUseCase() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Founder Headhunting</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{t('vcUseCase.roadmap.features.headhunting.title')}</h3>
                                 <p className="text-gray-600">
-                                    AI identifies potential second-time founders before they even incorporate, tracking their career moves and signals.
+                                    {t('vcUseCase.roadmap.features.headhunting.description')}
                                 </p>
                             </div>
 
@@ -283,9 +244,9 @@ export default function VCResearchUseCase() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Market Prediction</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{t('vcUseCase.roadmap.features.prediction.title')}</h3>
                                 <p className="text-gray-600">
-                                    Predictive analytics to identify emerging market trends and sectors before they become mainstream.
+                                    {t('vcUseCase.roadmap.features.prediction.description')}
                                 </p>
                             </div>
                         </div>
@@ -295,13 +256,13 @@ export default function VCResearchUseCase() {
                 {/* CTA Section */}
                 <section className="py-16 bg-indigo-900 text-white text-center">
                     <div className="mx-auto max-w-4xl px-4">
-                        <h2 className="text-3xl font-bold mb-6">Ready to upgrade your investment firm?</h2>
+                        <h2 className="text-3xl font-bold mb-6">{t('vcUseCase.cta.title')}</h2>
                         <Button
                             size="lg"
                             className="bg-white text-indigo-900 hover:bg-gray-100"
                             onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
                         >
-                            Get Started Now
+                            {t('vcUseCase.cta.button')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>

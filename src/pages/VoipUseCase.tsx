@@ -11,13 +11,15 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => void }) {
+    const { t } = useTranslation();
     const phrases = [
-        "Show me where most traffic missed...",
-        "Where is ACD gain last hour top-5...",
-        "Tell me top 10 destinations targets to look terminators...",
-        "Analyze margin drop on Brazil Mobile..."
+        t('voipUseCase.dashboard.phrases.0'),
+        t('voipUseCase.dashboard.phrases.1'),
+        t('voipUseCase.dashboard.phrases.2'),
+        t('voipUseCase.dashboard.phrases.3')
     ];
     const [text, setText] = useState("");
     const [phraseIndex, setPhraseIndex] = useState(0);
@@ -51,7 +53,7 @@ function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => v
                 readOnly
                 value={text}
                 className="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-4 shadow-sm"
-                placeholder="Ask anything..."
+                placeholder={t('voipUseCase.dashboard.placeholder')}
             />
             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-indigo-500 animate-pulse">
                 <span className="inline-block w-2 H-5 bg-indigo-500 ml-1">|</span>
@@ -61,20 +63,21 @@ function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => v
 }
 
 export default function VoipUseCase() {
+    const { t } = useTranslation();
     const [activePhraseIndex, setActivePhraseIndex] = useState(0);
 
     const responses = [
-        { text: "Detected 45% drop in ASR for traffic from Originator A to UK Mobile in last 15 min.", type: "alert" },
-        { text: "Top 5 routes by ACD gain (Last Hour):\n1. Germany Mobile (TalkTime) +15%\n2. France Fixed (Orange) +12%...", type: "list" },
-        { text: "Recommended Terminators for target destinations (based on margin & quality):", type: "list" },
-        { text: "Margin Analysis for Brazil Mobile (Last 24h):", type: "graph" }
+        { text: t('voipUseCase.dashboard.responses.0'), type: "alert" },
+        { text: t('voipUseCase.dashboard.responses.1'), type: "list" },
+        { text: t('voipUseCase.dashboard.responses.2'), type: "list" },
+        { text: t('voipUseCase.dashboard.responses.3'), type: "graph" }
     ];
 
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>AI for VoIP Wholesale Business - DealoAgent.ai</title>
-                <meta name="description" content="AI-Native Business Intelligence for VoIP Wholesale. Optimize routing, monitor ASR/ACD, and prevent margin leakage." />
+                <title>{t('voipUseCase.helmet.title')}</title>
+                <meta name="description" content={t('voipUseCase.helmet.description')} />
                 <link rel="canonical" href="https://dealoagent.ai/usecases/voip/" />
             </Helmet>
             <Navigation />
@@ -85,13 +88,13 @@ export default function VoipUseCase() {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                         <div className="inline-flex items-center gap-2 rounded-full bg-indigo-800/50 border border-indigo-700 px-4 py-2 text-indigo-100 mb-6">
                             <Activity className="h-4 w-4" />
-                            <span className="text-sm font-medium">New: VoIP Business Intelligence</span>
+                            <span className="text-sm font-medium">{t('voipUseCase.header.badge')}</span>
                         </div>
                         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl mb-6">
-                            AI-Native Logic for VoIP Wholesale
+                            {t('voipUseCase.header.title')}
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg text-indigo-100">
-                            Stop margin leakage and optimize routing instantly. Monitor ASR, ACD, and PDD in real-time with natural language.
+                            {t('voipUseCase.header.description')}
                         </p>
                     </div>
                 </div>
@@ -100,9 +103,9 @@ export default function VoipUseCase() {
                 <section className="py-16 bg-indigo-50">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl font-bold text-gray-900">Seamless Integration Architecture</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">{t('voipUseCase.technical.title')}</h2>
                             <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-                                No hardware required. Integrate directly with your softswitch CDRs and billing streams for real-time visibility.
+                                {t('voipUseCase.technical.description')}
                             </p>
                         </div>
 
@@ -120,8 +123,8 @@ export default function VoipUseCase() {
                                         <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-600">
                                             <Phone className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">Voice PBX</h3>
-                                        <p className="text-sm text-gray-500 mt-2">Originator / Income Calls</p>
+                                        <h3 className="font-bold text-gray-900">{t('voipUseCase.technical.nodes.pbx.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('voipUseCase.technical.nodes.pbx.description')}</p>
                                     </div>
 
                                     {/* Node 2: Voip Routing & Billing (Center) */}
@@ -136,9 +139,9 @@ export default function VoipUseCase() {
                                         <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 text-indigo-600">
                                             <Server className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">VoIP Routing & Billing</h3>
-                                        <p className="text-sm text-gray-500 mt-2">Softswitch / Billing</p>
-                                        <span className="mt-2 text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">No Quality Loss</span>
+                                        <h3 className="font-bold text-gray-900">{t('voipUseCase.technical.nodes.routing.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('voipUseCase.technical.nodes.routing.description')}</p>
+                                        <span className="mt-2 text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">{t('voipUseCase.technical.nodes.routing.tag')}</span>
                                     </div>
 
                                     {/* Node 3: SIP Traffic Routing */}
@@ -146,8 +149,8 @@ export default function VoipUseCase() {
                                         <div className="h-16 w-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-600">
                                             <Globe className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">SIP Traffic Routing</h3>
-                                        <p className="text-sm text-gray-500 mt-2">Outgoing Calls / Terminators</p>
+                                        <h3 className="font-bold text-gray-900">{t('voipUseCase.technical.nodes.sip.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('voipUseCase.technical.nodes.sip.description')}</p>
                                     </div>
                                 </div>
 
@@ -157,8 +160,8 @@ export default function VoipUseCase() {
                                         <div className="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center mb-4 text-white">
                                             <Bot className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-white">DealoAgent AI</h3>
-                                        <p className="text-sm text-indigo-100 mt-2">Financial Analysis, Routing Logic & Alerts</p>
+                                        <h3 className="font-bold text-white">{t('voipUseCase.technical.nodes.ai.title')}</h3>
+                                        <p className="text-sm text-indigo-100 mt-2">{t('voipUseCase.technical.nodes.ai.description')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,14 +173,13 @@ export default function VoipUseCase() {
                 <section className="py-24 bg-white overflow-hidden">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                         <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-8">
-                            <span className="font-semibold">Natural Language BI</span>
+                            <span className="font-semibold">{t('voipUseCase.dashboard.badge')}</span>
                         </div>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                            VoIP Business Wishlist
+                            {t('voipUseCase.dashboard.title')}
                         </h2>
                         <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                            "Show me where most traffic missed", "Where is ACD gain last hour top-5."
-                            Instant answers for your routing and financial decisions.
+                            {t('voipUseCase.dashboard.description')}
                         </p>
 
                         <div className="relative max-w-3xl mx-auto">
@@ -236,7 +238,7 @@ export default function VoipUseCase() {
                                         {/* User Query Input (Animated) */}
                                         <div className="flex gap-4 items-center">
                                             <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 shrink-0">
-                                                <span className="font-bold text-xs">YOU</span>
+                                                <span className="font-bold text-xs">{t('callCenterUseCase.dashboard.you')}</span>
                                             </div>
                                             <div className="flex-1">
                                                 <TypingEffect onPhraseChange={setActivePhraseIndex} />
@@ -255,49 +257,28 @@ export default function VoipUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center">
                             <div>
                                 <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-6">
-                                    <span className="font-semibold">Traffic Manager</span>
+                                    <span className="font-semibold">{t('voipUseCase.trafficManager.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Active Traffic Management
+                                    {t('voipUseCase.trafficManager.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('voipUseCase.trafficManager.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>ASR/ACD Blindness:</strong> I only found out about dropped calls when partners complained or sales volume plummeted.
-                                            </li>
-                                            <li>
-                                                <strong>Capacity Limit:</strong> I could only effectively manage relationships and routing for 7-10 companies max.
-                                            </li>
-                                            <li>
-                                                <strong>Manual Routing:</strong> Trying to manually adjust LCR lists and routing tables took hours every day.
-                                            </li>
-                                            <li>
-                                                <strong>Delayed Troubleshooting:</strong> Investigating PDD issues required digging through logs and CSVs manually.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`voipUseCase.trafficManager.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('voipUseCase.trafficManager.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Real-time Alerts:</strong> The system pings me instantly if ASR drops on any key route, so I can switch vendors immediately.
-                                            </li>
-                                            <li>
-                                                <strong>Scale to 100+ Partners:</strong> Automation allows me to effortlessly manage over 100 active interconnections.
-                                            </li>
-                                            <li>
-                                                <strong>Deep Relationship Intelligence:</strong> AI finds hidden facts about hundreds of partner managers, helping me build warm relationships at scale.
-                                            </li>
-                                            <li>
-                                                <strong>Softswitch Integration:</strong> All data connected to Softswitch realtime data streams for instant visibility.
-                                            </li>
-                                            <li>
-                                                <strong>Automated LCR Optimization:</strong> AI suggests routing changes based on real-time quality stats and margin.
-                                            </li>
+                                            {[0, 1, 2, 3, 4].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`voipUseCase.trafficManager.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -313,7 +294,7 @@ export default function VoipUseCase() {
                                 </div>
                                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border border-gray-100">
                                     <p className="text-gray-700 italic">
-                                        "My ASR improved by 15% because I can finally see where the traffic is failing in real-time."
+                                        {t('voipUseCase.trafficManager.quote')}
                                     </p>
                                 </div>
                             </div>
@@ -327,43 +308,28 @@ export default function VoipUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center lg:flex-row-reverse">
                             <div className="lg:order-2">
                                 <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-purple-700 mb-6">
-                                    <span className="font-semibold">VoIP Business Owner / CEO</span>
+                                    <span className="font-semibold">{t('voipUseCase.owner.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Full Margin Visibility
+                                    {t('voipUseCase.owner.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('voipUseCase.owner.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Not Speaking My Language:</strong> Generic CRMs don't understand 'ASR', 'ACD', or 'Ports', forcing us to use messy spreadsheets alongside them.
-                                            </li>
-                                            <li>
-                                                <strong>Management Blindspots:</strong> I spent too much time chasing traffic managers for updates instead of focusing on strategy and high-level deals.
-                                            </li>
-                                            <li>
-                                                <strong>Margin Leakage:</strong> We lost money on negative margin routes often because manual rate updates were too slow.
-                                            </li>
+                                            {[0, 1, 2].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`voipUseCase.owner.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('voipUseCase.owner.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>VoIP-Native Ecosystem:</strong> The whole platform speaks VoIP—from 'Interconnection' deals to 'Rate Sheet' processing—so my team works 2x faster.
-                                            </li>
-                                            <li>
-                                                <strong>AI Employee Oversight:</strong> I have a real-time view of every traffic manager's performance, with AI identifying coaching needs automatically.
-                                            </li>
-                                            <li>
-                                                <strong>Connected Data:</strong> All financial and routing data is connected to Softswitch realtime streams for single-source-of-truth accuracy.
-                                            </li>
-                                            <li>
-                                                <strong>Real-time Margin Tracking:</strong> I see exact profit per minute per destination, ensuring we never run negative margin traffic.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`voipUseCase.owner.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -379,7 +345,7 @@ export default function VoipUseCase() {
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border border-gray-100">
                                     <p className="text-gray-700 italic">
-                                        "We eliminated negative margin routes entirely and increased overall profitability by 20% in the first quarter."
+                                        {t('voipUseCase.owner.quote')}
                                     </p>
                                 </div>
                             </div>
@@ -390,13 +356,13 @@ export default function VoipUseCase() {
                 {/* CTA Section */}
                 <section className="py-16 bg-indigo-900 text-white text-center">
                     <div className="mx-auto max-w-4xl px-4">
-                        <h2 className="text-3xl font-bold mb-6">Ready to scale your VoIP Business?</h2>
+                        <h2 className="text-3xl font-bold mb-6">{t('voipUseCase.cta.title')}</h2>
                         <Button
                             size="lg"
                             className="bg-white text-indigo-900 hover:bg-gray-100"
                             onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
                         >
-                            Get Started Now
+                            {t('voipUseCase.cta.button')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>

@@ -1,6 +1,7 @@
 
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
+import "./i18n"; // Import i18n configuration
 import Router from "./Router.tsx";
 import "./index.css";
 

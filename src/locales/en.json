@@ -1,0 +1,1279 @@
+{
+    "nav": {
+        "useCases": "Use cases",
+        "features": "Features",
+        "pricing": "Pricing",
+        "team": "Team",
+        "partners": "Partners",
+        "blog": "Blog",
+        "signIn": "Sign In",
+        "talkToSales": "Talk to Sales",
+        "register": "Register Now"
+    },
+    "hero": {
+        "badge": "Your Full-Stack AI Partner",
+        "title": "Speaks and Looks Like Your Industry",
+        "subtitle": "Combine a fully customizable CRM with a native AI business assistant. Construct your workspace with your own industry language and workflows, adapting the interface and intelligence to match exactly how you work.",
+        "cta": {
+            "register": "Register Now - Get Free Credits",
+            "watch": "Watch product tour",
+            "comingSoon": "Coming soon"
+        },
+        "stats": {
+            "users": "Active users",
+            "deals": "Deals closed",
+            "roi": "ROI increase"
+        }
+    },
+    "features": {
+        "title": "Features that drive results",
+        "subtitle": "Everything you need to automate your sales workflow",
+        "intelligence": {
+            "title": "Competitive Intelligence",
+            "description": "Extract pricing/features from emails; monitor sites; AI comparison tables; sentiment tracking."
+        },
+        "unified": {
+            "title": "Unified Communication",
+            "description": "Centralize Email/Teams/Chat; semantic search; auto-deal matching; relationship scoring."
+        },
+        "crm": {
+            "title": "Natural Language CRM",
+            "description": "Chat interface for all tasks; no manual entry; custom process design via chat."
+        },
+        "outreach": {
+            "title": "Context-Aware Outreach",
+            "description": "AI drafts personalized emails using history; learns from success; multi-channel sequences."
+        },
+        "cta": {
+            "seamless": "All features work together seamlessly through <1>one AI-powered chat interface</1>",
+            "tryFree": "Try All Features Free",
+            "startTrial": "Start Free Trial"
+        }
+    },
+    "featureCards": {
+        "sourcing": {
+            "title": "B2B Lead Sourcing & Intelligence",
+            "description": "Find high-quality leads and build deep relationships using verified commercial databases and AI-driven deep research.",
+            "items": [
+                "Integrated database with 750M+ verified business emails for precision lead sourcing",
+                "AI-powered 'hidden' web search to uncover lead mentions and obscure facts across the web",
+                "Build 100% personalized outreach that transforms cold leads into warm relationships",
+                "Automatic enrichment of CRM records with real-time contact and company data"
+            ]
+        },
+        "research": {
+            "title": "Deep Multi-Source Research & Analysis",
+            "description": "Automate complex information gathering across multiple hops. Whether for Competitor Analysis, VC Due Diligence, or HR Screening, AI fills in the gaps from documents and conversations.",
+            "items": [
+                "Extract structured data from emails, proposals, and complex documents automatically",
+                "Directly scrape target websites and auto-summarize key information",
+                "Build comprehensive comparison tables for Competitors, Candidates, or Startups",
+                "Handle multi-channel interactions and extract text from any attached file type",
+                "Automatically draft outreach messages to request missing specific information"
+            ]
+        },
+        "crm": {
+            "title": "Natural Language CRM",
+            "description": "Forget complex CRM interfaces. Just chat with your AI copilot to manage deals, find information, and execute workflows in seconds.",
+            "items": [
+                "Ask questions in plain native language - get instant answers from your data",
+                "No manual data entry - AI fills CRM from emails and conversations",
+                "One chat interface for any task - no app switching or copy-pasting",
+                "Execute complex workflows with a single command"
+            ]
+        },
+        "outreach": {
+            "title": "Context-Aware Outreach Generator",
+            "description": "Stop sending generic emails or messages. Generate hyper-personalized messages that reference past conversations, client needs, and competitive positioning.",
+            "items": [
+                "AI drafts emails using full conversation history and client context",
+                "Use AI 'hidden' Google search to find hidden facts about leads for 100% personalized outreach",
+                "Learn from your best-performing messages and replicate success",
+                "Multi-channel sequences across email and messaging platforms",
+                "Navigate and teach AI your personal preferences to improve future generations"
+            ]
+        },
+        "automation": {
+            "title": "Intelligent Web Automation",
+            "description": "Take control of the web. Our Chrome extension acts as your digital hand, automating LinkedIn networking, form submissions, and complex browser workflows.",
+            "items": [
+                "Scale LinkedIn operations: auto-connect, message, and extract data",
+                "Smart form filling: populates fields using context from your documents",
+                "Batch processing: automate repetitive actions across any website",
+                "Secure Chrome extension integration for seamless browser control"
+            ]
+        },
+        "roles": {
+            "title": "Team Roles & Employee Access",
+            "description": "Manage your sales team with granular permissions. Assign roles, track individual performance, and ensure secure access for every employee.",
+            "items": [
+                "Role-based access control (RBAC) for admins, managers, and reps",
+                "Secure employee login with single sign-on (SSO) support",
+                "Easy onboarding and offboarding of team members",
+                "Customizable permission sets for different departments"
+            ]
+        }
+    },
+    "difference": {
+        "title": "Experience the Difference",
+        "subtitle": "See how DealoAgent transforms your sales workflow from complex and manual to simple and conversational.",
+        "newApproach": "NEW APPROACH",
+        "oldApproach": "OLD APPROACH",
+        "ui": {
+            "dashboard": "Dashboard",
+            "leads": "Leads",
+            "reports": "Reports",
+            "advancedSearch": "Advanced Search",
+            "dataView": "Data View",
+            "emailEditor": "Email Editor",
+            "connectionTimeout": "Connection Timeout",
+            "refreshMessage": "Please refresh the page and try again."
+        }
+    },
+    "howItWorks": {
+        "badge": "How it works",
+        "title": "From insight to close in three simple steps",
+        "steps": {
+            "analyze": {
+                "title": "Analyze",
+                "description": "Our AI scans your emails, attachments, and communications to understand your market, competitors, and opportunities."
+            },
+            "automate": {
+                "title": "Automate",
+                "description": "Generate personalized outreach messages, comparison tables, and follow-ups based on past conversations and data."
+            },
+            "accelerate": {
+                "title": "Accelerate",
+                "description": "Close deals faster with AI-powered insights, automated workflows, and intelligent recommendations."
+            }
+        }
+    },
+    "results": {
+        "title": "Results that speak for themselves",
+        "subtitle": "Join thousands of sales teams achieving unprecedented growth",
+        "stats": {
+            "researchTime": "Time saved on research",
+            "dealVelocity": "Faster deal velocity",
+            "responseRate": "Increase in response rate",
+            "dealsClosed": "Total deals closed"
+        }
+    },
+    "pricing": {
+        "badge": "Pricing",
+        "subtitle": "Choose the plan that's right for you. All plans include AI tokens for usage.",
+        "perMonth": "/month",
+        "tokensIncluded": "usage tokens included",
+        "popular": "Most Popular",
+        "free": {
+            "title": "Free",
+            "cta": "Get Started Free",
+            "features": [
+                "Basic competitor analysis",
+                "Up to 10 AI-generated messages",
+                "Email support",
+                "Chat-based CRM interface"
+            ]
+        },
+        "pro": {
+            "title": "Pro",
+            "cta": "Start Pro Trial",
+            "features": [
+                "Advanced competitor intelligence",
+                "Unlimited AI messages",
+                "Attachment scanning & analytics",
+                "Email & chat integration",
+                "Priority support"
+            ]
+        },
+        "enterprise": {
+            "title": "Enterprise",
+            "cta": "Contact Sales",
+            "features": [
+                "Everything in Pro",
+                "Full AI Sales Agent (coming soon)",
+                "Custom integrations",
+                "Dedicated account manager",
+                "24/7 premium support"
+            ]
+        },
+        "addon": {
+            "title": "Need more usage tokens?",
+            "subtitle": "Add <1>$50</1> worth of usage tokens anytime",
+            "cta": "Buy Token Package"
+        },
+        "note": "All plans include 14-day free trial · No credit card required · Cancel anytime",
+        "promo": {
+            "title": "Limited Time: Free Credits + Referral Rewards",
+            "text": "New users get <1>free credits</1> to start. Plus, invite friends and earn rewards through our referral system - both you and your referrals get bonus credits!",
+            "cta": "Claim Your Free Credits Now"
+        }
+    },
+    "readiness": {
+        "badge": "Ready to grow?",
+        "subtitle": "Join thousands of sales teams already using DealoAgent to close more deals. Start your free trial today - no credit card required.",
+        "registerCta": "Register Now - Get Free Credits",
+        "salesCta": "Talk to sales",
+        "promoText": "🎁 Limited time offer: Free credits + Referral system rewards",
+        "footerNote": "14-day free trial · No credit card required · Cancel anytime"
+    },
+    "partners": {
+        "badge": "Partnership Program",
+        "title": "Grow with DealoAgent",
+        "description": "Whether you're a System Integrator, Reseller, or Affiliate, we have a program designed for your success. Earn high commissions and offer the most advanced AI CRM to your clients.",
+        "table": {
+            "headers": {
+                "benefit": "Benefit",
+                "dealoAgent": "DealoAgent",
+                "others": "Others"
+            },
+            "rows": {
+                "revShareY1": "Rev Share (Y1)",
+                "revShareY2Y3": "Rev Share (Y2/Y3)",
+                "flatBounty": "Flat Bounty",
+                "multiTierReferral": "Multi-Tier Referral",
+                "multiTierValue": "Yes (Earn from network)"
+            }
+        }
+    },
+    "industryUseCases": {
+        "title": "Use Cases (per industry)",
+        "subtitle": "Discover how DealoAgent transforms operations for specific industries.",
+        "learnMore": "Learn More",
+        "recruiting": {
+            "title": "Recruiting",
+            "description": "Streamline candidate sourcing, screening, and client management. See how recruiters, sales reps, and agency owners leverage AI to place more candidates."
+        },
+        "saas": {
+            "title": "SaaS Sales",
+            "description": "Scale ARR and Pipeline Velocity. Empower Reps with automated outreach and Founders with a real-time Telegram Command Center for total oversight."
+        },
+        "vc": {
+            "title": "Venture Capital",
+            "description": "Automate due diligence and portfolio monitoring. Give analysts superpowers and help partners never miss a unicorn."
+        },
+        "callCenter": {
+            "title": "Call Centres",
+            "description": "AI-based agent scoring, script deviation detection, and emotion analysis. Simple zero cost integration."
+        },
+        "voip": {
+            "title": "VoIP Wholesale",
+            "description": "AI-Native Traffic Management. Real-time ASR/ACD alerts, automated LCR optimization, and natural language margin analysis."
+        }
+    },
+    "team": {
+        "badge": "Team",
+        "subtitle": "Meet the team building the future of AI-powered sales",
+        "founder": {
+            "role": "Founder & CEO",
+            "name": "Oleksii Vinogradov",
+            "bio": "AI Leader with proven ability to deliver advanced AI systems from concept to production. Built UnitAI from scratch in 3 months—a full AI agent suite for Unity developers. Deep Learning Specialization certified with expertise in LLMs, RAG, agentic memory, and full-stack AI product development."
+        },
+        "contact": "Contact Partner Team",
+        "explore": "Explore Programs"
+    },
+    "blog": {
+        "badge": "Latest Insights",
+        "subtitle": "Real stories and proven strategies from teams transforming their sales with AI",
+        "readStory": "Read story",
+        "viewAll": "View All Stories",
+        "hero": {
+            "badge": "Insights & Case Studies",
+            "title": "DealoAgent Blog",
+            "description": "Real stories, proven strategies, and insights on AI-powered sales intelligence"
+        },
+        "featured": {
+            "label": "Featured Story",
+            "readMore": "Read full story"
+        },
+        "latest": {
+            "title": "Latest Articles"
+        },
+        "newsletter": {
+            "title": "Stay Updated",
+            "description": "Get the latest insights on AI-powered sales delivered to your inbox",
+            "button": "Subscribe to Newsletter"
+        }
+    },
+    "footer": {
+        "description": "AI-powered CRM platform for modern B2B sales teams.",
+        "copyright": "© 2025 DealoAgent. All rights reserved.",
+        "product": {
+            "title": "Product",
+            "features": "Features",
+            "pricing": "Pricing",
+            "security": "Security",
+            "roadmap": "Roadmap",
+            "login": "Employee Login"
+        },
+        "company": {
+            "title": "Company",
+            "about": "About",
+            "blog": "Blog",
+            "careers": "Careers",
+            "contact": "Contact",
+            "privacy": "Privacy Policy"
+        }
+    },
+    "recruitingUseCase": {
+        "helmet": {
+            "title": "AI for Recruiting Agencies - DealoAgent.ai",
+            "description": "Automate candidate screening, parsing, and outreach with DealoAgent.ai. See how recruiters save 70% of admin time."
+        },
+        "header": {
+            "title": "AI for Recruiting Agencies",
+            "description": "See how DealoAgent transforms the recruiting process for recruiters, sales teams, and agency owners."
+        },
+        "roles": {
+            "recruiter": {
+                "badge": "The Recruiter",
+                "title": "Focus on candidates, not admin",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Manual CV Processing:</strong> Candidates send PDFs or Docs that I have to manually convert and compare against vacancy skills.",
+                        "1": "<strong>Fragmented Data Collection:</strong> I chase information across emails, messengers, and calls to fill vacancy forms. It's endless manual cycles, and I never know if a profile is truly complete.",
+                        "2": "<strong>Redundant Interviews:</strong> I waste time in voice interviews asking questions about information the candidate already provided but I missed.",
+                        "3": "<strong>Research Nightmare:</strong> Digging into candidate backgrounds manually is time-consuming and overwhelming."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Automated Parsing:</strong> All documents are converted on the fly from emails, messengers, or chats and instantly connected to the candidate.",
+                        "1": "<strong>Smart Gap Filling:</strong> AI generates specific questions to fill missing vacancy details (even for candidates who ignore points), ensuring 100% completeness.",
+                        "2": "<strong>Intelligent Interview Prep:</strong> AI analyzes all past info to suggest the EXACT questions I need. Voice call transcripts automatically fill any remaining unclear info.",
+                        "3": "<strong>Deep Insights:</strong> Integrated deep research automatically adds special focusing points to the candidate report."
+                    }
+                },
+                "quote": "\"And good news, no need to wait for approval from the top or long integration decisions. I just started using it alone, and it works like a charm.\"",
+                "testimonial": {
+                    "name": "Sarah Jenkins",
+                    "role": "Recruiter at TalentFlow Agency",
+                    "text": "\"It's like having a team of 5 assistants working 24/7. My placement rate has doubled in just 3 months.\""
+                }
+            },
+            "sales": {
+                "badge": "Sales & Business Development",
+                "title": "Predictable pipeline, personalized outreach",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Manual Prospecting:</strong> I spent hours manually hunting for companies hiring for roles we cover. It was a slow, hit-or-miss process.",
+                        "1": "<strong>Generic Outreach:</strong> To hit my numbers, I had to send generic \"spray and pray\" emails. Personalization was impossible at scale, so response rates were low.",
+                        "2": "<strong>Lost Context:</strong> When a lead finally replied, I'd scramble to find past notes or emails. I often walked into calls blindly, forgetting key details from months ago.",
+                        "3": "<strong>Missed Follow-ups:</strong> I relied on memory or sticky notes to follow up. Valuable leads constantly slipped through the cracks."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>AI-Driven Targeting:</strong> DealoAgent identifies high-intent leads using integrated databases with 750M+ verified emails and tracks companies matching your niche who just posted relevant jobs.",
+                        "1": "<strong>Hyper-Personalization:</strong> AI uses 'hidden facts' search to uncover lead mentions online, creating 100% personalized messages that reference specific roles, company news, and our top candidates.",
+                        "2": "<strong>Unified Intelligence:</strong> Every email, call, and LinkedIn message is analyzed. I get a \"cheat sheet\" before every interaction with full context and suggested talking points.",
+                        "3": "<strong>Smart Re-engagement:</strong> The system alerts me when a dormant lead shows buying signals (like visiting our site or posting a new role) and drafts the perfect re-opening line."
+                    }
+                },
+                "quote": "\"And good news, no need to wait for approval from the top or long integration decisions. I just started using it alone, and it works like a charm.\"",
+                "testimonial": {
+                    "name": "Michael Chen",
+                    "role": "Sales Lead at TalentFlow Agency",
+                    "text": "\"I've moved from chasing leads to managing a steady stream of qualified meetings. My commission checks have never been higher.\""
+                }
+            },
+            "ceo": {
+                "badge": "CEO / Agency Owner",
+                "title": "Scale without headcount",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Operational Black Box:</strong> I relied on weekly manual reports to understand what was happening. By the time I saw the data, it was often too late to fix issues.",
+                        "1": "<strong>Performance Blind Spots:</strong> It was hard to distinguish between busy work and actual progress. I couldn't easily tell who was performing and who needed help without digging through CRM logs.",
+                        "2": "<strong>Reactive Management:</strong> Correcting an employee's approach required sitting in on calls or reviewing random emails. I was always reacting to problems rather than preventing them.",
+                        "3": "Fragmented Oversight: Sales and recruiting data were disconnected, making it impossible to get a unified view of the agency's health."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Conversational Intelligence:</strong> I simply chat with the AI to get real-time status updates. \"Show me the sales pipeline\" or \"Visualize team activity\" generates instant diagrams and reports.",
+                        "1": "<strong>Performance Clarity:</strong> The AI identifies top performers and those struggling based on actual conversation outcomes, not just activity metrics.",
+                        "2": "<strong>Scalable Coaching:</strong> I can instantly correct course. The AI analyzes communication styles and highlights areas for individual improvement, allowing me to provide specific, timely feedback.",
+                        "3": "<strong>Proactive Leadership:</strong> I have a 24/7 pulse on every prospect and employee. I can spot trends and steer the ship with data-backed confidence."
+                    }
+                },
+                "quote": "\"And the best part? No special technical deployment was required. We simply connected our communication channels, and it started delivering value immediately.\"",
+                "testimonial": {
+                    "name": "Elena Rodriguez",
+                    "role": "CEO of TalentFlow Agency",
+                    "text": "\"DealoAgent gave us the operational leverage we needed to grow. It's the best investment I've made for my business.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Future Roadmap",
+            "title": "Coming Soon to DealoAgent",
+            "subtitle": "We're constantly innovating. Here is a sneak peek at the powerful features currently in our development pipeline.",
+            "features": {
+                "screening": {
+                    "title": "24/7 AI Screening Bot",
+                    "description": "An always-on assistant that validates candidate knowledge and screens applicants around the clock, ensuring you never miss top talent."
+                },
+                "questions": {
+                    "title": "Smart Question Generator",
+                    "description": "AI analyzes vacancy details to automatically generate precise, role-specific interview questions to assess technical and soft skills."
+                },
+                "avatar": {
+                    "title": "AI Avatar Interviews",
+                    "description": "Conduct preliminary video interviews with a realistic AI avatar that interacts naturally with candidates, saving your team hours of call time."
+                },
+                "analysis": {
+                    "title": "Advanced Profile Analysis",
+                    "description": "Deep analysis of candidate responses to detect potential fraud, evaluate emotional intelligence, and build comprehensive psychological profiles."
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to transform your recruiting agency?",
+            "button": "Get Started Now"
+        }
+    },
+    "saasUseCase": {
+        "helmet": {
+            "title": "AI for SaaS Sales - DealoAgent.ai",
+            "description": "Scale your ARR, automate competitor research, and control your sales pipeline from anywhere with DealoAgent.ai."
+        },
+        "header": {
+            "title": "AI for SaaS Sales Teams",
+            "description": "Scale your ARR, automate competitor research, and control your pipeline from anywhere."
+        },
+        "roles": {
+            "rep": {
+                "badge": "Sales Representative (SDR/AE)",
+                "title": "100x More Deals, Automated Outreach",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Manual Prospecting:</strong> I wasted hours on LinkedIn manually hunting for leads. My pipeline velocity was dead slow.",
+                        "1": "<strong>Spray & Pray:</strong> To hit quota, I sent generic emails with low open rates. Personalization at scale was impossible.",
+                        "2": "<strong>CRM Data Entry Hell:</strong> Updating the CRM took longer than selling. I missed follow-ups and inadvertently caused churn.",
+                        "3": "<strong>Limited Bandwidth:</strong> I could only handle a few dozen prospects effectively. Scaling up meant burnout."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>AI Outreach & Research:</strong> The AI finds MQLs/SQLs, researches them, and drafts hyper-personalized sequences. I just approve and close.",
+                        "1": "<strong>100x Deal Volume:</strong> I work with significantly more prospects. The AI Assistant handles the grunt work, allowing me to close 100x more deals.",
+                        "2": "<strong>Contextual Intelligence:</strong> Before every demo, I get a \"cheat sheet\" on the prospect's company news and tech stack.",
+                        "3": "<strong>Automated Follow-ups:</strong> No lead slips through the cracks. The AI manages my entire funnel and nurtures leads automatically."
+                    }
+                },
+                "quote": "\"My quota is crushed every month. I focus on closing while the AI handles the prospecting and research.\"",
+                "testimonial": {
+                    "name": "Michael Chen",
+                    "role": "SDR at TechGrowth",
+                    "text": "\"I'm booking 5x more demos with less effort. It's like having a dedicated research team.\""
+                }
+            },
+            "founder": {
+                "badge": "The Founder",
+                "title": "Control Company Results from Anywhere",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Tied to the Desk:</strong> I had to be glued to my laptop to check dashboards. If I traveled, I lost visibility.",
+                        "1": "<strong>Delayed Updates:</strong> I was always chasing the team for status updates via Slack. \"Did we close that Enterprise deal?\"",
+                        "2": "<strong>Guesswork:</strong> Scaling meant chaos. I didn't know if our new messaging was landing or if we were burning cash on bad channels.",
+                        "3": "<strong>Reactive:</strong> I only found out about missed targets at the end of the month when it was too late to fix."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Telegram Command Center:</strong> I control the company results from Telegram or Web. \"Show me today's ARR\" gets an instant answer.",
+                        "1": "<strong>Remote Pulse:</strong> Whether I'm at a conference or on the go, I have a realtime pulse on every deal and metric.",
+                        "2": "<strong>AI Assistant Control:</strong> I can instruct the AI to \"Prioritize Q3 deals\" or \"Launch a re-engagement campaign\" directly from chat.",
+                        "3": "<strong>Proactive Alerts:</strong> The AI alerts me instantly if key metrics dip, so I can intervene immediately."
+                    }
+                },
+                "quote": "\"I run my SaaS from my phone. The AI Assistant acts as my COO, keeping everything on track.\"",
+                "testimonial": {
+                    "name": "David Miller",
+                    "role": "Founder of SaaSFlow",
+                    "text": "\"The freedom to control my company's growth from anywhere is priceless. It's true autonomy.\""
+                }
+            },
+            "ceo": {
+                "badge": "The CEO",
+                "title": "Automated Competitor Research & Team Control",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Competitive Blindness:</strong> Competitors changed pricing or launched features, and we found out weeks later when we lost the deal.",
+                        "1": "<strong>Black Box Sales:</strong> I didn't know *why* we were losing. Was it pricing? Product? Sales skill? The CRM didn't tell the story.",
+                        "2": "<strong>Manual Management:</strong> Managing the sales team was a full-time job—reviewing calls, checking activities, and enforcing process.",
+                        "3": "<strong>Slow Adaptation:</strong> Market shifts happened faster than we could react. Our strategy was always outdated."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Automated Intel:</strong> AI monitors competitors daily. I get comparison tables, feature updates, and pricing shifts automatically.",
+                        "1": "<strong>Realtime Control:</strong> I have automated control over sales results. The AI monitors conversations and guides the team to follow our playbook.",
+                        "2": "<strong>Source of Ideas:</strong> The AI Research capabilities give me a constant stream of new ideas and market gaps to exploit.",
+                        "3": "<strong>Strategic Dominance:</strong> I see exactly why we win or lose. I can pivot our strategy instantly based on real market data."
+                    }
+                },
+                "quote": "\"We're winning against competitors 10x our size because we're faster and smarter. DealoAgent is our secret weapon.\"",
+                "testimonial": {
+                    "name": "Jennifer Wu",
+                    "role": "CEO at CloudScale",
+                    "text": "\"DealoAgent gives me the clarity and control I need to lead effectively. It's indispensable.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Future Roadmap",
+            "title": "Coming Soon to DealoAgent for SaaS",
+            "subtitle": "We're constantly innovating. Here is a sneak peek at the powerful features currently in our development pipeline.",
+            "features": {
+                "negotiation": {
+                    "title": "Automated Negotiation Bot",
+                    "description": "An AI that can handle initial negotiation rounds, pricing questions, and scheduling, freeing up your closers."
+                },
+                "revenue": {
+                    "title": "Predictive Revenue AI",
+                    "description": "Forecast your quarter with 99% accuracy. AI analyzes deal sentiment and velocity to predict exactly what will close."
+                },
+                "avatar": {
+                    "title": "Sales Avatar Training",
+                    "description": "New reps practice pitches with a realistic AI prospect avatar that raises objections and gives feedback."
+                },
+                "churn": {
+                    "title": "Churn Prediction",
+                    "description": "Analyze usage patterns and communication sentiment to identify at-risk customers before they churn."
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to hyper-scale your SaaS sales?",
+            "button": "Get Started Now"
+        }
+    },
+    "vcUseCase": {
+        "helmet": {
+            "title": "AI for Venture Capital - DealoAgent.ai",
+            "description": "Transform deal flow and due diligence with AI. Automate research, scoring, and market analysis for VC firms."
+        },
+        "header": {
+            "title": "AI for Venture Capital",
+            "description": "See how DealoAgent transforms deal flow and due diligence for analysts and partners."
+        },
+        "roles": {
+            "analyst": {
+                "badge": "The Investment Analyst",
+                "title": "Deep diligence in minutes, not days",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Manual Data Entry:</strong> I spend hours copy-pasting data from pitch decks and emails into our CRM. It's tedious and prone to errors.",
+                        "1": "<strong>Fragmented Deal Flow:</strong> I struggle to build comprehensive reports on potential or existing portfolio startups. Information is scattered across emails, messengers, and pitch decks, making it impossible to get a unified view without hours of manual compilation.",
+                        "2": "<strong>Slow Due Diligence:</strong> Building a comprehensive competitive landscape takes me weeks of Googling and reading reports.",
+                        "3": "<strong>Superficial Research:</strong> With high deal volume, I can only do surface-level checks. I often miss critical details about founders, market dynamics, and hidden competitors because I lack the time for deep dives.",
+                        "4": "<strong>Complex Tools:</strong> Our CRM requires complex filters and clicks to find anything. I spend more time managing software than analyzing deals."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Automated Ingestion:</strong> I just forward pitch decks to the AI. It extracts team, market size, and traction data and fills the CRM automatically.",
+                        "1": "<strong>Automated Intelligence & Outreach:</strong> The AI aggregates data from all channels and automatically creates outreach emails or messages with specific questions to fill missing information, ensuring comprehensive reports with zero manual effort.",
+                        "2": "<strong>Instant Landscapes:</strong> I ask \"Show me the competitive map for [Startup]\" and get a detailed comparison table with strengths and weaknesses in seconds.",
+                        "3": "<strong>Deep AI Research:</strong> AI autonomously searches for 'hidden facts' and mentions about founders across 750M+ verified email records and public web data to build a 100% personalized investment thesis and background report.",
+                        "4": "<strong>Native Language Communication:</strong> I simply chat with the AI to get real-time insights. \"Show me the competitive landscape\" or \"Draft a follow-up\" - it understands context and executes instantly."
+                    }
+                },
+                "quote": "\"I can now cover 5x more startups without working weekends. The depth of insight I get instantly is like having a team of researchers.\"",
+                "testimonial": {
+                    "name": "David Kim",
+                    "role": "Senior Analyst at Apex Ventures",
+                    "text": "\"The automated competitive mapping alone saves me 10 hours a week. It's a game changer for our deal flow.\""
+                }
+            },
+            "partner": {
+                "badge": "General Partner / CEO",
+                "title": "See the whole board, never miss a unicorn",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>Operational Black Box:</strong> I relied on weekly manual reports to understand what my analysts were working on. By the time I saw the data, hot deals were already cold.",
+                        "1": "<strong>Performance Blind Spots:</strong> It was hard to distinguish between busy work and actual deal sourcing. I couldn't easily tell which analysts were bringing in quality leads without digging through email threads.",
+                        "2": "<strong>Reactive Management:</strong> Correcting an analyst's investment thesis required sitting in on calls or reviewing random notes. I was always reacting to missed opportunities rather than preventing them.",
+                        "3": "<strong>Fragmented Oversight:</strong> Deal flow and due diligence data were disconnected, making it impossible to get a unified view of the firm's pipeline health."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Conversational Intelligence:</strong> I simply chat with the AI to get real-time status updates. \"Show me the deal pipeline\" or \"Visualize analyst activity\" generates instant diagrams and reports.",
+                        "1": "<strong>Performance Clarity:</strong> The AI identifies top performers and those struggling based on actual deal quality and outreach outcomes, not just activity metrics.",
+                        "2": "<strong>Scalable Coaching:</strong> I can instantly correct course. The AI analyzes investment memos and highlights areas for individual improvement, allowing me to provide specific, timely feedback on thesis alignment.",
+                        "3": "<strong>Proactive Leadership:</strong> I have a 24/7 pulse on every deal and analyst. I can spot trends and steer the firm with data-backed confidence."
+                    }
+                },
+                "quote": "\"It's like having a Chief of Staff who never sleeps. We're closing better deals because we're moving faster and with more conviction.\"",
+                "testimonial": {
+                    "name": "James Sterling",
+                    "role": "General Partner at Sterling Capital",
+                    "text": "\"DealoAgent gives us an unfair advantage. We see the patterns others miss.\""
+                }
+            }
+        },
+        "roadmap": {
+            "badge": "Future Roadmap",
+            "title": "Coming Soon to DealoAgent",
+            "subtitle": "We're building the operating system for the next generation of venture capital.",
+            "features": {
+                "scoring": {
+                    "title": "Automated Pitch Deck Scoring",
+                    "description": "AI instantly scores every deck against your specific investment thesis and highlights key risks."
+                },
+                "termsheet": {
+                    "title": "Term Sheet Generator",
+                    "description": "Draft standard term sheets in seconds based on deal parameters and market standards."
+                },
+                "headhunting": {
+                    "title": "Founder Headhunting",
+                    "description": "AI identifies potential second-time founders before they even incorporate, tracking their career moves and signals."
+                },
+                "prediction": {
+                    "title": "Market Prediction",
+                    "description": "Predictive analytics to identify emerging market trends and sectors before they become mainstream."
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to upgrade your investment firm?",
+            "button": "Get Started Now"
+        }
+    },
+    "callCenterUseCase": {
+        "helmet": {
+            "title": "AI for Call Centers & BPOs - DealoAgent.ai",
+            "description": "AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage."
+        },
+        "header": {
+            "badge": "New: BPO & Contact Center AI",
+            "title": "AI-First Contact Center Intelligence",
+            "description": "Slash AHT, boost FCR, and optimize Occupancy. 100% QA coverage to reduce Shrinkage and drive Adherence."
+        },
+        "technical": {
+            "title": "Seamless Integration Architecture",
+            "description": "Zero latency recording with no quality loss. No custom APIs or complex infrastructure changes required—simply place the recorder, register it in DealoAgent, and you're live.",
+            "nodes": {
+                "pbx": {
+                    "title": "Voice PBX",
+                    "description": "Your existing telephony"
+                },
+                "ixc": {
+                    "title": "IXC Softswitch",
+                    "description": "High-fidelity Recording Box",
+                    "tag": "No quality loss"
+                },
+                "terminator": {
+                    "title": "Voice Terminator",
+                    "description": "SIP Traffic routing"
+                },
+                "ai": {
+                    "title": "DealoAgent AI",
+                    "description": "Processing, Understanding & Scoring"
+                }
+            }
+        },
+        "features": {
+            "title": "Deep Call Analytics & QA",
+            "description": "Automate your Quality Assurance to audit 100% of interactions. Optimize AHT and drive FCR with data.",
+            "grid": {
+                "adherence": {
+                    "title": "Real-Time Adherence & Assist",
+                    "description": "Live tactical playbooks guide agents to reduce Wrap-up time and boost CSAT/NPS."
+                },
+                "qa": {
+                    "title": "100% QA & Compliance Checks",
+                    "description": "Full audit of every interaction. Flag prohibited language and ensure script adherence across all calls."
+                },
+                "coaching": {
+                    "title": "Automated Coaching",
+                    "description": "Slash ramp time with automated coaching that identifies AHT outliers and winning phrases."
+                },
+                "bpo": {
+                    "title": "BPO Intelligence",
+                    "description": "Chat with your data to uncover Shrinkage causes and Occupancy trends. \"Show me agents with high Hold Time.\""
+                }
+            }
+        },
+        "leaderboard": {
+            "badge": "Live Team Leaderboard",
+            "title": "Gamify performance with transparent metrics",
+            "description": "Identify your top performers instantly. DealoAgent tracks nuanced metrics like \"Script Adherence\" and \"Customer Satisfaction Rate\" to give you a true picture of productivity beyond just call counts.",
+            "weeklyTitle": "Weekly Top Performers",
+            "metrics": {
+                "satisfaction": "Top Satisfaction Rate",
+                "deviation": "Lowest Script Deviation",
+                "average": "Best Average Score"
+            },
+            "review": {
+                "title": "Agent Performance Review",
+                "session": "Session ID: #8821 • Agent 498",
+                "score": "Score: 0.45 (Satisfied)",
+                "scriptDeviation": "Script Deviation",
+                "criticalAlert": "Critical Alert",
+                "uplift": "FCR & CSAT Uplift",
+                "satisfiedRate": "Satisfied Rate",
+                "ahtBreakdown": "AHT Breakdown (min)",
+                "agentTalk": "Agent Talk Time",
+                "customerTalk": "Customer Talk Time",
+                "emotionMix": "Emotion Mix (>10%)",
+                "agentEmotions": "Agent Emotions",
+                "customerEmotions": "Customer Emotions",
+                "neutral": "Neutral",
+                "happy": "Happy",
+                "sad": "Sad"
+            }
+        },
+        "dashboard": {
+            "badge": "Natural Language BI",
+            "title": "Build your own dashboard",
+            "description": "Stop waiting for data analysts. Just ask DealoAgent to visualize any metric, trend, or anomaly in seconds.",
+            "phrases": [
+                "Show me agents with highest Script Deviation this week...",
+                "Graph the correlation between Hold Time and CSAT...",
+                "Who are the top performers in the Retention campaign?",
+                "List calls where 'compliance' was missed last hour..."
+            ],
+            "responses": [
+                "Here are the top 5 agents with highest script deviation (>5%):",
+                "Here is the correlation analysis for Hold Time vs CSAT (Last 30 days):",
+                "Top 3 Performers in Retention Campaign by Save Rate:",
+                "Found 4 calls with missed 'Mini-Miranda' disclosure in the last hour:"
+            ],
+            "placeholder": "Ask anything...",
+            "criticalAlert": "Critical Compliance Alert",
+            "criticalMessage": "Call ID #9923, #9911, #8843 missed mandatory disclosure.",
+            "you": "YOU"
+        },
+        "roles": {
+            "agent": {
+                "badge": "The Agent",
+                "title": "Empowered, not monitored",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>QA Anxiety:</strong> I was constantly worried about skipping a mandatory disclosure or compliance statement.",
+                        "1": "<strong>Escalation Fatigue:</strong> Without a playbook, I'd freeze when customers got angry, leading to long hold times and escalations.",
+                        "2": "<strong>Delayed Coaching:</strong> I'd get feedback on my calls weeks later, when the context was already lost.",
+                        "3": "<strong>KPI Uncertainty:</strong> I didn't know my AHT or CSAT standing until the monthly view."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>Real-time Guardrails:</strong> The system alerts me instantly if I miss a script requirement, so I can fix it live on the call.",
+                        "1": "<strong>Winning Playbooks:</strong> I get live suggestions to turn \"neutral\" interactions into \"happy\" ones, boosting my CSAT.",
+                        "2": "<strong>Daily Micro-Goals:</strong> I see my FCR and AHT targets in real-time, with clips of my best moments.",
+                        "3": "<strong>Automated Coaching:</strong> The AI identifies my specific strengths and gaps, offering bite-sized coaching tips every morning."
+                    }
+                },
+                "quote": "\"I feel much more confident knowing the system has my back. My customer satisfaction scores went up 30% in the first month.\""
+            },
+            "owner": {
+                "badge": "BPO Owner / CEO",
+                "title": "Total visibility, zero blind spots",
+                "before": {
+                    "title": "Before DealoAgent",
+                    "items": {
+                        "0": "<strong>1% QA Sample Liability:</strong> QA could only listen to 1% of calls. We had massive blind spot exposure on 99% of interactions.",
+                        "1": "<strong>Blind Spot Exposure:</strong> We only found out about compliance breaches or prohibited language usage when a client complained.",
+                        "2": "<strong>Biased QA Scoring:</strong> Performance reviews were subjective and inconsistent, based on random call samples.",
+                        "3": "<strong>Unclear Seat Utilization:</strong> It was hard to track true Occupancy and justify headcount efficiency to clients."
+                    }
+                },
+                "after": {
+                    "title": "After DealoAgent",
+                    "items": {
+                        "0": "<strong>100% QA Audit:</strong> AI scores and audits EVERY single call. We know exactly what is happening in real-time across the entire floor.",
+                        "1": "<strong>Compliance Firewall:</strong> We can search across all transcripts for \"risky promises\" or specific prohibited terms to mitigate liability.",
+                        "2": "<strong>Occupancy & Shrinkage Insights:</strong> Leaderboards based on \"AHT\" and \"Adherence\" let us reward true productivity.",
+                        "3": "<strong>Natural Language BPO Queries:</strong> I can ask \"Show me the trend of happy customers this month\" and get an instant chart to share with stakeholders."
+                    }
+                },
+                "quote": "\"We moved from reactive damage control to proactive quality engineering. Operations are finally transparent.\""
+            }
+        },
+        "cta": {
+            "title": "Ready to upgrade your Call Center?",
+            "button": "Get Started Now"
+        }
+    },
+    "voipUseCase": {
+        "helmet": {
+            "title": "AI for VoIP Wholesale Business - DealoAgent.ai",
+            "description": "AI-Native Business Intelligence for VoIP Wholesale. Optimize routing, monitor ASR/ACD, and prevent margin leakage."
+        },
+        "header": {
+            "badge": "New: VoIP Business Intelligence",
+            "title": "AI-Native Logic for VoIP Wholesale",
+            "description": "Stop margin leakage and optimize routing instantly. Monitor ASR, ACD, and PDD in real-time with natural language."
+        },
+        "technical": {
+            "title": "Seamless Integration Architecture",
+            "description": "No hardware required. Integrate directly with your softswitch CDRs and billing streams for real-time visibility.",
+            "nodes": {
+                "pbx": {
+                    "title": "Voice PBX",
+                    "description": "Originator / Income Calls"
+                },
+                "routing": {
+                    "title": "VoIP Routing & Billing",
+                    "description": "Softswitch / Billing",
+                    "tag": "No Quality Loss"
+                },
+                "sip": {
+                    "title": "SIP Traffic Routing",
+                    "description": "Outgoing Calls / Terminators"
+                },
+                "ai": {
+                    "title": "DealoAgent AI",
+                    "description": "Financial Analysis, Routing Logic & Alerts"
+                }
+            }
+        },
+        "dashboard": {
+            "badge": "Natural Language BI",
+            "title": "VoIP Business Wishlist",
+            "description": "\"Show me where most traffic missed\", \"Where is ACD gain last hour top-5.\" Instant answers for your routing and financial decisions.",
+            "placeholder": "Ask anything...",
+            "phrases": {
+                "0": "Show me where most traffic missed...",
+                "1": "Where is ACD gain last hour top-5...",
+                "2": "Tell me top 10 destinations targets to look terminators...",
+                "3": "Analyze margin drop on Brazil Mobile..."
+            },
+            "responses": {
+                "0": "Detected 45% drop in ASR for traffic from Originator A to UK Mobile in last 15 min.",
+                "1": "Top 5 routes by ACD gain (Last Hour):\n1. Germany Mobile (TalkTime) +15%\n2. France Fixed (Orange) +12%...",
+                "2": "Recommended Terminators for target destinations (based on margin & quality):",
+                "3": "Margin Analysis for Brazil Mobile (Last 24h):"
+            }
+        },
+        "trafficManager": {
+            "badge": "Traffic Manager",
+            "title": "Active Traffic Management",
+            "before": {
+                "title": "Before DealoAgent",
+                "items": {
+                    "0": "<strong>ASR/ACD Blindness:</strong> I only found out about dropped calls when partners complained or sales volume plummeted.",
+                    "1": "<strong>Capacity Limit:</strong> I could only effectively manage relationships and routing for 7-10 companies max.",
+                    "2": "<strong>Manual Routing:</strong> Trying to manually adjust LCR lists and routing tables took hours every day.",
+                    "3": "<strong>Delayed Troubleshooting:</strong> Investigating PDD issues required digging through logs and CSVs manually."
+                }
+            },
+            "after": {
+                "title": "After DealoAgent",
+                "items": {
+                    "0": "<strong>Real-time Alerts:</strong> The system pings me instantly if ASR drops on any key route, so I can switch vendors immediately.",
+                    "1": "<strong>Scale to 100+ Partners:</strong> Automation allows me to effortlessly manage over 100 active interconnections.",
+                    "2": "<strong>Deep Relationship Intelligence:</strong> AI finds hidden facts about hundreds of partner managers, helping me build warm relationships at scale.",
+                    "3": "<strong>Softswitch Integration:</strong> All data connected to Softswitch realtime data streams for instant visibility.",
+                    "4": "<strong>Automated LCR Optimization:</strong> AI suggests routing changes based on real-time quality stats and margin."
+                }
+            },
+            "quote": "\"My ASR improved by 15% because I can finally see where the traffic is failing in real-time.\""
+        },
+        "owner": {
+            "badge": "VoIP Business Owner / CEO",
+            "title": "Full Margin Visibility",
+            "before": {
+                "title": "Before DealoAgent",
+                "items": {
+                    "0": "<strong>Not Speaking My Language:</strong> Generic CRMs don't understand 'ASR', 'ACD', or 'Ports', forcing us to use messy spreadsheets alongside them.",
+                    "1": "<strong>Management Blindspots:</strong> I spent too much time chasing traffic managers for updates instead of focusing on strategy and high-level deals.",
+                    "2": "<strong>Margin Leakage:</strong> We lost money on negative margin routes often because manual rate updates were too slow."
+                }
+            },
+            "after": {
+                "title": "After DealoAgent",
+                "items": {
+                    "0": "<strong>VoIP-Native Ecosystem:</strong> The whole platform speaks VoIP—from 'Interconnection' deals to 'Rate Sheet' processing—so my team works 2x faster.",
+                    "1": "<strong>AI Employee Oversight:</strong> I have a real-time view of every traffic manager's performance, with AI identifying coaching needs automatically.",
+                    "2": "<strong>Connected Data:</strong> All financial and routing data is connected to Softswitch realtime data streams for single-source-of-truth accuracy.",
+                    "3": "<strong>Real-time Margin Tracking:</strong> I see exact profit per minute per destination, ensuring we never run negative margin traffic."
+                }
+            },
+            "quote": "\"We eliminated negative margin routes entirely and increased overall profitability by 20% in the first quarter.\""
+        },
+        "cta": {
+            "title": "Ready to scale your VoIP Business?",
+            "button": "Get Started Now"
+        }
+    },
+    "useCasesIndex": {
+        "helmet": {
+            "title": "Industry Use Cases - DealoAgent.ai",
+            "description": "Discover how DealoAgent.ai transforms sales, recruiting, and research workflows across different industries with AI-powered intelligence."
+        }
+    },
+    "login": {
+        "title": "Sign in to your account",
+        "subtitle": "Access your DealoAgent dashboard",
+        "employeeLogin": "Employee Login",
+        "enterCredentials": "Enter your credentials to access the workspace",
+        "emailLabel": "Email address",
+        "emailPlaceholder": "name@company.com",
+        "passwordLabel": "Password",
+        "forgotPassword": "Forgot password?",
+        "signInButton": "Sign in",
+        "signingIn": "Signing in...",
+        "noAccount": "Don't have an account?",
+        "contactAdmin": "Contact your administrator"
+    },
+    "partnersPage": {
+        "hero": {
+            "badge": "DealoAgent Partner Program",
+            "title": "Partner with the AI CRM",
+            "titleGradient": "that sells itself",
+            "description": "Join the fastest-growing AI sales ecosystem. Whether you're a system integrator, reseller, or affiliate, we provide the technology and incentives to fuel your growth.",
+            "cta": {
+                "becomePartner": "Become a Partner",
+                "explore": "Explore Programs"
+            }
+        },
+        "comparison": {
+            "title": "Why Partners Choose DealoAgent",
+            "subtitle": "See how we stack up against the competition",
+            "headers": {
+                "benefit": "Program Benefit",
+                "dealo": "DealoAgent",
+                "hubspot": "HubSpot",
+                "apollo": "Apollo.io",
+                "clay": "Clay"
+            },
+            "rows": {
+                "revShareY1": "Revenue Share (Year 1)",
+                "revShareY2": "Revenue Share (Year 2)",
+                "revShareY3": "Revenue Share (Year 3)",
+                "bounty": "Flat Bounty",
+                "referral": "Multi-Tier Referral",
+                "terms": "Payout Terms"
+            },
+            "values": {
+                "y1_30": "30%",
+                "y1_20": "20%",
+                "y2_20": "20%",
+                "y3_10": "10%",
+                "bountyVal": "$60 (Enterprise), $10 (Pro)",
+                "bountyClay": "$50 (Pro only)",
+                "referralYes": "Yes (Earn from network)",
+                "termsNet30": "Net 30 Monthly",
+                "termsQuarterly": "Quarterly",
+                "termsNet90": "Net 90 (First), then Monthly",
+                "dash": "-"
+            }
+        },
+        "programs": {
+            "title": "Choose Your Partnership Path",
+            "description": "We've designed flexible programs tailored to your business model. Find the perfect fit and start growing with us.",
+            "solution": {
+                "title": "Solution Partners",
+                "description": "For agencies, consultancies, and system integrators. Implement DealoAgent for your clients and earn ongoing revenue share plus service fees.",
+                "benefits": [
+                    "30% (Y1), 20% (Y2), 10% (Y3) share",
+                    "Implementation revenue",
+                    "Dedicated partner manager"
+                ]
+            },
+            "resellers": {
+                "title": "Resellers",
+                "description": "For software dealers and VARs. Bundle DealoAgent with your existing portfolio. High margins and volume-based incentives.",
+                "benefits": [
+                    "Huge recurring revenue potential vs one-time sales",
+                    "Sell your own support & integration services"
+                ]
+            },
+            "affiliates": {
+                "title": "Affiliates",
+                "description": "For content creators, influencers, and community leaders. Share your unique link and earn for every signup. No caps.",
+                "benefits": [
+                    "$60 flat bounty per Enterprise sub",
+                    "$10 flat bounty per Pro sub",
+                    "30% (Y1), 20% (Y2), 10% (Y3) share",
+                    "Earn from your network's referrals"
+                ]
+            }
+        },
+        "why": {
+            "title": "Why Partner with DealoAgent?",
+            "description": "We're building the future of sales. Our partners are crucial to that mission, and we treat them like co-founders.",
+            "market": {
+                "title": "Massive Market Opportunity",
+                "description": "The AI CRM market is exploding. Position yourself as a leader by offering the most advanced tool."
+            },
+            "retention": {
+                "title": "High Retention Product",
+                "description": "Our stickiness means your recurring revenue grows and stays. Users love the \"chat to sell\" experience."
+            },
+            "support": {
+                "title": "Partner-First Support",
+                "description": "Get direct access to our product team, priority support for your clients, and dedicated resources."
+            }
+        },
+        "roi": {
+            "label": "Average ROI for Partners in Year 1",
+            "support": "Priority Partner Support"
+        },
+        "cta": {
+            "title": "Ready to grow together?",
+            "description": "Apply now to join the DealoAgent Partner Network. We review applications within 24 hours.",
+            "button": "Apply to Become a Partner"
+        }
+    },
+    "blogPost": {
+        "back": "Back to Blog",
+        "notFound": {
+            "title": "Post Not Found",
+            "button": "Back to Blog"
+        },
+        "share": "Share",
+        "writtenBy": "Written by {{author}}",
+        "bio": "The DealoAgent team shares insights on AI-powered sales intelligence, real customer success stories, and best practices for modern B2B sales teams.",
+        "startTrial": "Start Free Trial",
+        "cta": {
+            "title": "Ready to Transform Your Sales?",
+            "description": "Join hundreds of teams using DealoAgent to close more deals",
+            "button": "Register Now - Get Free Credits",
+            "promo": "🎁 Limited time: Free credits + Referral rewards",
+            "more": "Read More Stories"
+        }
+    },
+    "industry_validation": {
+        "quote": {
+            "text": "Is there an AI bubble? With the massive number of dollars going into AI infrastructure such as OpenAI’s $1.4 trillion plan and Nvidia briefly reaching a $5 trillion market cap, many have asked if speculation and hype have driven the values of AI investments above sustainable values. However, AI isn’t monolithic, and different areas look bubbly to different degrees.",
+            "author": "Andrew Ng",
+            "role": "AI Pioneer",
+            "credentials": "Co-founder of Coursera, Google Brain"
+        },
+        "analysis": {
+            "title": "Andrew Ng's Market Analysis",
+            "layer": {
+                "title": "AI Application Layer",
+                "description": "There is underinvestment. The potential is still much greater than most realize.",
+                "dealoBadge": "DealoAgent operates in this layer"
+            },
+            "infraInference": {
+                "title": "AI Infrastructure for Inference",
+                "description": "This still needs significant investment."
+            },
+            "infraTraining": {
+                "title": "AI Infrastructure for Model Training",
+                "description": "I’m still cautiously optimistic about this sector, but there could also be a bubble."
+            }
+        }
+    },
+    "pitchDeck": {
+        "slides": {
+            "1": {
+                "subtitle": "AI-Powered Sales Agent & Competitor Intelligence"
+            },
+            "2": {
+                "title": "The Problem",
+                "content": "Sales teams drown in unstructured communication.",
+                "items": [
+                    "Emails & attachments go unread",
+                    "Manual outreach is slow & inconsistent",
+                    "Competitor offers are buried in threads",
+                    "CRMs are passive, not intelligent",
+                    "Lost deals due to lack of visibility"
+                ],
+                "visual": "Broken Workflow Visual"
+            },
+            "3": {
+                "title": "Who Suffers?",
+                "content": "SDRs • AEs • Founders • Managers",
+                "items": [
+                    "SDRs waste time writing outreach",
+                    "AEs lose deals due to slow follow-up",
+                    "Founders lack competitor visibility",
+                    "Managers cannot measure quality"
+                ],
+                "visual": "User Groups Diagram"
+            },
+            "4": {
+                "title": "Current Tools Fail",
+                "content": "Everyone solves a small part — no one solves the whole problem.",
+                "items": [
+                    "CRMs → Passive data entry",
+                    "Outreach tools → Generic templates",
+                    "Enrichment → No competitor intel",
+                    "Conversation AI → No CRM sync",
+                    "Email parsers → Limited context"
+                ],
+                "chart": "Comparison Grid"
+            },
+            "5": {
+                "title": "Our Solution",
+                "content": "Two ways to work: Chat with AI or use the full dashboard.",
+                "items": [
+                    "Chat Interface: Mobile-friendly, works anywhere",
+                    "Traditional UI available for power users",
+                    "AI auto-fills CRM from conversations",
+                    "No complex forms—impossible on mobile CRMs",
+                    "Complete CRM from your phone via chat"
+                ],
+                "image": "Dual Interface Screenshot"
+            },
+            "6": {
+                "title": "How It Works",
+                "content": "Input → AI Processing → Intelligent Output",
+                "items": [
+                    "Inputs: Emails, PDFs, Calls, Chats",
+                    "AI: Parsing, Extracting, Reasoning",
+                    "Outputs: CRM Records, Competitor Tables",
+                    "Action: Auto-generated Outreach"
+                ],
+                "visual": "Workflow Diagram"
+            },
+            "7": {
+                "title": "Product Highlights",
+                "content": "Your entire sales workflow — automated.",
+                "items": [
+                    "Competitor Intelligence",
+                    "AI Outreach Generation",
+                    "Contact Discovery",
+                    "Emotion Analytics",
+                    "CRM Record Builder"
+                ],
+                "image": "Large Product Screenshot"
+            },
+            "8": {
+                "title": "Market Opportunity",
+                "content": "TAM: $186B+ | SOM: $22B+",
+                "items": [
+                    "AI sales tools market is exploding",
+                    "CRM market is massive and aging",
+                    "Email communication volume is peaking",
+                    "B2B sales shifting to automation"
+                ],
+                "chart": "Market Growth Graph"
+            },
+            "9": {
+                "title": "Timing",
+                "content": "AI is finally capable of making sales teams superhuman.",
+                "items": [
+                    "LLMs enable deep email reasoning",
+                    "Remote work = more digital signals",
+                    "Need for efficiency skyrocketed",
+                    "Legacy tools are too slow to adapt"
+                ],
+                "visual": "Trend Visual"
+            },
+            "10": {
+                "title": "Business Model",
+                "content": "SaaS Tiers + AI Usage + Enterprise Add-ons",
+                "items": [
+                    "Free Plan: Limited usage, viral growth",
+                    "Paid Plans: More AI tokens & features",
+                    "Upsells: API, Voice Analytics, Integrations",
+                    "Enterprise: Custom deployment & support"
+                ],
+                "visual": "Pricing Card Graphic"
+            },
+            "11": {
+                "title": "Traction",
+                "content": "Already processing thousands of emails.",
+                "items": [
+                    "Internal usage & validation",
+                    "VoIP/SMS pilot programs",
+                    "Thousands of outreach sequences",
+                    "Live competitor tables built",
+                    "Growing user activation"
+                ],
+                "chart": "Growth Chart"
+            },
+            "12": {
+                "title": "GTM Strategy",
+                "content": "Founder-led distribution & Content Loop",
+                "items": [
+                    "LinkedIn (15k+ audience)",
+                    "X / YouTube educational content",
+                    "Affiliate & Partner programs",
+                    "Freemium product-led growth",
+                    "Strategic Integrations"
+                ],
+                "chart": "Funnel Diagram"
+            },
+            "13": {
+                "title": "Competitive Landscape",
+                "content": "Only platform unifying CRM + AI Outreach + Competitor Intel.",
+                "items": [
+                    "Apollo: Strong database, weak conversational AI",
+                    "HubSpot: Enterprise standard, but slow and manual",
+                    "Clay: Excellent enrichment, not a sales workflow",
+                    "Folk: Modern contact manager, lacks deep sales AI",
+                    "Attio: Flexible data, requires manual build-out",
+                    "Amplemarket: Good outreach, siloed from CRM data",
+                    "Close: High velocity calling, weak AI reasoning",
+                    "DealoAgent: Unified AI Sales Agent & CRM"
+                ],
+                "chart": "2x2 Matrix"
+            },
+            "14": {
+                "title": "How It’s Built",
+                "content": "Scalable, Secure AI Infrastructure",
+                "items": [
+                    "Document AI Processing",
+                    "Advanced LLM Pipeline",
+                    "Vector DB Memory",
+                    "Emotion Analysis Model",
+                    "Multi-workspace Architecture"
+                ],
+                "visual": "Architecture Diagram"
+            },
+            "15": {
+                "title": "Roadmap",
+                "content": "Q4 2025 — Q2 2026",
+                "items": [
+                    "Q4 2025: Core AI Agent & CRM",
+                    "Q1 2026: Advanced Voice & Integrations",
+                    "Q2 2026: Enterprise Scale & API"
+                ],
+                "chart": "Timeline Graphic"
+            },
+            "16": {
+                "title": "Team",
+                "content": "Oleksii Vinogradov",
+                "items": [
+                    "Founder & CEO",
+                    "AI Leader with proven delivery track record",
+                    "Built UnitAI from scratch in 3 months",
+                    "Deep Learning certified, LLM & RAG expert"
+                ],
+                "image": "Founder Photo"
+            },
+            "17": {
+                "title": "The Ask",
+                "content": "$500k - $1M SAFE",
+                "items": [
+                    "Accelerate ML Engineering",
+                    "Expand Integrations",
+                    "Enhance AI Pipeline",
+                    "Fuel Customer Acquisition"
+                ],
+                "visual": "Join Us Visual"
+            },
+            "18": {
+                "title": "DealoAgent.ai",
+                "visual": "Final Product Hero"
+            }
+        }
+    }
+}

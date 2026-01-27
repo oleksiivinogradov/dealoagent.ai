@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     Search,
     Database,
@@ -56,6 +57,7 @@ const CONVERSATIONS: ConversationStep[] = [
 ];
 
 export function BeforeAfterSlider() {
+    const { t } = useTranslation();
     const [sliderPosition, setSliderPosition] = useState(50);
     const containerRef = useRef<HTMLDivElement>(null);
     const isDragging = useRef(false);
@@ -224,11 +226,11 @@ export function BeforeAfterSlider() {
                 <div className="mb-8 sm:mb-12 text-center">
                     <div className="mb-4 sm:mb-6">
                         <span className="inline-block rounded-full bg-indigo-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-indigo-700">
-                            Experience the Difference
+                            {t('difference.title')}
                         </span>
                     </div>
                     <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-                        See how DealoAgent transforms your sales workflow from complex and manual to simple and conversational.
+                        {t('difference.subtitle')}
                     </p>
                 </div>
 
@@ -242,7 +244,7 @@ export function BeforeAfterSlider() {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex flex-col">
                         <div className="absolute top-8 right-0 w-1/2 text-center z-10">
                             <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 font-bold text-sm tracking-wider">
-                                NEW APPROACH
+                                {t('difference.newApproach')}
                             </span>
                         </div>
 
@@ -354,7 +356,7 @@ export function BeforeAfterSlider() {
                     >
                         <div className="absolute top-8 left-0 w-1/2 text-center z-10">
                             <span className="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-sm tracking-wider">
-                                OLD APPROACH
+                                {t('difference.oldApproach')}
                             </span>
                         </div>
 

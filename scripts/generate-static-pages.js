@@ -7,8 +7,18 @@ const __dirname = path.dirname(__filename);
 
 const buildDir = path.join(__dirname, '../build');
 const indexHtmlPath = path.join(buildDir, 'index.html');
+
+if (!fs.existsSync(indexHtmlPath)) {
+    console.error('Build index.html not found. Run npm run build first.');
+    process.exit(1);
+}
+
 const indexHtmlContent = fs.readFileSync(indexHtmlPath, 'utf8');
 
+const languages = ['en', 'uk', 'pl'];
+
+// Base pages configuration
+// Ideally these should be translated. For now using English as fallback/placeholder.
 const pages = [
     {
         path: 'pitchdeck',
@@ -18,32 +28,32 @@ const pages = [
     {
         path: 'usecases',
         title: 'Industry Use Cases - DealoAgent.ai',
-        description: 'Discover how DealoAgent.ai transforms sales, recruiting, and research workflows across different industries with AI-powered intelligence.'
+        description: 'Discover how DealoAgent.ai transforms sales, recruiting, and research workflows across different industries.'
     },
     {
         path: 'usecases/recruiting',
         title: 'AI for Recruiting Agencies - DealoAgent.ai',
-        description: 'Automate candidate screening, parsing, and outreach with DealoAgent.ai. See how recruiters save 70% of admin time.'
+        description: 'Automate candidate screening, parsing, and outreach with DealoAgent.ai.'
     },
     {
         path: 'usecases/softwaresales',
         title: 'AI for Software Sales - DealoAgent.ai',
-        description: 'Accelerate your sales cycle and win more deals with AI-powered intelligence for managers and executives.'
+        description: 'Accelerate your sales cycle and win more deals with AI-powered intelligence.'
     },
     {
         path: 'usecases/vcresearch',
         title: 'AI for Venture Capital - DealoAgent.ai',
-        description: 'Transform deal flow and due diligence with AI. Automate research, scoring, and market analysis for VC firms.'
+        description: 'Transform deal flow and due diligence with AI. Automate research for VC firms.'
     },
     {
         path: 'usecases/callcenter',
         title: 'AI for Call Centers & BPOs - DealoAgent.ai',
-        description: 'AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage.'
+        description: 'AI-First Contact Center Intelligence. Slash AHT, boost FCR.'
     },
     {
         path: 'usecases/voip',
         title: 'AI for VoIP Wholesale Business - DealoAgent.ai',
-        description: 'AI-Native Business Intelligence for VoIP Wholesale. Optimize routing, monitor ASR/ACD, and prevent margin leakage.'
+        description: 'AI-Native Business Intelligence for VoIP Wholesale.'
     },
     {
         path: 'login',
@@ -53,39 +63,58 @@ const pages = [
     {
         path: 'blog',
         title: 'DealoAgent Blog - AI Sales Insights & Case Studies',
-        description: 'Explore the latest insights on AI-powered sales intelligence, real customer success stories of recruiting agencies, venture capitals and software sales.'
+        description: 'Explore the latest insights on AI-powered sales intelligence.'
     }
 ];
 
-pages.forEach(page => {
-    const dirPath = path.join(buildDir, page.path);
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-    }
+languages.forEach(lang => {
+    const isDefault = lang === 'en';
+    const langPrefix = isDefault ? '' : lang;
+    const langDir = isDefault ? buildDir : path.join(buildDir, lang);
 
-    let html = indexHtmlContent;
+    // Ensure lang dir exists
+    if (!fs.existsSync(langDir)) fs.mkdirSync(langDir, { recursive: true });
 
-    // Replace Title
-    html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${page.title}</title>`);
+    pages.forEach(page => {
+        const pagePath = path.join(langDir, page.path);
 
-    // Replace Description (multi-line support)
-    html = html.replace(/<meta name="description"[\s\S]*?\/>/, `<meta name="description" content="${page.description}" />`);
+        if (!fs.existsSync(pagePath)) {
+            fs.mkdirSync(pagePath, { recursive: true });
+        }
 
-    // Update Canonical
-    const canonicalUrl = `https://dealoagent.ai/${page.path}/`;
-    html = html.replace(/<link rel="canonical"[\s\S]*?\/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
+        let html = indexHtmlContent;
 
-    // Update OG Tags
-    html = html.replace(/<meta property="og:title"[\s\S]*?\/>/, `<meta property="og:title" content="${page.title}" />`);
-    html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${page.description}" />`);
-    html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${canonicalUrl}" />`);
+        // 1. Language Attribute
+        html = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
 
-    // Update Twitter Tags
-    html = html.replace(/<meta property="twitter:title"[\s\S]*?\/>/, `<meta property="twitter:title" content="${page.title}" />`);
-    html = html.replace(/<meta property="twitter:description"[\s\S]*?\/>/, `<meta property="twitter:description" content="${page.description}" />`);
-    html = html.replace(/<meta property="twitter:url"[\s\S]*?\/>/, `<meta property="twitter:url" content="${canonicalUrl}" />`);
+        // 2. Metadata (Should be translated in future)
+        const titleSuffix = isDefault ? '' : ` [${lang.toUpperCase()}]`; // Temporary marker
+        html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${page.title}${titleSuffix}</title>`);
+        html = html.replace(/<meta name="description"[\s\S]*?\/>/, `<meta name="description" content="${page.description}" />`);
 
+        // 3. Canonical and Alternates
+        const canonicalPath = isDefault ? `${page.path}/` : `${lang}/${page.path}/`;
+        const fullUrl = `https://dealoagent.ai/${canonicalPath}`.replace(/\/+/g, '/').replace('https:/', 'https://'); // cleanup logic
 
-    fs.writeFileSync(path.join(dirPath, 'index.html'), html);
-    console.log(`✓ Generated: ${page.path}/index.html`);
+        html = html.replace(/<link rel="canonical"[\s\S]*?\/>/, ''); // remove existing
+
+        let seoTags = `<link rel="canonical" href="${fullUrl}" />\n`;
+        languages.forEach(l => {
+            const lPrefix = l === 'en' ? '' : `${l}/`;
+            const lUrl = `https://dealoagent.ai/${lPrefix}${page.path}/`.replace(/\/+/g, '/').replace('https:/', 'https://');
+            seoTags += `    <link rel="alternate" hreflang="${l}" href="${lUrl}" />\n`;
+        });
+
+        const xDefaultUrl = `https://dealoagent.ai/${page.path}/`.replace(/\/+/g, '/').replace('https:/', 'https://');
+        seoTags += `    <link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`;
+
+        html = html.replace(/<\/head>/, `${seoTags}\n  </head>`);
+
+        // 4. Client-side hydration data (maybe pass initial lang in window object?)
+        // <script>window.initialLang = "${lang}";</script>
+        // But i18next detector on path should handle it.
+
+        fs.writeFileSync(path.join(pagePath, 'index.html'), html);
+        console.log(`✓ Generated: ${langPrefix}/${page.path}/index.html`);
+    });
 });

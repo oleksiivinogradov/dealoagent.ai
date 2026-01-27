@@ -1,18 +1,33 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export function IndustryUseCases() {
+    const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+
+    const getPath = (path: string) => {
+        const lang = i18n.language;
+        if (lang === 'en') return path;
+        return `/${lang}${path}`;
+    };
+
+    const handleNavigate = (path: string) => {
+        navigate(getPath(path));
+    };
+
     return (
         <section id="use-cases" className="py-12 sm:pt-4 sm:pb-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-8 sm:mb-12 text-center">
                     <div className="mb-4 sm:mb-6">
                         <span className="inline-block rounded-full bg-indigo-100 px-4 sm:px-8 py-2 sm:py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-indigo-700">
-                            Use Cases (per industry)
+                            {t('industryUseCases.title')}
                         </span>
                     </div>
                     <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-xl text-gray-600 px-4">
-                        Discover how DealoAgent transforms operations for specific industries.
+                        {t('industryUseCases.subtitle')}
                     </p>
                 </div>
 
@@ -21,16 +36,16 @@ export function IndustryUseCases() {
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">🤝</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">Recruiting</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">{t('industryUseCases.recruiting.title')}</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            Streamline candidate sourcing, screening, and client management. See how recruiters, sales reps, and agency owners leverage AI to place more candidates.
+                            {t('industryUseCases.recruiting.description')}
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/recruiting/'}
+                            onClick={() => handleNavigate('/usecases/recruiting')}
                         >
-                            Learn More
+                            {t('industryUseCases.learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>
@@ -39,16 +54,16 @@ export function IndustryUseCases() {
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">💻</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">SaaS Sales</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">{t('industryUseCases.saas.title')}</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            Scale ARR and Pipeline Velocity. Empower Reps with automated outreach and Founders with a real-time Telegram Command Center for total oversight.
+                            {t('industryUseCases.saas.description')}
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/softwaresales/'}
+                            onClick={() => handleNavigate('/usecases/softwaresales')}
                         >
-                            Learn More
+                            {t('industryUseCases.learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>
@@ -57,16 +72,16 @@ export function IndustryUseCases() {
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">🦄</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">Venture Capital</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">{t('industryUseCases.vc.title')}</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            Automate due diligence and portfolio monitoring. Give analysts superpowers and help partners never miss a unicorn.
+                            {t('industryUseCases.vc.description')}
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/vcresearch/'}
+                            onClick={() => handleNavigate('/usecases/vcresearch')}
                         >
-                            Learn More
+                            {t('industryUseCases.learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>
@@ -75,16 +90,16 @@ export function IndustryUseCases() {
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">🎧</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">Call Centres</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">{t('industryUseCases.callCenter.title')}</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            AI-based agent scoring, script deviation detection, and emotion analysis. Simple zero cost integration.
+                            {t('industryUseCases.callCenter.description')}
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/callcenter/'}
+                            onClick={() => handleNavigate('/usecases/callcenter')}
                         >
-                            Learn More
+                            {t('industryUseCases.learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>
@@ -93,16 +108,16 @@ export function IndustryUseCases() {
                     <div className="rounded-2xl sm:rounded-3xl border-2 border-indigo-200 bg-indigo-50/50 p-4 sm:p-6 md:p-8 overflow-hidden flex flex-col">
                         <div className="mb-4 sm:mb-6 flex items-center gap-3">
                             <span className="text-2xl sm:text-3xl flex-shrink-0">📡</span>
-                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">VoIP Wholesale</h3>
+                            <h3 className="text-indigo-900 text-xl sm:text-2xl break-words">{t('industryUseCases.voip.title')}</h3>
                         </div>
                         <p className="text-sm sm:text-base text-gray-700 mb-6 flex-grow">
-                            AI-Native Traffic Management. Real-time ASR/ACD alerts, automated LCR optimization, and natural language margin analysis.
+                            {t('industryUseCases.voip.description')}
                         </p>
                         <Button
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                            onClick={() => window.location.href = '/usecases/voip/'}
+                            onClick={() => handleNavigate('/usecases/voip')}
                         >
-                            Learn More
+                            {t('industryUseCases.learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>

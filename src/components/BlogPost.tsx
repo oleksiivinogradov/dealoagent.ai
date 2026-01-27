@@ -2,7 +2,11 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, Clock, Share2, Tag, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import blogPosts from '../data/blogPosts.json';
+import blogPostsEn from '../data/blogPosts.json';
+import blogPostsUk from '../data/blogPosts_uk.json';
+import blogPostsPl from '../data/blogPosts_pl.json';
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from 'react';
 
 interface BlogPost {
   id: string;
@@ -48,19 +52,39 @@ const formatText = (text: string) => {
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 };
 
+const getBlogPosts = (lang: string): BlogPost[] => {
+  switch (lang) {
+    case 'uk': return blogPostsUk as BlogPost[];
+    case 'pl': return blogPostsPl as BlogPost[];
+    default: return blogPostsEn as BlogPost[];
+  }
+};
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const post = blogPosts.find((p) => p.slug === slug) as BlogPost | undefined;
+  const { t, i18n } = useTranslation();
+  const [post, setPost] = useState<BlogPost | undefined>(undefined);
+
+  const getPath = (path: string) => {
+    const lang = i18n.language;
+    if (lang === 'en') return path;
+    return `/${lang}${path}`;
+  };
+
+  useEffect(() => {
+    const posts = getBlogPosts(i18n.language);
+    setPost(posts.find((p) => p.slug === slug));
+  }, [slug, i18n.language]);
 
   if (!post) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl mb-4">Post Not Found</h1>
-          <Button onClick={() => navigate('/blog')}>
+          <h1 className="text-4xl mb-4">{t('blogPost.notFound.title')}</h1>
+          <Button onClick={() => navigate(getPath('/blog'))}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Blog
+            {t('blogPost.notFound.button')}
           </Button>
         </div>
       </div>
@@ -204,8 +228,8 @@ export default function BlogPost() {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: post.title,
-        text: post.excerpt,
+        title: post?.title,
+        text: post?.excerpt,
         url: window.location.href,
       });
     } else {
@@ -235,18 +259,18 @@ export default function BlogPost() {
         <meta property="twitter:description" content={post.excerpt} />
         <meta property="twitter:image" content={post.coverImage} />
 
-        <link rel="canonical" href={`https://dealoagent.ai/blog/${post.slug}/`} />
+        <link rel="canonical" href={`https://dealoagent.ai/${i18n.language === 'en' ? '' : i18n.language + '/'}blog/${post.slug}/`} />
       </Helmet>
 
       {/* Back Button */}
       <div className="border-b border-gray-200 bg-white/80 backdrop-blur-lg sticky top-16 z-40">
         <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
           <Link
-            to="/blog"
+            to={getPath('/blog')}
             className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Blog
+            {t('blogPost.back')}
           </Link>
         </div>
       </div>
@@ -310,7 +334,7 @@ export default function BlogPost() {
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4 text-gray-400" />
                 <span>
-                  {new Date(post.publishDate).toLocaleDateString('en-US', {
+                  {new Date(post.publishDate).toLocaleDateString(i18n.language, {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
@@ -331,7 +355,7 @@ export default function BlogPost() {
                 className="gap-2 text-gray-600 hover:text-blue-600"
               >
                 <Share2 className="h-4 w-4" />
-                Share
+                {t('blogPost.share')}
               </Button>
             </div>
           </div>
@@ -365,18 +389,17 @@ export default function BlogPost() {
             />
             <div>
               <h3 className="mb-2 text-xl font-bold text-gray-900">
-                Written by {post.author}
+                {t('blogPost.writtenBy', { author: post.author })}
               </h3>
               <p className="mb-4 text-gray-600">
-                The DealoAgent team shares insights on AI-powered sales intelligence,
-                real customer success stories, and best practices for modern B2B sales teams.
+                {t('blogPost.bio')}
               </p>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
               >
-                Start Free Trial
+                {t('blogPost.startTrial')}
               </Button>
             </div>
           </div>
@@ -387,10 +410,10 @@ export default function BlogPost() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-4 text-3xl text-white">
-            Ready to Transform Your Sales?
+            {t('blogPost.cta.title')}
           </h2>
           <p className="mb-8 text-xl text-blue-100/80">
-            Join hundreds of teams using DealoAgent to close more deals
+            {t('blogPost.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex flex-col gap-2">
@@ -399,20 +422,20 @@ export default function BlogPost() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
               >
-                Register Now - Get Free Credits
+                {t('blogPost.cta.button')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <p className="text-xs text-blue-200/60 text-center">
-                🎁 Limited time: Free credits + Referral rewards
+                {t('blogPost.cta.promo')}
               </p>
             </div>
             <Button
               size="lg"
               variant="outline"
               className="border-white/20 bg-white/10 text-white hover:bg-white/20"
-              onClick={() => navigate('/blog')}
+              onClick={() => navigate(getPath('/blog'))}
             >
-              Read More Stories
+              {t('blogPost.cta.more')}
             </Button>
           </div>
         </div>
@@ -420,4 +443,5 @@ export default function BlogPost() {
     </div>
   );
 }
+
 

@@ -15,12 +15,15 @@ import {
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
+import { useTranslation } from "react-i18next";
+
 function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => void }) {
+    const { t } = useTranslation();
     const phrases = [
-        "Show me agents with highest Script Deviation this week...",
-        "Graph the correlation between Hold Time and CSAT...",
-        "Who are the top performers in the Retention campaign?",
-        "List calls where 'compliance' was missed last hour..."
+        t('callCenterUseCase.dashboard.phrases.0'),
+        t('callCenterUseCase.dashboard.phrases.1'),
+        t('callCenterUseCase.dashboard.phrases.2'),
+        t('callCenterUseCase.dashboard.phrases.3')
     ];
     const [text, setText] = useState("");
     const [phraseIndex, setPhraseIndex] = useState(0);
@@ -54,7 +57,7 @@ function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => v
                 readOnly
                 value={text}
                 className="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-4 shadow-sm"
-                placeholder="Ask anything..."
+                placeholder={t('callCenterUseCase.dashboard.placeholder')}
             />
             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-indigo-500 animate-pulse">
                 <span className="inline-block w-2 H-5 bg-indigo-500 ml-1">|</span>
@@ -64,20 +67,21 @@ function TypingEffect({ onPhraseChange }: { onPhraseChange: (index: number) => v
 }
 
 export default function CallCenterUseCase() {
+    const { t } = useTranslation();
     const [activePhraseIndex, setActivePhraseIndex] = useState(0);
 
     const responses = [
-        { text: "Here are the top 5 agents with highest script deviation (>5%):", type: "list" },
-        { text: "Here is the correlation analysis for Hold Time vs CSAT (Last 30 days):", type: "graph" },
-        { text: "Top 3 Performers in Retention Campaign by Save Rate:", type: "list" },
-        { text: "Found 4 calls with missed 'Mini-Miranda' disclosure in the last hour:", type: "alert" }
+        { text: t('callCenterUseCase.dashboard.responses.0'), type: "list" },
+        { text: t('callCenterUseCase.dashboard.responses.1'), type: "graph" },
+        { text: t('callCenterUseCase.dashboard.responses.2'), type: "list" },
+        { text: t('callCenterUseCase.dashboard.responses.3'), type: "alert" }
     ];
 
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>AI for Call Centers & BPOs - DealoAgent.ai</title>
-                <meta name="description" content="AI-First Contact Center Intelligence. Slash AHT, boost FCR, and optimize Occupancy with 100% QA coverage." />
+                <title>{t('callCenterUseCase.helmet.title')}</title>
+                <meta name="description" content={t('callCenterUseCase.helmet.description')} />
                 <link rel="canonical" href="https://dealoagent.ai/usecases/callcenter/" />
             </Helmet>
             <Navigation />
@@ -88,13 +92,13 @@ export default function CallCenterUseCase() {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                         <div className="inline-flex items-center gap-2 rounded-full bg-indigo-800/50 border border-indigo-700 px-4 py-2 text-indigo-100 mb-6">
                             <Headphones className="h-4 w-4" />
-                            <span className="text-sm font-medium">New: BPO & Contact Center AI</span>
+                            <span className="text-sm font-medium">{t('callCenterUseCase.header.badge')}</span>
                         </div>
                         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl mb-6">
-                            AI-First Contact Center Intelligence
+                            {t('callCenterUseCase.header.title')}
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg text-indigo-100">
-                            Slash AHT, boost FCR, and optimize Occupancy. 100% QA coverage to reduce Shrinkage and drive Adherence.
+                            {t('callCenterUseCase.header.description')}
                         </p>
                     </div>
                 </div>
@@ -103,9 +107,9 @@ export default function CallCenterUseCase() {
                 <section className="py-16 bg-indigo-50">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl font-bold text-gray-900">Seamless Integration Architecture</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">{t('callCenterUseCase.technical.title')}</h2>
                             <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-                                Zero latency recording with no quality loss. No custom APIs or complex infrastructure changes required—simply place the recorder, register it in DealoAgent, and you're live.
+                                {t('callCenterUseCase.technical.description')}
                             </p>
                         </div>
 
@@ -123,8 +127,8 @@ export default function CallCenterUseCase() {
                                         <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-600">
                                             <Phone className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">Voice PBX</h3>
-                                        <p className="text-sm text-gray-500 mt-2">Your existing telephony</p>
+                                        <h3 className="font-bold text-gray-900">{t('callCenterUseCase.technical.nodes.pbx.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('callCenterUseCase.technical.nodes.pbx.description')}</p>
                                     </div>
 
                                     {/* Node 2: IXC Softswitch (Center) */}
@@ -139,9 +143,9 @@ export default function CallCenterUseCase() {
                                         <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 text-indigo-600">
                                             <Mic className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">IXC Softswitch</h3>
-                                        <p className="text-sm text-gray-500 mt-2">High-fidelity Recording Box</p>
-                                        <span className="mt-2 text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">No quality loss</span>
+                                        <h3 className="font-bold text-gray-900">{t('callCenterUseCase.technical.nodes.ixc.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('callCenterUseCase.technical.nodes.ixc.description')}</p>
+                                        <span className="mt-2 text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">{t('callCenterUseCase.technical.nodes.ixc.tag')}</span>
                                     </div>
 
                                     {/* Node 3: Voice Terminator */}
@@ -149,8 +153,8 @@ export default function CallCenterUseCase() {
                                         <div className="h-16 w-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-600">
                                             <Server className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900">Voice Terminator</h3>
-                                        <p className="text-sm text-gray-500 mt-2">SIP Traffic routing</p>
+                                        <h3 className="font-bold text-gray-900">{t('callCenterUseCase.technical.nodes.terminator.title')}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">{t('callCenterUseCase.technical.nodes.terminator.description')}</p>
                                     </div>
                                 </div>
 
@@ -160,8 +164,8 @@ export default function CallCenterUseCase() {
                                         <div className="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center mb-4 text-white">
                                             <Bot className="h-8 w-8" />
                                         </div>
-                                        <h3 className="font-bold text-white">DealoAgent AI</h3>
-                                        <p className="text-sm text-indigo-100 mt-2">Processing, Understanding & Scoring</p>
+                                        <h3 className="font-bold text-white">{t('callCenterUseCase.technical.nodes.ai.title')}</h3>
+                                        <p className="text-sm text-indigo-100 mt-2">{t('callCenterUseCase.technical.nodes.ai.description')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -173,39 +177,39 @@ export default function CallCenterUseCase() {
                 <section className="py-16 sm:py-24 bg-white">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-gray-900">Deep Call Analytics & QA</h2>
+                            <h2 className="text-3xl font-bold text-gray-900">{t('callCenterUseCase.features.title')}</h2>
                             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                                Automate your Quality Assurance to audit 100% of interactions. Optimize AHT and drive FCR with data.
+                                {t('callCenterUseCase.features.description')}
                             </p>
                         </div>
 
                         <div className="grid gap-8 md:grid-cols-2">
                             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                 <Zap className="h-10 w-10 text-amber-500 mb-4" />
-                                <h3 className="text-xl font-bold mb-2">Real-Time Adherence & Assist</h3>
+                                <h3 className="text-xl font-bold mb-2">{t('callCenterUseCase.features.grid.adherence.title')}</h3>
                                 <p className="text-gray-600">
-                                    Live tactical playbooks guide agents to reduce Wrap-up time and boost CSAT/NPS.
+                                    {t('callCenterUseCase.features.grid.adherence.description')}
                                 </p>
                             </div>
                             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                 <ShieldAlert className="h-10 w-10 text-red-500 mb-4" />
-                                <h3 className="text-xl font-bold mb-2">100% QA & Compliance Checks</h3>
+                                <h3 className="text-xl font-bold mb-2">{t('callCenterUseCase.features.grid.qa.title')}</h3>
                                 <p className="text-gray-600">
-                                    Full audit of every interaction. Flag prohibited language and ensure script adherence across all calls.
+                                    {t('callCenterUseCase.features.grid.qa.description')}
                                 </p>
                             </div>
                             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                 <Headphones className="h-10 w-10 text-indigo-500 mb-4" />
-                                <h3 className="text-xl font-bold mb-2">Automated Coaching</h3>
+                                <h3 className="text-xl font-bold mb-2">{t('callCenterUseCase.features.grid.coaching.title')}</h3>
                                 <p className="text-gray-600">
-                                    Slash ramp time with automated coaching that identifies AHT outliers and winning phrases.
+                                    {t('callCenterUseCase.features.grid.coaching.description')}
                                 </p>
                             </div>
                             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                 <MessageCircle className="h-10 w-10 text-blue-500 mb-4" />
-                                <h3 className="text-xl font-bold mb-2">BPO Intelligence</h3>
+                                <h3 className="text-xl font-bold mb-2">{t('callCenterUseCase.features.grid.bpo.title')}</h3>
                                 <p className="text-gray-600">
-                                    Chat with your data to uncover Shrinkage causes and Occupancy trends. "Show me agents with high Hold Time."
+                                    {t('callCenterUseCase.features.grid.bpo.description')}
                                 </p>
                             </div>
                         </div>
@@ -221,38 +225,38 @@ export default function CallCenterUseCase() {
                             <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 shadow-2xl">
                                 <div className="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
                                     <div>
-                                        <h3 className="font-semibold text-lg">Agent Performance Review</h3>
-                                        <p className="text-slate-400 text-sm">Session ID: #8821 • Agent 498</p>
+                                        <h3 className="font-semibold text-lg">{t('callCenterUseCase.leaderboard.review.title')}</h3>
+                                        <p className="text-slate-400 text-sm">{t('callCenterUseCase.leaderboard.review.session')}</p>
                                     </div>
                                     <div className="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm font-medium border border-green-500/20">
-                                        Score: 0.45 (Satisfied)
+                                        {t('callCenterUseCase.leaderboard.review.score')}
                                     </div>
                                 </div>
 
                                 <div className="space-y-6">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="bg-slate-700/50 p-4 rounded-lg">
-                                            <p className="text-sm text-slate-400 mb-1">Script Deviation</p>
+                                            <p className="text-sm text-slate-400 mb-1">{t('callCenterUseCase.leaderboard.review.scriptDeviation')}</p>
                                             <p className="text-2xl font-bold text-red-400">0.4%</p>
-                                            <p className="text-xs text-slate-500">Critical Alert</p>
+                                            <p className="text-xs text-slate-500">{t('callCenterUseCase.leaderboard.review.criticalAlert')}</p>
                                         </div>
                                         <div className="bg-slate-700/50 p-4 rounded-lg">
-                                            <p className="text-sm text-slate-400 mb-1">FCR & CSAT Uplift</p>
+                                            <p className="text-sm text-slate-400 mb-1">{t('callCenterUseCase.leaderboard.review.uplift')}</p>
                                             <div className="flex items-center gap-2">
                                                 <span className="text-xl font-bold">0.45</span>
                                                 <ArrowRight className="h-4 w-4 text-slate-500" />
                                                 <span className="text-xl font-bold text-green-400">30.3%</span>
                                             </div>
-                                            <p className="text-xs text-slate-500">Satisfied Rate</p>
+                                            <p className="text-xs text-slate-500">{t('callCenterUseCase.leaderboard.review.satisfiedRate')}</p>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <h4 className="text-sm font-medium text-slate-300 mb-4">AHT Breakdown (min)</h4>
+                                        <h4 className="text-sm font-medium text-slate-300 mb-4">{t('callCenterUseCase.leaderboard.review.ahtBreakdown')}</h4>
                                         <div className="space-y-3">
                                             <div>
                                                 <div className="flex justify-between text-xs mb-1">
-                                                    <span>Agent Talk Time</span>
+                                                    <span>{t('callCenterUseCase.leaderboard.review.agentTalk')}</span>
                                                     <span>276.7 min</span>
                                                 </div>
                                                 <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
@@ -261,7 +265,7 @@ export default function CallCenterUseCase() {
                                             </div>
                                             <div>
                                                 <div className="flex justify-between text-xs mb-1">
-                                                    <span>Customer Talk Time</span>
+                                                    <span>{t('callCenterUseCase.leaderboard.review.customerTalk')}</span>
                                                     <span>122.7 min</span>
                                                 </div>
                                                 <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
@@ -272,38 +276,38 @@ export default function CallCenterUseCase() {
                                     </div>
 
                                     <div>
-                                        <h4 className="text-sm font-medium text-slate-300 mb-4">Emotion Mix (&gt;10%)</h4>
+                                        <h4 className="text-sm font-medium text-slate-300 mb-4">{t('callCenterUseCase.leaderboard.review.emotionMix')}</h4>
                                         <div className="grid grid-cols-2 gap-8">
                                             <div>
-                                                <p className="text-xs text-slate-400 mb-2">Agent Emotions</p>
+                                                <p className="text-xs text-slate-400 mb-2">{t('callCenterUseCase.leaderboard.review.agentEmotions')}</p>
                                                 <div className="space-y-2 text-sm">
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-gray-400"></div>Neutral</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-gray-400"></div>{t('callCenterUseCase.leaderboard.review.neutral')}</span>
                                                         <span>45.5%</span>
                                                     </div>
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-400"></div>Happy</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-400"></div>{t('callCenterUseCase.leaderboard.review.happy')}</span>
                                                         <span>26.7%</span>
                                                     </div>
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"></div>Sad</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"></div>{t('callCenterUseCase.leaderboard.review.sad')}</span>
                                                         <span>24.8%</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div>
-                                                <p className="text-xs text-slate-400 mb-2">Customer Emotions</p>
+                                                <p className="text-xs text-slate-400 mb-2">{t('callCenterUseCase.leaderboard.review.customerEmotions')}</p>
                                                 <div className="space-y-2 text-sm">
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-400"></div>Happy</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-400"></div>{t('callCenterUseCase.leaderboard.review.happy')}</span>
                                                         <span>38.8%</span>
                                                     </div>
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"></div>Sad</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"></div>{t('callCenterUseCase.leaderboard.review.sad')}</span>
                                                         <span>27.2%</span>
                                                     </div>
                                                     <div className="flex justify-between">
-                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-gray-400"></div>Neutral</span>
+                                                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-gray-400"></div>{t('callCenterUseCase.leaderboard.review.neutral')}</span>
                                                         <span>24.8%</span>
                                                     </div>
                                                 </div>
@@ -317,16 +321,16 @@ export default function CallCenterUseCase() {
                             <div className="flex flex-col justify-center h-full">
                                 <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 text-blue-400 px-4 py-2 border border-blue-500/20 mb-6 w-fit">
                                     <BarChart3 className="h-4 w-4" />
-                                    <span className="font-semibold">Live Team Leaderboard</span>
+                                    <span className="font-semibold">{t('callCenterUseCase.leaderboard.badge')}</span>
                                 </div>
-                                <h2 className="text-3xl font-bold mb-6">Gamify performance with transparent metrics</h2>
+                                <h2 className="text-3xl font-bold mb-6">{t('callCenterUseCase.leaderboard.title')}</h2>
                                 <p className="text-slate-300 mb-8 text-lg">
-                                    Identify your top performers instantly. DealoAgent tracks nuanced metrics like "Script Adherence" and "Customer Satisfaction Rate" to give you a true picture of productivity beyond just call counts.
+                                    {t('callCenterUseCase.leaderboard.description')}
                                 </p>
 
                                 <div className="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
                                     <div className="p-4 border-b border-slate-700 bg-slate-800/50">
-                                        <h3 className="font-semibold">Weekly Top Performers</h3>
+                                        <h3 className="font-semibold">{t('callCenterUseCase.leaderboard.weeklyTitle')}</h3>
                                     </div>
                                     <div className="divide-y divide-slate-700">
                                         <div className="p-4 flex items-center justify-between hover:bg-slate-700/30 transition-colors">
@@ -334,7 +338,7 @@ export default function CallCenterUseCase() {
                                                 <div className="h-8 w-8 rounded-full bg-yellow-500/20 text-yellow-500 flex items-center justify-center font-bold">1</div>
                                                 <div>
                                                     <p className="font-medium">agent_13</p>
-                                                    <p className="text-xs text-slate-400">Top Satisfaction Rate</p>
+                                                    <p className="text-xs text-slate-400">{t('callCenterUseCase.leaderboard.metrics.satisfaction')}</p>
                                                 </div>
                                             </div>
                                             <div className="text-green-400 font-bold">38.9%</div>
@@ -344,7 +348,7 @@ export default function CallCenterUseCase() {
                                                 <div className="h-8 w-8 rounded-full bg-slate-600/20 text-slate-400 flex items-center justify-center font-bold">2</div>
                                                 <div>
                                                     <p className="font-medium">agent_2</p>
-                                                    <p className="text-xs text-slate-400">Lowest Script Deviation</p>
+                                                    <p className="text-xs text-slate-400">{t('callCenterUseCase.leaderboard.metrics.deviation')}</p>
                                                 </div>
                                             </div>
                                             <div className="text-blue-400 font-bold">0.2%</div>
@@ -354,7 +358,7 @@ export default function CallCenterUseCase() {
                                                 <div className="h-8 w-8 rounded-full bg-slate-600/20 text-slate-400 flex items-center justify-center font-bold">3</div>
                                                 <div>
                                                     <p className="font-medium">agent_5</p>
-                                                    <p className="text-xs text-slate-400">Best Average Score</p>
+                                                    <p className="text-xs text-slate-400">{t('callCenterUseCase.leaderboard.metrics.average')}</p>
                                                 </div>
                                             </div>
                                             <div className="text-purple-400 font-bold">0.54</div>
@@ -370,13 +374,13 @@ export default function CallCenterUseCase() {
                 <section className="py-24 bg-white overflow-hidden">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                         <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-8">
-                            <span className="font-semibold">Natural Language BI</span>
+                            <span className="font-semibold">{t('callCenterUseCase.dashboard.badge')}</span>
                         </div>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                            Build your own dashboard
+                            {t('callCenterUseCase.dashboard.title')}
                         </h2>
                         <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                            Stop waiting for data analysts. Just ask DealoAgent to visualize any metric, trend, or anomaly in seconds.
+                            {t('callCenterUseCase.dashboard.description')}
                         </p>
 
                         <div className="relative max-w-3xl mx-auto">
@@ -425,8 +429,8 @@ export default function CallCenterUseCase() {
                                                 )}
                                                 {responses[activePhraseIndex].type === 'alert' && (
                                                     <div className="bg-red-50 border border-red-100 rounded p-2 text-xs text-red-700">
-                                                        <div className="font-bold mb-1">Critical Compliance Alert</div>
-                                                        <p>Call ID #9923, #9911, #8843 missed mandatory disclosure.</p>
+                                                        <div className="font-bold mb-1">{t('callCenterUseCase.dashboard.criticalAlert')}</div>
+                                                        <p>{t('callCenterUseCase.dashboard.criticalMessage')}</p>
                                                     </div>
                                                 )}
                                             </div>
@@ -435,7 +439,7 @@ export default function CallCenterUseCase() {
                                         {/* User Query Input (Animated) */}
                                         <div className="flex gap-4 items-center">
                                             <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 shrink-0">
-                                                <span className="font-bold text-xs">YOU</span>
+                                                <span className="font-bold text-xs">{t('callCenterUseCase.dashboard.you')}</span>
                                             </div>
                                             <div className="flex-1">
                                                 <TypingEffect onPhraseChange={setActivePhraseIndex} />
@@ -454,46 +458,28 @@ export default function CallCenterUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center">
                             <div>
                                 <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 mb-6">
-                                    <span className="font-semibold">The Agent</span>
+                                    <span className="font-semibold">{t('callCenterUseCase.roles.agent.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Empowered, not monitored
+                                    {t('callCenterUseCase.roles.agent.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('callCenterUseCase.roles.agent.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>QA Anxiety:</strong> I was constantly worried about skipping a mandatory disclosure or compliance statement.
-                                            </li>
-                                            <li>
-                                                <strong>Escalation Fatigue:</strong> Without a playbook, I'd freeze when customers got angry, leading to long hold times and escalations.
-                                            </li>
-                                            <li>
-                                                <strong>Delayed Coaching:</strong> I'd get feedback on my calls weeks later, when the context was already lost.
-                                            </li>
-                                            <li>
-                                                <strong>KPI Uncertainty:</strong> I didn't know my AHT or CSAT standing until the monthly view.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`callCenterUseCase.roles.agent.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('callCenterUseCase.roles.agent.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>Real-time Guardrails:</strong> The system alerts me instantly if I miss a script requirement, so I can fix it live on the call.
-                                            </li>
-                                            <li>
-                                                <strong>Winning Playbooks:</strong> I get live suggestions to turn "neutral" interactions into "happy" ones, boosting my CSAT.
-                                            </li>
-                                            <li>
-                                                <strong>Daily Micro-Goals:</strong> I see my FCR and AHT targets in real-time, with clips of my best moments.
-                                            </li>
-                                            <li>
-                                                <strong>Automated Coaching:</strong> The AI identifies my specific strengths and gaps, offering bite-sized coaching tips every morning.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`callCenterUseCase.roles.agent.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -509,7 +495,7 @@ export default function CallCenterUseCase() {
                                 </div>
                                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border border-gray-100">
                                     <p className="text-gray-700 italic">
-                                        "I feel much more confident knowing the system has my back. My customer satisfaction scores went up 30% in the first month."
+                                        {t('callCenterUseCase.roles.agent.quote')}
                                     </p>
                                 </div>
                             </div>
@@ -523,46 +509,28 @@ export default function CallCenterUseCase() {
                         <div className="grid gap-12 lg:grid-cols-2 items-center lg:flex-row-reverse">
                             <div className="lg:order-2">
                                 <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-purple-700 mb-6">
-                                    <span className="font-semibold">BPO Owner / CEO</span>
+                                    <span className="font-semibold">{t('callCenterUseCase.roles.owner.badge')}</span>
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Total visibility, zero blind spots
+                                    {t('callCenterUseCase.roles.owner.title')}
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-red-900 mb-4">Before DealoAgent</h3>
+                                        <h3 className="font-semibold text-red-900 mb-4">{t('callCenterUseCase.roles.owner.before.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>1% QA Sample Liability:</strong> QA could only listen to 1% of calls. We had massive blind spot exposure on 99% of interactions.
-                                            </li>
-                                            <li>
-                                                <strong>Blind Spot Exposure:</strong> We only found out about compliance breaches or prohibited language usage when a client complained.
-                                            </li>
-                                            <li>
-                                                <strong>Biased QA Scoring:</strong> Performance reviews were subjective and inconsistent, based on random call samples.
-                                            </li>
-                                            <li>
-                                                <strong>Unclear Seat Utilization:</strong> It was hard to track true Occupancy and justify headcount efficiency to clients.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`callCenterUseCase.roles.owner.before.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
 
                                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                                        <h3 className="font-semibold text-green-900 mb-4">After DealoAgent</h3>
+                                        <h3 className="font-semibold text-green-900 mb-4">{t('callCenterUseCase.roles.owner.after.title')}</h3>
                                         <ul className="space-y-3 text-gray-700 list-disc pl-4">
-                                            <li>
-                                                <strong>100% QA Audit:</strong> AI scores and audits EVERY single call. We know exactly what is happening in real-time across the entire floor.
-                                            </li>
-                                            <li>
-                                                <strong>Compliance Firewall:</strong> We can search across all transcripts for "risky promises" or specific prohibited terms to mitigate liability.
-                                            </li>
-                                            <li>
-                                                <strong>Occupancy & Shrinkage Insights:</strong> Leaderboards based on "AHT" and "Adherence" let us reward true productivity.
-                                            </li>
-                                            <li>
-                                                <strong>Natural Language BPO Queries:</strong> I can ask "Show me the trend of happy customers this month" and get an instant chart to share with stakeholders.
-                                            </li>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: t(`callCenterUseCase.roles.owner.after.items.${i}`) }} />
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -578,7 +546,7 @@ export default function CallCenterUseCase() {
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border border-gray-100">
                                     <p className="text-gray-700 italic">
-                                        "We moved from reactive damage control to proactive quality engineering. Operations are finally transparent."
+                                        {t('callCenterUseCase.roles.owner.quote')}
                                     </p>
                                 </div>
                             </div>
@@ -589,13 +557,13 @@ export default function CallCenterUseCase() {
                 {/* CTA Section */}
                 <section className="py-16 bg-indigo-900 text-white text-center">
                     <div className="mx-auto max-w-4xl px-4">
-                        <h2 className="text-3xl font-bold mb-6">Ready to upgrade your Call Center?</h2>
+                        <h2 className="text-3xl font-bold mb-6">{t('callCenterUseCase.cta.title')}</h2>
                         <Button
                             size="lg"
                             className="bg-white text-indigo-900 hover:bg-gray-100"
                             onClick={() => window.open('https://app.dealoagent.ai', '_blank')}
                         >
-                            Get Started Now
+                            {t('callCenterUseCase.cta.button')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>

@@ -23,14 +23,14 @@ export interface PitchSlide {
     };
 }
 
-export const pitchDeckSlides: PitchSlide[] = [
+export const getPitchDeckSlides = (t: TFunction): PitchSlide[] => [
     // SLIDE 1 — TITLE SLIDE
     {
         id: 1,
         layout: 'z-pattern',
         sectionA: {
             title: '', // Empty title to avoid duplication with Logo
-            subtitle: 'AI-Powered Sales Agent & Competitor Intelligence'
+            subtitle: t('pitchDeck.slides.1.subtitle', 'AI-Powered Sales Agent & Competitor Intelligence')
         },
         sectionB: {
             content: 'logo',
@@ -101,21 +101,6 @@ export const pitchDeckSlides: PitchSlide[] = [
         id: 4,
         layout: 'z-pattern',
         sectionA: {
-            title: 'Current Tools Fail'
-        },
-        sectionB: {
-            content: 'Everyone solves a small part — no one solves the whole problem.',
-            type: 'text'
-        },
-        sectionC: {
-            type: 'bullets',
-            items: [
-                { text: 'CRMs → Passive data entry', icon: 'Layout' },
-                { text: 'Outreach tools → Generic templates', icon: 'Mail' },
-                { text: 'Enrichment → No competitor intel', icon: 'Search' },
-                { text: 'Conversation AI → No CRM sync', icon: 'MessageSquare' },
-                { text: 'Email parsers → Limited context', icon: 'FileText' }
-            ]
         },
         sectionD: {
             type: 'chart',
