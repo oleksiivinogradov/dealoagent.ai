@@ -1,4 +1,5 @@
 
+import { TFunction } from 'i18next';
 
 export interface PitchSlide {
     id: number;
@@ -101,6 +102,20 @@ export const getPitchDeckSlides = (t: TFunction): PitchSlide[] => [
         id: 4,
         layout: 'z-pattern',
         sectionA: {
+            title: 'Why Current Tools Fail'
+        },
+        sectionB: {
+            content: 'Sales tools are siloed and disconnected.',
+            type: 'text'
+        },
+        sectionC: {
+            type: 'bullets',
+            items: [
+                { text: 'CRM has no context of conversations', icon: 'Database' },
+                { text: 'Outreach tools are blind to deal health', icon: 'Mail' },
+                { text: 'Research happens in browser tabs, not CRM', icon: 'Search' },
+                { text: 'No single source of truth for the deal', icon: 'Layout' }
+            ]
         },
         sectionD: {
             type: 'chart',

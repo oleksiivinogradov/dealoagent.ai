@@ -79,8 +79,10 @@ export default function App() {
 
   const getPath = (path: string) => {
     const lang = i18n.language;
-    if (lang === 'en') return path;
-    return `/${lang}${path}`;
+    // Ensure path ends with slash if it's not root
+    const normalizedPath = path === '/' ? '/' : path.endsWith('/') ? path : `${path}/`;
+    if (lang === 'en') return normalizedPath;
+    return `/${lang}${normalizedPath}`;
   };
 
   const handleLinkClick = (path: string) => {

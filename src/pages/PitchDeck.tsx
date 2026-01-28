@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import {
     ChevronLeft,
     ChevronRight,
@@ -50,13 +51,38 @@ const iconMap: Record<string, any> = {
 };
 
 export default function PitchDeck() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const { slideId } = useParams();
+    const navigate = useNavigate();
     const pitchDeckSlides: PitchSlide[] = getPitchDeckSlides(t);
-    const [currentSlide, setCurrentSlide] = useState(0);
+
+    // Initialize state from URL param (1-based index to 0-based index)
+    const initialSlide = slideId ? Math.max(0, Math.min(parseInt(slideId) - 1, pitchDeckSlides.length - 1)) : 0;
+    const [currentSlide, setCurrentSlide] = useState(initialSlide);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [isPrinting, setIsPrinting] = useState(false);
 
     const slide = pitchDeckSlides[currentSlide];
+
+    // Sync URL when slide changes
+    useEffect(() => {
+        const path = i18n.language === 'en' ? `/pitchdeck/${currentSlide + 1}` : `/${i18n.language}/pitchdeck/${currentSlide + 1}`;
+        // Only navigate if the current URL ID doesn't match to avoid redundant pushes (mostly for initial load)
+        if (slideId !== String(currentSlide + 1)) {
+            navigate(path, { replace: true });
+        }
+    }, [currentSlide, i18n.language, navigate, slideId]);
+
+    // Handle external URL changes (e.g. back button)
+    useEffect(() => {
+        if (slideId) {
+            const newIndex = Math.max(0, Math.min(parseInt(slideId) - 1, pitchDeckSlides.length - 1));
+            if (newIndex !== currentSlide) {
+                setCurrentSlide(newIndex);
+            }
+        }
+    }, [slideId]);
+
 
     const nextSlide = () => {
         if (currentSlide < pitchDeckSlides.length - 1) {
@@ -341,6 +367,11 @@ export default function PitchDeck() {
 
     return (
         <>
+            <Helmet>
+                <title>{t('pitchDeck.title', 'Pitch Deck')} | DealoAgent.ai</title>
+                <meta name="description" content={t('pitchDeck.description', 'DealoAgent.ai Pitch Deck - The AI Native Sales CRM')} />
+                <link rel="canonical" href={`https://dealoagent.ai/${i18n.language === 'en' ? '' : i18n.language + '/'}pitchdeck/`} />
+            </Helmet>
             {/* Print-only view - All slides */}
             {isPrinting && (
                 <style>{`

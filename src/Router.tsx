@@ -30,8 +30,10 @@ export function Navigation() {
 
   const getPath = (path: string) => {
     const lang = i18n.language;
-    if (lang === 'en') return path;
-    return `/${lang}${path}`;
+    // Ensure path ends with slash if it's not root
+    const normalizedPath = path === '/' ? '/' : path.endsWith('/') ? path : `${path}/`;
+    if (lang === 'en') return normalizedPath;
+    return `/${lang}${normalizedPath}`;
   };
 
   // Check if we are effectively on the home page (root or /uk or /pl)
@@ -168,7 +170,7 @@ function LocalizedRoutes({ lang }: { lang: string }) {
         <Route path="/" element={<App />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/pitchdeck" element={<PitchDeck />} />
+        <Route path="/pitchdeck/:slideId?" element={<PitchDeck />} />
         <Route path="/login" element={<Login />} />
         <Route path="/usecases" element={<UseCases />} />
         <Route path="/usecases/recruiting" element={<RecruitingUseCase />} />
