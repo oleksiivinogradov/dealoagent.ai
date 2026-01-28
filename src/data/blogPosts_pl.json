@@ -1,5 +1,155 @@
 [
   {
+    "id": "bessemer-investment-analyst-transformation-dealoagent",
+    "slug": "how-gaby-goldberg-bessemer-investment-analyst-automates-diligence-ai",
+    "title": "Jak Gaby Goldberg (Analityk Inwestycyjny w Bessemer Venture Partners) może zautomatyzować due diligence dzięki AI",
+    "subtitle": "Hipotetyczne studium przypadku: Jak Gaby może przeglądać 10 razy więcej transakcji i automatyzować mapowanie rynku przy użyciu DealoAgent.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-01-28",
+    "readTime": "7 min czytania",
+    "category": "Studium przypadku",
+    "featured": true,
+    "coverImage": "/images/blog/bessemer_investment_analyst_workspace.png",
+    "excerpt": "Analitycy inwestycyjni, tacy jak Gaby Goldberg z Bessemer Venture Partners, zmagają się z falą pitch decków i danych. W tym hipotetycznym studium przypadku pokazujemy, jak może ona użyć DealoAgent do automatyzacji wstępnej selekcji i mapowania rynku.",
+    "tags": [
+      "Studium przypadku",
+      "Venture Capital",
+      "Bessemer Venture Partners",
+      "AI",
+      "Analiza inwestycyjna"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: To jest hipotetyczne studium przypadku badające, jak Gaby Goldberg, analityk inwestycyjny w Bessemer Venture Partners, może wykorzystać DealoAgent.AI. Bessemer Venture Partners to prawdziwa, wiodąca firma VC, a Gaby to prawdziwy analityk, ale ten scenariusz został stworzony, aby zilustrować możliwości DealoAgent."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Bessemer Venture Partners** słynie ze swojego „anty-portfela” i zdolności do wczesnego dostrzegania firm definiujących kategorie. Ale dla analityka inwestycyjnego na pierwszej linii frontu sam ogrom szumu może być ogłuszający. Gdy tysiące startupów walczą o uwagę, strach przed przegapieniem kolejnego Shopify lub Pinteresta jest bardzo realny."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Tonięcie w prezentacjach"
+      },
+      {
+        "type": "paragraph",
+        "text": "Poznaj **Gaby Goldberg**, analityczkę inwestycyjną w Bessemer Venture Partners. Gaby jest bystra, kieruje się tezami i koncentruje na ekonomii twórców oraz technologiach konsumenckich. Ale jej dzień często pochłania ręczne przetwarzanie danych zamiast budowania strategii wysokiego poziomu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Jej główne problemy w tym hipotetycznym scenariuszu dotyczą:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Niekończąca się selekcja**: Skrzynka odbiorcza Gaby to strumień pitch decków. Spędza godziny na ich ręcznym filtrowaniu, często musząc odmawiać na podstawie szybkiego rzutu oka.",
+          "**Żmudne wprowadzanie danych**: Kiedy znajduje obiecującą firmę, musi ręcznie wpisywać metryki, nazwiska założycieli i szczegóły rundy do CRM. To mało wydajna praca, która zjada cenny czas na myślenie.",
+          "**Pobieżne due diligence**: Przy tak dużej liczbie transakcji często ma czas tylko na sprawdzenie strony internetowej i LinkedIn. Głębokie mapowanie konkurencji zajmuje zbyt wiele czasu dla każdego leada.",
+          "**Reaktywne pozyskiwanie**: Reaguje na to, co trafia do jej skrzynki, zamiast proaktywnie mapować rynek."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Chcę spędzać czas na rozmowach z założycielami i budowaniu przekonania, a nie na kopiowaniu liczb przychodów z PDF do bazy danych.",
+        "author": "Hipotetyczny scenariusz: Gaby Goldberg, Analityk Inwestycyjny w Bessemer Venture Partners"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wejście DealoAgent: Zautomatyzowany silnik Due Diligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "W tej hipotetycznej transformacji Gaby zatrudnia **DealoAgent** jako swojego partnera badawczego AI. Stoi on między nią a strumieniem informacji, natychmiast filtrując i organizując wszystko."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Zautomatyzowana wstępna selekcja"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zamiast otwierać każdy PDF, Gaby pozwala DealoAgent przeczytać je jako pierwszemu. AI skanuje 50 prezentacji w kilka sekund, wyodrębniając kluczowe metryki (ARR, wzrost, wydatki) i oznaczając te, które pasują do tez inwestycyjnych Bessemer."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Natychmiastowe wzbogacanie CRM"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kiedy Gaby decyduje się śledzić firmę, nie wpisuje ani słowa. Klika „Dodaj do lejka”, a DealoAgent wypełnia CRM biografiami założycieli, historią finansowania i szacunkowymi przychodami — wszystko to pochodzi z prezentacji i badań internetowych."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Głębokie mapowanie rynku w kilka minut"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gaby chce zrozumieć krajobraz konkurencyjny dla nowego narzędzia do „edycji wideo AI”. Pyta DealoAgent:"
+      },
+      {
+        "type": "quote",
+        "text": "Zmapuj krajobraz konkurencyjny dla edytorów wideo AI. Kto jest liderem, a kto wschodzącą gwiazdą, która zebrała fundusze w ciągu ostatnich 6 miesięcy?",
+        "author": "Zapytanie Gaby"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent przeszukuje sieć, Crunchbase i GitHub. Zwraca ustrukturyzowaną tabelę konkurentów, ich status finansowania i różnice w funkcjach. Gaby ma mapę rynku w 5 minut, co wcześniej zajmowało 5 godzin."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hipotetyczny wpływ"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Pokrycie transakcji",
+            "value": "10x",
+            "description": "Startupy sprawdzone vs proces ręczny"
+          },
+          {
+            "label": "Szybkość Diligence",
+            "value": "-90%",
+            "description": "Czas na zbudowanie mapy rynku"
+          },
+          {
+            "label": "Przegapione sygnały",
+            "value": "0",
+            "description": "Każda prezentacja otrzymuje sprawiedliwy, zautomatyzowany przegląd"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wniosek"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dla analityka takiego jak Gaby, DealoAgent to nie tylko narzędzie produktywności; to mnożnik siły. Pozwala jej działać z zasięgiem 10-osobowego zespołu, zapewniając, że gdy pojawi się kolejna firma definiująca kategorię, Bessemer będzie pierwszym, do którego zadzwonią."
+      },
+      {
+        "type": "cta",
+        "title": "Zautomatyzuj swoje Due Diligence",
+        "description": "Zobacz, jak DealoAgent może pomóc Ci przeglądać 10 razy więcej transakcji.",
+        "primaryButton": {
+          "text": "Uzyskaj demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Zobacz cennik",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "robert-half-talent-manager-recruiting-transformation",
     "slug": "how-emma-franck-robert-half-transforms-recruiting-with-ai",
     "title": "Jak Emma Franck (Talent Acquisition Manager w Robert Half) mogłaby transformować rekrutację z AI",

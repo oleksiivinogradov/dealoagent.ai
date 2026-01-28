@@ -9,10 +9,10 @@ Use multi_replace_file tool if replace_file_content tool doesn't work
 ## Blog Post Creation Rules
 
 ### Content Guidelines
-CRITICAL - do not repeat companies and persons in posts.
+CRITICAL - do not repeat companies and persons in posts. allways call grep -i "title" src/data/blogPosts.json and check if company used was not present
 
 1. **Companies and Persons MUST be real**
-   - **Companies**: Select a real company from the specific industry.
+   - **Companies**: Select a real company from the specific industry. check in past blog posts if company was not mentioned in past!
    - **Persons**: The protagonist MUST be a **real person** currently holding the relevant position at that company.
      - **MANDATORY**: You MUST verify their existence and role on **LinkedIn** before writing the post. If you cannot find them on LinkedIn, choose a different person/company.
      - Use their **full name** and **exact title**.
@@ -65,6 +65,7 @@ CRITICAL - do not repeat companies and persons in posts.
      - `tags`: Relevant tags array.
      - `content`: Array of content blocks.
 
+make sure blog post added for rest languages supported.  
 6. **Build & Preview**
    - Run `npm run build` after adding posts.
    - Verify generated HTML in `build/blog/[slug]/index.html`.
