@@ -67,16 +67,64 @@ export default function OnePager() {
         setIsExporting(true);
         try {
             const element = contentRef.current;
+
+            // Get button position for link
+            const button = element.querySelector('a[href="https://app.dealoagent.ai"]');
+            let linkRect = null;
+            if (button) {
+                const contentRect = element.getBoundingClientRect();
+                const btnRect = button.getBoundingClientRect();
+                // We need relative coordinates within the 794x1123 container
+                // The container is scaled via CSS logic potentially, but we know intrinsic size is 794
+                // Let's use offsetLeft/Top if possible or calculate relative
+
+                // Calculate scaling if the display size differs from 794
+                const currentScale = contentRect.width / 794;
+
+                linkRect = {
+                    x: (btnRect.left - contentRect.left) / currentScale,
+                    y: (btnRect.top - contentRect.top) / currentScale,
+                    w: btnRect.width / currentScale,
+                    h: btnRect.height / currentScale
+                };
+            }
+
             const canvas = await html2canvas(element, {
                 scale: 2,
                 useCORS: true,
                 logging: false,
                 backgroundColor: "#ffffff",
                 windowWidth: 794,
+                windowHeight: 1123,
+                onclone: (clonedDoc) => {
+                    // Fix for SVG rendering issues in some cases
+                    const clonedButton = clonedDoc.querySelector('a[href="https://app.dealoagent.ai"]');
+                    if (clonedButton) {
+                        // Ensure styles are explicit
+                        (clonedButton as HTMLElement).style.display = 'inline-flex';
+                    }
+                }
             });
+
             const imgData = canvas.toDataURL("image/png");
             const pdf = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+
+            // A4 size: 210mm x 297mm
             pdf.addImage(imgData, "PNG", 0, 0, 210, 297);
+
+            // Add clickable link
+            if (linkRect) {
+                // Convert px (based on 794px width) to mm (210mm width)
+                const pxToMm = 210 / 794;
+                pdf.link(
+                    linkRect.x * pxToMm,
+                    linkRect.y * pxToMm,
+                    linkRect.w * pxToMm,
+                    linkRect.h * pxToMm,
+                    { url: "https://app.dealoagent.ai" }
+                );
+            }
+
             pdf.save("DealoAgent_OnePager.pdf");
         } catch (error) {
             console.error("Error generating PDF:", error);
@@ -117,7 +165,7 @@ export default function OnePager() {
                 {/* Hero Title */}
                 <div className="bg-gradient-to-r from-slate-900 to-blue-900 text-white px-10 py-8 text-center">
                     <h1 className="text-4xl font-bold mb-2">Your AI Business Assistant</h1>
-                    <p className="text-blue-200 text-lg">Automate sales. Focus on closing deals.</p>
+                    <p className="text-blue-200 text-lg">Automate your workflow.</p>
                 </div>
 
                 {/* Hub-and-Spoke Layout */}
@@ -214,7 +262,7 @@ export default function OnePager() {
                                 <Users className="w-6 h-6 text-teal-600" />
                             </div>
                             <div>
-                                <div className="font-bold text-slate-900">Sales Team</div>
+                                <div className="font-bold text-slate-900">Team</div>
                                 <div className="flex items-center gap-1 text-slate-500 text-xs">
                                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -249,10 +297,10 @@ export default function OnePager() {
                 <div className="px-10 py-4 bg-white flex items-center justify-between border-t border-slate-200">
                     <div>
                         <h3 className="text-lg font-bold text-slate-900">Ready to automate your revenue?</h3>
-                        <p className="text-slate-500 text-sm">Book a 15-min demo • alex@dealoagent.ai</p>
+
                     </div>
-                    <a href="https://dealoagent.ai" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg transition-colors">
-                        Book Demo <ArrowRight className="w-4 h-4" />
+                    <a href="https://app.dealoagent.ai" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg transition-colors">
+                        Register Now <ArrowRight className="w-4 h-4" />
                     </a>
                 </div>
             </div>
