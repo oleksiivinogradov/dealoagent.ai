@@ -1,5 +1,157 @@
 [
   {
+    "id": "concentrix-delivery-engineering-transformation-dealoagent",
+    "slug": "how-winnie-sun-concentrix-transforms-delivery-operations-ai",
+    "title": "Jak Winnie Sun (SVP Operations w Concentrix) mogłaby transformować inżynierię dostarczania z AI",
+    "subtitle": "Hipotetyczne case study: Przejście od „Zielonych Wskaźników, Czerwonej Rzeczywistości” do prawdziwej inteligencji operacyjnej w ponad 40 krajach.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-02",
+    "readTime": "10 min czytania",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/concentrix_ops_dashboard.png",
+    "excerpt": "Zarządzanie globalnymi operacjami dla Concentrix oznacza nadzór nad tysiącami agentów w dziesiątkach krajów. W tym hipotetycznym case study badamy, jak Winnie Sun mogłaby użyć DealoAgent, aby uzyskać „Boski widok” w czasie rzeczywistym, przewidywać luki w wydajności, zanim wystąpią, i inżynierować idealną interakcję z klientem na dużą skalę.",
+    "tags": [
+      "Case Study",
+      "BPO",
+      "Concentrix",
+      "AI",
+      "Delivery Operations"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: To jest hipotetyczne studium przypadku badające, jak Winnie Sun, SVP Operations and Delivery Engineering w Concentrix, mogłaby wykorzystać DealoAgent.AI. Concentrix to prawdziwy, globalny lider rozwiązań CX, ale ten scenariusz jest wyobrażony, aby zilustrować możliwości DealoAgent."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Concentrix** działa na ogromną skalę, dostarczając doświadczenia klientów dla najlepszych marek na świecie. Dla SVP ds. Operacji wyzwaniem nie jest tylko zarządzanie ludźmi — to zarządzanie *spójnością* ponad granicami, językami i strefami czasowymi. Celem jest „Inżynieria Dostarczania”: zamiana sztuki obsługi klienta w przewidywalną, wysokiej jakości naukę."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Zielone Wskaźniki, Czerwona Rzeczywistość"
+      },
+      {
+        "type": "paragraph",
+        "text": "Poznajcie **Winnie Sun**, Senior Vice President, Operations and Delivery Engineering w Concentrix. Winnie odpowiada za zapewnienie płynnego i wydajnego przebiegu operacji na globalną skalę. Ale nawet z najlepszymi zespołami, duże BPO często stają w obliczu „Efektu Arbuza”: wskaźniki wyglądają na zielone na zewnątrz (SLA spełnione), ale są czerwone w środku (nastroje klientów są słabe)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Jej główne bolączki w tym hipotetycznym scenariuszu krążą wokół globalnej fragmentacji:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Opóźnienie Agregacji**: Zanim dane z Filipin, Indii i Kostaryki zostaną zagregowane w globalny raport, są już przestarzałe o kilka dni. Winnie często reaguje na pożar z zeszłego tygodnia, zamiast zapobiegać przyszłemu.",
+          "**Niespójna Jakość**: Jeden region może osiągać świetne wyniki, podczas gdy inny ma problemy, ale identyfikacja *przyczyny źródłowej* (skrypty vs. szkolenia vs. łączność) zajmuje tygodnie ręcznego audytu.",
+          "**Zgadywanie Przepustowości**: Przewidywanie potrzeb kadrowych zwykle opiera się na historycznych modelach Erlang-C. Jeśli nagły problem z produktem spowoduje skok wolumenu, centrum jest przeciążone, zanim ktokolwiek zauważy trend."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Muszę widzieć puls całej globalnej operacji na jednym ekranie. Nie arkusz kalkulacyjny z zeszłego piątku, ale rzeczywistość tu i teraz.",
+        "author": "Hipotetyczny scenariusz: Winnie Sun, SVP Operations w Concentrix"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wkracza DealoAgent: Warstwa Inteligencji Globalnego Dostarczania"
+      },
+      {
+        "type": "paragraph",
+        "text": "W tej hipotetycznej transformacji Winnie aktywuje **DealoAgent** jako centralny układ nerwowy dla Global Delivery. Łączy się on z systemami telefonicznymi i czatowymi każdej placówki, pobierając audio i tekst w czasie rzeczywistym, niezależnie od języka."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Prawdziwy „Boski Widok” na Operacje"
+      },
+      {
+        "type": "paragraph",
+        "text": "Winnie nie czeka już na aktualizacje regionalne. Otwiera swój pulpit DealoAgent i widzi mapę cieplną globalnych nastrojów w czasie rzeczywistym."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Spostrzeżenie**: Widzi czerwony klaster w regionie EMEA. DealoAgent sygnalizuje: *'Skok negatywnych nastrojów w hubach w Polsce i Rumunii związany z nową polityką zwrotów. Wskaźnik eskalacji wzrósł o 15%.'* Winnie natychmiast wie, gdzie skupić swoją uwagę."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Inżynieria Idealnej Interakcji"
+      },
+      {
+        "type": "paragraph",
+        "text": "Winnie chce ustandaryzować doskonałość. Prosi DealoAgenta o przeanalizowanie 1% najlepszych rozmów z najwyższymi wynikami CSAT z ostatniego miesiąca."
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent identyfikuje DNA sukcesu: *'Najlepsi agenci używają stwierdzeń empatycznych w ciągu pierwszych 30 sekund i unikają słowa „polityka” przy odmawianiu zwrotu.'* Winnie natychmiast przesyła to spostrzeżenie jako wskazówkę coachingową do wszystkich 50 000 agentów."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Predykcyjne Planowanie Przepustowości"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zamiast reagować na kolejki, DealoAgent je przewiduje. Zauważa rosnący trend wzmianek o temacie „Błąd logowania” w mediach społecznościowych i wczesnych rozmowach głosowych."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Działanie**: AI ostrzega: *'Przewidywany skok wolumenu o 40% w ciągu najbliższych 2 godzin z powodu potencjalnej awarii.'* Winnie prewencyjnie przesuwa agentów z kanałów innych niż głosowe na telefony i ostrzega klienta, łagodząc skutki, zanim kolejka wybuchnie."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hipotetyczny Wpływ"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Globalna Widoczność",
+            "value": "Real-time",
+            "description": "Zerowe opóźnienie wglądu w dowolny region"
+          },
+          {
+            "label": "Wzrost CSAT",
+            "value": "+12%",
+            "description": "Dzięki ustandaryzowanemu coachingowi „najlepszych praktyk”"
+          },
+          {
+            "label": "Efektywność Operacyjna",
+            "value": "Wysoka",
+            "description": "Proaktywne obsadzanie zapobiega wypaleniu i naruszeniom SLA"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wniosek"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dla globalnego lidera, takiego jak Winnie Sun, DealoAgent zapewnia ostateczne centrum dowodzenia. Zamienia „Operacje” z reaktywnej gry w zgadywanki w proaktywną, inżynieryjną naukę. Widząc prawdę w danych natychmiast, Concentrix może dostarczać spójne, premium doświadczenie, którego oczekują ich klienci, za każdym razem."
+      },
+      {
+        "type": "cta",
+        "title": "Zainżynieruj Swoje Operacje",
+        "description": "Zobacz, jak DealoAgent może zapewnić Ci globalną widoczność w czasie rzeczywistym.",
+        "primaryButton": {
+          "text": "Uzyskaj Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Zobacz Cennik",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "bessemer-investment-analyst-transformation-dealoagent",
     "slug": "how-gaby-goldberg-bessemer-investment-analyst-automates-diligence-ai",
     "title": "Jak Gaby Goldberg (Analityk Inwestycyjny w Bessemer Venture Partners) może zautomatyzować due diligence dzięki AI",

@@ -1,5 +1,157 @@
 [
   {
+    "id": "concentrix-delivery-engineering-transformation-dealoagent",
+    "slug": "how-winnie-sun-concentrix-transforms-delivery-operations-ai",
+    "title": "How Winnie Sun (SVP Operations at Concentrix) Could Transform Delivery Engineering with AI",
+    "subtitle": "A hypothetical deep dive: Moving from 'Green Metrics, Red Reality' to true operational intelligence across 40+ countries.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-02",
+    "readTime": "10 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/concentrix_ops_dashboard.png",
+    "excerpt": "Managing global operations for Concentrix means overseeing thousands of agents across dozens of geos. In this hypothetical case study, we explore how Winnie Sun could use DealoAgent to gain a real-time 'God's eye view,' predict capacity gaps before they happen, and engineer the perfect customer interaction at scale.",
+    "tags": [
+      "Case Study",
+      "BPO",
+      "Concentrix",
+      "AI",
+      "Delivery Operations"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Winnie Sun, SVP of Operations and Delivery Engineering at Concentrix, could leverage DealoAgent.AI. Concentrix is a real, global customer experience solutions leader, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Concentrix** operates on a massive scale, delivering customer experiences for the world's best brands. For an SVP of Operations, the challenge isn't just managing people—it's managing *consistency* across borders, languages, and legacy time zones. The goal is 'Delivery Engineering': turning the art of customer service into a predictable, high-quality science."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Green Metrics, Red Reality"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Winnie Sun**, Senior Vice President, Operations and Delivery Engineering at Concentrix. Winnie is tasked with ensuring that operations run smoothly and efficiently on a global scale. But even with the best teams, large BPOs often face the 'Watermelon Effect': metrics look green on the outside (SLAs met), but are red on the inside (customer sentiment is poor)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Her primary pain points in this hypothetical scenario revolve around global fragmentation:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**The Aggregation Lag**: By the time data from the Philippines, India, and Costa Rica is aggregated into a global report, it's days old. Winnie is often reacting to last week's fire rather than preventing next week's.",
+          "**Inconsistent Quality**: One geo might be outperforming while another struggles, but identifying the *root cause* (scripting vs. training vs. connectivity) takes weeks of manual auditing.",
+          "**Capacity Guesswork**: Predicting staffing needs usually relies on historical Erlang-C models. If a sudden product issue spikes volume, the center is overwhelmed before anyone notices the trend."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I need to see the pulse of the entire global operation on one screen. Not a spreadsheet from last Friday, but the reality of right now.",
+        "author": "Hypothetical scenario: Winnie Sun, SVP Operations at Concentrix"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Global Delivery Intelligence Layer"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Winnie activates **DealoAgent** as the central nervous system for Global Delivery. It connects to the telephony and chat systems of every site, ingesting audio and text in real-time regardless of language."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. True 'God's Eye View' of Operations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Winnie no longer waits for regional updates. She opens her DealoAgent dashboard and sees a real-time heatmap of global sentiment."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: She sees a red cluster in the EMEA region. DealoAgent flags: *'Negative sentiment spike in Poland and Romania hubs related to new refund policy rolling out. Escalation rate up 15%.'* Winnie instantly knows where to focus her attention."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Engineering the Perfect Interaction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Winnie wants to standardize excellence. She asks DealoAgent to analyze the top 1% of calls with the highest CSAT scores from the last month."
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent identifies the DNA of success: *'Top agents use empathy statements within the first 30 seconds and avoid the word 'policy' when denying a refund.'* Winnie pushes this insight as a real-time coaching nudge to all 50,000 agents instantly."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Predictive Capacity Planning"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of reacting to queues, DealoAgent predicts them. It notices a rising trend in topic mentions regarding 'Login Failure' on social media and early voice calls."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Action**: The AI warns: *'Predicted volume spike of 40% in the next 2 hours due to potential outage.'* Winnie preemptively shifts non-voice agents to the phones and alerts the client, mitigating the impact before the queue explodes."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Global Visibility",
+            "value": "Real-time",
+            "description": "0-latency insight into any geo"
+          },
+          {
+            "label": "CSAT Uplift",
+            "value": "+12%",
+            "description": "Due to standardized 'best practice' coaching"
+          },
+          {
+            "label": "Operational Efficiency",
+            "value": "High",
+            "description": "Proactive staffing prevents burnout and SLAs breaches"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a global leader like Winnie Sun, DealoAgent provides the ultimate command center. It turns 'Operations' from a reactive game of whack-a-mole into a proactive, engineered science. By seeing the truth in the data instantly, Concentrix can deliver the consistent, premium experience their clients expect, every single time."
+      },
+      {
+        "type": "cta",
+        "title": "Engineer Your Operations",
+        "description": "See how DealoAgent can give you global visibility in real-time.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "bessemer-investment-analyst-transformation-dealoagent",
     "slug": "how-gaby-goldberg-bessemer-investment-analyst-automates-diligence-ai",
     "title": "How Gaby Goldberg (Investment Analyst at Bessemer Venture Partners) Could Automate Due Diligence with AI",
