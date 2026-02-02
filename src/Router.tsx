@@ -14,6 +14,7 @@ import VoipUseCase from './pages/VoipUseCase';
 import UseCases from './pages/UseCases';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { PartnersPage } from './pages/PartnersPage';
+import OnePager from './pages/OnePager';
 import { Logo, AIBadge } from "./components/Logo";
 import { Button } from "./components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -180,6 +181,7 @@ function LocalizedRoutes({ lang }: { lang: string }) {
         <Route path="/usecases/voip" element={<VoipUseCase />} />
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/one_pager" element={<OnePager />} />
       </Routes>
     </>
   );
