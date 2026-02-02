@@ -1,4 +1,5 @@
 import { Logo, AIBadge } from "./components/Logo";
+
 import { ChatBubble } from "./components/FloatingCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { Button } from "./components/ui/button";
@@ -189,14 +190,7 @@ export default function App() {
               <a href="#pricing" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
               <a href="#team" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
               <a href="#partners" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
-              <Button variant="ghost" className="hidden xl:flex" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
-              <Button
-                variant="outline"
-                className="text-sm"
-                onClick={() => window.open('https://t.me/alex12alex', '_blank')}
-              >
-                {t('nav.talkToSales')}
-              </Button>
+
               <Button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm"
                 onClick={() => navigateToApp('register')}
@@ -234,13 +228,7 @@ export default function App() {
                 <a href="#pricing" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'pricing')}>{t('nav.pricing')}</a>
                 <a href="#team" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'team')}>{t('nav.team')}</a>
                 <a href="#partners" className="text-gray-700 hover:text-gray-900 py-2" onClick={(e) => handleNavClick(e, 'partners')}>{t('nav.partners')}</a>
-                <Button variant="ghost" className="justify-start" onClick={() => navigateToApp('sign_in')}>{t('nav.signIn')}</Button>
-                <Button
-                  variant="outline"
-                  onClick={() => window.open('https://t.me/alex12alex', '_blank')}
-                >
-                  {t('nav.talkToSales')}
-                </Button>
+
                 <Button
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                   onClick={() => navigateToApp('register')}
@@ -283,7 +271,7 @@ export default function App() {
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                     onClick={() => navigateToApp('register')}
                   >
-                    {t('hero.cta.register')}
+                    {t('nav.register')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
 
@@ -444,17 +432,10 @@ export default function App() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
+                onClick={() => navigateToApp('register')}
               >
-                {t('features.cta.tryFree')}
+                {t('nav.register')}
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
-              >
-                {t('features.cta.startTrial')}
               </Button>
             </div>
           </div>
@@ -763,26 +744,13 @@ export default function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-            <div className="flex flex-col gap-2">
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100"
-                onClick={() => window.location.href = 'https://app.dealoagent.ai'}
-              >
-                {t('readiness.registerCta')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <p className="text-xs text-blue-200/60 text-center">
-                {t('readiness.promoText')}
-              </p>
-            </div>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/20 bg-white/10 text-white hover:bg-white/20"
-              onClick={() => window.open('https://t.me/alex12alex', '_blank')}
+              className="bg-white text-blue-600 hover:bg-gray-100"
+              onClick={() => navigateToApp('register')}
             >
-              {t('readiness.salesCta')}
+              {t('nav.register')}
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
@@ -813,6 +781,8 @@ export default function App() {
                 </p>
 
                 {/* Comparison Table */}
+              </div>
+              {/* Comparison Table
                 <div className="overflow-hidden rounded-xl border border-blue-500/30 bg-slate-800/50 backdrop-blur-sm mb-8 mx-auto max-w-2xl">
                   <div className="overflow-x-auto">
                     <table className="w-full text-left text-sm text-blue-100/80">
@@ -847,33 +817,32 @@ export default function App() {
                       </tbody>
                     </table>
                   </div>
-                </div>
+                </div> */}
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* <Button
                     size="lg"
                     className="bg-white text-blue-900 hover:bg-gray-100 min-w-[160px]"
                     onClick={() => window.location.href = i18n.language === 'en' ? '/partners' : `/${i18n.language}/partners`}
                   >
                     {t('team.explore')}
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/20 bg-white/10 text-white hover:bg-white/20 min-w-[160px]"
-                    onClick={() => window.open('https://t.me/alex12alex', '_blank')}
-                  >
-                    {t('team.contact')}
-                  </Button>
-                </div>
+                  </Button> */}
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/20 bg-white/10 text-white hover:bg-white/20 min-w-[160px]"
+                  onClick={() => window.open('https://t.me/alex12alex', '_blank')}
+                >
+                  {t('team.contact')}
+                </Button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Team Section */}
-      <section id="team" className="py-12 sm:py-24 bg-white">
+      < section id="team" className="py-12 sm:py-24 bg-white" >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
@@ -935,10 +904,10 @@ export default function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Blog Section */}
-      <section className="py-12 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+      < section className="py-12 sm:py-24 bg-gradient-to-b from-white to-gray-50" >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 sm:mb-16 text-center">
             <div className="mb-4 sm:mb-6">
@@ -1017,15 +986,15 @@ export default function App() {
             </Button>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Industry Validation Section */}
-      <IndustryValidation />
+      < IndustryValidation />
 
 
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white py-8 sm:py-12">
+      < footer className="border-t border-gray-200 bg-white py-8 sm:py-12" >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             <div className="sm:col-span-2 text-center sm:text-left">
@@ -1048,7 +1017,7 @@ export default function App() {
                 <li><a href="#pricing" className="hover:text-blue-600" onClick={(e) => handleNavClick(e, 'pricing')}>{t('footer.product.pricing')}</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.product.security')}</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.product.roadmap')}</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/login'); }} className="hover:text-blue-600">{t('footer.product.login')}</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/one_pager'); }} className="hover:text-blue-600">{t('footer.product.onePager')}</a></li>
               </ul>
             </div>
 
@@ -1064,7 +1033,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 }
