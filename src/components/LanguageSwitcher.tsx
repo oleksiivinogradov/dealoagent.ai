@@ -54,13 +54,13 @@ export function LanguageSwitcher() {
 
     return (
         <Select value={currentLang} onValueChange={handleValueChange}>
-            <SelectTrigger className="w-[70px] bg-transparent border-gray-200">
+            <SelectTrigger className="w-[70px] bg-transparent border-gray-200 text-gray-900">
                 <SelectValue placeholder="En" />
             </SelectTrigger>
-            <SelectContent className="bg-white/80 backdrop-blur-lg border-gray-200">
-                <SelectItem value="en">EN</SelectItem>
-                <SelectItem value="uk">UK</SelectItem>
-                <SelectItem value="pl">PL</SelectItem>
+            <SelectContent className="bg-white/80 backdrop-blur-lg border-gray-200 text-gray-900">
+                <SelectItem value="en" className="text-gray-900">EN</SelectItem>
+                <SelectItem value="uk" className="text-gray-900">UK</SelectItem>
+                <SelectItem value="pl" className="text-gray-900">PL</SelectItem>
             </SelectContent>
         </Select>
     );

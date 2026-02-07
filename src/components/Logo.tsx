@@ -1,13 +1,22 @@
 import { useMemo } from "react";
+import dealoAgentIcon from "../assets/new_logo_no_text_for_fabi.png";
 
 export function Logo({ variant = "light", className = "" }: { variant?: "light" | "dark"; className?: string }) {
   const textColor = variant === "light" ? "text-white" : "text-gray-900";
   const uniqueId = useMemo(() => `logo-${Math.random().toString(36).substr(2, 9)}`, []);
   
   return (
-    <div className={`relative inline-flex items-center ${className}`} style={{ paddingTop: '0' }}>
+    <div className={`relative inline-flex items-center gap-2 ${className}`} style={{ paddingTop: '0' }}>
+      {/* Icon */}
+      <img
+        src={dealoAgentIcon}
+        alt="DealoAgent"
+        className="h-10 w-10 object-contain"
+      />
       {/* Text with the full name */}
-      <span className={`${textColor} font-semibold tracking-tight inline-flex items-center text-xl sm:text-2xl lg:text-[36px]`} style={{ height: '48px' }}>DealoAgent</span>
+      <span className={`${textColor} font-semibold tracking-tight inline-flex items-center text-xl sm:text-2xl lg:text-[36px]`} style={{ height: '48px' }}>
+        DealoAgent
+      </span>
     </div>
   );
 }

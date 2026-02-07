@@ -315,6 +315,12 @@
             "privacy": "Polityka prywatności"
         }
     },
+    "integrationHub": {
+        "badge": "AI‑Natywny Hub Procesów",
+        "subtitle": "Ogranicz pracę ręczną, reaguj szybciej i skaluj wyniki, przekształcając każdy sygnał w najlepsze działania w dowolnym procesie.",
+        "footer": "Zastąp ręczne aktualizacje automatycznie wypełnionym kontekstem, wiedzą i najlepszymi działaniami w dowolnym przepływie pracy.",
+        "addFreeTooltip": "Dodamy każdą nową integrację za darmo"
+    },
     "recruitingUseCase": {
         "helmet": {
             "title": "AI dla Agencji Rekrutacyjnych - DealoAgent.ai",

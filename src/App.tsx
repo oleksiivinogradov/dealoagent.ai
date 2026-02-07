@@ -9,6 +9,7 @@ import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { IndustryUseCases } from "./components/IndustryUseCases";
 import { IndustryValidation } from "./components/IndustryValidation";
+import { IntegrationHub } from "./components/IntegrationHub";
 import founderImage from "figma:asset/91f0865d322b601ece4b8e907c5b04462763af93.png";
 import { useState, useMemo, useEffect } from "react";
 import {
@@ -206,7 +207,7 @@ export default function App() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="flex-shrink-0"
+                className="flex-shrink-0 text-gray-900"
               >
                 {mobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -241,152 +242,8 @@ export default function App() {
         )}
       </nav>
 
-      {/* Hero Section - Dark with floating elements */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-16">
-        {/* Gradient orbs */}
-        <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-purple-600/30 blur-3xl" />
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-8 sm:pb-24">
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Left Content */}
-            <div className="z-10 text-center lg:text-left">
-              <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-sm">
-                <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 text-blue-400" />
-                <span className="text-sm sm:text-xl text-blue-100">{t('hero.badge')}</span>
-              </div>
-
-              <h1 className="mb-4 sm:mb-6 text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                {t('hero.title')}
-              </h1>
-
-              <p className="mb-6 sm:mb-8 text-base sm:text-xl text-blue-100/80">
-                {t('hero.subtitle')}
-              </p>
-
-              <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
-                <div className="flex flex-col gap-2">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                    onClick={() => navigateToApp('register')}
-                  >
-                    {t('nav.register')}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-
-                </div>
-                {/* Watch product tour button - hidden */}
-                {/* <div className="flex flex-col items-center sm:items-start gap-1">
-                  <Button size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
-                    Watch product tour
-                  </Button>
-                  <span className="text-xs text-blue-200/60">Coming soon</span>
-                </div> */}
-              </div>
-
-
-            </div>
-
-            {/* Right Content - Hero Image with Floating Cards */}
-            <div className="relative mt-12 lg:mt-0">
-              {/* Main hero image */}
-              <div className="relative z-0 rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1600389167383-b0cef0e45f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHNtaWxpbmclMjBidXNpbmVzc21hbiUyMHN1Y2Nlc3N8ZW58MXx8fHwxNzYyODUzMDA2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Happy smiling businessman using DealoAgent"
-                  className="w-full h-auto"
-                />
-              </div>
-
-              {/* Floating UI Cards - Desktop only */}
-
-              {/* Floating UI Cards - Desktop only */}
-
-              {/* Single Rotating Chat Bubble - Bottom Right */}
-              <ChatBubble
-                key={activeBubble} // Force re-mount to ensure clean animation restart
-                question={[
-                  "Is our pricing higher than Competitor X?",
-                  "Visualize my pipeline velocity",
-                  "Why is the Deal with ACME stuck?"
-                ][activeBubble]}
-                answer={[
-                  "Competitor X is cheaper on entry tier, but 20% more expensive for enterprise. Summary: We win on scale.",
-                  <div className="space-y-2">
-                    <p>Pipeline velocity increased by 35% this month.</p>
-                    <div className="flex h-16 items-end gap-1 px-1 border-b border-white/10 pb-1">
-                      <div className="w-4 bg-blue-500/30 h-[40%] rounded-t-sm" />
-                      <div className="w-4 bg-blue-500/40 h-[60%] rounded-t-sm" />
-                      <div className="w-4 bg-blue-500/60 h-[50%] rounded-t-sm" />
-                      <div className="w-4 bg-blue-500/80 h-[80%] rounded-t-sm" />
-                      <div className="w-4 bg-blue-500 h-[100%] rounded-t-sm relative group">
-                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white text-blue-900 text-[10px] font-bold px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                          +35%
-                        </div>
-                      </div>
-                    </div>
-                  </div>,
-                  <span>
-                    Their CTO mentioned <span className="text-red-300 font-semibold">"budget freeze"</span> in a podcast yesterday.
-                    <div className="mt-2 rounded bg-white/10 p-2 text-[10px] border-l-2 border-green-400">
-                      <span className="text-green-300 font-semibold uppercase">Suggestion:</span> Offer Q1 delayed payment.
-                    </div>
-                  </span>
-                ][activeBubble]}
-                isActive={true}
-                onComplete={() => setActiveBubble((prev) => (prev + 1) % 3)}
-                className="absolute -right-2 -bottom-12 sm:-right-12 sm:-bottom-8 z-20 scale-75 sm:scale-100 origin-bottom-right"
-              />
-
-              {/* AI Badge floating */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <AIBadge className="shadow-2xl shadow-purple-500/50" />
-              </div>
-            </div>
-          </div>
-
-          {/* Stats Bar - Moved to separate block below main hero */}
-          <div className="mt-16 sm:mt-24 border-t border-white/10 pt-8 sm:pt-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 md:gap-24">
-              <div className="text-center">
-                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
-                  10,000+
-                </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.users')}</p>
-              </div>
-              <div className="hidden sm:block h-12 w-px bg-white/20" />
-              <div className="text-center">
-                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
-                  $2.5M+
-                </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.deals')}</p>
-              </div>
-              <div className="hidden sm:block h-12 w-px bg-white/20" />
-              <div className="text-center">
-                <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-3xl sm:text-4xl font-bold">
-                  127%
-                </div>
-                <p className="mt-1 text-sm sm:text-base text-blue-200/70">{t('hero.stats.roi')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trusted By Section - Hidden */}
-      {false && (
-        <section className="border-b border-gray-200 bg-white py-8 sm:py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="mb-6 sm:mb-8 text-center text-xs sm:text-sm text-gray-500">Trusted by leading B2B companies</p>
-            <div className="grid grid-cols-2 gap-4 sm:gap-8 md:grid-cols-5 items-center justify-items-center opacity-50 grayscale">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="text-lg sm:text-2xl text-gray-400">Company {i}</div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Hero Section - Integration Hub */}
+      <IntegrationHub />
 
       {/* Before/After Slider Section */}
       <BeforeAfterSlider />
@@ -1007,6 +864,9 @@ export default function App() {
               </p>
               <p className="text-xs sm:text-sm text-gray-500">
                 {t('footer.copyright')}
+              </p>
+              <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                * - Coming soon
               </p>
             </div>
 

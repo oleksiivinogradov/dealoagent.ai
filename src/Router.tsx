@@ -89,7 +89,7 @@ export function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex-shrink-0"
+              className="flex-shrink-0 text-gray-900"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />

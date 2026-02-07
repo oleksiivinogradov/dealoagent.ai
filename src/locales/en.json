@@ -315,6 +315,12 @@
             "privacy": "Privacy Policy"
         }
     },
+    "integrationHub": {
+        "badge": "AI‑Native Workflow Hub",
+        "subtitle": "Cut manual work, respond faster, and scale output by turning every signal into next‑best actions across any process.",
+        "footer": "Replace manual updates with auto‑filled context, knowledge, and next‑best actions across any workflow.",
+        "addFreeTooltip": "We'll add any new integration for free"
+    },
     "recruitingUseCase": {
         "helmet": {
             "title": "AI for Recruiting Agencies - DealoAgent.ai",
