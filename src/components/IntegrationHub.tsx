@@ -167,30 +167,71 @@ function IntegrationItem({ title, subtitle, logos, icon: Icon, color, bg, border
   );
 }
 
-export function IntegrationHub() {
+type IntegrationHubVariant = 'default' | 'onepager';
+
+interface IntegrationHubProps {
+  variant?: IntegrationHubVariant;
+}
+
+export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
   const { t } = useTranslation();
+  const isOnePager = variant === 'onepager';
+  const sectionClassName = isOnePager
+    ? "relative h-[1123px] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-6 pb-2"
+    : "relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-20 sm:pt-24 pb-8 sm:pb-14";
+  const containerClassName = isOnePager
+    ? "relative mx-auto max-w-[794px] px-2"
+    : "relative mx-auto max-w-7xl px-1 sm:px-6 lg:px-8";
+  const titleWrapClassName = isOnePager
+    ? "mb-2 text-center"
+    : "mb-3 sm:mb-4 text-center";
+  const badgeClassName = isOnePager
+    ? "inline-block rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-1.5 text-base text-white font-bold shadow-lg"
+    : "inline-block rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 sm:px-10 py-2 sm:py-3 text-lg sm:text-2xl md:text-3xl text-white font-bold shadow-lg";
+  const subtitleClassName = isOnePager
+    ? "mx-auto max-w-xl text-xs text-blue-100/80 font-medium"
+    : "mx-auto max-w-2xl text-sm sm:text-base md:text-lg text-blue-100/80 font-medium";
+  const hubClassName = isOnePager
+    ? "relative min-h-[980px] flex items-center justify-center"
+    : "relative min-h-[700px] sm:min-h-[820px] lg:min-h-[920px] flex items-center justify-center";
+  const topBlockClassName = isOnePager
+    ? "absolute top-2 left-1/2 -translate-x-1/2 flex flex-row gap-1 z-10"
+    : "absolute top-5 sm:top-6 lg:top-8 left-1/2 -translate-x-1/2 flex flex-row gap-1.5 sm:gap-4 z-10";
+  const topBlockItemClassName = isOnePager ? "w-40" : "w-28 sm:w-40";
+  const leftBlockClassName = isOnePager
+    ? "absolute left-3 top-[50%] -translate-y-1/2 flex flex-col gap-1 w-44 z-10"
+    : "absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10";
+  const rightBlockClassName = isOnePager
+    ? "absolute right-3 top-[50%] -translate-y-1/2 flex flex-col gap-1 w-44 z-10"
+    : "absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10";
+  const bottomBlockClassName = isOnePager
+    ? "absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-row gap-1 z-10"
+    : "absolute bottom-12 sm:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 flex flex-row gap-0.5 sm:gap-4 z-10";
+  const bottomBlockItemClassName = isOnePager ? "w-32" : "w-[82px] sm:w-36";
+  const footerWrapClassName = isOnePager ? "mt-2 text-center" : "mt-6 sm:mt-8 text-center";
+  const footerTextClassName = isOnePager ? "text-xs text-blue-100/70" : "text-sm sm:text-base text-blue-100/70";
   
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-20 sm:pt-24 pb-8 sm:pb-14">
+    <section className={sectionClassName}>
       {/* Background gradient orbs (hero style) */}
       <div className="absolute left-1/4 top-1/4 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-blue-600/30 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
       <div className="absolute bottom-1/4 right-1/4 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-purple-600/30 blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
       
-      <div className="relative mx-auto max-w-7xl px-1 sm:px-6 lg:px-8">
+      <div className={containerClassName}>
         {/* Section Title */}
-        <div className="mb-3 sm:mb-4 text-center">
-          <div className="mb-2 sm:mb-3">
-            <span className="inline-block rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 sm:px-10 py-2 sm:py-3 text-lg sm:text-2xl md:text-3xl text-white font-bold shadow-lg">
+        <div className={titleWrapClassName}>
+          <div className={isOnePager ? "mb-1" : "mb-2 sm:mb-3"}>
+            <span className={badgeClassName}>
               {t('integrationHub.badge')}
             </span>
           </div>
-          <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-lg text-blue-100/80 font-medium">
+          <p className={subtitleClassName}>
             {t('integrationHub.subtitle')}
           </p>
         </div>
 
         {/* Hub Layout - Reduced height for tighter spacing */}
-        <div className="relative min-h-[700px] sm:min-h-[820px] lg:min-h-[920px] flex items-center justify-center">
+        <div className={hubClassName}>
           
           {/* Central Logo Circle */}
           <div className="relative z-20">
@@ -283,32 +324,32 @@ export function IntegrationHub() {
           </svg>
 
           {/* TOP - YOU AND YOUR TEAM (2 blocks horizontally) - Closer to center */}
-          <div className="absolute top-5 sm:top-6 lg:top-8 left-1/2 -translate-x-1/2 flex flex-row gap-1.5 sm:gap-4 z-10">
+          <div className={topBlockClassName}>
             {topUserItems.map((item, idx) => (
-              <div key={idx} className="w-28 sm:w-40">
+              <div key={idx} className={topBlockItemClassName}>
                 <IntegrationItem {...item} />
               </div>
             ))}
           </div>
 
           {/* LEFT SIDE - CONNECTORS (4 blocks vertically stacked) */}
-          <div className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10">
+          <div className={leftBlockClassName}>
             {connectorItems.map((item, idx) => (
               <IntegrationItem key={idx} {...item} />
             ))}
           </div>
 
           {/* RIGHT SIDE - EXTERNAL DATA (3 blocks vertically stacked) */}
-          <div className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10">
+          <div className={rightBlockClassName}>
             {externalDataItems.map((item, idx) => (
               <IntegrationItem key={idx} {...item} />
             ))}
           </div>
 
           {/* BOTTOM - AGENTS (4 blocks horizontally) - Closer to center */}
-          <div className="absolute bottom-12 sm:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 flex flex-row gap-0.5 sm:gap-4 z-10">
+          <div className={bottomBlockClassName}>
             {agentItems.map((item, idx) => (
-              <div key={idx} className="w-[82px] sm:w-36">
+              <div key={idx} className={bottomBlockItemClassName}>
                 <IntegrationItem {...item} />
               </div>
             ))}
@@ -316,8 +357,8 @@ export function IntegrationHub() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-sm sm:text-base text-blue-100/70">
+        <div className={footerWrapClassName}>
+          <p className={footerTextClassName}>
             {t('integrationHub.footer')}
           </p>
         </div>
