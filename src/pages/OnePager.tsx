@@ -18,6 +18,10 @@ export default function OnePager() {
         setIsExporting(true);
         try {
             const element = contentRef.current;
+            // Ensure web fonts are fully loaded before canvas capture (prevents baseline drift in PDF)
+            if ("fonts" in document) {
+                await (document as Document & { fonts: FontFaceSet }).fonts.ready;
+            }
 
             // Get button position for link
             const button = element.querySelector('a[href="https://app.dealoagent.ai"]');
@@ -48,12 +52,72 @@ export default function OnePager() {
                 windowWidth: 794,
                 windowHeight: 1123,
                 onclone: (clonedDoc) => {
-                    // Fix for SVG rendering issues in some cases
+                    // Fix for SVG rendering issues
                     const clonedButton = clonedDoc.querySelector('a[href="https://app.dealoagent.ai"]');
                     if (clonedButton) {
-                        // Ensure styles are explicit
                         (clonedButton as HTMLElement).style.display = 'inline-flex';
                     }
+
+                    // === html2canvas text-baseline fix ===
+                    // html2canvas uses its own text layout engine that positions text
+                    // lower than the browser does. CSS flex/align-items don't help because
+                    // html2canvas doesn't fully implement them. The only reliable fix is to
+                    // use asymmetric padding to compensate: less paddingTop + more paddingBottom
+                    // visually shifts text upward within its container.
+
+                    // Fix the main badge pill ("AI-Native Workflow Hub")
+                    clonedDoc.querySelectorAll('[data-pdf-badge]').forEach((el) => {
+                        const badge = el as HTMLElement;
+                        // Original py-1.5 = 6px each. Text renders ~4px too low in html2canvas.
+                        badge.style.paddingTop = '1px';
+                        badge.style.paddingBottom = '11px';
+                        badge.style.lineHeight = '1.1';
+                    });
+
+                    // Fix small pills (Gmail, Outlook, etc.)
+                    // At 794px width sm: breakpoint is active → sm:py-1 = 4px each side
+                    clonedDoc.querySelectorAll('[data-pdf-pill]').forEach((el) => {
+                        const pill = el as HTMLElement;
+                        // Compensate ~3px downward drift at sm: sizes
+                        pill.style.paddingTop = '1px';
+                        pill.style.paddingBottom = '7px';
+                        pill.style.lineHeight = '1.1';
+                    });
+
+                    // Fix card headers — force row layout with proper gap
+                    clonedDoc.querySelectorAll('[data-pdf-header]').forEach((el) => {
+                        const header = el as HTMLElement;
+                        header.style.display = 'flex';
+                        header.style.alignItems = 'center';
+                        header.style.flexDirection = 'row';
+                    });
+                    clonedDoc.querySelectorAll('[data-pdf-header-inner]').forEach((el) => {
+                        const inner = el as HTMLElement;
+                        inner.style.display = 'flex';
+                        inner.style.alignItems = 'center';
+                        inner.style.flexDirection = 'row';
+                        inner.style.gap = '8px';
+                    });
+                    // Fix h3 titles in card headers
+                    clonedDoc.querySelectorAll('[data-pdf-header-inner] h3').forEach((el) => {
+                        const h3 = el as HTMLElement;
+                        h3.style.lineHeight = '1';
+                        h3.style.margin = '0';
+                        h3.style.padding = '0';
+                    });
+                    // Fix the "YOUR" add-button text (colored bg pill in bottom-right of cards)
+                    clonedDoc.querySelectorAll('[data-pdf-add-btn]').forEach((el) => {
+                        const btn = el as HTMLElement;
+                        // sm:py-1 = 4px each. Compensate baseline drift.
+                        btn.style.paddingTop = '1px';
+                        btn.style.paddingBottom = '7px';
+                        btn.style.lineHeight = '1.1';
+                    });
+                    // Fix subtitle text below badge
+                    clonedDoc.querySelectorAll('[data-pdf-subtitle]').forEach((el) => {
+                        const sub = el as HTMLElement;
+                        sub.style.lineHeight = '1.3';
+                    });
                 }
             });
 
