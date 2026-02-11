@@ -15,6 +15,8 @@ CRITICAL - do not repeat companies and persons in posts. allways call grep -i "t
    - **Companies**: Select a real company from the specific industry. check in past blog posts if company was not mentioned in past!
    - **Persons**: The protagonist MUST be a **real person** currently holding the relevant position at that company.
      - **MANDATORY**: You MUST verify their existence and role on **LinkedIn** before writing the post. If you cannot find them on LinkedIn, choose a different person/company.
+     - **MANDATORY**: Verification means you MUST **open the actual LinkedIn profile page in the browser** and confirm that BOTH the person's **full name** AND their **current company** match. Do NOT rely on search engine snippets or third-party sites — only the actual LinkedIn profile page counts as verification.
+     - **MANDATORY**: You MUST include the protagonist's **verified LinkedIn profile URL** in the implementation plan so the user can verify before proceeding.
      - Use their **full name** and **exact title**.
    - **Scenario**: The scenario remains **hypothetical** (e.g., "How Arjay Angodung could use DealoAgent...").
    - Must reach specific, measurable outcomes.
