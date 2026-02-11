@@ -170,5 +170,13 @@ languages.forEach(lang => {
 
         fs.writeFileSync(path.join(postDir, 'index.html'), html);
         console.log(`✓ Generated: ${langPrefix}/blog/${post.slug}/index.html`);
+
+        // Also create a .html file at the blog directory level (e.g. blog/slug.html)
+        // This prevents GitHub Pages from issuing a 301 redirect when the URL
+        // is requested without a trailing slash (e.g. /blog/slug -> /blog/slug/)
+        // GitHub Pages resolves /blog/slug to blog/slug.html directly (200)
+        const htmlFilePath = path.join(blogDir, `${post.slug}.html`);
+        fs.writeFileSync(htmlFilePath, html);
+        console.log(`✓ Generated: ${langPrefix}/blog/${post.slug}.html (no-redirect)`);
     });
 });

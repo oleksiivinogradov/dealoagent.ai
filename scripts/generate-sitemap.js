@@ -25,7 +25,10 @@ const pages = [
     'usecases/vcresearch',
     'usecases/callcenter',
     'usecases/voip',
-    'pitchdeck'
+    'pitchdeck',
+    'partners',
+    'privacy-policy',
+    'one_pager'
 ];
 
 const generateSitemap = () => {

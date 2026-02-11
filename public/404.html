@@ -2,17 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DealoAgent.ai - AI-Powered Sales CRM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - DealoAgent.ai</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); color: white; text-align: center; }
+    .container { max-width: 480px; padding: 2rem; }
+    h1 { font-size: 5rem; margin: 0; background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    p { font-size: 1.2rem; color: #94a3b8; margin: 1rem 0; }
+    a { display: inline-block; margin-top: 1.5rem; padding: 0.75rem 2rem; background: linear-gradient(to right, #2563eb, #7c3aed); color: white; text-decoration: none; border-radius: 9999px; font-weight: 600; transition: opacity 0.2s; }
+    a:hover { opacity: 0.9; }
+  </style>
   <script>
-    // GitHub Pages hack to handle client-side routing
-    // This script takes the current URL and redirects to the index page with the path
-    // as a query parameter that the app can use to navigate to the correct page
-    sessionStorage.redirect = location.href;
+    // GitHub Pages SPA routing fallback:
+    // Only redirect for known SPA routes (client-side navigation support).
+    // For unknown URLs, show the 404 page (better for SEO).
+    (function() {
+      var defined = [
+        /^\/$/, /^\/(uk|pl)\/?$/,
+        /^\/(uk\/|pl\/)?blog\/?$/, /^\/(uk\/|pl\/)?blog\/[\w-]+\/?$/,
+        /^\/(uk\/|pl\/)?pitchdeck(\/\d+)?\/?$/, /^\/(uk\/|pl\/)?login\/?$/,
+        /^\/(uk\/|pl\/)?usecases(\/[\w-]+)?\/?$/, /^\/(uk\/|pl\/)?partners\/?$/,
+        /^\/(uk\/|pl\/)?privacy-policy\/?$/, /^\/(uk\/|pl\/)?one_pager\/?$/
+      ];
+      var path = location.pathname;
+      var isKnown = defined.some(function(r) { return r.test(path); });
+      if (isKnown) {
+        // Store the intended URL and redirect to root for SPA hydration
+        sessionStorage.redirect = location.href;
+        location.replace('/');
+      }
+      // Otherwise: stay on this 404 page (no redirect for crawlers/unknown URLs)
+    })();
   </script>
-  <meta http-equiv="refresh" content="0;URL='/'">
 </head>
 <body>
-  <!-- GitHub Pages 404 redirect handler -->
+  <div class="container">
+    <h1>404</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/">Go to Homepage</a>
+  </div>
 </body>
 </html>
-

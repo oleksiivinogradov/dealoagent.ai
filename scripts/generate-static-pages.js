@@ -64,6 +64,21 @@ const pages = [
         path: 'blog',
         title: 'DealoAgent Blog - AI Sales Insights & Case Studies',
         description: 'Explore the latest insights on AI-powered sales intelligence.'
+    },
+    {
+        path: 'partners',
+        title: 'Partners - DealoAgent.ai',
+        description: 'Join the DealoAgent.ai partner ecosystem. Collaborate with us to bring AI-powered sales intelligence to more teams.'
+    },
+    {
+        path: 'privacy-policy',
+        title: 'Privacy Policy - DealoAgent.ai',
+        description: 'DealoAgent.ai privacy policy. Learn how we handle and protect your data.'
+    },
+    {
+        path: 'one_pager',
+        title: 'One Pager - DealoAgent.ai',
+        description: 'DealoAgent.ai at a glance. AI-native CRM for multi-channel B2B sales intelligence.'
     }
 ];
 
@@ -116,5 +131,20 @@ languages.forEach(lang => {
 
         fs.writeFileSync(path.join(pagePath, 'index.html'), html);
         console.log(`✓ Generated: ${langPrefix}/${page.path}/index.html`);
+
+        // Also create a .html file at the parent directory level
+        // (e.g. pitchdeck.html alongside pitchdeck/index.html)
+        // This prevents GitHub Pages from issuing a 301 redirect when the URL
+        // is requested without a trailing slash (e.g. /pitchdeck -> /pitchdeck/)
+        // GitHub Pages resolves /pitchdeck to pitchdeck.html directly (200)
+        const htmlFileName = page.path.includes('/')
+            ? page.path.split('/').pop() + '.html'  // e.g. "recruiting.html"
+            : page.path + '.html';                   // e.g. "pitchdeck.html"
+        const htmlFileDir = page.path.includes('/')
+            ? path.join(langDir, page.path.split('/').slice(0, -1).join('/'))
+            : langDir;
+        const htmlFilePath = path.join(htmlFileDir, htmlFileName);
+        fs.writeFileSync(htmlFilePath, html);
+        console.log(`✓ Generated: ${langPrefix}/${page.path}.html (no-redirect)`);
     });
 });
