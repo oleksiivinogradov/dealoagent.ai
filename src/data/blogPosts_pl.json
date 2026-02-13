@@ -1,5 +1,157 @@
 [
   {
+    "id": "betts-recruiting-ceo-transformation",
+    "slug": "how-carolyn-betts-betts-recruiting-transforms-staffing-ai",
+    "title": "Jak Carolyn Betts (CEO w Betts Recruiting) mogłaby skalować rekrutację dzięki AI",
+    "subtitle": "Hipotetyczne studium przypadku: Transformacja wiodącej agencji z operacji „opartych na ludziach” w silnik przychodów wspomagany przez AI.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-13",
+    "readTime": "10 min czytania",
+    "category": "Studium przypadku",
+    "featured": true,
+    "coverImage": "/images/blog/betts_recruiting_ceo_workspace.png",
+    "excerpt": "Prowadzenie najwyższej klasy firmy rekrutacyjnej, takiej jak Betts Recruiting, oznacza balansowanie między szybkością a jakością. W tym hipotetycznym studium przypadku badamy, jak Carolyn Betts mogłaby użyć DealoAgent do prognozowania przychodów, egzekwowania „Głosu Betts” na dużą skalę i automatyzacji kontroli jakości.",
+    "tags": [
+      "Studium przypadku",
+      "Rekrutacja",
+      "Betts Recruiting",
+      "AI",
+      "Przywództwo w Staffingu"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: To jest hipotetyczne studium przypadku badające, jak Carolyn Betts, Założycielka i CEO w Betts Recruiting, mogłaby wykorzystać DealoAgent.AI. Betts Recruiting to prawdziwa, wiodąca w branży agencja rekrutacyjna dla ról generujących przychód, ale ten scenariusz jest wyobrażony, aby zilustrować możliwości DealoAgent."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Betts Recruiting** jest partnerem pierwszego wyboru dla szybko rozwijających się firm skalujących swoje zespoły sprzedaży i marketingu. Dla CEO wyzwaniem nie jest tylko realizacja zleceń — to budowanie przewidywalnego, skalowalnego silnika, który nie polega wyłącznie na heroizmie poszczególnych rekruterów. Celem jest zamiana „sztuki” rekrutacji w naukę opartą na danych."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Cykl „Uczta lub Głód”"
+      },
+      {
+        "type": "paragraph",
+        "text": "Poznajcie **Carolyn Betts**, Założycielkę i CEO Betts Recruiting. Carolyn zbudowała imperium, łącząc najlepsze talenty z najbardziej innowacyjnymi firmami na świecie. Ale skalowanie biznesu opartego na ludziach wiąże się z nieodłącznym tarciem."
+      },
+      {
+        "type": "paragraph",
+        "text": "Jej główne bolączki w tym hipotetycznym scenariuszu krążą wokół spójności i widoczności:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Nieprzewidywalne Przychody**: Przychody agencji często przypominają kolejkę górską. Jeden miesiąc jest rekordowy; następny cichy. Carolyn polega na raportach z lejka, które często opierają się na optymizmie rekruterów, a nie na twardych danych.",
+          "**Opóźnienie we Wdrożeniu**: Wdrożenie nowego rekrutera zajmuje miesiące. Muszą poznać rynek, pitch i „Drogę Betts”. W tym okresie wdrożenia są centrum kosztów, a nie generatorem przychodów.",
+          "**Martwe Punkty Kontroli Jakości**: Przy setkach rozmów odbywających się codziennie, niemożliwe jest wiedzieć, czy każde doświadczenie kandydata spełnia standard Betts. Jedna zła interakcja może zaszkodzić marce, ale ręczne odsłuchiwanie rozmów się nie skaluje."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Chcę wiedzieć, jakie będą nasze przychody w przyszłym kwartale na podstawie dzisiejszej aktywności, a nie tylko nadziei. I chcę, żeby każdy rekruter brzmiał jak weteran z 10-letnim stażem od pierwszego dnia.",
+        "author": "Hipotetyczny scenariusz: Carolyn Betts, CEO w Betts Recruiting"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wkracza DealoAgent: Silnik Przychodów AI"
+      },
+      {
+        "type": "paragraph",
+        "text": "W tej hipotetycznej transformacji Carolyn wdraża **DealoAgent** w całej firmie. Służy on jako warstwa inteligencji, która wspomaga każdego rekrutera i zapewnia krystalicznie czystą widoczność dla kierownictwa."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Predykcyjne Prognozowanie Przychodów"
+      },
+      {
+        "type": "paragraph",
+        "text": "Carolyn nie polega już na samodzielnie zgłaszanych prawdopodobieństwach w lejku. DealoAgent analizuje *rzeczywisty* sentyment i dynamikę każdej interakcji z klientem."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Spostrzeżenie**: AI sygnalizuje: *\"Mimo że rola AE w TechCorp jest oznaczona jako 'Commit', menedżer ds. rekrutacji nie otworzył ostatnich 3 e-maili, a sentyment spadł. Prawdopodobieństwo skorygowane do 20%.\"* Carolyn widzi prawdziwą liczbę i może skorygować strategię przed końcem kwartału."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Skalowanie „Głosu Betts”"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nowi rekruterzy często mają trudności z stworzeniem idealnego kontaktu. DealoAgent działa jak zawsze włączony trener, tworząc projekty e-maili i skryptów, które pasują do wysokowydajnych wzorców najlepszych pracowników."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Efekt**: Kontakt młodszego rekrutera do VP Sprzedaży brzmi doświadczenie i strategicznie, ponieważ DealoAgent sugeruje konkretne spostrzeżenia rynkowe do uwzględnienia. Czas wdrożenia skraca się o połowę, ponieważ AI proaktywnie prowadzi ich przez proces."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Zautomatyzowana Kontrola Jakości"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zamiast wyrywkowego sprawdzania rozmów, DealoAgent monitoruje 100% interakcji pod kątem jakości i zgodności."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Strażnik Marki**: Jeśli rekruter obieca kandydatowi coś, co nie jest zgodne z budżetem klienta, AI natychmiast oznacza menedżera. Coaching odbywa się niemal w czasie rzeczywistym, chroniąc reputację firmy i zaufanie klienta."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hipotetyczny Wpływ"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Dokładność Prognozy",
+            "value": "95%",
+            "description": "Prognozowanie przychodów oparte na danych"
+          },
+          {
+            "label": "Czas Wdrożenia",
+            "value": "-50%",
+            "description": "Szybsze osiągnięcie produktywności przez nowych pracowników"
+          },
+          {
+            "label": "Bezpieczeństwo Marki",
+            "value": "100%",
+            "description": "Zautomatyzowany monitoring wszystkich interakcji"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wniosek"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dla wizjonerskiej liderki, jaką jest Carolyn Betts, AI nie polega na zastąpieniu ludzkiego elementu rekrutacji — chodzi o jego podniesienie. Używając DealoAgent do obsługi danych i dostarczania barier ochronnych, daje swojemu zespołowi możliwość skupienia się na tym, co robią najlepiej: budowaniu zmieniających życie relacji. Rezultatem jest agencja, która skaluje się z precyzją firmy programistycznej."
+      },
+      {
+        "type": "cta",
+        "title": "Skaluj Swoją Firmę Staffingową",
+        "description": "Zobacz, jak DealoAgent może zapewnić Ci przewidywalne przychody i zautomatyzowaną kontrolę jakości.",
+        "primaryButton": {
+          "text": "Uzyskaj Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Zobacz Cennik",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "alorica-vp-operations-call-center-transformation",
     "slug": "how-ralph-brambles-alorica-transforms-call-center-operations-ai",
     "title": "Jak Ralph Brambles (VP Operations w Alorica) mógłby transformować operacje call center z AI",

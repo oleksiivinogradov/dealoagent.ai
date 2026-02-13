@@ -1,5 +1,157 @@
 [
   {
+    "id": "betts-recruiting-ceo-transformation",
+    "slug": "how-carolyn-betts-betts-recruiting-transforms-staffing-ai",
+    "title": "How Carolyn Betts (CEO at Betts Recruiting) Could Scale Staffing with AI",
+    "subtitle": "A hypothetical deep dive: Transforming a leading agency from \"people-heavy\" operations to an AI-augmented revenue engine.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-13",
+    "readTime": "10 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/betts_recruiting_ceo_workspace.png",
+    "excerpt": "Running a top-tier staffing firm like Betts Recruiting means balancing speed with quality. In this hypothetical case study, we explore how Carolyn Betts could use DealoAgent to predict revenue, enforce the \"Betts Voice\" at scale, and automate quality control.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "Betts Recruiting",
+      "AI",
+      "Staffing Leadership"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Carolyn Betts, Founder & CEO at Betts Recruiting, could leverage DealoAgent.AI. Betts Recruiting is a real, industry-leading staffing agency for revenue-generating roles, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Betts Recruiting** is the go-to partner for high-growth companies scaling their sales and marketing teams. For a CEO, the challenge isn't just making placements—it's building a predictable, scalable engine that doesn't rely solely on the heroism of individual recruiters. The goal is to turn the \"art\" of recruiting into a data-driven science."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The \"Feast or Famine\" Cycle"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Carolyn Betts**, Founder & CEO of Betts Recruiting. Carolyn has built an empire by connecting top talent with the world's most innovative companies. But scaling a people-based business comes with inherent friction."
+      },
+      {
+        "type": "paragraph",
+        "text": "Her primary pain points in this hypothetical scenario revolve around consistency and visibility:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Unpredictable Revenue**: Agency revenue often rides a roller coaster. One month is record-breaking; the next is quiet. Carolyn relies on pipeline reports that are often based on recruiter optimism rather than hard data.",
+          "**Ramp-Up Latency**: Bringing on a new recruiter takes months. They need to learn the market, the pitch, and the \"Betts Way.\" During that ramp period, they are a cost center, not a revenue generator.",
+          "**Quality Control Blind Spots**: With hundreds of calls happening daily, it's impossible to know if every candidate experience meets the Betts standard. A bad interaction can hurt the brand, but manual call listening doesn't scale."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I want to know what our revenue will be next quarter based on activity today, not just hope. And I want every recruiter to sound like a 10-year veteran from Day 1.",
+        "author": "Hypothetical scenario: Carolyn Betts, CEO at Betts Recruiting"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Revenue Engine"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Carolyn implements **DealoAgent** across the firm. It serves as the intelligence layer that augments every recruiter and provides crystal-clear visibility to leadership."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Predictive Revenue Forecasting"
+      },
+      {
+        "type": "paragraph",
+        "text": "Carolyn no longer relies on self-reported pipeline probabilities. DealoAgent analyzes the *actual* sentiment and momentum of every client interaction."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: The AI flags: *\"Although the AE role at TechCorp is marked 'Commit', the hiring manager hasn't opened the last 3 emails and sentiment has dropped. Probability adjusted to 20%.\"* Carolyn sees the real number and can adjust strategy before the quarter ends."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Scaling the \"Betts Voice\""
+      },
+      {
+        "type": "paragraph",
+        "text": "New recruiters often struggle to craft the perfect outreach. DealoAgent acts as an always-on coach, drafting emails and scripts that match the high-performing patterns of top billers."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Effect**: A junior recruiter's outreach to a VP of Sales sounds seasoned and strategic because DealoAgent suggests specific market insights to include. Ramp time is cut in half because the AI proactively guides them through the process."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Automated Quality Assurance"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of spot-checking calls, DealoAgent monitors 100% of interactions for quality and compliance."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Brand Guard**: If a recruiter promises a candidate something that isn't in slignment with the client's budget, the AI tags the manager instantly. Coaching happens in near real-time, protecting the firm's reputation and client trust."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Forecast Accuracy",
+            "value": "95%",
+            "description": "Data-driven revenue prediction"
+          },
+          {
+            "label": "Ramp Time",
+            "value": "-50%",
+            "description": "Faster time-to-productivity for new hires"
+          },
+          {
+            "label": "Brand Safety",
+            "value": "100%",
+            "description": "Automated monitoring of all interactions"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a visionary leader like Carolyn Betts, AI isn't about replacing the human element of recruiting—it's about elevating it. By using DealoAgent to handle the data and provide guardrails, she empowers her team to focus on what they do best: building life-changing connections. The result is an agency that scales with the precision of a software company."
+      },
+      {
+        "type": "cta",
+        "title": "Scale Your Staffing Firm",
+        "description": "See how DealoAgent can give you predictable revenue and automated quality control.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "alorica-vp-operations-call-center-transformation",
     "slug": "how-ralph-brambles-alorica-transforms-call-center-operations-ai",
     "title": "How Ralph Brambles (VP Operations at Alorica) Could Transform Call Center Operations with AI",
