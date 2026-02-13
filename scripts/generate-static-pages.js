@@ -71,11 +71,6 @@ const pages = [
         description: 'Join the DealoAgent.ai partner ecosystem. Collaborate with us to bring AI-powered sales intelligence to more teams.'
     },
     {
-        path: 'privacy-policy',
-        title: 'Privacy Policy - DealoAgent.ai',
-        description: 'DealoAgent.ai privacy policy. Learn how we handle and protect your data.'
-    },
-    {
         path: 'one_pager',
         title: 'One Pager - DealoAgent.ai',
         description: 'DealoAgent.ai at a glance. AI-native CRM for multi-channel B2B sales intelligence.'

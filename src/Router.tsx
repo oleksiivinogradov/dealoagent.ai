@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import App from './App';
@@ -12,7 +12,6 @@ import VCResearchUseCase from './pages/VCResearchUseCase';
 import CallCenterUseCase from './pages/CallCenterUseCase';
 import VoipUseCase from './pages/VoipUseCase';
 import UseCases from './pages/UseCases';
-import PrivacyPolicy from './pages/PrivacyPolicy';
 import { PartnersPage } from './pages/PartnersPage';
 import OnePager from './pages/OnePager';
 import { Logo, AIBadge } from "./components/Logo";
@@ -168,7 +167,7 @@ function LocalizedRoutes({ lang }: { lang: string }) {
         <Route path="/usecases/callcenter" element={<CallCenterUseCase />} />
         <Route path="/usecases/voip" element={<VoipUseCase />} />
         <Route path="/partners" element={<PartnersPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<Navigate to="/privacy_policy.html" replace />} />
         <Route path="/one_pager" element={<OnePager />} />
       </Routes>
     </>

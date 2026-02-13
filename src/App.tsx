@@ -888,7 +888,7 @@ export default function App() {
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/blog'); }} className="hover:text-blue-600">{t('footer.company.blog')}</a></li>
                 <li><a href="/coming-soon.html" className="hover:text-blue-600">{t('footer.company.careers')}</a></li>
                 <li><a href="mailto:alex@dealoagent.ai" className="hover:text-blue-600">{t('footer.company.contact')}</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/privacy-policy'); }} className="hover:text-blue-600">{t('footer.company.privacy')}</a></li>
+                <li><a href="/privacy_policy.html" className="hover:text-blue-600">{t('footer.company.privacy')}</a></li>
               </ul>
             </div>
           </div>
