@@ -13,6 +13,7 @@ CRITICAL - do not repeat companies and persons in posts. allways call grep -i "t
 
 1. **Companies and Persons MUST be real**
    - **Companies**: Select a real company from the specific industry. check in past blog posts if company was not mentioned in past!
+   - **History Check**: Before proposing a new post, ALWAYS check the last 10 posts to identify the use case with the longest gap in coverage. Propose the new topic based on this "least recently used" logic.
    - **Persons**: The protagonist MUST be a **real person** currently holding the relevant position at that company.
      - **MANDATORY**: You MUST verify their existence and role on **LinkedIn** before writing the post. If you cannot find them on LinkedIn, choose a different person/company.
      - **MANDATORY**: Verification means you MUST **open the actual LinkedIn profile page in the browser** and confirm that BOTH the person's **full name** AND their **current company** match. Do NOT rely on search engine snippets or third-party sites — only the actual LinkedIn profile page counts as verification.
@@ -94,13 +95,18 @@ DealoAgent.ai is an AI-native sales CRM turning communication data into a 24/7 s
 7. **Analytics**: Conversation analytics; win/loss analysis; team metrics; natural language reports.
 
 ## LinkedIn Post Creation
-After creating a blog post, **ALWAYS** propose a LinkedIn post text.
+After creating a blog post, **ALWAYS** prepare TWO versions of a LinkedIn post.
 
-### Guidelines
+**IMPORTANT**: 
+1. Do NOT post automatically.
+2. Prepare texts for **Oleksii Vynogradov** (Personal Profile) and **DealoAgent** (Company Page).
+
+### 1. Oleksii Vynogradov (Personal Profile)
 **Tone & Style:**
 - Write for 15k+ professional followers. Conversational, authentic, warm (not marketing-heavy).
 - Frame as genuine curiosity/puzzle. NO bullet points/lists.
 - **CRITICAL**: Mention the persona's **full name and position** (e.g., "I wrote up a hypothetical scenario about how Arjay Angodung, a VP of Ops...").
+- Use "I" perspective.
 
 **Structure:**
 - Start with personal observation/question.
@@ -114,11 +120,20 @@ After creating a blog post, **ALWAYS** propose a LinkedIn post text.
 - Promise to share free advice on how it can be automated with AI in return.
 - Example: "Share your current workflow bottlenecks below, and I'll break down exactly how AI could automate them for you."
 
-**Tags:**
+### 2. DealoAgent (Company Page)
+**Tone & Style:**
+- Professional, authoritative, team-oriented ("We" perspective).
+- Focus on the *business problem* and *solution*.
+
+**Structure:**
+- Start with the business question/challenge.
+- Explain the "What if" scenario.
+- Intro blog post ("We explored a hypothetical scenario... Read the full thought experiment here: [link]").
+- End with a question for business owners/leaders.
+
+**Tags (For Both):**
 - Add 3 random tags: #innovation #management #digitalmarketing #technology #creativity #futurism #startups #marketing #socialmedia #socialnetworking #motivation #personaldevelopment #jobinterviews #sustainability #personalbranding #education #productivity #travel #sales #socialentrepreneurship
 
 **Posting Process:**
-1. Propose text to user for confirmation.
-2. **When confirmed**: Open LinkedIn in browser.
-3. Login: `alex@callsfreecalls.com` / `alex1vinogradov2`.
-4. Initiate post and paste confirmed text.
+1. Propose BOTH texts to user for confirmation/manual posting.
+2. Do **NOT** use the browser tool to post automatically.

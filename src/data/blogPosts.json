@@ -3801,5 +3801,157 @@
         }
       }
     ]
+  },
+  {
+    "id": "ian-reither-telnyx-coo-routing-optimization",
+    "slug": "how-ian-reither-telnyx-optimizes-routing-ai",
+    "title": "How Ian Reither (COO at Telnyx) Could Optimize Global Routing with AI",
+    "subtitle": "A hypothetical deep dive: Moving from static Least Cost Routing to real-time AI-driven quality assurance.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-18",
+    "readTime": "9 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/telnyx_coo_dashboard.png",
+    "excerpt": "Managing a global carrier network like Telnyx requires balancing cost, quality, and routing precision. In this hypothetical case study, we explore how Ian Reither could use DealoAgent to automate routing decisions based on real-time quality metrics and predict churn.",
+    "tags": [
+      "Case Study",
+      "VoIP",
+      "Telnyx",
+      "AI",
+      "Routing Optimization"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Ian Reither, COO at Telnyx, could leverage DealoAgent.AI. Telnyx is a real, major global communications platform, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Telnyx** has revolutionized the telecom industry by offering a next-generation private global network. For a COO like Ian, the mission is delivering carrier-grade reliability with the agility of a tech startup. But as the network scales to billions of minutes and messages, ensuring optimal routing and quality manually becomes impossible."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The Static Routing Trap"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Ian Reither**, COO at Telnyx. Ian has been instrumental in building Telnyx's infrastructure and operations. He knows that in the wholesale voice world, margins are razor-thin, and quality is the only differentiator that sticks."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario revolve around the speed of decision-making:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Reactive Routing Updates**: Traditional Least Cost Routing (LCR) tables are often updated daily or weekly. If a downstream carrier has a quality dip (ASR drop) at 2 PM, Ian's team might not route traffic away until 5 PM, impacting customer experience.",
+          "**Margin Leakage**: With thousands of rate updates from vendors every week, it's easy for a route to become unprofitable unnoticed. A slight rate increase from a vendor that isn't reflected in customer pricing instantly eats margins.",
+          "**Silent Churn**: Customers rarely complain before they leave; they just stop sending traffic. Identifying a 10% drop in traffic from a specific account amidst billions of records is like finding a needle in a haystack."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I want our network to be self-healing. If a route degrades, the traffic should move automatically before a human even opens a ticket.",
+        "author": "Hypothetical scenario: Ian Reither, COO at Telnyx"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Network Operations Center"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Ian deploys **DealoAgent** as an intelligent layer on top of the Telnyx network operations. It digests real-time SIP signaling data, vendor rate sheets, and customer traffic patterns."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Dynamic AI-Driven Routing"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of static LCR, DealoAgent monitors route quality in real-time. If the ASR (Answer Seizure Ratio) for a specific route to Brazil drops below 40%, the AI instantly recalculates the next best route that maintains margin and switches traffic."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Result**: Customers experience seamless quality. The \"bad route\" ticket never even gets created because the system solved it in milliseconds."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Predictive Churn Detection"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent monitors traffic patterns for every single customer account. It detects subtle anomalies—like a customer slowly ramping down traffic on high-margin destinations while keeping low-margin ones."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: Ian receives an alert: *'Account XYZ has reduced traffic to France by 15% week-over-week, while industry average is flat. Competitor likely offered a lower rate.'* Ian's team reaches out proactively with a tailored offer to win the traffic back."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Automated Vendor Rate Management"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent parses incoming rate sheets from vendors (often messy PDFs or Excel files) instantly. It compares them against current sell rates to identify negative margin risks."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Profit Protection**: The AI flags: *'Vendor A raised rates to Vietnam mobile. Current pricing for Customer B will result in -2% margin.'* It automatically suggests a rate adjustment for the customer or routes to an alternative vendor."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Routing Latency",
+            "value": "<1s",
+            "description": "Time to switch away from a degraded route"
+          },
+          {
+            "label": "Margin Uplift",
+            "value": "+8%",
+            "description": "Preventing negative margin calls"
+          },
+          {
+            "label": "Churn Reduction",
+            "value": "25%",
+            "description": "Proactive detection of traffic drops"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For an operations leader like Ian Reither, DealoAgent turns network data into a competitive advantage. It moves Telnyx from a reactive stance—fixing problems after they happen—to a proactive one, where the network optimizes itself in real-time. This ensures that Telnyx remains the carrier of choice for high-growth businesses."
+      },
+      {
+        "type": "cta",
+        "title": "Optimize Your Network",
+        "description": "See how DealoAgent can bring AI intelligence to your VoIP operations.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
   }
 ]
