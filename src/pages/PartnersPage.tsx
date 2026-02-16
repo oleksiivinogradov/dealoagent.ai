@@ -10,8 +10,8 @@ export function PartnersPage() {
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>DealoAgent Partner Program | AI CRM Partnership</title>
-                <meta name="description" content="Join the DealoAgent Partner Program. Whether you're a reseller, affiliate, or solution partner, earn high commissions with the fastest growing AI CRM." />
+                <title>DealoAgent Partner Program — AI Workflow Hub Partnership</title>
+                <meta name="description" content="Join the DealoAgent.ai partner ecosystem. Resell, refer, or integrate the AI‑Native Workflow Hub and earn industry-leading commissions on sales, recruiting, and research automation." />
             </Helmet>
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-slate-900 pt-32 pb-20 lg:pt-40 lg:pb-28">

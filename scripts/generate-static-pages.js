@@ -22,38 +22,38 @@ const languages = ['en', 'uk', 'pl'];
 const pages = [
     {
         path: 'pitchdeck',
-        title: 'DealoAgent.ai - Pitch Deck',
-        description: 'View the DealoAgent.ai pitch deck. The first AI-native CRM that understands your deals.'
+        title: 'Pitch Deck — DealoAgent.ai | AI‑Native Workflow Hub',
+        description: 'View the DealoAgent.ai pitch deck. The AI‑Native Workflow Hub that automates sales, recruiting, VC research, and call center operations.'
     },
     {
         path: 'usecases',
-        title: 'Industry Use Cases - DealoAgent.ai',
-        description: 'Discover how DealoAgent.ai transforms sales, recruiting, and research workflows across different industries.'
+        title: 'AI Automation Use Cases — DealoAgent.ai',
+        description: 'Discover how DealoAgent.ai automates workflows across sales, recruiting, VC research, call centers, and VoIP trading with intelligent AI agents.'
     },
     {
         path: 'usecases/recruiting',
-        title: 'AI for Recruiting Agencies - DealoAgent.ai',
-        description: 'Automate candidate screening, parsing, and outreach with DealoAgent.ai.'
+        title: 'AI Recruiting Automation — DealoAgent.ai',
+        description: 'Automate candidate sourcing, CV parsing, and outreach with AI. Reduce hiring time by 85% with DealoAgent workflow automation.'
     },
     {
         path: 'usecases/softwaresales',
-        title: 'AI for Software Sales - DealoAgent.ai',
-        description: 'Accelerate your sales cycle and win more deals with AI-powered intelligence.'
+        title: 'AI Sales Automation for Software Companies — DealoAgent.ai',
+        description: 'Accelerate your sales pipeline with AI-powered competitive intelligence, automated outreach, and deal management workflows.'
     },
     {
         path: 'usecases/vcresearch',
-        title: 'AI for Venture Capital - DealoAgent.ai',
-        description: 'Transform deal flow and due diligence with AI. Automate research for VC firms.'
+        title: 'AI for Venture Capital Due Diligence — DealoAgent.ai',
+        description: 'Automate deal flow analysis, due diligence research, and portfolio monitoring with AI agents built for VC firms.'
     },
     {
         path: 'usecases/callcenter',
-        title: 'AI for Call Centers & BPOs - DealoAgent.ai',
-        description: 'AI-First Contact Center Intelligence. Slash AHT, boost FCR.'
+        title: 'AI Call Center Automation — DealoAgent.ai',
+        description: 'AI‑first contact center intelligence. Slash average handle time, boost first call resolution, and automate call center workflows.'
     },
     {
         path: 'usecases/voip',
-        title: 'AI for VoIP Wholesale Business - DealoAgent.ai',
-        description: 'AI-Native Business Intelligence for VoIP Wholesale.'
+        title: 'AI for VoIP Wholesale & Telecom Trading — DealoAgent.ai',
+        description: 'AI‑native business intelligence for VoIP wholesale. Automate rate management, traffic analysis, and partner outreach.'
     },
     {
         path: 'login',
@@ -67,13 +67,13 @@ const pages = [
     },
     {
         path: 'partners',
-        title: 'Partners - DealoAgent.ai',
-        description: 'Join the DealoAgent.ai partner ecosystem. Collaborate with us to bring AI-powered sales intelligence to more teams.'
+        title: 'DealoAgent Partner Program — AI Workflow Hub Partnership',
+        description: 'Join the DealoAgent.ai partner ecosystem. Resell, refer, or integrate the AI‑Native Workflow Hub and earn industry-leading commissions.'
     },
     {
         path: 'one_pager',
-        title: 'One Pager - DealoAgent.ai',
-        description: 'DealoAgent.ai at a glance. AI-native CRM for multi-channel B2B sales intelligence.'
+        title: 'One Pager — DealoAgent.ai | AI‑Native Workflow Hub',
+        description: 'DealoAgent.ai at a glance. AI‑Native Workflow Hub for automating sales, recruiting, VC research, and call center workflows.'
     }
 ];
 
