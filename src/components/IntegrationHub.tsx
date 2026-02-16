@@ -1,6 +1,7 @@
 import { Mail, MessageSquare, Calendar, BarChart3, Database, Phone, Building2, Search, Repeat, Send, User, Users, Plus } from "lucide-react";
 import dealoAgentLogo from "../assets/new_logo_no_text_for_fabi.png";
 import { useTranslation } from 'react-i18next';
+import { G2Widget } from "./G2Widget";
 
 // Top Users category
 const topUserItems = [
@@ -246,7 +247,7 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
 
       <div className={containerClassName}>
         {/* Section Title */}
-          <div className={titleWrapClassName}>
+        <div className={titleWrapClassName}>
           <div className={isOnePager ? "mb-1" : "mb-2 sm:mb-3"}>
             <span className={badgeClassName} data-pdf-badge>
               {t('integrationHub.badge')}
@@ -388,6 +389,13 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
           <p className={footerTextClassName}>
             {t('integrationHub.footer')}
           </p>
+
+          {/* G2 Widget Integration */}
+          {!isOnePager && (
+            <div className="flex justify-center mt-6">
+              <G2Widget />
+            </div>
+          )}
         </div>
       </div>
     </section>

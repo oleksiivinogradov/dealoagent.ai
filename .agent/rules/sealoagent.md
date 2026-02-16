@@ -100,6 +100,7 @@ After creating a blog post, **ALWAYS** prepare TWO versions of a LinkedIn post.
 **IMPORTANT**: 
 1. Do NOT post automatically.
 2. Prepare texts for **Oleksii Vynogradov** (Personal Profile) and **DealoAgent** (Company Page).
+3. **Use Real Links**: Do NOT use placeholders like [Link]. ALWAYS construct the full, absolute URL (e.g., https://dealoagent.ai/blog/slug) and verify it works locally or matches the build output.
 
 ### 1. Oleksii Vynogradov (Personal Profile)
 **Tone & Style:**
