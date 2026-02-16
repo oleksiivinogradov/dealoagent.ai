@@ -61,12 +61,15 @@ const generateSitemap = () => {
             const lPrefix = lang === 'en' ? '' : lang;
             const lUrl = cleanUrl(BASE_URL, lPrefix, relativePath);
 
+            // Lower priority for non-English pages to avoid them outranking English in general search
+            const langPriority = lang === 'en' ? priority : '0.5';
+
             sitemap += `
     <url>
         <loc>${lUrl}</loc>
         <lastmod>${lastmod}</lastmod>
         <changefreq>${changefreq}</changefreq>
-        <priority>${priority}</priority>
+        <priority>${langPriority}</priority>
 ${alternates}
     </url>`;
         });
