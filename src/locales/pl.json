@@ -112,6 +112,16 @@
                 "Łatwe wdrażanie i usuwanie członków zespołu",
                 "Konfigurowalne zestawy uprawnień dla różnych działów"
             ]
+        },
+        "periodicTasks": {
+            "title": "Zadania okresowe i inteligencja kalendarza",
+            "description": "Zautomatyzuj powtarzalne przepływy pracy i zsynchronizuj kalendarz, aby nigdy nie przegapić follow-upu, terminu ani przygotowania do spotkania. AI zmienia Twój harmonogram w proaktywny silnik sprzedaży.",
+            "items": [
+                "Zautomatyzowane zadania cykliczne: follow-upy, generowanie raportów, check-iny i przeglądy pipeline'u według Twojego harmonogramu",
+                "Synchronizacja kalendarza z Google Calendar i Outlook dla outreachu uwzględniającego spotkania i planowania bez konfliktów",
+                "AI sugeruje optymalny czas kontaktu na podstawie wzorców wcześniejszych interakcji i danych o zaangażowaniu odbiorców",
+                "Proaktywne śledzenie terminów i inteligentne przypomnienia o transakcjach, kamieniach milowych i odnowieniach umów"
+            ]
         }
     },
     "difference": {

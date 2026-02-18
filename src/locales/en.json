@@ -112,6 +112,16 @@
                 "Easy onboarding and offboarding of team members",
                 "Customizable permission sets for different departments"
             ]
+        },
+        "periodicTasks": {
+            "title": "Periodic Tasks & Calendar Intelligence",
+            "description": "Automate recurring workflows and sync your calendar to never miss a follow-up, deadline, or meeting prep. AI turns your schedule into a proactive sales engine.",
+            "items": [
+                "Automated recurring tasks: follow-ups, report generation, check-ins, and pipeline reviews on your schedule",
+                "Calendar sync with Google Calendar & Outlook for meeting-aware outreach and conflict-free scheduling",
+                "AI suggests optimal contact times based on past interaction patterns and recipient engagement data",
+                "Proactive deadline tracking and smart reminders for deals, milestones, and contract renewals"
+            ]
         }
     },
     "difference": {

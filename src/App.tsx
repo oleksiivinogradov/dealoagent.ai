@@ -51,6 +51,10 @@ import {
   MousePointerClick,
   FileText,
   Handshake,
+  CalendarClock,
+  Bell,
+  RefreshCw,
+  Timer,
 } from "lucide-react";
 import blogPosts from "./data/blogPosts.json";
 import blogPostsUk from "./data/blogPosts_uk.json";
@@ -168,6 +172,17 @@ export default function App() {
         { text: t('featureCards.roles.items.1'), icon: LogIn },
         { text: t('featureCards.roles.items.2'), icon: UserPlus },
         { text: t('featureCards.roles.items.3'), icon: Settings2 },
+      ],
+    },
+    {
+      icon: CalendarClock,
+      title: t('featureCards.periodicTasks.title'),
+      description: t('featureCards.periodicTasks.description'),
+      features: [
+        { text: t('featureCards.periodicTasks.items.0'), icon: RefreshCw },
+        { text: t('featureCards.periodicTasks.items.1'), icon: Calendar },
+        { text: t('featureCards.periodicTasks.items.2'), icon: Timer },
+        { text: t('featureCards.periodicTasks.items.3'), icon: Bell },
       ],
     },
   ];
