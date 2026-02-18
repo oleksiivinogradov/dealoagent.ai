@@ -8,12 +8,28 @@ Use multi_replace_file tool if replace_file_content tool doesn't work
 
 ## Blog Post Creation Rules
 
+### Mandatory Pre-Proposal Flow (MUST follow in order)
+
+Before proposing ANY new blog post, you MUST execute these 3 steps in order:
+
+**Step 1: Extract all blog post titles and dates**
+Run: `grep -i '"title"\|"publishDate"' src/data/blogPosts.json`
+List ALL existing posts with their publish dates.
+
+**Step 2: Map each post to its use case category**
+Available use cases: Recruiting, VC Research, Software Sales, Call Center, VoIP.
+For each blog post, identify which use case it belongs to. Then build a summary table:
+| Use Case | Last Covered | Post Title |
+Show the date of the MOST RECENT post for each use case. If a use case has NEVER been covered, mark it as "NEVER".
+
+**Step 3: Propose the next blog post based on the least-recently-covered use case**
+The use case with the oldest (or NEVER) coverage date gets priority. Present this analysis to the user BEFORE selecting a company/person.
+
 ### Content Guidelines
-CRITICAL - do not repeat companies and persons in posts. allways call grep -i "title" src/data/blogPosts.json and check if company used was not present
+CRITICAL - do not repeat companies and persons in posts. Always call `grep -i "title" src/data/blogPosts.json` and check if company used was not present.
 
 1. **Companies and Persons MUST be real**
-   - **Companies**: Select a real company from the specific industry. check in past blog posts if company was not mentioned in past!
-   - **History Check**: Before proposing a new post, ALWAYS check the last 10 posts to identify the use case with the longest gap in coverage. Propose the new topic based on this "least recently used" logic.
+   - **Companies**: Select a real company from the specific industry. Check in past blog posts if company was not mentioned in past!
    - **Persons**: The protagonist MUST be a **real person** currently holding the relevant position at that company.
      - **MANDATORY**: You MUST verify their existence and role on **LinkedIn** before writing the post. If you cannot find them on LinkedIn, choose a different person/company.
      - **MANDATORY**: Verification means you MUST **open the actual LinkedIn profile page in the browser** and confirm that BOTH the person's **full name** AND their **current company** match. Do NOT rely on search engine snippets or third-party sites — only the actual LinkedIn profile page counts as verification.
