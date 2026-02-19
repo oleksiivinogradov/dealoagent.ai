@@ -2,6 +2,7 @@ import { Mail, MessageSquare, Calendar, BarChart3, Database, Phone, Building2, S
 import dealoAgentLogo from "../assets/new_logo_no_text_for_fabi.png";
 import { useTranslation } from 'react-i18next';
 import { G2Widget } from "./G2Widget";
+import { ProductHuntWidget } from "./ProductHuntWidget";
 
 // Top Users category
 const topUserItems = [
@@ -390,10 +391,11 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
             {t('integrationHub.footer')}
           </p>
 
-          {/* G2 Widget Integration */}
+          {/* G2 Widget & Product Hunt Widget Integration */}
           {!isOnePager && (
-            <div className="flex justify-center mt-6">
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
               <G2Widget />
+              <ProductHuntWidget />
             </div>
           )}
         </div>
