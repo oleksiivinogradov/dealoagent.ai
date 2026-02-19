@@ -1,5 +1,87 @@
 [
   {
+    "id": "dealoagent-launches-on-product-hunt",
+    "slug": "dealoagent-launches-on-product-hunt",
+    "title": "DealoAgent.ai na Product Hunt! 🚀",
+    "subtitle": "Oficjalnie uruchamiamy nasz AI-native Sales CRM. Dołącz do dyskusji i pomóż nam kształtować przyszłość sprzedaży.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-19",
+    "readTime": "3 min czytania",
+    "category": "Aktualności",
+    "featured": true,
+    "coverImage": "/images/blog/product_hunt_launch_cover.png",
+    "excerpt": "Dziś wielki dzień: DealoAgent.ai jest na Product Hunt! Zobacz, jak zamieniamy chaos komunikacyjny w całodobowego asystenta sprzedaży i wesprzyj nasz start.",
+    "tags": [
+      "Start",
+      "Product Hunt",
+      "Aktualności",
+      "Sales CRM",
+      "AI"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Ten dzień wreszcie nadszedł! Z radością ogłaszamy, że **DealoAgent.ai jest oficjalnie na Product Hunt**."
+      },
+      {
+        "type": "paragraph",
+        "text": "Przez ostatni rok intensywnie pracowaliśmy nad stworzeniem CRM sprzedażowego, o jakim zawsze marzyliśmy — takiego, który nie tylko przechowuje dane, ale aktywnie pomaga sprzedawać. Dziś dzielimy się nim z najlepszą na świecie społecznością miłośników produktów i wczesnych użytkowników."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Dlaczego DealoAgent?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zespoły sprzedażowe toną w administracyjnym chaosie. Spędzają więcej czasu na wprowadzaniu danych, szukaniu starych e-maili i badaniu konkurencji niż na samej sprzedaży. Zbudowaliśmy DealoAgent, aby to zmienić."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Zunifikowana Komunikacja**: Wszystkie e-maile, rozmowy i czaty w jednym miejscu, przeszukiwalne według kontekstu, a nie tylko słów kluczowych.",
+          "**Wywiad Konkurencyjny**: AI, która monitoruje konkurencję i w czasie rzeczywistym sygnalizuje zmiany cen lub nowe funkcje.",
+          "**Aktywny Coaching**: Całodobowy asystent, który analizuje twoje rozmowy i sugeruje lepsze sposoby radzenia sobie z obiekcjami."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Wierzymy, że przyszłością CRM nie jest baza danych — jest nią agent."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Potrzebujemy Twojego wsparcia!"
+      },
+      {
+        "type": "paragraph",
+        "text": "Product Hunt to platforma oparta na społeczności, a Twoje wsparcie znaczy dla nas bardzo wiele. Oto jak możesz pomóc:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "1. **Odwiedź naszą stronę na Product Hunt**: Kliknij przycisk poniżej!",
+          "2. **Zostaw recenzję**: Jeśli już korzystałeś z DealoAgent, daj znać innym, co myślisz.",
+          "3. **Dołącz do dyskusji**: Zadawaj pytania lub po prostu przywitaj się w komentarzach."
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Wesprzyj DealoAgent na Product Hunt",
+        "description": "Sprawdź naszą stronę startową, obejrzyj demo i dołącz do rozmowy!",
+        "primaryButton": {
+          "text": "Odwiedź Product Hunt 🚀",
+          "url": "https://www.producthunt.com/products/dealoagent-ai"
+        },
+        "secondaryButton": {
+          "text": "Uzyskaj Demo",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "hubspot-cso-scales-global-sales-ai",
     "slug": "how-david-cohen-hubspot-scales-global-sales-with-ai",
     "title": "Jak David Cohen (CSO w HubSpot) mógłby skalować globalną sprzedaż z AI",
