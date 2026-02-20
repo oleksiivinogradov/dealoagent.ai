@@ -393,9 +393,21 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
 
           {/* G2 Widget & Product Hunt Widget Integration */}
           {!isOnePager && (
-            <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
               <G2Widget />
               <ProductHuntWidget />
+              <a
+                href="https://www.shipit.buzz/products/dealoagentai?ref=badge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 transition-all duration-300 hover:scale-105"
+              >
+                <img
+                  src="https://www.shipit.buzz/api/products/dealoagentai/badge?theme=light"
+                  alt="Featured on Shipit"
+                  className="h-[54px] w-auto"
+                />
+              </a>
             </div>
           )}
         </div>
