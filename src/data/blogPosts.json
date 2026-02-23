@@ -1,5 +1,158 @@
 [
   {
+    "id": "index-ventures-partner-transformation-dealoagent",
+    "slug": "how-martin-mignot-index-ventures-transforms-network-intelligence-ai",
+    "title": "How Martin Mignot (Partner at Index Ventures) Could Scale Network Intelligence with AI",
+    "subtitle": "A hypothetical deep dive: Moving from fragmented CRM data to an interactive, AI-powered intelligence graph across European and global startup networks.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-23",
+    "readTime": "9 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/index_ventures_partner_workspace.png",
+    "excerpt": "For a Partner at a top-tier firm like Index Ventures, managing thousands of relationships across continents is a monumental challenge. In this hypothetical case study, we explore how Martin Mignot could use DealoAgent to unlock the hidden strength of his network, automate board briefings, and spot early signals of portfolio distress.",
+    "tags": [
+      "Case Study",
+      "Venture Capital",
+      "Index Ventures",
+      "AI",
+      "Network Intelligence"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Martin Mignot, Partner at Index Ventures, could leverage DealoAgent.AI. Index Ventures is a real, premier global venture capital firm, and Martin is a real Partner, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Index Ventures** is renowned for backing generation-defining software companies from their earliest days. For a Partner operating across Europe and the US, the most valuable asset isn't capital—it's the collective network and the speed at which intelligence can be operationalized."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The Fragmented Network Problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Martin Mignot**, a Partner at Index Ventures who has been with the firm for over 16 years. Martin's track record includes investments in some of the most successful tech companies globally. However, as the portfolio and the team grow, extracting actionable insights from the sheer volume of interactions becomes increasingly complex."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario center around data silos and manual synthesis:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**The 'Generic CRM' Limitation**: Relying on platforms built for transactional sales, not the complex, multi-year relationship tracking required in venture capital. Vital context is often lost between standard data fields.",
+          "**The Board Briefing Bottleneck**: Spending hours, sometimes days, manually compiling briefings before crucial board meetings by hunting through old emails, notes, and disparate documents.",
+          "**Hidden Distress Signals**: Missing early warning signs of startup distress that are subtly buried in the frequency or tone of founder communications.",
+          "**The Network Operationalization Gap**: Struggling to seamlessly unlock the collective network of all partners. When a specific introduction is needed, the process often involves blasting the team on Slack rather than instantly knowing who has the strongest connection."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Our network is our biggest advantage, but we often spend too much time trying to figure out who knows whom, and not enough time actually leveraging those connections.",
+        "author": "Hypothetical scenario: Martin Mignot, Partner at Index Ventures"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Intelligence Layer for VC"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Martin implements **DealoAgent** to act as a silent, intelligent layer over the firm's existing communications. It doesn't require manual data entry; instead, it passively builds a dynamic relationship graph."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. The Dynamic Relationship Graph"
+      },
+      {
+        "type": "paragraph",
+        "text": "No more guessing who has the best path to a founder or corporate development executive. DealoAgent analyzes historical email metadata and communication patterns to map the firm's true network securely."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: Martin asks DealoAgent, 'Who has the strongest relationship with the VP of Engineering at Stripe?' Instantly, the AI responds: *'Your colleague in San Francisco exchanged 14 emails with her last month regarding a portfolio company technical review. The sentiment was highly positive. Would you like me to draft an intro request?'*"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Auto-Generated Board Briefings"
+      },
+      {
+        "type": "paragraph",
+        "text": "The manual drag of meeting preparation is eliminated. DealoAgent synthesizes recent communications, market data, and portfolio metrics into a cohesive format."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Effect**: Before a board meeting for a key portfolio company, DealoAgent delivers an automated brief: *'Since the last meeting, the CEO has highlighted hiring challenges for the new Dublin office in 3 separate emails. Top search term competitors in their space have increased marketing spend by 15% this quarter. Here is a summary of all partner interactions with the leadership team over the past 90 days.'* Martin arrives fully briefed without sacrificing a Sunday afternoon."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Predictive Portfolio Alerts"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent acts as an early warning system, analyzing the sentiment and velocity of founder updates."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Early Warning**: The AI flags: *'PORTFOLIO ALERT: Communication frequency from the Founder of Startup X has dropped by 40% over the last four weeks, and the tone of recent product updates has shifted from optimistic to defensive. Recommended action: Schedule a casual check-in coffee this week.'* Martin can offer support before a minor hurdle becomes a significant crisis."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Network Utilization",
+            "value": "Instant",
+            "description": "'Who knows whom' queries answered in seconds"
+          },
+          {
+            "label": "Prep Time Saved",
+            "value": "8+ hrs/month",
+            "description": "Auto-generated board and meeting briefings"
+          },
+          {
+            "label": "Portfolio Visibility",
+            "value": "Proactive",
+            "description": "Predictive alerts based on communication sentiment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a Partner navigating the high-stakes environment of global venture capital, time and intelligence are the ultimate currencies. By leveraging DealoAgent, Martin Mignot transforms the firm's collective communication history into a proactive, searchable intelligence asset. It ensures that Index Ventures brings the full weight of its network to every founder interaction, efficiently and effortlessly."
+      },
+      {
+        "type": "cta",
+        "title": "Scale Your Oversight",
+        "description": "See how DealoAgent can give your firm a relationship graph and automated briefings.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "dealoagent-launches-on-product-hunt",
     "slug": "dealoagent-launches-on-product-hunt",
     "title": "DealoAgent.ai is Live on Product Hunt! 🚀",
