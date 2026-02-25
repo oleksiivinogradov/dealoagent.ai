@@ -1,0 +1,152 @@
+{
+    "id": "david-casem-telnyx-voip-margin-leakage",
+    "slug": "how-david-casem-telnyx-eliminates-margin-leakage-with-ai",
+    "title": "How David Casem (CEO at Telnyx) Could Eliminate Margin Leakage with AI",
+    "subtitle": "A hypothetical deep dive: Automating routing decisions and margin protection for a global VoIP carrier.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-25",
+    "readTime": "8 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/telnyx_ceo_voip_dashboard.png",
+    "excerpt": "For a CEO like David Casem at Telnyx, managing global interconnection margins is a high-stakes game. In this hypothetical case study, we explore how he could use DealoAgent to gain real-time ASR visibility, stop margin leakage instantly, and scale partner relationships without adding headcount.",
+    "tags": [
+        "Case Study",
+        "VoIP",
+        "Telnyx",
+        "AI",
+        "Telecommunications"
+    ],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "NOTE: This is a hypothetical case study exploring how David Casem, Co-founder & CEO of Telnyx, could leverage DealoAgent.AI. Telnyx is a real, world-leading next-generation communications platform, but this scenario is imagined to illustrate DealoAgent's capabilities."
+        },
+        {
+            "type": "paragraph",
+            "text": "**Telnyx** powers the communications of some of the world's most innovative enterprises. When you are managing a global IP network moving billions of minutes and messages, every fraction of a cent in margin variance matters. For a CEO, the challenge is ensuring that this massive engine runs efficiently, without getting bogged down by the sheer complexity of thousands of carrier interconnects."
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "The Challenge: The Margin Fog"
+        },
+        {
+            "type": "paragraph",
+            "text": "Meet **David Casem**, the Co-founder & CEO of Telnyx. Since founding the company in 2009, David has focused on building a purpose-built, global private network for communications. But in the wholesale voice and data world, operational details define profitability. A sudden rate increase from a vendor or a drop in ASR (Answer Seizure Ratio) on a key route can bleed significant profit if not caught in time."
+        },
+        {
+            "type": "paragraph",
+            "text": "His primary pain points in this hypothetical scenario revolve around visibility and speed:"
+        },
+        {
+            "type": "list",
+            "items": [
+                "**Not Speaking The Language**: Generic CRMs don't understand 'ASR', 'ACD' (Average Call Duration), or 'Ports'. They track basic 'Opportunities', forcing the team to rely on messy, disconnected spreadsheets to track real business metrics.",
+                "**Management Blindspots**: Spending too much time chasing traffic managers for updates instead of focusing on high-level strategy and securing enterprise deals.",
+                "**Margin Leakage**: Losing money on negative margin routes often because manual rate sheet updates and routing table adjustments are simply too slow."
+            ]
+        },
+        {
+            "type": "quote",
+            "text": "In the wholesale telecom business, a delay in updating a routing table based on a new rate sheet means you are effectively subsidizing your customers' calls. We need real-time, automated control.",
+            "author": "Hypothetical scenario: David Casem, CEO at Telnyx"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Enter DealoAgent: The AI Intelligence Layer"
+        },
+        {
+            "type": "paragraph",
+            "text": "In this hypothetical transformation, David deploys **DealoAgent** to act as the AI-powered intelligence layer across Telnyx's operations. It doesn't just store data; it actively monitors traffic, understands telecom metrics, and automates decisions."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "1. VoIP-Native Ecosystem"
+        },
+        {
+            "type": "paragraph",
+            "text": "David's team no longer wrestles with tools built for standard B2B sales. DealoAgent speaks VoIP natively."
+        },
+        {
+            "type": "paragraph",
+            "text": "**The Transformation**: The AI processes complex interconnection deals, understands capacity agreements, and automatically parses standard rate sheets. When a partner emails a new rate sheet, DealoAgent ingests the CSV, identifies rate increases, and instantly highlights routes that are no longer profitable. The team works twice as fast because the software actually understands their daily workflow."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "2. AI Employee Oversight & Connected Data"
+        },
+        {
+            "type": "paragraph",
+            "text": "David gains a 'God's eye view' of his traffic management team."
+        },
+        {
+            "type": "paragraph",
+            "text": "**The Insight**: All financial and routing data is connected directly to Softswitch realtime data streams for single-source-of-truth accuracy. David has a real-time view of every traffic manager's performance. The AI automatically identifies coaching needs—for example, flagging if an account manager is failing to proactively negotiate rates on declining routes."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Real-time Margin Tracking"
+        },
+        {
+            "type": "paragraph",
+            "text": "Margin leakage becomes a problem of the past. DealoAgent acts as an automated firewall for profitability."
+        },
+        {
+            "type": "paragraph",
+            "text": "**The Effect**: *\"ALERT: Originator A traffic to France Mobile has dropped to -0.001 margin due to a sudden rate hike from Terminator B. Recommended action: Route via Terminator C.\"* David sees exact profit per minute per destination in real-time, ensuring not a single minute of traffic runs at a negative margin unexpectedly."
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "The Hypothetical Impact"
+        },
+        {
+            "type": "metrics",
+            "data": [
+                {
+                    "label": "Margin Leakage",
+                    "value": "Eliminated",
+                    "description": "Zero negative margin routes undetected"
+                },
+                {
+                    "label": "Response Time",
+                    "value": "Instant",
+                    "description": "Rate sheets parsed and analyzed instantly"
+                },
+                {
+                    "label": "Profitability",
+                    "value": "+20%",
+                    "description": "Increase in overall margin per minute"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Conclusion"
+        },
+        {
+            "type": "paragraph",
+            "text": "For a visionary CEO like David Casem, surviving in the competitive landscape of next-generation communications requires more than just a strong network; it requires impeccable operational execution. By utilizing DealoAgent, Telnyx can transform reactive data analysis into proactive, AI-driven margin protection. The result is a highly scalable, fiercely profitable telecom operation where every decision is backed by real-time intelligence."
+        },
+        {
+            "type": "cta",
+            "title": "Scale Your VoIP Business",
+            "description": "See how DealoAgent can eliminate your margin leakage and optimize routing automatically.",
+            "primaryButton": {
+                "text": "Get a Demo",
+                "url": "https://app.dealoagent.ai"
+            },
+            "secondaryButton": {
+                "text": "View Pricing",
+                "url": "https://app.dealoagent.ai"
+            }
+        }
+    ]
+}
