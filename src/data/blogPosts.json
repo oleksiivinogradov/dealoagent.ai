@@ -1,5 +1,168 @@
 [
   {
+    "id": "teleperformance-vp-operations-call-center-quality-ai",
+    "slug": "how-vijay-bhasin-teleperformance-transforms-call-center-quality-ai",
+    "title": "How Vijay Bhasin (VP of Operations at Teleperformance) Could Transform Call Center Quality with AI",
+    "subtitle": "A hypothetical deep dive: Moving from 1% QA sampling to 100% AI-powered quality audits across thousands of agents.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-27",
+    "readTime": "10 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/teleperformance_ops_dashboard.png",
+    "excerpt": "Managing thousands of call center agents at Teleperformance means quality cannot be left to chance. In this hypothetical case study, we explore how Vijay Bhasin could use DealoAgent to achieve 100% QA coverage, build a compliance firewall, and unlock natural language BI for instant operational answers.",
+    "tags": [
+      "Case Study",
+      "Call Center",
+      "Teleperformance",
+      "AI",
+      "Quality Assurance",
+      "BPO Operations"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Vijay Bhasin, VP of Operations at Teleperformance, could leverage DealoAgent.AI. Teleperformance is a real, major global digital business services company, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Teleperformance** is a global leader in digital business services, serving major brands with operations across the globe. For an operations VP overseeing massive teams in regions like India, the mandate is clear: deliver consistent, compliant, world-class service at a scale that makes manual oversight physically impossible."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The 1% QA Trap at Massive Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Vijay Bhasin**, VP of Operations at Teleperformance in India. With deep expertise in managing complex BPO operations, Vijay knows that even with world-class processes, the fundamental math of manual quality assurance doesn't add up at scale."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario stem from the limitations of traditional QA:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**The 1% QA Sample Liability**: Traditional QA teams can only review roughly 1% of interactions. This leaves massive blind spot exposure on 99% of interactions, where compliance violations or coaching opportunities go completely unnoticed.",
+          "**Blind Spot Exposure**: Compliance breaches often aren't discovered until a client complains. By then, the damage is done.",
+          "**Biased QA Scoring**: Performance reviews can be subjective and inconsistent, based on random call samples.",
+          "**Unclear Seat Utilization**: It is challenging to track true Occupancy and justify headcount efficiency to clients in real-time."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Our operations are massive. Making million-dollar decisions about staffing and program performance based on a 1% sample size leaves too much to chance.",
+        "author": "Hypothetical scenario: Vijay Bhasin, VP Operations at Teleperformance"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: From 1% Samples to 100% Intelligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Vijay deploys **DealoAgent** as the AI-powered quality and operations intelligence layer. It connects to the voice, chat, and email channels, analyzing every single interaction in real-time."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. 100% QA Audit"
+      },
+      {
+        "type": "paragraph",
+        "text": "Vijay's QA team no longer wrestles with random sampling. DealoAgent listens to and scores **every single call** automatically."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: AI scores and audits EVERY single call. Vijay now knows exactly what is happening in real-time across the entire floor. The system flags calls where an agent missed a verification step or failed a resolution, allowing QA analysts to become targeted coaches instead of random samplers."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Compliance Firewall"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent builds an active defense against liability."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: Vijay's team can search across all transcripts for \"risky promises\" or specific prohibited terms to mitigate liability instantly. If a compliance breach occurs, it's caught on the call, not weeks later."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Occupancy & Shrinkage Insights"
+      },
+      {
+        "type": "paragraph",
+        "text": "Leaderboards based on metrics like \"AHT\" (Average Handle Time) and \"Adherence\" let Vijay reward true productivity rather than just activity."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Natural Language BPO Queries"
+      },
+      {
+        "type": "paragraph",
+        "text": "Vijay gains the ability to talk directly to his operational data."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: Instead of waiting for data analysts, Vijay can ask DealoAgent: \"Show me the trend of happy customers this month\" and get an instant chart to share with stakeholders."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "QA Audit Coverage",
+            "value": "100%",
+            "description": "Every single interaction is analyzed and scored"
+          },
+          {
+            "label": "Compliance Disputes",
+            "value": "Near Zero",
+            "description": "Prohibited language and missed disclosures caught instantly"
+          },
+          {
+            "label": "Analyst Efficiency",
+            "value": "10x",
+            "description": "QA team focuses on coaching, not random listening"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For an operations leader like Vijay Bhasin navigating the scale of a global BPO like Teleperformance, AI is the key to escaping the 1% QA trap. By deploying DealoAgent, operations evolve from reactive damage control to proactive quality engineering. It ensures consistent, compliant service at a scale impossible for human teams alone."
+      },
+      {
+        "type": "cta",
+        "title": "Upgrade Your Call Center",
+        "description": "See how DealoAgent can give your BPO operations 100% QA coverage and real-time intelligence.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "david-casem-telnyx-voip-margin-leakage",
     "slug": "how-david-casem-telnyx-eliminates-margin-leakage-with-ai",
     "title": "How David Casem (CEO at Telnyx) Could Eliminate Margin Leakage with AI",

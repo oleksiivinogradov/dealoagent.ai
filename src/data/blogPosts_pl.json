@@ -1,5 +1,126 @@
 [
   {
+    "id": "teleperformance-vp-operations-call-center-quality-ai",
+    "slug": "how-vijay-bhasin-teleperformance-transforms-call-center-quality-ai",
+    "title": "Jak Vijay Bhasin (VP of Operations w Teleperformance) mógłby przekształcić jakość Contact Center dzięki AI",
+    "subtitle": "Hipotetyczna analiza: Przejście od 1% próbkowania QA do 100% audytów jakości opartych na AI wśród tysięcy agentów.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-02-27",
+    "readTime": "10 min czytania",
+    "category": "Studium Przypadku",
+    "featured": true,
+    "coverImage": "/images/blog/teleperformance_ops_dashboard.png",
+    "excerpt": "Zarządzanie tysiącami agentów call center w Teleperformance oznacza, że jakości nie można pozostawić przypadkowi. W tym hipotetycznym studium przypadku badamy, jak Vijay Bhasin mógłby użyć DealoAgent do osiągnięcia 100% pokrycia QA.",
+    "tags": [
+      "Studium Przypadku",
+      "Call Center",
+      "Teleperformance",
+      "AI",
+      "Zapewnienie Jakości",
+      "Operacje BPO"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: To jest hipotetyczne studium przypadku badające, jak Vijay Bhasin, VP of Operations w Teleperformance, mógłby wykorzystać DealoAgent.AI."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Teleperformance** jest światowym liderem w dziedzinie cyfrowych usług biznesowych. Dla VP nadzorującego ogromne zespoły w regionach takich jak Indie, mandat jest jasny: dostarczać spójne usługi na skalę, która czyni ręczny nadzór fizycznie niemożliwym."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Pułapka 1% QA w wielkiej skali"
+      },
+      {
+        "type": "paragraph",
+        "text": "Poznaj Vijaya Bhasina. Mając głębokie doświadczenie w zarządzaniu operacjami BPO, Vijay wie, że fundamentalna matematyka ręcznego zapewniania jakości nie działa w takiej skali."
+      },
+      {
+        "type": "paragraph",
+        "text": "Jego główne bolączki wynikają z ograniczeń tradycyjnego QA:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Ryzyko próbki 1% QA**: Tradycyjne zespoły QA mogą sprawdzić tylko około 1% interakcji. Pozostawia to ogromną ślepą plamę na 99% połączeń.",
+          "**Ekspozycja na ślepe punkty**: Naruszenia zgodności często nie są odkrywane, dopóki klient nie złoży skargi.",
+          "**Stronnicze ocenianie QA**: Oceny wydajności mogą być subiektywne i niespójne.",
+          "**Niejasne wykorzystanie stanowisk**: Trudno jest śledzić prawdziwe Occupancy (Zajętość)."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wejście DealoAgent: Od 1% do 100% Inteligencji"
+      },
+      {
+        "type": "paragraph",
+        "text": "W tej hipotetycznej transformacji Vijay wdraża **DealoAgent** jako warstwę inteligencji oceniającej jakość opartą na sztucznej inteligencji."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. 100% Audyt QA"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sztuczna inteligencja automatycznie odsłuchuje i ocenia **każdą pojedynczą rozmowę**."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Zapora Zgodności (Compliance Firewall)"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent buduje aktywną obronę przed odpowiedzialnością cywilną, natychmiast wychwytując błędy."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Wgląd w Occupancy i Skurcz"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tabele wyników oparte na metrykach takich jak \"AHT\" i \"Adherence\" pozwalają Vijayowi nagradzać prawdziwą produktywność."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Zapytania BPO w języku naturalnym"
+      },
+      {
+        "type": "paragraph",
+        "text": "Vijay może po prostu zapytać DealoAgent: \"Pokaż mi trend zadowolonych klientów w tym miesiącu\" i otrzymać natychmiastowy wykres."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wniosek"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dla lidera operacyjnego takiego jak Vijay Bhasin, AI jest kluczem do ucieczki z pułapki 1% QA. Dzięki wdrożeniu DealoAgent operacje ewoluują od reaktywnej kontroli uszkodzeń do proaktywnej inżynierii jakości."
+      },
+      {
+        "type": "cta",
+        "title": "Zaktualizuj swoje Call Center",
+        "description": "Zobacz, jak DealoAgent może zapewnić Twoim operacjom BPO 100% pokrycie QA.",
+        "primaryButton": {
+          "text": "Zdobądź Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Zobacz cennik",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "david-casem-telnyx-voip-margin-leakage",
     "slug": "jak-david-casem-telnyx-eliminuje-utrate-marzy-dzieki-ai",
     "title": "Jak David Casem (CEO w Telnyx) Mógłby Wyeliminować Utratę Marży Dzięki AI",
