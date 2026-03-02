@@ -1,5 +1,171 @@
 [
   {
+    "id": "insight-global-ceo-bert-bean-recruiting-ai",
+    "slug": "how-bert-bean-insight-global-scales-staffing-ai",
+    "title": "Jak Bert Bean (CEO w Insight Global) mógłby skalować rekrutację za pomocą AI",
+    "subtitle": "Hipotetyczna głęboka analiza: Przekształcenie masowej agencji rekrutacyjnej z operacji \"opartej na ludziach\" w silnik dochodowy rozszerzony o sztuczną inteligencję.",
+    "author": "Zespół DealoAgent",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-03-02",
+    "readTime": "10 min czytania",
+    "category": "Studium przypadku",
+    "featured": true,
+    "coverImage": "/images/blog/insight_global_ceo_dashboard.png",
+    "excerpt": "Zarządzanie firmą rekrutacyjną najwyższej klasy, taką jak Insight Global, oznacza równoważenie szybkości z jakością na ogromną skalę. W tym hipotetycznym badaniu przypadku sprawdzamy, w jaki sposób Bert Bean mógłby wykorzystać DealoAgent do prognozowania przychodów, egzekwowania wysokiej jakości doświadczeń kandydatów i automatyzacji coachingu efektywności.",
+    "tags": [
+      "Studium przypadku",
+      "Rekrutacja",
+      "Insight Global",
+      "AI",
+      "Przywództwo w rekrutacji"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: To jest hipotetyczne studium przypadku, które bada, jak Bert Bean, Dyrektor Generalny (CEO) w Insight Global, mógłby wykorzystać DealoAgent.AI. Insight Global to prawdziwa, wiodąca w branży firma oferująca usługi personelu, ale ten scenariusz został stworzony w celu zilustrowania możliwości DealoAgent."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Insight Global** jest potęgą w branży rekrutacyjnej, łącząc najlepsze talenty z najbardziej innowacyjnymi firmami na świecie. Dla Dyrektora Generalnego zarządzającego tysiącami account managerów i rekruterów wyzwaniem nie jest tylko realizacja zatrudnień - to budowa przewidywalnego, skalowalnego silnika, który nie opiera się wyłącznie na bohaterstwie (lub wypaleniu) pojedynczych wykonawców. Celem jest przekształcenie \"sztuki\" rekrutacji w naukę opartą na danych, wspomaganą przez sztuczną inteligencję."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Skalowanie biznesu opartego na ludziach"
+      },
+      {
+        "type": "paragraph",
+        "text": "Poznajcie **Berta Beana**, Dyrektora Generalnego Insight Global. Pod jego kierownictwem firma ogromnie się rozwinęła. Ale skalowanie biznesu opartego na ludziach wiąże się z nieodłącznymi tarciami i lukami w widoczności."
+      },
+      {
+        "type": "paragraph",
+        "text": "Jego główne punkty bólu w tym hipotetycznym scenariuszu krążą wokół spójności i widoczności operacyjnej:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Operacyjna czarna skrzynka**: Poleganie na cotygodniowych raportach z ręki i dashboardach CRM, aby zrozumieć, co dzieje się na parkiecie. Zanim zarząd zobaczy dane, często jest już za późno na naprawienie problemów.",
+          "**Ślepe punkty w pracy**: Trudno odróżnić bycie zajętym od rzeczywistego postępu. Ustalenie, kto naprawdę osiąga wyniki, a kto potrzebuje pomocy, wymaga przekopywania się przez niepowiązane logi CRM i przysłuchiwania się telefonom.",
+          "**Zarządzanie reaktywne**: Korygowanie podejścia pracownika często wymaga obecności przy telefonie lub sprawdzania losowych e-maili. Kierownictwo zawsze reaguje na problemy, zamiast im zapobiegać.",
+          "**Rozproszona kontrola**: Dane dotyczące sprzedaży (pozyskiwania klientów) i rekrutacji (poszukiwania kandydatów) są rozłączone, co uniemożliwia uzyskanie jednolitego, przejrzystego obrazu stanu agencji w czasie rzeczywistym."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Muszę wiedzieć, jakie będą nasze przychody w przyszłym kwartale na podstawie rzeczywistej jakości dzisiejszych rozmów, a nie tylko stopnia aktywności. Chcę, aby każdy nowy rekruter już od pierwszego dnia brzmiał jak ktoś z 10-letnim stażem.",
+        "author": "Hipotetyczny scenariusz: Bert Bean, CEO w Insight Global"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Poznajcie DealoAgent: Warstwa inteligencji AI"
+      },
+      {
+        "type": "paragraph",
+        "text": "W tej hipotetycznej transformacji, Bert wdrożył **DealoAgent** do pracy we wszystkich biurach Insight Global. Służy on jako warstwa sztucznej inteligencji wspomagającej każdego rekrutera czy account managera, jako pomoc i zapewnienie pełnej przejrzystości dla zarządu."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Inteligencja konwersacyjna i raportowanie"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bert nie czeka już na cotygodniowe zestawienia. DealoAgent zapewnia oparty na naturalnym języku interfejs do wszystkich danych firmowych agencji."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Wyniki**: Bert może po prostu czatować z AI, aby otrzymywać aktualizacje stanu projektów w czasie rzeczywistym z poziomu swojego telefonu. Zadanie pytania \"Pokaż mi lejek sprzedaży w biurze w Atlancie\" lub \"Wizualizuj aktywności dla działań rekruterów z działu inżynieryjnego\" skutkuje pokazaniem przez AI interaktywnych schematów bazujących na rozmowach (w czasie reczewistym), a nie samych logach w CRM."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Przejrzystość wykonania wykraczająca poza samą aktywność"
+      },
+      {
+        "type": "paragraph",
+        "text": "Czasy oceny tylko według wygenerowanej liczby rozmów już dawno odeszły."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Efekt**: AI wskazuje na najlepiej performujących oraz tych męczących się, na podstawie oceniania *rezultatów w rozmowach* czy samych opinii klientów. Algorytmy mogą natychmiast stwierdzić czy dany wykonawca tylko frustruje docelowych konsumentów złą linią kwalifikacyjną czy faktycznie pomaga generować zyski."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Skalowany Ai coatching"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rozbudowa tysięcy pracowników wymaga potężnego wsparcia coach'ingowego. Dlatego dealeAgent pracuje tutaj takżew formie pomocnika gotowego wspierać każdy dział w trybie on-line."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Transformacja**: Działający z ramienia pracowniczej grupy - podwładni Berta mogą w chwile interweniować. Ai analiziuje sposób samej komunikacji i wyróżnia punkty nad, kótrymi dane grupy powinny poprawić swoje wyniki (na np: \"Accaunt manager X powinien zadawać więcej konkretniejszych oraz bardziej pogłębionych pytań budżetoych a nie ogólników\") pomagając przy tym dostarczać szybszy i ukierunkowany fitbeck."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Proaktywne kierowanie"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent gromadzi poszatkowane logi pomiędzy sprzedawaną oraz rektrutacją do scentralizowanego sytemu z jednym motorem predykaturyjnym."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Wcześniejsze rozpoznanie ryzyk**: *\"ALERT: Gwałtowny trend zapytań chmurowego z dziedziny programowania zanotoawny na ok 40% skok rozmowach dla ameryki południowej. A akcja polecająca nie została zaplanowana i podjęta. Sugerowany plan działań: zmień wektor poszkukiwań dla kandydatów z grup inżynieryjnej by podjąć te rynkowe wymagania.\"* Tego typu alerty sprawiają, ze Bert operuje agencją trzymając rękę pulsnie na bieżących poczynaniach by w razie co bez trudu nakierowaći sterowąć tak duzym statkiem badając o dane wyjściowe."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wpływ hipotetyczny"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Prędkość generowania wyników",
+            "value": "Wysoko w skali on-Line",
+            "description": "Formuowanie zapytań opartych o naturalny ludzki kod zapytania."
+          },
+          {
+            "label": "Czas wsparcia procesowego",
+            "value": "-30%",
+            "description": "Znaczcienie szybsza organizacjia na poczatku wspracia w on-bordning u nowego naboru"
+          },
+          {
+            "label": "Trafność oszacowań",
+            "value": "95%+",
+            "description": "Predykcje tworzone przy uzytkciu wyników interkacji - rezyngujc przy optiymizmie oceny z reki samago raportujacéo."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Podsumowanie"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dla Dyrektora Generalnego(a więc także właściciela biznesu o takiej wielkości b.długookresowych starategi biznesu i podtrzymania spójnej jendosći standarddów to kwestai najistotniejsza ze wszyatki - Bert Bean jako lider giganta, tj - Insight Global z pewnościa tego dośiwadzcy. Po przyłączeniu Agenta całe systemowe zarządanie rekruterzym agnetcją porzedzie do etapu transparętniej preykcyjene maszyny zarobkowej która z \"zamknietego pudełka\" ewoluuje przez zastosowaniu intelgiencji. Dając z jednej straony pracownikowe wspierającego a darmowego bot'a pomacanego tak w pracy ale z prsptykty lider - niespotykania wyoskom i szybką analizę potrzebną na teraz by decydoywać natuchmiat. "
+      },
+      {
+        "type": "cta",
+        "title": "Rozskaluj także swój zespół",
+        "description": "Zpoznaj się i zobacz osobiście tak i ty użyjesz oprogramowania jako własnego prognozu zysku ale  przy tzm nie tarć jakości po rzed automatyze.",
+        "primaryButton": {
+          "text": "Prośba o prezentacje",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Srawdz cennik oprogramopwania",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "teleperformance-vp-operations-call-center-quality-ai",
     "slug": "how-vijay-bhasin-teleperformance-transforms-call-center-quality-ai",
     "title": "Jak Vijay Bhasin (VP of Operations w Teleperformance) mógłby przekształcić jakość Contact Center dzięki AI",

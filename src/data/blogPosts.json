@@ -1,5 +1,171 @@
 [
   {
+    "id": "insight-global-ceo-bert-bean-recruiting-ai",
+    "slug": "how-bert-bean-insight-global-scales-staffing-ai",
+    "title": "How Bert Bean (CEO at Insight Global) Could Scale Staffing with AI",
+    "subtitle": "A hypothetical deep dive: Transforming a massive staffing agency from \"people-heavy\" operations to an AI-augmented revenue engine.",
+    "author": "DealoAgent Team",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    "publishDate": "2026-03-02",
+    "readTime": "10 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/insight_global_ceo_dashboard.png",
+    "excerpt": "Running a top-tier staffing firm like Insight Global means balancing speed with quality at immense scale. In this hypothetical case study, we explore how Bert Bean could use DealoAgent to predict revenue, enforce high-quality candidate experiences, and automate performance coaching.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "Insight Global",
+      "AI",
+      "Staffing Leadership"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Bert Bean, CEO at Insight Global, could leverage DealoAgent.AI. Insight Global is a real, industry-leading staffing and services company, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Insight Global** is a powerhouse in the staffing industry, connecting top talent with the world's most innovative companies. For a CEO managing thousands of account managers and recruiters, the challenge isn't just making placements—it's building a predictable, scalable engine that doesn't rely solely on the heroism (or burnout) of individual performers. The goal is to turn the \"art\" of recruiting into a data-driven, AI-augmented science."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Scaling the People Business"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Bert Bean**, CEO of Insight Global. Under his leadership, the company has grown tremendously. But scaling a people-based business comes with inherent friction and visibility gaps."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario revolve around consistency and operational visibility:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Operational Black Box**: Relying on weekly manual reports and CRM dashboards to understand what is happening on the floor. By the time leadership sees the data, it's often too late to fix issues.",
+          "**Performance Blind Spots**: It is hard to distinguish between busy work and actual progress. Determining who is truly performing and who needs help requires digging through disconnected CRM logs and shadowing calls.",
+          "**Reactive Management**: Correcting an employee's approach often requires sitting in on calls or reviewing random emails. Management is always reacting to problems rather than preventing them.",
+          "**Fragmented Oversight**: Sales (client acquisition) and recruiting (candidate sourcing) data are disconnected, making it impossible to get a unified, real-time view of the agency's health."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "I need to know what our revenue will be next quarter based on actual conversation quality today, not just activity volume. And I want every new recruiter to sound like a 10-year veteran from Day 1.",
+        "author": "Hypothetical scenario: Bert Bean, CEO at Insight Global"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The AI Intelligence Layer"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Bert implements **DealoAgent** across all Insight Global offices. It serves as the intelligence layer that augments every recruiter, every account manager, and provides crystal-clear visibility to leadership."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Conversational Intelligence & Reporting"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bert no longer waits for weekly roll-up reports. DealoAgent provides a natural language interface to the entire agency's data."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: Bert can simply chat with the AI to get real-time status updates from his phone. Asking \"Show me the sales pipeline in the Atlanta office\" or \"Visualize recruiter sourcing activity for engineering roles\" generates instant diagrams and reports based on live communications, not just CRM inputs."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Performance Clarity Beyond Activity"
+      },
+      {
+        "type": "paragraph",
+        "text": "The days of measuring success purely by call volume are over."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Effect**: The AI identifies top performers and those struggling based on *actual conversation outcomes* and sentiment, not just activity metrics. It highlights immediately if a high-volume caller is actually frustrating candidates with poor qualification questions."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Scalable AI Coaching"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ramping up thousands of employees requires scalable coaching. DealoAgent acts as an always-on mentor for every desk."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: Bert's managers can instantly correct course. The AI analyzes communication styles across emails and calls, highlighting areas for individual improvement (e.g., \"Account Manager X needs to ask deeper budget questions during initial discovery\"). This allows leadership to provide specific, timely feedback rather than generic advice."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Proactive Leadership"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent unifies the fragmented data between sales and recruiting into a single predictive engine."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Early Warning**: *\"ALERT: Demand for Cloud Architects in the Midwest has spiked 40% in client conversations this week, but candidate sourcing activity has remained flat. Recommended action: Shift two sourcing pods to this vertical immediately.\"* Bert has a 24/7 pulse on every prospect and employee, allowing him to steer the massive ship with data-backed confidence."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Reporting Speed",
+            "value": "Instant",
+            "description": "Natural language queries instead of waiting for weekly dashboards"
+          },
+          {
+            "label": "Ramp Time",
+            "value": "-30%",
+            "description": "Faster onboarding through real-time AI coaching and playbooks"
+          },
+          {
+            "label": "Forecast Accuracy",
+            "value": "95%+",
+            "description": "Predictions based on conversation sentiment, not rep optimism"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a CEO like Bert Bean at the helm of a staffing giant like Insight Global, maintaining culture and quality at scale is paramount. By deploying DealoAgent, a staffing firm transforms from a 'black box' of opaque human activity into a transparent, predictable revenue engine. Every recruiter and account manager gets an AI assistant to make them faster and smarter, while leadership gains the ultimate visibility required to make strategic decisions instantly."
+      },
+      {
+        "type": "cta",
+        "title": "Scale Your Staffing Firm",
+        "description": "See how DealoAgent can give your agency predictable pipeline forecasting and automated quality control.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "teleperformance-vp-operations-call-center-quality-ai",
     "slug": "how-vijay-bhasin-teleperformance-transforms-call-center-quality-ai",
     "title": "How Vijay Bhasin (VP of Operations at Teleperformance) Could Transform Call Center Quality with AI",
