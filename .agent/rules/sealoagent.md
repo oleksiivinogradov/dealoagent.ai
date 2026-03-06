@@ -80,6 +80,7 @@ CRITICAL - do not repeat companies and persons in posts. Always call `grep -i "t
      - `featured`: `true`.
      - `coverImage`: **REQUIRED** High-quality, UNIQUE absolute URL (https://).
        - **MANDATORY**: You MUST generate a NEW, UNIQUE image for every post using your image generation tool.
+       - **MANDATORY STYLE**: The generated image MUST feature a **photorealistic person** working on the specific case. Do NOT generate generic vector illustrations, glowing abstract network graphs, or highly stylized "AI-looking" images. Keep it grounded, realistic, and focused on humans using software in a professional office environment.
      - `excerpt`: 2-3 sentence summary.
      - `tags`: Relevant tags array.
      - `content`: Array of content blocks.
