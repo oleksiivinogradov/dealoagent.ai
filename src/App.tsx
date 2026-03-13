@@ -257,8 +257,9 @@ export default function App() {
         )}
       </nav>
 
-      {/* Hero Section - Integration Hub */}
+      {/* Integration Hub - AI‑Native Workflow Hub */}
       <IntegrationHub />
+
 
       {/* Before/After Slider Section */}
       <BeforeAfterSlider />

@@ -1,0 +1,405 @@
+Here is explainer for animation creation. 
+U must follow timing (frames shown regular video, snapshots was each 10 frames of video)
+Animated page must have visual like video play happens.
+
+
+Frame 0010
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0020
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0030
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0040
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0050
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0060
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0070
+Coordinates (Text): * "Work" (Light Grey) - X: 35%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw (approx 80px).
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0080
+Coordinates (Text): * "Work" (Dark Grey) - X: 35%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw (approx 80px).
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0090
+Coordinates (Text): * "Work" (Dark Grey) - X: 30%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"Sprawl" (Light Grey) - X: 65%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0100
+Coordinates (Text): * "Work Sprawl" (Solid Black) - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0110
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0120
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+Coordinates (SVG Shapes): None.
+
+SVG Text for Shapes: None.
+
+Frame 0130
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+Coordinates (SVG Shapes): Three red arrow tips appear on the left edge pointing inwards at Y: 15%, 45%, and 85%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><polygon points="8%,14% 10%,15% 8%,16%" fill="#991B1B"/><polygon points="3%,44% 5%,45% 3%,46%" fill="#991B1B"/><polygon points="4%,84% 6%,85% 4%,86%" fill="#991B1B"/></svg>
+
+Frame 0140
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is" (Light Grey) - X: 20%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw (approx 50px).
+
+Coordinates (SVG Shapes): Four left nodes ("Ideas", "Executive Direction", "Requests", "Fixes") at X: 5%. Text inside nodes: Font: 'Inter', sans-serif, Weight: Medium (500), Size: 1.2vw (approx 12px).
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="2%" y="10%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="6%" y="15%" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#991B1B" text-anchor="middle">Ideas</text><line x1="10%" y1="14%" x2="16%" y2="15%" stroke="#991B1B" stroke-width="1"/><rect x="1%" y="35%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="5%" y="39%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">Executive</text><line x1="9%" y1="39%" x2="15%" y2="28%" stroke="#991B1B" stroke-width="1"/><rect x="1%" y="60%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="5%" y="65%" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#991B1B" text-anchor="middle">Requests</text><line x1="9%" y1="62%" x2="15%" y2="45%" stroke="#991B1B" stroke-width="1"/><rect x="3%" y="85%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="7%" y="90%" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#991B1B" text-anchor="middle">Fixes</text><line x1="11%" y1="87%" x2="16%" y2="70%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0150
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is killing" (Solid "is", Light "killing") - X: 28%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw.
+
+Coordinates (SVG Shapes): Previous left nodes. New Top Center numbered list node at X: 28%, Y: 18%. List text: Font: 'Inter', sans-serif, Weight: Bold (700) for title, Regular (400) for items, Size: 1vw (approx 10px).
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="2%" y="10%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="1%" y="35%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="1%" y="60%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="3%" y="85%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="20%" y="5%" width="15%" height="22%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="21%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#991B1B">1. Is this a PRIORITY?</text><line x1="10%" y1="14%" x2="19%" y2="15%" stroke="#991B1B" stroke-width="1"/><line x1="9%" y1="39%" x2="19%" y2="25%" stroke="#991B1B" stroke-width="1"/><line x1="9%" y1="62%" x2="19%" y2="35%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0160
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is killing" (Both Solid) - X: 28%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw.
+
+Coordinates (SVG Shapes): Top node populates. Arrows extend rightwards.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="2%" y="10%" width="8%" height="8%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="20%" y="5%" width="15%" height="22%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="21%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#991B1B">1. Is this a PRIORITY?</text><text x="21%" y="15%" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#991B1B">2. HOW will work get done?</text><line x1="35%" y1="10%" x2="42%" y2="8%" stroke="#991B1B" stroke-width="1"/><polygon points="41%,7% 43%,8% 41%,9%" fill="#991B1B"/><line x1="35%" y1="20%" x2="45%" y2="40%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0170
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is killing us" (Light "us") - X: 30%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw.
+
+Coordinates (SVG Shapes): Three new translucent nodes at X: 50%, Y: 8% / X: 30%, Y: 85% / X: 65%, Y: 75%. Node Text: Font: 'Inter', sans-serif, Weight: Medium (500), Size: 1vw (approx 10px).
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="20%" y="5%" width="15%" height="22%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="44%" y="4%" width="12%" height="9%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="50%" y="8%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">Approvals take FOREVER</text><rect x="25%" y="80%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="30%" y="85%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">Context is MISSING</text><rect x="45%" y="70%" width="35%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="62%" y="77%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">NAVIGATING A MAZE of disconnected apps</text></svg>
+
+Frame 0180
+Coordinates (Text): * "Work Sprawl" - X: 50%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is killing us." (Solid Black) - X: 30%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw.
+
+Coordinates (SVG Shapes): New nodes become solid.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="20%" y="5%" width="15%" height="22%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="44%" y="4%" width="12%" height="9%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="50%" y="8%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">Approvals take FOREVER</text><rect x="25%" y="80%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="30%" y="85%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">Context is MISSING</text><rect x="45%" y="70%" width="35%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><line x1="35%" y1="10%" x2="43%" y2="8%" stroke="#991B1B" stroke-width="1"/><line x1="30%" y1="67%" x2="30%" y2="79%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0190
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): New translucent node "Decisions get LOST" at X: 60%, Y: 28%. Font: 'Inter', sans-serif, Weight: Medium (500), Size: 1vw.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="44%" y="4%" width="12%" height="9%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="45%" y="70%" width="35%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="62%" y="77%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">NAVIGATING A MAZE of disconnected apps</text><rect x="55%" y="22%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="60%" y="27%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">Decisions get LOST</text><line x1="56%" y1="13%" x2="60%" y2="21%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0200
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): New translucent nodes: "EXECS CAN'T SEE to unblock" at X: 75%, Y: 10%. "Feedback is SCATTERED" at X: 65%, Y: 95%. Font: 'Inter', sans-serif, Weight: Medium (500), Size: 1vw.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="55%" y="22%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="68%" y="5%" width="12%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="74%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">EXECS CAN'T SEE to unblock</text><rect x="60%" y="88%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="65%" y="94%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">Feedback is SCATTERED</text></svg>
+
+Frame 0210
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Nodes become solid.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="55%" y="22%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="68%" y="5%" width="12%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="74%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">EXECS CAN'T SEE to unblock</text><rect x="60%" y="88%" width="10%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="65%" y="94%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">Feedback is SCATTERED</text><line x1="62%" y1="80%" x2="65%" y2="87%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0220
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): New translucent nodes on far right. "REWORK..." at X: 90%, Y: 10%. "8 HOURS SPENT..." at X: 80%, Y: 28%. Font: 'Inter', sans-serif, Weight: Medium (500), Size: 1vw.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="68%" y="5%" width="12%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="85%" y="5%" width="12%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="91%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">REWORK happens causing delays</text><rect x="75%" y="22%" width="12%" height="12%" rx="4" fill="white" stroke="#991B1B" stroke-width="0.5" opacity="0.5"/><text x="81%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle" opacity="0.5">8 HOURS SPENT</text><line x1="80%" y1="10%" x2="84%" y2="10%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0230
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): "8 HOURS" and "REWORK" become solid.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="85%" y="5%" width="12%" height="10%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="91%" y="10%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">REWORK happens causing delays</text><rect x="75%" y="22%" width="12%" height="12%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><text x="81%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#991B1B" text-anchor="middle">8 HOURS SPENT</text></svg>
+
+Frame 0240
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): New translucent Pink node "Productivity VANISHES" at X: 90%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 1.2vw (approx 12px).
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="75%" y="22%" width="12%" height="12%" rx="4" fill="white" stroke="#991B1B" stroke-width="1"/><rect x="85%" y="60%" width="13%" height="10%" rx="4" fill="#F472B6" stroke="#DB2777" stroke-width="1" opacity="0.5"/><text x="91%" y="65%" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle" opacity="0.5">Productivity VANISHES</text><line x1="82%" y1="34%" x2="88%" y2="59%" stroke="#991B1B" stroke-width="1"/><line x1="91%" y1="15%" x2="91%" y2="59%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0250
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Pink node becomes 90% opaque.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="85%" y="60%" width="13%" height="10%" rx="4" fill="#EC4899" stroke="#DB2777" stroke-width="1" opacity="0.9"/><text x="91%" y="65%" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle" opacity="0.9">Productivity VANISHES</text><line x1="82%" y1="34%" x2="88%" y2="59%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0260
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Mind map is 100% solid.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="85%" y="60%" width="13%" height="10%" rx="4" fill="#E11D48" stroke="#BE123C" stroke-width="1"/><text x="91%" y="65%" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">Productivity VANISHES</text><line x1="82%" y1="34%" x2="88%" y2="59%" stroke="#991B1B" stroke-width="1"/></svg>
+
+Frame 0270
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Static fully formed mind map.
+
+SVG Text for Shapes: (Identical to Frame 0260)
+
+Frame 0280
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Static fully formed mind map.
+
+SVG Text for Shapes: (Identical to Frame 0260)
+
+Frame 0290
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Static fully formed mind map.
+
+SVG Text for Shapes: (Identical to Frame 0260)
+
+Frame 0300
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Black line emerges from period at X: 42%, Y: 60%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="85%" y="60%" width="13%" height="10%" rx="4" fill="#E11D48" stroke="#BE123C" stroke-width="1"/><line x1="42%" y1="60%" x2="44%" y2="60%" stroke="black" stroke-width="4"/><circle cx="44%" cy="60%" r="4" fill="black"/></svg>
+
+Frame 0310
+Coordinates (Text): Central lock-up matches Frame 0180.
+
+Coordinates (SVG Shapes): Black line extends to X: 46%, Y: 62%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><rect x="85%" y="60%" width="13%" height="10%" rx="4" fill="#E11D48" stroke="#BE123C" stroke-width="1"/><line x1="42%" y1="60%" x2="46%" y2="62%" stroke="black" stroke-width="6"/><circle cx="46%" cy="62%" r="6" fill="black"/></svg>
+
+Frame 0320
+Coordinates (Text): * "Work" - X: 15%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"Sprawl" - X: 45%, Y: 45%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 8vw.
+
+"is killing us" - X: 15%, Y: 60%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 5vw.
+
+"Productivity VANISHES" (Pink Box) - X: 85%, Y: 65%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 1.2vw.
+
+Coordinates (SVG Shapes): Black line starts at X: 35%, Y: 62% and ends at a solid black circle at X: 45%, Y: 64%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="35%" y1="62%" x2="45%" y2="64%" stroke="black" stroke-width="6"/><circle cx="45%" cy="64%" r="8" fill="black"/></svg>
+
+Frame 0330
+Coordinates (Text): Camera zoom begins scaling text rapidly.
+
+"Work" (partially off-screen) - X: -5%, Y: 40%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 14vw.
+
+"Sprawl" - X: 35%, Y: 40%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 14vw.
+
+"illing us" - X: 5%, Y: 62%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+"Productivity VANISHES" - X: 75%, Y: 63%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 2vw.
+
+Coordinates (SVG Shapes): Line spans from X: 20%, Y: 60%, ending at a black circle at X: 43%, Y: 62%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="20%" y1="60%" x2="43%" y2="62%" stroke="black" stroke-width="10"/><circle cx="43%" cy="62%" r="14" fill="black"/></svg>
+
+Frame 0340
+Coordinates (Text): Aggressive zoom.
+
+"Sprawl" - X: 15%, Y: 35%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 25vw.
+
+"Productivity VANISHES" - X: 55%, Y: 58%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 4vw.
+
+Coordinates (SVG Shapes): Line spans from X: -10%, Y: 58%, ending at a black circle at X: 42%, Y: 63%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="-10%" y1="58%" x2="42%" y2="63%" stroke="black" stroke-width="16"/><circle cx="42%" cy="63%" r="20" fill="black"/></svg>
+
+Frame 0350
+Coordinates (Text): Extreme zoom.
+
+"rawl" - X: 5%, Y: 25%. Font: 'Inter', sans-serif, Weight: Black (900), Size: 50vw.
+
+"Productivity VANISHES" - X: 15%, Y: 50%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 6vw.
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 58%, ending at a massive black circle at X: 45%, Y: 61%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="58%" x2="45%" y2="61%" stroke="black" stroke-width="24"/><circle cx="45%" cy="61%" r="28" fill="black"/></svg>
+
+Frame 0360
+Coordinates (Text): All readable text is pushed off-canvas. Only the extreme bottom curves of letters remain at X: 0%, Y: 15% (Scale equivalent to roughly 100vw).
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 55%, ending at the circle at X: 55%, Y: 57%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="55%" x2="55%" y2="57%" stroke="black" stroke-width="30"/><circle cx="55%" cy="57%" r="35" fill="black"/></svg>
+
+Frame 0370
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): Panning right. Line spans from X: 0%, Y: 55%, ending at the circle at X: 60%, Y: 55%. Pink motion blur lines appear.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="55%" x2="60%" y2="55%" stroke="black" stroke-width="32"/><circle cx="60%" cy="55%" r="40" fill="black"/><line x1="28%" y1="41%" x2="90%" y2="41%" stroke="#fbcfe8" stroke-width="4" opacity="0.6"/><line x1="18%" y1="67%" x2="80%" y2="67%" stroke="#fbcfe8" stroke-width="4" opacity="0.6"/></svg>
+
+Frame 0380
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 51%, ending at circle at X: 56%, Y: 51%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="51%" x2="56%" y2="51%" stroke="black" stroke-width="32"/><circle cx="56%" cy="51%" r="40" fill="black"/><line x1="20%" y1="25%" x2="85%" y2="25%" stroke="#fbcfe8" stroke-width="4" opacity="0.5"/><line x1="0%" y1="38%" x2="40%" y2="38%" stroke="#fbcfe8" stroke-width="4" opacity="0.5"/></svg>
+
+Frame 0390
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 50%, ending at circle at X: 51%, Y: 50%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="50%" x2="51%" y2="50%" stroke="black" stroke-width="32"/><circle cx="51%" cy="50%" r="40" fill="black"/><line x1="-5%" y1="43%" x2="30%" y2="43%" stroke="#fbcfe8" stroke-width="4" opacity="0.5"/></svg>
+
+Frame 0400
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 50%, ending at circle at X: 50%, Y: 50%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="50%" x2="50%" y2="50%" stroke="black" stroke-width="32"/><circle cx="50%" cy="50%" r="40" fill="black"/><line x1="40%" y1="58%" x2="100%" y2="58%" stroke="#fbcfe8" stroke-width="4" opacity="0.6"/></svg>
+
+Frame 0410
+Coordinates (Text): None.
+
+Coordinates (SVG Shapes): Line spans from X: 0%, Y: 50%, ending at circle at X: 50%, Y: 50%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="50%" x2="50%" y2="50%" stroke="black" stroke-width="32"/><circle cx="50%" cy="50%" r="40" fill="black"/><line x1="45%" y1="20%" x2="95%" y2="20%" stroke="#fbcfe8" stroke-width="4" opacity="0.5"/><line x1="55%" y1="40%" x2="100%" y2="40%" stroke="#fbcfe8" stroke-width="4" opacity="0.5"/></svg>
+
+Frame 0430
+Coordinates (Text): None. The text has not yet entered the frame.
+
+Coordinates (SVG Shapes): The thick black line and circle from the previous zoom sequence are still visible, stabilizing in the center. The line spans from the left edge X: 0%, Y: 50%, ending at the circle at X: 50%, Y: 50%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="50%" x2="50%" y2="50%" stroke="black" stroke-width="32"/><circle cx="50%" cy="50%" r="40" fill="black"/></svg>
+
+Frame 0440
+Coordinates (Text): * "Too" (Solid Grey/Black) - X: 25%, Y: 35%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 10vw.
+
+Coordinates (SVG Shapes): The camera begins to pull back rapidly. The thick black line spans from X: 0%, Y: 50% to the circle at X: 60%, Y: 50%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><line x1="0%" y1="50%" x2="60%" y2="50%" stroke="black" stroke-width="24"/><circle cx="60%" cy="50%" r="30" fill="black"/></svg>
+
+Frame 0450
+Coordinates (Text): * "Too" (Solid Black) - X: 25%, Y: 35%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 10vw.
+
+"many" (Translucent Light Grey) - X: 50%, Y: 35%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 10vw.
+
+Coordinates (SVG Shapes): The camera continues to pull back. The line curves slightly upward towards the right, ending in the circle at X: 90%, Y: 48%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,52 Q45,52 90,48" stroke="black" stroke-width="16" fill="none"/><circle cx="90%" cy="48%" r="20" fill="black"/></svg>
+
+Frame 0460
+Coordinates (Text): * "Too" (Solid Black) - X: 20%, Y: 40%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+"many" (Darker Grey, opaque) - X: 45%, Y: 40%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): The black circle has exited the right side of the frame. The line now sweeps across the lower third.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,60 Q50,60 100,50" stroke="black" stroke-width="8" fill="none"/></svg>
+
+Frame 0470
+Coordinates (Text): * "Too" (Solid Black) - X: 15%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+"many" (Solid Black) - X: 35%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+"apps..." (Translucent Light Grey) - X: 60%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): The black line morphs into a chaotic loop. Two app icons pop up: Slack (X: 60%, Y: 15%) and Monday.com (X: 85%, Y: 30%) with a red notification badge.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,72 C40,72 60,85 85,35 C95,15 70,5 60,15" stroke="black" stroke-width="4" fill="none"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="61%" cy="14%" r="4" fill="#36C5F0"/><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="84%" cy="30%" r="3" fill="#E11D48"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><text x="87%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">1</text></svg>
+
+Frame 0480
+Coordinates (Text): * "Too many" (Solid Black) - X: 15% & 35%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+"apps..." (Dark Grey) - X: 60%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): New icons appear: Jira (X: 62%, Y: 10%), Google Docs (X: 82%, Y: 8%), and Confluence (X: 65%, Y: 72%). A yellow warning triangle appears on the Slack icon.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,74 C30,74 50,85 80,45 C95,20 70,0 60,10 C50,20 55,40 70,60 C80,75 75,85 65,90" stroke="black" stroke-width="3" fill="none"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><polygon points="58%,8% 61%,3% 64%,8%" fill="#FACC15"/><text x="61%" y="7%" font-family="Inter, sans-serif" font-size="8" font-weight="900" fill="black" text-anchor="middle">!</text><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><text x="87%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">2</text><rect x="65%" y="70%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="8%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/></svg>
+
+Frame 0490
+Coordinates (Text): * "Too many apps..." - Solid black lock-up. X: 15%, Y: 45%. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): Dropbox appears at X: 58%, Y: 92% with a red badge.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,74 C30,74 50,85 80,45 C95,20 70,0 60,10 C45,20 50,50 65,65 C75,75 80,55 70,85 C65,100 50,90 58,92" stroke="black" stroke-width="3" fill="none"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><polygon points="58%,8% 61%,3% 64%,8%" fill="#FACC15"/><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><text x="87%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">2</text><rect x="65%" y="70%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="8%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="58%" y="90%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="62%" cy="90%" r="6" fill="#EF4444"/></svg>
+
+Frame 0500
+Coordinates (Text): * "Too many apps..." - Solid black lock-up. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): The path continues to tie itself into knots. More abstract app icons populate the loops.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,74 C30,74 50,85 80,45 C95,20 70,0 60,10 C40,25 50,60 65,70 C80,80 90,50 85,90 C80,110 50,100 60,70" stroke="black" stroke-width="3" fill="none"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><polygon points="58%,8% 61%,3% 64%,8%" fill="#FACC15"/><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><rect x="65%" y="70%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><polygon points="65%,68% 67%,64% 69%,68%" fill="#FACC15"/><rect x="80%" y="8%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="58%" y="90%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="62%" cy="90%" r="6" fill="#EF4444"/></svg>
+
+Frame 0510
+Coordinates (Text): * "Too many apps..." - Solid black lock-up. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): Maximum app density. Notion (X: 80%, Y: 58%), Teams/Microsoft (X: 88%, Y: 70%).
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,74 C30,74 50,85 80,45 C95,20 70,0 60,10 C35,30 50,70 65,80 C85,90 95,45 85,95 C75,120 45,100 55,70 C65,50 85,60 95,40" stroke="black" stroke-width="2.5" fill="none"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><text x="87%" y="28%" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">3</text><rect x="65%" y="70%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="8%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="58%" y="90%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="58%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><text x="82.5%" y="63%" font-family="Inter, sans-serif" font-size="10" font-weight="900" fill="black" text-anchor="middle">N</text></svg>
+
+Frame 0520
+Coordinates (Text): * "Too many apps..." - Solid black lock-up. Font: 'Inter', sans-serif, Weight: Bold (700), Size: 8vw.
+
+Coordinates (SVG Shapes): Final state. The line terminates in a tiny black dot floating around X: 92%, Y: 35%.
+
+SVG Text for Shapes: <svg width="100%" height="100%"><path d="M0,74 C30,74 50,85 80,45 C95,20 70,0 60,10 C35,30 50,70 65,80 C85,90 95,45 85,95 C75,120 45,100 55,70 C65,50 85,60 95,40 C100,20 85,30 92,35" stroke="black" stroke-width="2.5" fill="none"/><circle cx="92%" cy="35%" r="4" fill="black"/><rect x="58%" y="10%" width="6%" height="8%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="82%" y="25%" width="7%" height="9%" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/><circle cx="87%" cy="25%" r="8" fill="#EF4444"/><rect x="65%" y="70%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="8%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="58%" y="90%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><rect x="80%" y="58%" width="5%" height="7%" rx="6" fill="white" stroke="#E5E7EB" stroke-width="2"/><text x="82.5%" y="63%" font-family="Inter, sans-serif" font-size="10" font-weight="900" fill="black" text-anchor="middle">N</text></svg>

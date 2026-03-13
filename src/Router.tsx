@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import App from './App';
+import { HeroAnimation } from './components/HeroAnimation';
+import MainPageAnimation from './components/MainPageAnimation/MainPageAnimation';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import PitchDeck from './pages/PitchDeck';
@@ -169,6 +171,8 @@ function LocalizedRoutes({ lang }: { lang: string }) {
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="/privacy-policy" element={<Navigate to="/privacy_policy.html" replace />} />
         <Route path="/one_pager" element={<OnePager />} />
+        <Route path="/heroanimation" element={<HeroAnimation />} />
+        <Route path="/anim" element={<MainPageAnimation />} />
       </Routes>
     </>
   );

@@ -1,5 +1,158 @@
 [
   {
+    "id": "how-eric-petty-transparentbpo-scales-qa-with-ai",
+    "slug": "how-eric-petty-transparentbpo-scales-qa-with-ai",
+    "title": "Jak Eric Petty (COO w Transparent BPO) mógłby przekształcić operacje jakościowe dzięki AI",
+    "subtitle": "Hipotetyczna głęboka analiza: Przejście od 1% ręcznej próby QA do 100% audytów opartych na AI i zgodności w czasie rzeczywistym.",
+    "author": "DealoAgent Team",
+    "publishDate": "2026-03-12",
+    "readTime": "11 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/coo_transparent_bpo_dashboard.png",
+    "excerpt": "Zarządzanie tysiącami interakcji dziennie w globalnym BPO wymaga bezbłędnej realizacji. W tym hipotetycznym studium przypadku badamy, jak Eric Petty mógłby wykorzystać DealoAgent do osiągnięcia 100% pokrycia QA, zbudowania zapory zgodności i uzyskania natychmiastowych odpowiedzi operacyjnych.",
+    "tags": [
+      "Case Study",
+      "Call Center",
+      "Transparent BPO",
+      "AI",
+      "Quality Assurance",
+      "BPO Operations"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Eric Petty, Chief Operating Officer at Transparent BPO, could leverage DealoAgent.AI. Transparent BPO is a real, fast-growing global contact center and business process outsourcer, and Eric Petty is its real COO, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Transparent BPO** partners with major brands to deliver exceptional customer experiences across the globe. For a COO overseeing vast global operations and client services, the mandate is clear: deliver consistent, compliant, world-class service at a scale that makes traditional, manual oversight impossible."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: The 1% QA Trap at Massive Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Eric Petty**, Chief Operating Officer at Transparent BPO. With decades of experience driving operational efficiencies across global contact centers and BPOs, Eric knows that even with top-tier processes, the fundamental math of human-led quality assurance doesn't add up at enterprise scale."
+      },
+      {
+        "type": "paragraph",
+        "text": "His primary pain points in this hypothetical scenario stem from the limitations of legacy QA structures:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**The 1% QA Sample Liability**: Traditional QA teams can physically only review roughly 1% to 3% of total interactions. This leaves a massive blind spot on over 97% of customer conversations, where compliance violations or critical coaching opportunities go completely unnoticed.",
+          "**Blind Spot Exposure**: Compliance breaches—whether missed required disclosures or risky agent commitments—often aren't discovered until a client escalates a dispute. By then, the financial and reputational damage is done.",
+          "**Biased and Delayed QA Scoring**: Performance reviews can be subjective, based on a handful of randomly selected calls, and the feedback loop is often days or weeks late.",
+          "**Disjointed Operational Visibility**: It is incredibly challenging to pull together disjointed system data rapidly enough to answer a simple client question like, 'Why did handle times spike in Belize yesterday?'"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "When you are managing global operations, relying on a 1% QA sample size to guarantee quality and compliance is a massive risk. We need active intelligence on every single interaction, not just a random subset.",
+        "author": "Hypothetical scenario: Eric Petty, COO at Transparent BPO"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: From 1% Samples to 100% Intelligence"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Eric deploys **DealoAgent** as the central AI-powered quality and operations intelligence layer. It connects directly to the voice, chat, and email channels, passively analyzing and scoring every single interaction in real-time."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. 100% QA Audit & Automated Scoring"
+      },
+      {
+        "type": "paragraph",
+        "text": "Eric's QA team no longer wrestles with random sampling or spreadsheet scorecards."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: DealoAgent listens to, transcribes, and scores **every single call** against custom rubrics automatically. Eric now knows exactly what is happening in real-time across the entire global floor. The system instantly flags calls where an agent missed a verification step or failed a resolution protocol, allowing his QA analysts to level up from 'call listeners' to targeted performance coaches."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. The Active Compliance Firewall"
+      },
+      {
+        "type": "paragraph",
+        "text": "DealoAgent builds an active defense against client liability and regulatory fines."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: Eric's operations leaders can set DealoAgent to monitor all transcripts for 'risky promises', aggressive language, or missed mandatory disclosures (like TCPA compliance). If a compliance breach occurs, leadership is alerted immediately—caught directly on the call, not weeks later during a client audit."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Natural Language BI for Instant Answers"
+      },
+      {
+        "type": "paragraph",
+        "text": "Eric gains the ability to talk directly to his operational data without waiting for the BI team to build a dashboard."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: Before a major client QBR, instead of waiting days for analysts to compile reports, Eric can simply ask DealoAgent: *\"Show me the trend of resolved technical support issues in the LATAM region over the last 30 days compared to AHT.\"* He gets an instant, accurate chart to share directly with stakeholders."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "QA Audit Coverage",
+            "value": "100%",
+            "description": "Every single interaction is analyzed, scored, and cataloged"
+          },
+          {
+            "label": "Compliance Risk",
+            "value": "Mitigated",
+            "description": "Prohibited language and missed disclosures caught in real-time"
+          },
+          {
+            "label": "Analyst Efficiency",
+            "value": "10x",
+            "description": "QA team focuses entirely on targeted coaching, not random listening"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a seasoned operations leader like Eric Petty navigating the rapid growth and complex client demands of a modern BPO like Transparent BPO, AI is the key to escaping the limitations of manual QA. By deploying DealoAgent, a contact center evolves from reactive quality control to proactive quality engineering. It ensures consistent, compliant, and exceptional service at a scale impossible for human teams alone."
+      },
+      {
+        "type": "cta",
+        "title": "Upgrade Your Call Center Quality",
+        "description": "See how DealoAgent can give your BPO operations 100% QA coverage and real-time operational intelligence.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "how-amur-lakshminarayanan-ceo-at-tata-communications-could-eliminate-margin-leakage-with-ai",
     "slug": "how-amur-lakshminarayanan-ceo-at-tata-communications-could-eliminate-margin-leakage-with-ai",
     "title": "Jak Amur Lakshminarayanan (Dyrektor Generalny Tata Communications) mógłby wyeliminować wyciek marży dzięki AI",
