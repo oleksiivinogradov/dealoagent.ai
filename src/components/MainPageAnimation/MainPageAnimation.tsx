@@ -558,6 +558,11 @@ export default function MainPageAnimation() {
           <polygon points="886,359 894,359 890,367" fill="#991B1B" opacity={prodOpacity}/>
         </g>
 
+        {/* Static punctuation dot: visible from ~frame 180 until motion starts */}
+        <g opacity={frame < 300 ? punctuationDotOpacity : 0}>
+          <circle cx={dotBaseX} cy={dotBaseY} r={DOT_RADIUS} fill={DOT_COLOR} />
+        </g>
+
         {/* Frame 300+: horizontal moving dot with trailing line */}
         <g opacity={movingSegmentOpacity}>
           <line
