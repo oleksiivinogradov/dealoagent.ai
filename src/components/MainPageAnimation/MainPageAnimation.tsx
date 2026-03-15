@@ -281,8 +281,10 @@ export default function MainPageAnimation() {
   // "us" fades in at 168
   const usOpacity = fadeIn(frame, 165, 178);
   const usColor = frame < 180 ? '#9CA3AF' : '#111827';
-  // Fade out "us" once motion takeover starts.
+  // Fade out full subtitle "is killing us" once motion takeover starts so no "illing" etc during zoom
   const usTakeoverOpacity = frame < 348 ? 1 : fadeOut(frame, 348, 360);
+  const isVisibleOpacity = isOpacity * usTakeoverOpacity;
+  const killingVisibleOpacity = killingOpacity * usTakeoverOpacity;
   const usVisibleOpacity = usOpacity * usTakeoverOpacity;
   const punctuationDotOpacity = fadeIn(frame, 175, 185);
 
@@ -320,7 +322,18 @@ export default function MainPageAnimation() {
   const prodOpacity = (frame < 238 ? 0 : frame < 260 ? fadeIn(frame, 238, 258) : 1) * mindMapFadeOut;
   const prodBg = frame < 258 ? '#F472B6' : '#E11D48';
 
-  // Dot + line anchor from exact "us" painted bounds.
+  // ViewBox and %-based positioning (works on any screen size)
+  const VIEWBOX_W = 1000;
+  const VIEWBOX_H = 600;
+  const pctX = (p: number) => (p / 100) * VIEWBOX_W;
+  const pctY = (p: number) => (p / 100) * VIEWBOX_H;
+  // Stage line and dot positions in % (spec: frame 430–440)
+  const STAGE_LINE_Y_PCT = 50;
+  const DOT_X_430_PCT = 50;
+  const DOT_X_440_PCT = 60;
+  const DOT_Y_PCT = 50;
+
+  // Dot + line anchor from exact "us" painted bounds (used for frames < 430 and scale center when not on stage).
   const DOT_RADIUS = 8;
   const DOT_GAP_RIGHT = 4;
   const DOT_COLOR = '#111827';
@@ -328,40 +341,65 @@ export default function MainPageAnimation() {
   const dotBaseY = usAnchor.y - DOT_RADIUS;
 
   // Frame 300+: same dot, same size, horizontal-only movement.
-  // Keep dot speed lower than camera follow speed.
   const horizontalMoveProgress = frame < 300 ? 0 : frame < 430 ? (frame - 300) / 130 : 1;
   const movingDotX = dotBaseX + horizontalMoveProgress * 170;
   const movingDotY = dotBaseY;
-  const movingSegmentOpacity = frame >= 300 && frame < 440 ? (frame < 430 ? 1 : fadeOut(frame, 430, 440)) : 0;
-  // Zoom / Shift (320-360)
+  const post430Progress = frame < 430 ? 0 : frame < 460 ? (frame - 430) / 30 : 1;
+  const bridgeDotY = lerp(movingDotY, movingDotY - 10, post430Progress);
+
+  // Stage line/dot from %: frame 430 dot at 50% width, exactly 60% at 439 for perfect alignment. Use stage only when frame >= 430 (scale origin switches then); otherwise line/dot stay in zoomed space and stay on screen.
+  const stageLineY = pctY(STAGE_LINE_Y_PCT);
+  const dotX_PCT = frame < 430 ? DOT_X_430_PCT : lerp(DOT_X_430_PCT, DOT_X_440_PCT, Math.min(1, (frame - 430) / 9));
+  const stageDotX = pctX(dotX_PCT);
+  const stageDotY = pctY(DOT_Y_PCT);
+  const movingLineY = frame < 430 ? dotBaseY : stageLineY;
+  const movingLineEndX = frame < 430 ? movingDotX : stageDotX;
+  const movingLineEndY = frame < 430 ? movingDotY : stageDotY;
+
+  // Zoom: pull back to 1× by 439 so 439→440 handoff has no scale jump
   const zoomFactor = frame < 320 ? 1 : 
                      frame < 330 ? lerp(1, 1.2, (frame - 320) / 10) :
                      frame < 340 ? lerp(1.2, 2.5, (frame - 330) / 10) :
                      frame < 350 ? lerp(2.5, 5, (frame - 340) / 10) :
                      frame < 360 ? lerp(5, 10, (frame - 350) / 10) : 
                      frame < 430 ? 10 :
-                     frame < 460 ? lerp(10, 1, (frame - 430) / 30) : 1;
-  // Camera follows dot and keeps it centered as zoom increases.
+                     frame < 439 ? lerp(10, 1, (frame - 430) / 9) : 1;
+
+  // ─── CROSSFADE AND SIZE MORPH (430-440) ───
+  // We fade from the inner zoom layer to the overlay layer over 10 frames.
+  const handoffProgress = frame < 430 ? 0 : Math.min(1, (frame - 430) / 10);
+  const movingSegmentOpacity = frame < 300 ? 0 : (1 - handoffProgress);
+
+  // To avoid size jumps, we morph the inner line's visual thickness to match the overlay perfectly.
+  const overlayVisualLineWidth = pctY(4);  // 24
+  const overlayVisualDotR = pctY(5);       // 30
+  
+  const innerVisualLineWidth = frame < 430 ? 5 * zoomFactor : lerp(5 * 10, overlayVisualLineWidth, handoffProgress);
+  const innerVisualDotR = frame < 430 ? DOT_RADIUS * zoomFactor : lerp(DOT_RADIUS * 10, overlayVisualDotR, handoffProgress);
+  
+  const innerStrokeWidth = innerVisualLineWidth / zoomFactor;
+  const innerDotRadius = innerVisualDotR / zoomFactor;
   const cameraPanProgress = frame < 300 ? 0 : frame < 348 ? (frame - 300) / 48 : 1;
-  const targetCenterX = 500; // screen center x in viewBox coords
-  const targetCenterY = 300; // screen center y in viewBox coords
-  // Group transform is scale-around-dotBase then camera translate.
-  // To keep moving dot centered, pan must compensate current zoom.
-  const targetPanX = Math.max(0, (movingDotX - dotBaseX) * zoomFactor + dotBaseX - targetCenterX);
-  const targetPanY = Math.max(0, dotBaseY - targetCenterY);
+  // Scale/pan origin: use stage dot when frame >= 430 so zoom centers on line/dot
+  const scaleOriginX = frame >= 430 ? stageDotX : dotBaseX;
+  const scaleOriginY = frame >= 430 ? stageDotY : dotBaseY;
+  const targetCenterX = frame < 430 ? pctX(50) : 
+                        frame < 439 ? lerp(pctX(50), pctX(60), (frame - 430) / 9) :
+                        frame < 449 ? lerp(pctX(60), pctX(50), (frame - 439) / 10) : pctX(50);
+  const targetCenterY = pctY(50);
+  const dotXForPan = frame >= 430 ? stageDotX : movingDotX;
+  const targetPanX = Math.max(0, (dotXForPan - scaleOriginX) * zoomFactor + scaleOriginX - targetCenterX);
+  const targetPanY = Math.max(0, scaleOriginY - targetCenterY);
   const panXStrength = 1;
   const panYStrength = 1;
-  // "Camera moves right/down" => scene shifts left/up by pan amount.
   const cameraPanX = lerp(0, targetPanX * panXStrength, cameraPanProgress);
   const cameraPanY = lerp(0, targetPanY * panYStrength, cameraPanProgress);
-  const textPanXPercent = (cameraPanX / 1000) * 100;
-  const textPanYPercent = (cameraPanY / 600) * 100;
+  const textPanXPercent = (cameraPanX / VIEWBOX_W) * 100;
+  const textPanYPercent = (cameraPanY / VIEWBOX_H) * 100;
 
   // ─── EXTENDED ANIMATION (320-520) ───────────────────────────────────────────
 
-  const workX_Zoom = 35;
   const sprawlX_Zoom = 50;
-  const isKillingUsX_Zoom = 50;
 
 
   // Disabled while horizontal debug path is required.
@@ -371,18 +409,117 @@ export default function MainPageAnimation() {
   const blurOpacity = fadeIn(frame, 365, 375) * fadeOut(frame, 410, 420);
 
   // "Too many apps..." pull back (440-520)
-  const tooManyOpacity = fadeIn(frame, 435, 450);
-  const tooManyX = frame < 460 ? 25 : frame < 470 ? lerp(25, 20, (frame - 460) / 10) : 15;
+  const tooOpacity = fadeIn(frame, 440, 445);
+  const tooColor = frame < 445 ? '#6B7280' : '#111827';
+  const manyOpacity = fadeIn(frame, 450, 455);
+  const manyColor = frame < 455 ? 'rgba(107,114,128,0.5)' : frame < 465 ? 'rgba(75,85,99,0.9)' : '#111827';
   const appsOpacity = fadeIn(frame, 465, 475);
   
   // Chaotic loopy path opacity and morphing
-  const loopyOpacity = fadeIn(frame, 465, 475);
-  const iconsOpacity = fadeIn(frame, 470, 500);
+  const iconsOpacity = frame >= 465 ? 0 : fadeIn(frame, 470, 500);
+  
+  // ── OVERLAY PATH MATH (crossfade 430→440, maze starts 440) ──
+  // Match the exact on-screen position of the dot at frame 439 to prevent ANY X/Y jumps
+  const handoffX = 84.11; // (890 - 48.9) / 10
+  const handoffY = 52.33; // (320 - 6) / 6
+  const HANDOFF_PCT: [number, number] = [handoffX, handoffY];
+  const MAZE_ICONS_SCATTERED_PCT: Array<[number, number]> = [
+    HANDOFF_PCT, // 84.11, 52.33
+    [86, 25],    // Salesforce
+    [50, 15],    // Slack
+    [70, 8],     // Telegram
+    [90, 20],    // Notion
+    [92, 70],    // Gmail
+    [66, 85],    // Calendar
+    [45, 68],    // Teams
+    [110, 52.33],   // Exit (horizontally aligned with initial entry)
+  ];
+  const NUM_MAZE_SEGMENTS = 8; // handoff→Salesforce→Slack→...→Teams→exit
+  const MAZE_CURVE_CP_PCT: Array<[number, number]> = [
+    [85, 40], [85, 15], [50, 8], [85, 8], [100, 45], [92, 85], [45, 85], [80, 52.33],
+  ];
+  const MAZE_SEG_START = 440;
+  const MAZE_SEG_END = 520;
+  const mazeSegLen = (MAZE_SEG_END - MAZE_SEG_START) / NUM_MAZE_SEGMENTS;
+
+  // Overlay line opacity mirrors inner line opacity to crossfade.
+  const overlayLineOpacity = frame >= 520 ? 0 : handoffProgress;
+  // Base path: extends from far left (-20%) to avoid strokeLinecap inset, and tracks dotX_PCT for perfect sync during crossfade.
+  const overlayPathToHandoff = `M ${pctX(-20)} ${pctY(50)} L ${pctX(dotX_PCT)} ${pctY(HANDOFF_PCT[1])}`;
+
+  const overlayPathD = frame < 440
+    ? overlayPathToHandoff
+    : frame <= 520
+      ? (() => {
+          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
+          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
+          if (idx === 0 && tSeg === 0) return overlayPathToHandoff;
+          const eased = easeInOut(tSeg);
+          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
+          const P1 = MAZE_CURVE_CP_PCT[idx];
+          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
+
+          // Compute partial bezier curve control points using De Casteljau to trace dynamically without bulge/divergence
+          const Q1x = lerp(P0[0], P1[0], eased);
+          const Q1y = lerp(P0[1], P1[1], eased);
+          const Q1_to_P2x = lerp(P1[0], P2[0], eased);
+          const Q1_to_P2y = lerp(P1[1], P2[1], eased);
+          const Q2x = lerp(Q1x, Q1_to_P2x, eased);
+          const Q2y = lerp(Q1y, Q1_to_P2y, eased);
+
+          let d = overlayPathToHandoff;
+          for (let i = 0; i < idx; i++) {
+            d += ` Q ${pctX(MAZE_CURVE_CP_PCT[i][0])} ${pctY(MAZE_CURVE_CP_PCT[i][1])} ${pctX(MAZE_ICONS_SCATTERED_PCT[i + 1][0])} ${pctY(MAZE_ICONS_SCATTERED_PCT[i + 1][1])}`;
+          }
+          d += ` Q ${pctX(Q1x)} ${pctY(Q1y)} ${pctX(Q2x)} ${pctY(Q2y)}`;
+          return d;
+        })()
+      : overlayPathToHandoff + MAZE_ICONS_SCATTERED_PCT.slice(1).reduce((acc, p, i) => acc + ` Q ${pctX(MAZE_CURVE_CP_PCT[i][0])} ${pctY(MAZE_CURVE_CP_PCT[i][1])} ${pctX(p[0])} ${pctY(p[1])}`, '');
+
+  const overlayCircleVisible = handoffProgress > 0 && frame <= 520;
+  const overlayCircleX = frame < 440
+    ? pctX(dotX_PCT)
+    : frame <= 520
+      ? (() => {
+          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
+          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
+          if (idx === 0 && tSeg === 0) return pctX(HANDOFF_PCT[0]);
+          const eased = easeInOut(tSeg);
+          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
+          const P1 = MAZE_CURVE_CP_PCT[idx];
+          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
+          const Q1x = lerp(P0[0], P1[0], eased);
+          const Q1_to_P2x = lerp(P1[0], P2[0], eased);
+          const Q2x = lerp(Q1x, Q1_to_P2x, eased);
+          return pctX(Q2x);
+        })()
+      : pctX(110);
+  const overlayCircleY = frame < 440
+    ? pctY(HANDOFF_PCT[1])
+    : frame <= 520
+      ? (() => {
+          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
+          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
+          if (idx === 0 && tSeg === 0) return pctY(HANDOFF_PCT[1]);
+          const eased = easeInOut(tSeg);
+          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
+          const P1 = MAZE_CURVE_CP_PCT[idx];
+          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
+          const Q1y = lerp(P0[1], P1[1], eased);
+          const Q1_to_P2y = lerp(P1[1], P2[1], eased);
+          const Q2y = lerp(Q1y, Q1_to_P2y, eased);
+          return pctY(Q2y);
+        })()
+      : pctY(HANDOFF_PCT[1]);
+
+  const overlayStrokeWidth = frame < 440 ? pctY(4) : frame <= 520 ? pctY(lerp(4, 1.17, (frame - 440) / 80)) : pctY(1.17);
+  const overlayCircleR = pctY(5);
 
   // Red speed-lines from frame 358 to 430: fixed baseline, balanced up/down offsets.
   const quickSpeedOpacity = frame >= 358 && frame <= 430 ? fadeIn(frame, 358, 366) * fadeOut(frame, 424, 430) : 0;
   const speedFrame = Math.max(358, Math.min(frame, 430));
-  const renderedDotCenterY = (movingDotY - dotBaseY) * zoomFactor + dotBaseY - cameraPanY;
+  const speedDotY = frame < 430 ? movingDotY : bridgeDotY;
+  const renderedDotCenterY = (speedDotY - dotBaseY) * zoomFactor + dotBaseY - cameraPanY;
   const renderedDotRadius = DOT_RADIUS * zoomFactor;
   const speedBaselineY = renderedDotCenterY;
   const speedInset = renderedDotRadius * 2; // at least one full dot diameter from center line
@@ -421,12 +558,17 @@ export default function MainPageAnimation() {
       <svg
         ref={svgRef}
         className="mpa-svg"
-        viewBox="0 0 1000 600"
+        viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
         preserveAspectRatio="xMidYMid meet"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <defs>
+          <filter id="mpa-icon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.15"/>
+          </filter>
+        </defs>
         <g
-          transform={`translate(${-cameraPanX} ${-cameraPanY}) translate(${dotBaseX} ${dotBaseY}) scale(${zoomFactor}) translate(${-dotBaseX} ${-dotBaseY})`}
+          transform={`translate(${-cameraPanX} ${-cameraPanY}) translate(${scaleOriginX} ${scaleOriginY}) scale(${zoomFactor}) translate(${-scaleOriginX} ${-scaleOriginY})`}
         >
         {/* ── LEFT NODES ── */}
         <g opacity={leftNodesOpacity}>
@@ -493,9 +635,17 @@ export default function MainPageAnimation() {
 
         {/* NAVIGATING A MAZE */}
         <g opacity={mazeOpacity}>
-          <rect x="420" y="492" width="240" height="64" rx="8" fill="white" stroke="#991B1B" strokeWidth="1.5"/>
-          <text x="540" y="524" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="700" fill="#991B1B" textAnchor="middle">NAVIGATING A MAZE</text>
-          <text x="540" y="544" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500" fill="#991B1B" textAnchor="middle">of disconnected apps</text>
+          <rect x="400" y="492" width="280" height="64" rx="8" fill="white" stroke="#991B1B" strokeWidth="1.5"/>
+          {/* Logo row: Slack, Telegram, Teams, Gmail, Google Calendar, Notion, HubSpot, Salesforce (SVGs from Wikimedia Commons) */}
+          <image href="/icons/Slack.svg" x="435" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Telegram.svg" x="459" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Microsoft_Teams.svg" x="483" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Gmail.svg" x="507" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Google_Calendar.svg" x="531" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Notion.svg" x="555" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/HubSpot.svg" x="579" y="505" width="48" height="14" preserveAspectRatio="xMidYMid meet"/>
+          <image href="/icons/Salesforce.svg" x="633" y="504" width="18" height="18" preserveAspectRatio="xMidYMid meet"/>
+          <text x="540" y="538" fontFamily="Inter, sans-serif" fontSize="11" fill="#991B1B" textAnchor="middle"><tspan fontWeight="700">NAVIGATING A MAZE</tspan><tspan fontWeight="500"> of disconnected apps</tspan></text>
         </g>
 
         {/* ── DECISIONS LOST ── */}
@@ -512,8 +662,8 @@ export default function MainPageAnimation() {
           <rect x="700" y="542" width="130" height="50" rx="4" fill="white" stroke="#991B1B" strokeWidth="1.5"/>
           <text x="765" y="562" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500" fill="#991B1B" textAnchor="middle">Feedback is</text>
           <text x="765" y="580" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="700" fill="#991B1B" textAnchor="middle">SCATTERED</text>
-          <line x1="700" y1="568" x2="665" y2="550" stroke="#991B1B" strokeWidth="1.2"/>
-          <polygon points="665,550 674,550 670,558" fill="#991B1B"/>
+          <line x1="700" y1="568" x2="680" y2="550" stroke="#991B1B" strokeWidth="1.2"/>
+          <polygon points="680,550 683,558 689,552" fill="#991B1B"/>
         </g>
 
         {/* ── REWORK ── */}
@@ -563,18 +713,27 @@ export default function MainPageAnimation() {
           <circle cx={dotBaseX} cy={dotBaseY} r={DOT_RADIUS} fill={DOT_COLOR} />
         </g>
 
-        {/* Frame 300+: horizontal moving dot with trailing line */}
+        {/* Frame 300+: line from dot origin to moving dot; from 430 only, line from left edge (0) to stage dot */}
         <g opacity={movingSegmentOpacity}>
-          <line
-            x1={dotBaseX}
-            y1={dotBaseY}
-            x2={movingDotX}
-            y2={movingDotY}
-            stroke={DOT_COLOR}
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-          <circle cx={movingDotX} cy={movingDotY} r={DOT_RADIUS} fill={DOT_COLOR} />
+          {frame < 440 ? (
+            <line
+              x1={frame >= 430 ? -1000 : dotBaseX}
+              y1={movingLineY}
+              x2={movingLineEndX}
+              y2={movingLineEndY}
+              stroke={DOT_COLOR}
+              strokeWidth={innerStrokeWidth}
+              strokeLinecap="round"
+            />
+          ) : null}
+          {frame < 440 ? (
+            <circle
+              cx={movingLineEndX}
+              cy={movingLineEndY}
+              r={innerDotRadius}
+              fill={DOT_COLOR}
+            />
+          ) : null}
         </g>
 
         {/* ── THICK LINE & ZOOM CIRCLE (disabled) ── */}
@@ -634,32 +793,26 @@ export default function MainPageAnimation() {
           <line x1="10%" y1="20%" x2="95%" y2="20%" stroke="#fbcfe8" strokeWidth="4" opacity="0.4"/>
         </g>
 
-        {/* ── CHAOTIC LOOPY PATH AND ICONS (470-520) ── */}
-        <g opacity={loopyOpacity}>
-          <path 
-            d="M0,420 C150,420 250,510 400,270 C475,120 350,30 300,60 C250,90 275,240 325,300 C375,360 450,300 350,425 C325,475 250,450 290,460" 
-            stroke="black" 
-            strokeWidth="3" 
-            fill="none"
-            transform="scale(2) translate(0, -100)"
-            style={{ transition: 'all 0.5s ease' }}
-          />
-          <g opacity={iconsOpacity}>
-            {/* Slack */}
-            <rect x="580" y="80" width="60" height="48" rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-            <circle cx="610" cy="104" r="12" fill="#36C5F0"/>
-            {/* Warning triangle */}
-            {frame > 480 && <polygon points="580,70 610,20 640,70" fill="#FACC15"/>}
+        {/* ── APP ICONS (470+: Slack, Monday.com per task spec; positions in %) ── */}
+        <g opacity={iconsOpacity}>
+          {/* Slack: 58%, 10%, size 6%, 8% (task frame 470) */}
+          <rect x={pctX(58)} y={pctY(10)} width={pctX(6)} height={pctY(8)} rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
+          <circle cx={pctX(61)} cy={pctY(14)} r={pctY(0.67)} fill="#36C5F0"/>
+          {frame > 480 && <polygon points={`${pctX(58)},${pctY(8)} ${pctX(61)},${pctY(3)} ${pctX(64)},${pctY(8)}`} fill="#FACC15"/>}
 
-            {/* Monday */}
-            <rect x="820" y="150" width="70" height="54" rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-            <circle cx="870" cy="150" r="10" fill="#EF4444"/>
-            <text x="870" y="154" fontFamily="Inter" fontSize="10" fontWeight="700" fill="white" textAnchor="middle">1</text>
+          {/* Monday.com: 82%, 25%, size 7%, 9%; red badge */}
+          <rect x={pctX(82)} y={pctY(25)} width={pctX(7)} height={pctY(9)} rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
+          <circle cx={pctX(84)} cy={pctY(30)} r={pctY(0.5)} fill="#E11D48"/>
+          <circle cx={pctX(87)} cy={pctY(25)} r={pctY(1.33)} fill="#EF4444"/>
+          <text x={pctX(87)} y={pctY(28)} fontFamily="Inter" fontSize={10} fontWeight="700" fill="white" textAnchor="middle">1</text>
 
-            {/* Jira / Notion */}
-            <rect x="800" y="348" width="50" height="42" rx="6" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-            <text x="825" y="375" fontFamily="Inter" fontSize="14" fontWeight="900" fill="black" textAnchor="middle">N</text>
-          </g>
+          {/* Jira / Notion (later frames) */}
+          {frame > 500 && (
+            <>
+              <rect x={pctX(80)} y={pctY(58)} width={pctX(5)} height={pctY(7)} rx="6" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
+              <text x={pctX(82.5)} y={pctY(63)} fontFamily="Inter" fontSize={10} fontWeight="900" fill="black" textAnchor="middle">N</text>
+            </>
+          )}
         </g>
         
         {/* ── NATIVE SVG SUBTITLE ── */}
@@ -675,8 +828,8 @@ export default function MainPageAnimation() {
           fontFamily="'Inter', sans-serif"
           className="mpa-heading-text"
         >
-          <tspan fill="#111827" opacity={isOpacity}>is </tspan>
-          <tspan fill={killingColor} opacity={killingOpacity}>killing </tspan>
+          <tspan fill="#111827" opacity={isVisibleOpacity}>is </tspan>
+          <tspan fill={killingColor} opacity={killingVisibleOpacity}>killing </tspan>
           <tspan ref={usRef} fill={usColor} opacity={usVisibleOpacity}>us</tspan>
         </text>
         </g>
@@ -698,12 +851,74 @@ export default function MainPageAnimation() {
           ))}
         </g>
 
+        {/* Overlay line+dot in same 1000x600 viewBox (no transform) so 439→440 has no jump */}
+        <g opacity={overlayLineOpacity} style={{ pointerEvents: 'none' }}>
+          <path
+            d={overlayPathD}
+            stroke="#111827"
+            strokeWidth={overlayStrokeWidth}
+            fill="none"
+            strokeLinecap="round"
+          />
+          {overlayCircleVisible && (
+            <circle
+              cx={overlayCircleX}
+              cy={overlayCircleY}
+              r={overlayCircleR}
+              fill="#111827"
+            />
+          )}
+        </g>
+        {/* Maze icons: visible from 440 at path connection points; each icon appears when path reaches it */}
+        {frame >= 440 && (() => {
+          const ICON_SIZE = 36;
+          const CARD_SIZE = 60;
+          const CARD_HALF = CARD_SIZE / 2;
+          const MAZE_ICON_HREFS = [
+            '/icons/Salesforce.svg', '/icons/Slack.svg', '/icons/Telegram.svg', '/icons/Notion.svg',
+            '/icons/Gmail.svg', '/icons/Google_Calendar.svg', '/icons/Microsoft_Teams.svg',
+          ];
+          const mazeSegLenIcons = (520 - 440) / 8;
+          return (
+            <g style={{ pointerEvents: 'none' }}>
+              {MAZE_ICONS_SCATTERED_PCT.slice(1, 8).map(([cxPct, cyPct], i) => {
+                const cx = pctX(cxPct);
+                const cy = pctY(cyPct);
+                const iconReachedFrame = 440 + (i + 1) * mazeSegLenIcons;
+                const iconOpacity = frame >= iconReachedFrame ? 1 : frame >= iconReachedFrame - 8 ? fadeIn(frame, iconReachedFrame - 8, iconReachedFrame) : 0;
+                return (
+                  <g key={i} opacity={iconOpacity}>
+                    <rect
+                      x={cx - CARD_HALF}
+                      y={cy - CARD_HALF}
+                      width={CARD_SIZE}
+                      height={CARD_SIZE}
+                      rx="8"
+                      fill="white"
+                      stroke="#E5E7EB"
+                      strokeWidth="1.5"
+                      filter="url(#mpa-icon-shadow)"
+                    />
+                    <image
+                      href={MAZE_ICON_HREFS[i]}
+                      x={cx - ICON_SIZE / 2}
+                      y={cy - ICON_SIZE / 2}
+                      width={ICON_SIZE}
+                      height={ICON_SIZE}
+                      preserveAspectRatio="xMidYMid meet"
+                    />
+                  </g>
+                );
+              })}
+            </g>
+          );
+        })()}
       </svg>
 
       {/* ── TEXT OVERLAY ── */}
       <div className="mpa-text-layer" style={{ 
         transform: `translate(${-textPanXPercent}%, ${-textPanYPercent}%) scale(${zoomFactor})`,
-        transformOrigin: `${(dotBaseX / 1000) * 100}% ${(dotBaseY / 600) * 100}%`,
+        transformOrigin: `${(dotBaseX / VIEWBOX_W) * 100}% ${(dotBaseY / VIEWBOX_H) * 100}%`,
       }}>
         {/* "Work Sprawl" main heading */}
         <div style={{ 
@@ -747,35 +962,46 @@ export default function MainPageAnimation() {
 
           {/* Subtitle logic is now handled in the SVG above */}
         </div>
+      </div>
 
-        {/* "Too many apps..." phase (440-520) */}
-        <div className="mpa-too-many-layer" style={{ opacity: tooManyOpacity }}>
-          <span 
-            className="mpa-heading-text" 
-            style={{ 
-              left: `${tooManyX}%`, 
-              top: '45%', 
-              fontSize: '8vw', 
-              color: '#111827',
-              transform: 'translateY(-50%)' 
-            }}
-          >
-            Too many
-          </span>
-          <span 
-            className="mpa-heading-text" 
-            style={{ 
-              left: '60%', 
-              top: '45%', 
-              fontSize: '8vw', 
-              color: '#111827', 
-              opacity: appsOpacity,
-              transform: 'translateY(-50%)' 
-            }}
-          >
-            apps...
-          </span>
-        </div>
+      {/* "Too many apps..." phase (440-520) - outside zoom/pan so text stays in viewport */}
+      <div className="mpa-text-layer mpa-too-many-layer" style={{
+        position: 'absolute',
+        top: '25%',
+        left: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        paddingRight: '5vw',
+        alignItems: 'baseline',
+        gap: '1.5vw',
+        whiteSpace: 'nowrap',
+        pointerEvents: 'none',
+      }}>
+        <span 
+          style={{ 
+            fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900,
+            color: tooColor, opacity: tooOpacity
+          }}
+        >
+          Too
+        </span>
+        <span 
+          style={{ 
+            fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900,
+            color: manyColor, opacity: manyOpacity
+          }}
+        >
+          many
+        </span>
+        <span 
+          style={{ 
+            fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900,
+            color: frame < 480 ? 'rgba(107,114,128,0.6)' : '#111827', 
+            opacity: appsOpacity
+          }}
+        >
+          apps...
+        </span>
       </div>
 
       {/* ── PLAYBACK CONTROLS ── */}
@@ -800,6 +1026,25 @@ export default function MainPageAnimation() {
         >
           {paused ? '▶ Play' : '⏸ Pause'}
         </button>
+
+        {/* Jump to Frame */}
+        <div className="mpa-jump-control" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <span style={{ fontSize: '12px', color: '#6B7280' }}>Frame:</span>
+          <input
+            type="number"
+            className="mpa-select"
+            style={{ width: '60px', textAlign: 'center' }}
+            value={Math.round(frame)}
+            onChange={(e) => {
+              const f = Math.min(TOTAL_FRAMES, Math.max(0, Number(e.target.value)));
+              const p = f / TOTAL_FRAMES;
+              pausedAtRef.current = p;
+              startTimeRef.current = null;
+              setAnimState({ frame: f, progress: p });
+              if (!pausedRef.current) setPaused(true);
+            }}
+          />
+        </div>
 
         {/* Step forward */}
         <button className="mpa-btn mpa-btn-icon" title="+1 frame" onClick={() => stepFrame(1)}>⏩</button>

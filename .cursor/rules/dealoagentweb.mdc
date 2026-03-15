@@ -9,6 +9,13 @@ Site designed to be placed in github public space and using github pages to crea
 
 Make sure u run vite for this site local and mention url which to use local to test changes.
 
+**Animation rules (MainPageAnimation and any motion):**
+- NEVER use hard cuts or instant show/hide for animated elements. Always use smooth crossfades or opacity transitions over multiple frames (e.g. fadeIn/fadeOut over 10-15 frames).
+- When switching between two visual representations (e.g. dot+line → overlay line), use overlapping fade-out + fade-in so one element fades out while the other fades in over the same frame range. Avoid both at full opacity (duplication) and avoid instant disappearance (jarring cut).
+- NEVER show two overlapping representations of the same element at once (e.g. two lines, two dots). Use a single element that morphs, or switch only when the previous is fully gone. Duplicate faded copies violate this rule.
+- When a line and a dot represent the same logical element (e.g. line end and dot), keep them in sync: the line end point and the dot position must use the same coordinates and motion (same speed and direction). Derive one from the other or both from a single source of truth.
+- When transitioning to a new path (e.g. from “line exits right” to “path through icons”), keep one continuous line: the existing line should curve/morph into the new path. Do not hide the first line and show a second line in a different position with animated opacity—that violates the no-duplicate-representation rule.
+
 DealoAgent.ai is an AI-native sales CRM that turns your existing communication data into a 24/7 sales copilot. It connects to your email, messengers, and call channels, centralizes all conversations, and continuously analyses them to understand who your customers are, what they care about, and how your team sells today. Instead of staring at empty CRM fields, your team gets an always-up-to-date, automatically filled knowledge base about deals, contacts, and interactions.
 
 On top of this foundation, DealoAgent.ai runs deep competitive intelligence. It reads incoming emails, proposals, and attachments from prospects and vendors, extracts pricing, features, and terms, and builds living comparison tables of your competitors — without any manual copy-paste. Your sales team sees where your offer wins or loses in seconds and can adapt messaging instantly instead of digging through old threads or spreadsheets.
