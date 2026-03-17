@@ -7,14 +7,12 @@ You operating with web site dealoagent.ai Your goal to create SEO friendly site 
   ➜  Local:   http://localhost:3000/ for npm run
 
 **Animation rules (MainPageAnimation (http://localhost:3000/anim)  and any motion):**
+- when i provide samples images in name there number means frame * 10 - to understand speed on screen. 
 - NEVER use hard cuts or instant show/hide for animated elements. Always use smooth crossfades or opacity transitions over multiple frames (e.g. fadeIn/fadeOut over 10-15 frames).
 - When switching between two visual representations (e.g. dot+line → overlay line), use overlapping fade-out + fade-in so one element fades out while the other fades in over the same frame range. Avoid both at full opacity (duplication) and avoid instant disappearance (jarring cut).
 - NEVER show two overlapping representations of the same element at once (e.g. two lines, two dots). Use a single element that morphs, or switch only when the previous is fully gone. Duplicate faded copies violate this rule.
 - When a line and a dot represent the same logical element (e.g. line end and dot), keep them in sync: the line end point and the dot position must use the same coordinates and motion (same speed and direction). Derive one from the other or both from a single source of truth.
 - When transitioning to a new path (e.g. from “line exits right” to “path through icons”), keep one continuous line: the existing line should curve/morph into the new path. Do not hide the first line and show a second line in a different position with animated opacity—that violates the no-duplicate-representation rule.
-- Do not do large fixes for whole frames like 430 to 520 - you are too weak to do it! When the user tells you frames to fix, walk ONLY around the frames mentioned!
-- The dot on the end of the line must move TOGETHER with the line. If the dot moves slower or faster than the line (diverges), it is a violation of the rules.
-- Do not use strong angles when transitioning paths unless it is explicitly mentioned in the user task. Ensure curves are used smoothly instead of jumps with sharp angles.
 
 
 ## Blog Post Creation Rules

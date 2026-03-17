@@ -38,8 +38,8 @@ function fadeOut(frame: number, startFrame: number, endFrame: number): number {
 // Clamp 0..1
 function clamp01(v: number) { return Math.min(1, Math.max(0, v)); }
 
-const TOTAL_FRAMES = 520;
-const BASE_DURATION = 18000; // ms at 1× speed (increased for more frames)
+const TOTAL_FRAMES = 800;
+const BASE_DURATION = 24000; // ms at 1× speed (increased for more frames)
 
 export default function MainPageAnimation() {
   const [animState, setAnimState] = useState<AnimState>({ frame: 0, progress: 0 });
@@ -397,6 +397,13 @@ export default function MainPageAnimation() {
   const textPanXPercent = (cameraPanX / VIEWBOX_W) * 100;
   const textPanYPercent = (cameraPanY / VIEWBOX_H) * 100;
 
+  // ─── EXTENDED CAMERA PAN (520-700) ───
+  // The user requested that the app cluster moves left while the dot continues right.
+  // We apply an X-offset to the overlay paths and icons. It stops at frame 600 to pin the background.
+  const extendedPanProgress = frame < 520 ? 0 : frame > 600 ? 1 : (frame - 520) / 80;
+  // Shift left so the dark wipe at World 115 locks precisely onto the left edge (Screen 0)
+  const extendedPanX = lerp(0, pctX(-115), extendedPanProgress);
+
   // ─── EXTENDED ANIMATION (320-520) ───────────────────────────────────────────
 
   const sprawlX_Zoom = 50;
@@ -408,15 +415,15 @@ export default function MainPageAnimation() {
   // Panning/Blur (370-410)
   const blurOpacity = fadeIn(frame, 365, 375) * fadeOut(frame, 410, 420);
 
-  // "Too many apps..." pull back (440-520)
-  const tooOpacity = fadeIn(frame, 440, 445);
+  // "Too many apps..." pull back (440-520), fades out as wipe approaches (560-600)
+  const tooOpacity = fadeIn(frame, 440, 445) * fadeOut(frame, 560, 590);
   const tooColor = frame < 445 ? '#6B7280' : '#111827';
-  const manyOpacity = fadeIn(frame, 450, 455);
+  const manyOpacity = fadeIn(frame, 450, 455) * fadeOut(frame, 565, 595);
   const manyColor = frame < 455 ? 'rgba(107,114,128,0.5)' : frame < 465 ? 'rgba(75,85,99,0.9)' : '#111827';
-  const appsOpacity = fadeIn(frame, 465, 475);
+  const appsOpacity = fadeIn(frame, 465, 475) * fadeOut(frame, 570, 600);
   
-  // Chaotic loopy path opacity and morphing
-  const iconsOpacity = frame >= 465 ? 0 : fadeIn(frame, 470, 500);
+  // Chaotic loopy path opacity and morphing (kept visible!)
+  const iconsOpacity = fadeIn(frame, 470, 500);
   
   // ── OVERLAY PATH MATH (crossfade 430→440, maze starts 440) ──
   // Match the exact on-screen position of the dot at frame 439 to prevent ANY X/Y jumps
@@ -424,96 +431,136 @@ export default function MainPageAnimation() {
   const handoffY = 52.33; // (320 - 6) / 6
   const HANDOFF_PCT: [number, number] = [handoffX, handoffY];
   const MAZE_ICONS_SCATTERED_PCT: Array<[number, number]> = [
-    HANDOFF_PCT, // 84.11, 52.33
-    [86, 25],    // Salesforce
-    [50, 15],    // Slack
-    [70, 8],     // Telegram
-    [90, 20],    // Notion
-    [92, 70],    // Gmail
-    [66, 85],    // Calendar
-    [45, 68],    // Teams
-    [110, 52.33],   // Exit (horizontally aligned with initial entry)
+    HANDOFF_PCT, // 0: 440
+    [86, 25],    // 1: 450
+    [50, 15],    // 2: 460
+    [70, 8],     // 3: 470
+    [90, 20],    // 4: 480
+    [92, 70],    // 5: 490
+    [66, 85],    // 6: 500
+    [45, 68],    // 7: 510
+    [85, 50],    // 8: 520 (Exit apps)
+    [97.5, 50],  // 9: 540
+    [110, 50],   // 10: 560
+    [122.5, 50], // 11: 580
+    [135, 50],   // 12: 600 (Screen X: 20)
+    [142, 50],   // 13: 620 (Smooth flat lead-in)
+    [149, 10],   // 14: 640 (Peak)
+    [156, 90],   // 15: 660 (Valley)
+    [163, 10],   // 16: 680 (Peak)
+    [170, 90],   // 17: 700 (Valley)
+    [177, 10],   // 18: 720 (Peak)
+    [184, 90],   // 19: 740 (Valley)
+    [191, 10],   // 20: 760 (Peak)
+    [198, 50],   // 21: 790 (Level out)
+    [205, 50],   // 22: 800 (Screen X: 90)
   ];
-  const NUM_MAZE_SEGMENTS = 8; // handoff→Salesforce→Slack→...→Teams→exit
   const MAZE_CURVE_CP_PCT: Array<[number, number]> = [
-    [85, 40], [85, 15], [50, 8], [85, 8], [100, 45], [92, 85], [45, 85], [80, 52.33],
+    [85, 40], // 0 -> 1
+    [85, 15], // 1 -> 2
+    [50, 8],  // 2 -> 3
+    [85, 8],  // 3 -> 4
+    [100, 45], // 4 -> 5
+    [92, 85], // 5 -> 6
+    [45, 85], // 6 -> 7
+    [65, 59], // 7 -> 8
+    [91.2, 50],  // 8 -> 9
+    [103.7, 50], // 9 -> 10
+    [116.2, 50], // 10 -> 11
+    [128.7, 50], // 11 -> 12
+    [138.5, 50], // 12 -> 13
+    [145.5, 10], // 13 -> 14
+    [152.5, 90], // 14 -> 15
+    [159.5, 10], // 15 -> 16
+    [166.5, 90], // 16 -> 17
+    [173.5, 10], // 17 -> 18
+    [180.5, 90], // 18 -> 19
+    [187.5, 10], // 19 -> 20
+    [194.5, 50], // 20 -> 21
+    [201.5, 50], // 21 -> 22
   ];
-  const MAZE_SEG_START = 440;
-  const MAZE_SEG_END = 520;
-  const mazeSegLen = (MAZE_SEG_END - MAZE_SEG_START) / NUM_MAZE_SEGMENTS;
+  const MAZE_TIMINGS = [
+    440, 450, 460, 470, 480, 490, 500, 510,
+    520, 530, 545, 560, 575, 590, 605, 620,
+    640, 660, 680, 710, 740, 770, 800
+  ];
 
   // Overlay line opacity mirrors inner line opacity to crossfade.
-  const overlayLineOpacity = frame >= 520 ? 0 : handoffProgress;
-  // Base path: extends from far left (-20%) to avoid strokeLinecap inset, and tracks dotX_PCT for perfect sync during crossfade.
+  let currentSegment = 0;
+  let tSeg = 0;
+  if (frame < MAZE_TIMINGS[0]) {
+    currentSegment = 0;
+    tSeg = 0;
+  } else if (frame >= MAZE_TIMINGS[MAZE_TIMINGS.length - 1]) {
+    currentSegment = MAZE_TIMINGS.length - 2;
+    tSeg = 1;
+  } else {
+    for (let i = 0; i < MAZE_TIMINGS.length - 1; i++) {
+      if (frame >= MAZE_TIMINGS[i] && frame < MAZE_TIMINGS[i + 1]) {
+        currentSegment = i;
+        tSeg = (frame - MAZE_TIMINGS[i]) / (MAZE_TIMINGS[i + 1] - MAZE_TIMINGS[i]);
+        break;
+      }
+    }
+  }
+
+  const eased = easeInOut(tSeg);
+  const P0 = MAZE_ICONS_SCATTERED_PCT[currentSegment];
+  const P1 = MAZE_CURVE_CP_PCT[currentSegment];
+  const P2 = MAZE_ICONS_SCATTERED_PCT[currentSegment + 1];
+
+  const Q1x = lerp(P0[0], P1[0], eased);
+  const Q1y = lerp(P0[1], P1[1], eased);
+  const Q1_to_P2x = lerp(P1[0], P2[0], eased);
+  const Q1_to_P2y = lerp(P1[1], P2[1], eased);
+  const Q2x = lerp(Q1x, Q1_to_P2x, eased);
+  const Q2y = lerp(Q1y, Q1_to_P2y, eased);
+
+  const overlayLineOpacity = handoffProgress;
   const overlayPathToHandoff = `M ${pctX(-20)} ${pctY(50)} L ${pctX(dotX_PCT)} ${pctY(HANDOFF_PCT[1])}`;
 
-  const overlayPathD = frame < 440
-    ? overlayPathToHandoff
-    : frame <= 520
-      ? (() => {
-          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
-          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
-          if (idx === 0 && tSeg === 0) return overlayPathToHandoff;
-          const eased = easeInOut(tSeg);
-          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
-          const P1 = MAZE_CURVE_CP_PCT[idx];
-          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
+  let overlayPathD = overlayPathToHandoff;
+  if (frame >= 440) {
+    for (let i = 0; i < currentSegment; i++) {
+      overlayPathD += ` Q ${pctX(MAZE_CURVE_CP_PCT[i][0])} ${pctY(MAZE_CURVE_CP_PCT[i][1])} ${pctX(MAZE_ICONS_SCATTERED_PCT[i + 1][0])} ${pctY(MAZE_ICONS_SCATTERED_PCT[i + 1][1])}`;
+    }
+    if (tSeg > 0) {
+      overlayPathD += ` Q ${pctX(Q1x)} ${pctY(Q1y)} ${pctX(Q2x)} ${pctY(Q2y)}`;
+    }
+  }
 
-          // Compute partial bezier curve control points using De Casteljau to trace dynamically without bulge/divergence
-          const Q1x = lerp(P0[0], P1[0], eased);
-          const Q1y = lerp(P0[1], P1[1], eased);
-          const Q1_to_P2x = lerp(P1[0], P2[0], eased);
-          const Q1_to_P2y = lerp(P1[1], P2[1], eased);
-          const Q2x = lerp(Q1x, Q1_to_P2x, eased);
-          const Q2y = lerp(Q1y, Q1_to_P2y, eased);
+  const overlayCircleVisible = handoffProgress > 0 && frame <= 800;
+  const overlayCircleX = frame < 440 ? pctX(dotX_PCT) : pctX(Q2x);
+  const overlayCircleY = frame < 440 ? pctY(HANDOFF_PCT[1]) : pctY(Q2y);
 
-          let d = overlayPathToHandoff;
-          for (let i = 0; i < idx; i++) {
-            d += ` Q ${pctX(MAZE_CURVE_CP_PCT[i][0])} ${pctY(MAZE_CURVE_CP_PCT[i][1])} ${pctX(MAZE_ICONS_SCATTERED_PCT[i + 1][0])} ${pctY(MAZE_ICONS_SCATTERED_PCT[i + 1][1])}`;
-          }
-          d += ` Q ${pctX(Q1x)} ${pctY(Q1y)} ${pctX(Q2x)} ${pctY(Q2y)}`;
-          return d;
-        })()
-      : overlayPathToHandoff + MAZE_ICONS_SCATTERED_PCT.slice(1).reduce((acc, p, i) => acc + ` Q ${pctX(MAZE_CURVE_CP_PCT[i][0])} ${pctY(MAZE_CURVE_CP_PCT[i][1])} ${pctX(p[0])} ${pctY(p[1])}`, '');
-
-  const overlayCircleVisible = handoffProgress > 0 && frame <= 520;
-  const overlayCircleX = frame < 440
-    ? pctX(dotX_PCT)
-    : frame <= 520
-      ? (() => {
-          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
-          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
-          if (idx === 0 && tSeg === 0) return pctX(HANDOFF_PCT[0]);
-          const eased = easeInOut(tSeg);
-          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
-          const P1 = MAZE_CURVE_CP_PCT[idx];
-          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
-          const Q1x = lerp(P0[0], P1[0], eased);
-          const Q1_to_P2x = lerp(P1[0], P2[0], eased);
-          const Q2x = lerp(Q1x, Q1_to_P2x, eased);
-          return pctX(Q2x);
-        })()
-      : pctX(110);
-  const overlayCircleY = frame < 440
-    ? pctY(HANDOFF_PCT[1])
-    : frame <= 520
-      ? (() => {
-          const idx = Math.min(NUM_MAZE_SEGMENTS - 1, Math.floor((frame - MAZE_SEG_START) / mazeSegLen));
-          const tSeg = frame >= MAZE_SEG_END ? 1 : ((frame - MAZE_SEG_START) - idx * mazeSegLen) / mazeSegLen;
-          if (idx === 0 && tSeg === 0) return pctY(HANDOFF_PCT[1]);
-          const eased = easeInOut(tSeg);
-          const P0 = MAZE_ICONS_SCATTERED_PCT[idx];
-          const P1 = MAZE_CURVE_CP_PCT[idx];
-          const P2 = MAZE_ICONS_SCATTERED_PCT[idx + 1];
-          const Q1y = lerp(P0[1], P1[1], eased);
-          const Q1_to_P2y = lerp(P1[1], P2[1], eased);
-          const Q2y = lerp(Q1y, Q1_to_P2y, eased);
-          return pctY(Q2y);
-        })()
-      : pctY(HANDOFF_PCT[1]);
-
+  // Outline width drops slightly during the chaotic maze, stays thin for the final loops
   const overlayStrokeWidth = frame < 440 ? pctY(4) : frame <= 520 ? pctY(lerp(4, 1.17, (frame - 440) / 80)) : pctY(1.17);
   const overlayCircleR = pctY(5);
+
+  const wipeProgress = frame < 520 ? 0 : 1; 
+  // The dark wipe correctly tracks extending X by incorporating extendedPanX mapping
+  // to perfectly track the distance to the rest of the left content while the screen pans.
+  // It stops solidly on the left edge (Screen X = 0) at frame 600.
+  const wipeStartX = Math.max(0, pctX(115) + extendedPanX);
+  const wipeEndX = overlayCircleX + extendedPanX;
+  const wipePathD = wipeProgress === 0 
+    ? "" 
+    : `M ${wipeStartX} 0 L ${wipeEndX} 0 L ${wipeEndX} ${VIEWBOX_H} L ${wipeStartX} ${VIEWBOX_H} Z`;
+
+  // AI tools text opacity
+  const aiToolsOpacity = frame < 580 ? 0 : fadeIn(frame, 580, 610);
+  
+  // Create AI tools data mapping to specific node peaks/valleys
+  const aiWaveTools = [
+    { idx: 14, type: 'sparkle', color: '#10B981' }, // 640 Peak
+    { idx: 15, type: 'burst', color: '#3B82F6' },   // 660 Valley
+    { idx: 16, type: 'sparkle', color: '#8B5CF6' }, // 680 Peak
+    { idx: 17, type: 'burst', color: '#D97757' },   // 700 Valley
+    { idx: 18, type: 'sparkle', color: '#EC4899' }, // 720 Peak
+  ].map(t => {
+    const iconOpacity = frame < MAZE_TIMINGS[t.idx] - 10 ? 0 : fadeIn(frame, MAZE_TIMINGS[t.idx] - 10, MAZE_TIMINGS[t.idx] + 10);
+    return { ...t, cp: MAZE_ICONS_SCATTERED_PCT[t.idx], opacity: iconOpacity };
+  });
 
   // Red speed-lines from frame 358 to 430: fixed baseline, balanced up/down offsets.
   const quickSpeedOpacity = frame >= 358 && frame <= 430 ? fadeIn(frame, 358, 366) * fadeOut(frame, 424, 430) : 0;
@@ -566,6 +613,13 @@ export default function MainPageAnimation() {
           <filter id="mpa-icon-shadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.15"/>
           </filter>
+          <linearGradient id="dark-starry-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#0B0B1A" />
+            <stop offset="100%" stopColor="#1E1332" />
+          </linearGradient>
+          <clipPath id="wipe-clip">
+            <path d={wipePathD} />
+          </clipPath>
         </defs>
         <g
           transform={`translate(${-cameraPanX} ${-cameraPanY}) translate(${scaleOriginX} ${scaleOriginY}) scale(${zoomFactor}) translate(${-scaleOriginX} ${-scaleOriginY})`}
@@ -793,26 +847,9 @@ export default function MainPageAnimation() {
           <line x1="10%" y1="20%" x2="95%" y2="20%" stroke="#fbcfe8" strokeWidth="4" opacity="0.4"/>
         </g>
 
-        {/* ── APP ICONS (470+: Slack, Monday.com per task spec; positions in %) ── */}
+        {/* ── APP ICONS (470+) ── */}
+        {/* The hardcoded custom Slack/Monday/Notion boxes were removed as requested. Real icons are loaded further down. */}
         <g opacity={iconsOpacity}>
-          {/* Slack: 58%, 10%, size 6%, 8% (task frame 470) */}
-          <rect x={pctX(58)} y={pctY(10)} width={pctX(6)} height={pctY(8)} rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-          <circle cx={pctX(61)} cy={pctY(14)} r={pctY(0.67)} fill="#36C5F0"/>
-          {frame > 480 && <polygon points={`${pctX(58)},${pctY(8)} ${pctX(61)},${pctY(3)} ${pctX(64)},${pctY(8)}`} fill="#FACC15"/>}
-
-          {/* Monday.com: 82%, 25%, size 7%, 9%; red badge */}
-          <rect x={pctX(82)} y={pctY(25)} width={pctX(7)} height={pctY(9)} rx="8" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-          <circle cx={pctX(84)} cy={pctY(30)} r={pctY(0.5)} fill="#E11D48"/>
-          <circle cx={pctX(87)} cy={pctY(25)} r={pctY(1.33)} fill="#EF4444"/>
-          <text x={pctX(87)} y={pctY(28)} fontFamily="Inter" fontSize={10} fontWeight="700" fill="white" textAnchor="middle">1</text>
-
-          {/* Jira / Notion (later frames) */}
-          {frame > 500 && (
-            <>
-              <rect x={pctX(80)} y={pctY(58)} width={pctX(5)} height={pctY(7)} rx="6" fill="white" stroke="#E5E7EB" strokeWidth="2"/>
-              <text x={pctX(82.5)} y={pctY(63)} fontFamily="Inter" fontSize={10} fontWeight="900" fill="black" textAnchor="middle">N</text>
-            </>
-          )}
         </g>
         
         {/* ── NATIVE SVG SUBTITLE ── */}
@@ -851,40 +888,75 @@ export default function MainPageAnimation() {
           ))}
         </g>
 
-        {/* Overlay line+dot in same 1000x600 viewBox (no transform) so 439→440 has no jump */}
-        <g opacity={overlayLineOpacity} style={{ pointerEvents: 'none' }}>
-          <path
-            d={overlayPathD}
-            stroke="#111827"
-            strokeWidth={overlayStrokeWidth}
-            fill="none"
-            strokeLinecap="round"
-          />
-          {overlayCircleVisible && (
-            <circle
-              cx={overlayCircleX}
-              cy={overlayCircleY}
-              r={overlayCircleR}
-              fill="#111827"
-            />
+        {/* ── DARK WIPE BACKGROUND ── */}
+        <g style={{ pointerEvents: 'none' }}>
+          {wipeProgress > 0 && wipePathD && (
+            <path d={wipePathD} fill="url(#dark-starry-grad)" />
           )}
         </g>
+
+        {/* Overlay line+dot in same 1000x600 viewBox (no transform) so 439→440 has no jump */}
+        {/* We apply the layout shift (extendedPanX) here so the path and apps track left */}
+        <g opacity={overlayLineOpacity} style={{ pointerEvents: 'none' }}>
+          {/* Black version */}
+          <g transform={`translate(${extendedPanX}, 0)`}>
+            <path
+              d={overlayPathD}
+              stroke="#111827"
+              strokeWidth={overlayStrokeWidth}
+              fill="none"
+              strokeLinecap="round"
+            />
+            {overlayCircleVisible && (
+              <circle
+                cx={overlayCircleX}
+                cy={overlayCircleY}
+                r={overlayCircleR}
+                fill="#111827"
+              />
+            )}
+          </g>
+
+          {/* White version clipped to the dark wipe (screen space clip) */}
+          <g clipPath="url(#wipe-clip)">
+            <g transform={`translate(${extendedPanX}, 0)`}>
+              <path
+                d={overlayPathD}
+                stroke="#FFFFFF"
+                strokeWidth={overlayStrokeWidth}
+                fill="none"
+                strokeLinecap="round"
+              />
+              {overlayCircleVisible && (
+                <circle
+                  cx={overlayCircleX}
+                  cy={overlayCircleY}
+                  r={overlayCircleR}
+                  fill="#FFFFFF"
+                />
+              )}
+            </g>
+          </g>
+        </g>
         {/* Maze icons: visible from 440 at path connection points; each icon appears when path reaches it */}
-        {frame >= 440 && (() => {
-          const ICON_SIZE = 36;
-          const CARD_SIZE = 60;
-          const CARD_HALF = CARD_SIZE / 2;
-          const MAZE_ICON_HREFS = [
+        <g transform={`translate(${extendedPanX}, 0)`}>
+          {frame >= 440 && (() => {
+            const ICON_SIZE = 36;
+            const CARD_SIZE = 60;
+            const CARD_HALF = CARD_SIZE / 2;
+            const MAZE_ICON_HREFS = [
             '/icons/Salesforce.svg', '/icons/Slack.svg', '/icons/Telegram.svg', '/icons/Notion.svg',
             '/icons/Gmail.svg', '/icons/Google_Calendar.svg', '/icons/Microsoft_Teams.svg',
           ];
           const mazeSegLenIcons = (520 - 440) / 8;
           return (
             <g style={{ pointerEvents: 'none' }}>
+              {/* Restored slice to 8 to include Gmail, Calendar, Teams */}
               {MAZE_ICONS_SCATTERED_PCT.slice(1, 8).map(([cxPct, cyPct], i) => {
                 const cx = pctX(cxPct);
                 const cy = pctY(cyPct);
                 const iconReachedFrame = 440 + (i + 1) * mazeSegLenIcons;
+                // Icons shouldn't disappear
                 const iconOpacity = frame >= iconReachedFrame ? 1 : frame >= iconReachedFrame - 8 ? fadeIn(frame, iconReachedFrame - 8, iconReachedFrame) : 0;
                 return (
                   <g key={i} opacity={iconOpacity}>
@@ -913,6 +985,26 @@ export default function MainPageAnimation() {
             </g>
           );
         })()}
+
+          {/* ── AI TOOLS WAVE ICONS (Inside the pan group) ── */}
+          {aiWaveTools.map((tool, i) => (
+            <g key={i} opacity={tool.opacity} style={{ pointerEvents: 'none' }}>
+              <g transform={`translate(${pctX(tool.cp[0])}, ${pctY(tool.cp[1])})`}>
+                <circle cx="0" cy="0" r={pctY(6)} fill="white" filter="url(#mpa-icon-shadow)" />
+                {tool.type === 'sparkle' ? (
+                  <path d={`M 0 ${pctY(-3)} Q ${pctY(0.4)} ${pctY(-0.4)} ${pctY(3)} 0 Q ${pctY(0.4)} ${pctY(0.4)} 0 ${pctY(3)} Q ${pctY(-0.4)} ${pctY(0.4)} ${pctY(-3)} 0 Q ${pctY(-0.4)} ${pctY(-0.4)} 0 ${pctY(-3)} Z`} fill={tool.color} />
+                ) : (
+                  <g stroke={tool.color} strokeWidth={pctY(0.6)} strokeLinecap="round">
+                    <line x1={pctY(-2.5)} y1="0" x2={pctY(2.5)} y2="0" />
+                    <line x1="0" y1={pctY(-2.5)} x2="0" y2={pctY(2.5)} />
+                    <line x1={pctY(-1.7)} y1={pctY(-1.7)} x2={pctY(1.7)} y2={pctY(1.7)} />
+                    <line x1={pctY(-1.7)} y1={pctY(1.7)} x2={pctY(1.7)} y2={pctY(-1.7)} />
+                  </g>
+                )}
+              </g>
+            </g>
+          ))}
+        </g>
       </svg>
 
       {/* ── TEXT OVERLAY ── */}
@@ -965,6 +1057,7 @@ export default function MainPageAnimation() {
       </div>
 
       {/* "Too many apps..." phase (440-520) - outside zoom/pan so text stays in viewport */}
+      {/* Needs to shift left with extendedPanX (as percentage of VW) */}
       <div className="mpa-text-layer mpa-too-many-layer" style={{
         position: 'absolute',
         top: '25%',
@@ -976,6 +1069,7 @@ export default function MainPageAnimation() {
         gap: '1.5vw',
         whiteSpace: 'nowrap',
         pointerEvents: 'none',
+        transform: `translateX(${(extendedPanX / VIEWBOX_W) * 100}%)`,
       }}>
         <span 
           style={{ 
@@ -1002,6 +1096,26 @@ export default function MainPageAnimation() {
         >
           apps...
         </span>
+      </div>
+
+      {/* "Too many AI tools..." phase (600+) */}
+      <div className="mpa-text-layer mpa-too-many-layer" style={{
+        position: 'absolute',
+        top: '30%',
+        left: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        paddingRight: '5vw',
+        alignItems: 'baseline',
+        gap: '1.5vw',
+        whiteSpace: 'nowrap',
+        pointerEvents: 'none',
+        opacity: aiToolsOpacity,
+        transform: `translateX(${((extendedPanX + pctX(120)) / VIEWBOX_W) * 100}%)`,
+      }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900, color: 'white' }}>Too</span>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900, color: 'white' }}>many</span>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '6vw', fontWeight: 900, color: 'white' }}>AI tools...</span>
       </div>
 
       {/* ── PLAYBACK CONTROLS ── */}
