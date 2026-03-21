@@ -1,200 +1,59 @@
-import { Mail, MessageSquare, Calendar, BarChart3, Database, Phone, Building2, Search, Repeat, Send, User, Users, Plus } from "lucide-react";
-import dealoAgentLogo from "../assets/new_logo_no_text_for_fabi.png";
+import { Mail, Database, Search, Users } from "lucide-react";
+import { useState, useRef, useEffect } from 'react';
+import {
+    ArrowRight,
+    Bot,
+    Sparkles,
+    GripVertical,
+    Settings,
+    Globe,
+    MousePointer2,
+    AlertCircle,
+    X
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { G2Widget } from "./G2Widget";
 import { ProductHuntWidget } from "./ProductHuntWidget";
 
-// Top Users category
-const topUserItems = [
-  {
-    title: "You", logos: [
-      { name: "Control", note: false },
-      { name: "Monitor", note: false },
-      { name: "Decide", note: false },
-      { name: "Approve", note: false },
-      { name: "Review", note: false }
-    ], icon: User, color: "text-emerald-600", bg: "bg-emerald-50", border: "border-emerald-200"
-  },
-  {
-    title: "Your team", subtitle: "(optional)", logos: [
-      { name: "Collaborate", note: false },
-      { name: "Share", note: false },
-      { name: "Access", note: false },
-      { name: "Track", note: false },
-      { name: "Report", note: false }
-    ], icon: Users, color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200"
-  },
+// --- Types & Data for New Approach Animation ---
+type ConversationStep = {
+    lang: 'EN' | 'ES' | 'DE';
+    query: string;
+    responseType: 'list' | 'email' | 'status';
+    responseContent: any;
+};
+
+const CONVERSATIONS: ConversationStep[] = [
+    {
+        lang: 'EN',
+        query: "Find SaaS companies in FinTech raising Series A",
+        responseType: 'list',
+        responseContent: [
+            { name: "FinTech Corp", detail: "$15M Series A • 2 days ago" },
+            { name: "PayFlow", detail: "$12M Series A • 5 days ago" },
+            { name: "Bankify", detail: "$20M Series A • 1 week ago" }
+        ]
+    },
+    {
+        lang: 'ES',
+        query: "Redacta un correo de seguimiento para Juan",
+        responseType: 'email',
+        responseContent: {
+            subject: "Seguimiento: Nuestra reunión",
+            body: "Hola Juan, gracias por tu tiempo hoy. Me gustaría..."
+        }
+    },
+    {
+        lang: 'DE',
+        query: "Wie ist der Status von Deal Alpha?",
+        responseType: 'status',
+        responseContent: {
+            stage: "Verhandlung",
+            probability: "85%",
+            nextStep: "Vertrag unterzeichnen"
+        }
+    }
 ];
-
-// Connectors category
-const connectorItems = [
-  {
-    title: "Email", logos: [
-      { name: "Gmail", note: false },
-      { name: "Outlook", note: false },
-      { name: "Yahoo", note: false },
-      { name: "ProtonMail", note: false },
-      { name: "Zoho", note: false }
-    ], icon: Mail, color: "text-red-600", bg: "bg-red-50", border: "border-red-200", showAddButton: true
-  },
-  {
-    title: "Messenger", logos: [
-      { name: "Telegram", note: false },
-      { name: "Slack", note: true },
-      { name: "WhatsApp", note: true },
-      { name: "Teams", note: false },
-      { name: "Discord", note: true }
-    ], icon: MessageSquare, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200", showAddButton: true
-  },
-  {
-    title: "Calendar", logos: [
-      { name: "Google", note: false },
-      { name: "Outlook", note: false },
-      { name: "Apple", note: true },
-      { name: "Calendly", note: true },
-      { name: "Zoom", note: true }
-    ], icon: Calendar, color: "text-green-600", bg: "bg-green-50", border: "border-green-200", showAddButton: true
-  },
-  {
-    title: "Analytics", logos: [
-      { name: "Google", note: true },
-      { name: "Mixpanel", note: true },
-      { name: "Amplitude", note: true },
-      { name: "Segment", note: true },
-      { name: "Heap", note: true }
-    ], icon: BarChart3, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200", showAddButton: true
-  },
-];
-
-// External Data category
-const externalDataItems = [
-  {
-    title: "CRM Sync", logos: [
-      { name: "Salesforce", note: true },
-      { name: "HubSpot", note: true },
-      { name: "Pipedrive", note: true },
-      { name: "Zoho", note: true },
-      { name: "Monday", note: true }
-    ], icon: Building2, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200", showAddButton: true
-  },
-  {
-    title: "Softswitch", logos: [
-      { name: "IXC", note: false },
-      { name: "iptel", note: false }
-    ], icon: Phone, color: "text-orange-600", bg: "bg-orange-50", border: "border-orange-200", showAddButton: true
-  },
-  {
-    title: "Commercial DB", logos: [
-      { name: "Apollo", note: false },
-      { name: "ZoomInfo", note: true },
-      { name: "RocketReach", note: false },
-      { name: "Hunter", note: true },
-      { name: "Lusha", note: true }
-    ], icon: Database, color: "text-indigo-600", bg: "bg-indigo-50", border: "border-indigo-200", showAddButton: true
-  },
-];
-
-// Agents category
-const agentItems = [
-  {
-    title: "Research", logos: [
-      { name: "Market", note: false },
-      { name: "Competitor", note: false },
-      { name: "Lead", note: false },
-      { name: "Company", note: false },
-      { name: "Industry", note: false }
-    ], icon: Search, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200"
-  },
-  {
-    title: "CRM", logos: [
-      { name: "Auto-fill", note: false },
-      { name: "Vocabulary", note: false },
-      { name: "Insights", note: false },
-      { name: "History", note: false },
-      { name: "Context", note: false }
-    ], icon: Database, color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200"
-  },
-  {
-    title: "Workflow", logos: [
-      { name: "Sequence", note: false },
-      { name: "Pipeline", note: false },
-      { name: "Task", note: false },
-      { name: "Route", note: false },
-      { name: "Automate", note: false }
-    ], icon: Repeat, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200"
-  },
-  {
-    title: "Follow Up", logos: [
-      { name: "Email", note: false },
-      { name: "SMS", note: false },
-      { name: "Call", note: false },
-      { name: "LinkedIn", note: false },
-      { name: "Reminder", note: false }
-    ], icon: Send, color: "text-green-600", bg: "bg-green-50", border: "border-green-200"
-  },
-];
-
-interface IntegrationItemProps {
-  title: string;
-  subtitle?: string;
-  logos: Array<{ name: string; note: boolean }>;
-  icon: any;
-  color: string;
-  bg: string;
-  border: string;
-  showAddButton?: boolean;
-}
-
-function IntegrationItem({ title, subtitle, logos, icon: Icon, color, bg, border, showAddButton }: IntegrationItemProps) {
-  const { t } = useTranslation();
-
-  return (
-    <div className={`bg-white rounded-lg sm:rounded-xl border-2 ${border} shadow-lg p-1.5 sm:p-4 hover:shadow-xl hover:scale-105 transition-all duration-300 relative`}>
-      {/* Header with title and optional subtitle - Uniform small font on mobile */}
-      <div data-pdf-header className="flex items-center justify-between pb-1 sm:pb-2 mb-1 sm:mb-2 border-b-2 border-gray-100 pr-0.5 sm:pr-1">
-        <div data-pdf-header-inner className="flex items-center gap-1 sm:gap-2 min-w-0 flex-1">
-          <div className={`${bg} p-0.5 sm:p-1.5 rounded-lg flex-shrink-0`} data-pdf-icon-wrap>
-            <Icon className={`w-2.5 h-2.5 sm:w-4 sm:h-4 ${color}`} />
-          </div>
-          <div className="flex flex-col min-w-0 flex-1">
-            <h3 className="text-[8px] sm:text-sm font-bold text-gray-900 leading-tight whitespace-nowrap">{title}</h3>
-            {subtitle && <span className="text-[7px] sm:text-[10px] text-gray-500 leading-tight whitespace-nowrap">{subtitle}</span>}
-          </div>
-        </div>
-      </div>
-
-      {/* Logos list with note markers */}
-      <div className="flex flex-wrap gap-0.5 sm:gap-1 pr-3 sm:pr-8">
-        {logos.map((logo, idx) => (
-          <span
-            key={idx}
-            data-pdf-pill
-            className={`inline-flex items-center align-middle leading-none text-[6px] sm:text-[10px] px-0.5 sm:px-2 py-0.5 sm:py-1 rounded-md ${bg} ${color} font-medium whitespace-nowrap`}
-          >
-            {logo.name}{logo.note && <sup className="text-[5px] sm:text-[8px]">*</sup>}
-          </span>
-        ))}
-      </div>
-
-      {/* Optional Add Button */}
-      {showAddButton && (
-        <button
-          className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 group"
-          title={t('integrationHub.addFreeTooltip')}
-        >
-          <div className={`flex items-center gap-0.5 sm:gap-1 ${bg} ${color} px-1 sm:px-2 py-0.5 sm:py-1 rounded-lg hover:scale-110 transition-transform`} data-pdf-add-btn>
-            <Plus className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-            <span className="text-[7px] sm:text-[8px] font-bold">YOUR</span>
-          </div>
-          {/* Tooltip */}
-          <div className="absolute bottom-full right-0 mb-1 hidden group-hover:block w-36 bg-emerald-500 text-white text-[9px] px-2 py-1 rounded shadow-lg z-50 whitespace-normal border border-emerald-300">
-            {t('integrationHub.addFreeTooltip')}
-          </div>
-        </button>
-      )}
-    </div>
-  );
-}
 
 type IntegrationHubVariant = 'default' | 'onepager';
 
@@ -205,6 +64,7 @@ interface IntegrationHubProps {
 export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
   const { t } = useTranslation();
   const isOnePager = variant === 'onepager';
+
   const sectionClassName = isOnePager
     ? "relative h-[1123px] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-6 pb-2"
     : "relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-20 sm:pt-24 pb-8 sm:pb-14";
@@ -220,29 +80,152 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
   const subtitleClassName = isOnePager
     ? "mx-auto max-w-xl text-xs text-blue-100/80 font-medium"
     : "mx-auto max-w-2xl text-sm sm:text-base md:text-lg text-blue-100/80 font-medium";
-  const hubClassName = isOnePager
-    ? "relative min-h-[980px] flex items-center justify-center"
-    : "relative min-h-[700px] sm:min-h-[820px] lg:min-h-[920px] flex items-center justify-center";
-  const topBlockClassName = isOnePager
-    ? "absolute top-2 left-1/2 -translate-x-1/2 flex flex-row gap-1 z-10"
-    : "absolute top-5 sm:top-6 lg:top-8 left-1/2 -translate-x-1/2 flex flex-row gap-1.5 sm:gap-4 z-10";
-  const topBlockItemClassName = isOnePager ? "w-40" : "w-28 sm:w-40";
-  const leftBlockClassName = isOnePager
-    ? "absolute left-3 top-[50%] -translate-y-1/2 flex flex-col gap-1 w-44 z-10"
-    : "absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10";
-  const rightBlockClassName = isOnePager
-    ? "absolute right-3 top-[50%] -translate-y-1/2 flex flex-col gap-1 w-44 z-10"
-    : "absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 sm:gap-4 w-28 sm:w-44 z-10";
-  const bottomBlockClassName = isOnePager
-    ? "absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-row gap-1 z-10"
-    : "absolute bottom-12 sm:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 flex flex-row gap-0.5 sm:gap-4 z-10";
-  const bottomBlockItemClassName = isOnePager ? "w-32" : "w-[82px] sm:w-36";
   const footerWrapClassName = isOnePager ? "mt-2 text-center" : "mt-6 sm:mt-8 text-center";
   const footerTextClassName = isOnePager ? "text-xs text-blue-100/70" : "text-sm sm:text-base text-blue-100/70";
 
+  // --- Slider State ---
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+
+  // --- Animation State: Old Approach ---
+  const [oldStep, setOldStep] = useState(0);
+  const [cursorPos, setCursorPos] = useState({ x: 50, y: 50 });
+  const [isClicking, setIsClicking] = useState(false);
+
+  // --- Animation State: New Approach ---
+  const [convoIndex, setConvoIndex] = useState(0);
+  const [typingText, setTypingText] = useState("");
+  const [showResponse, setShowResponse] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+
+  // --- Handlers for Slider ---
+  const handleMouseDown = () => { isDragging.current = true; };
+  const handleMouseMove = (e: React.MouseEvent | MouseEvent) => {
+      if (!isDragging.current || !containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = (e as React.MouseEvent).clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      setSliderPosition(percentage);
+  };
+  const handleTouchMove = (e: React.TouchEvent | TouchEvent) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = (e as React.TouchEvent).touches[0].clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      setSliderPosition(percentage);
+  };
+
+  // --- Global Event Listeners & Slider Animation ---
+  useEffect(() => {
+      const handleGlobalMouseUp = () => { isDragging.current = false; };
+      const handleGlobalMouseMove = (e: MouseEvent) => { handleMouseMove(e); };
+
+      window.addEventListener('mouseup', handleGlobalMouseUp);
+      window.addEventListener('mousemove', handleGlobalMouseMove);
+
+      let animationFrameId: number;
+      let startTime: number | null = null;
+
+      const animateSlider = (timestamp: number) => {
+          if (!isDragging.current) {
+              if (!startTime) startTime = timestamp;
+              const elapsed = timestamp - startTime;
+              const newPosition = 50 + Math.sin(elapsed / 2000) * 35;
+              setSliderPosition(newPosition);
+          } else {
+              startTime = null;
+          }
+          animationFrameId = requestAnimationFrame(animateSlider);
+      };
+      animationFrameId = requestAnimationFrame(animateSlider);
+
+      return () => {
+          window.removeEventListener('mouseup', handleGlobalMouseUp);
+          window.removeEventListener('mousemove', handleGlobalMouseMove);
+          cancelAnimationFrame(animationFrameId);
+      };
+  }, []);
+
+  // --- Old Approach Animation Loop ---
+  useEffect(() => {
+      const sequence = [
+          { x: 50, y: 50, delay: 1000 },
+          { x: 20, y: 30, delay: 800 },
+          { x: 20, y: 30, click: true, delay: 300 },
+          { x: 80, y: 40, delay: 800 },
+          { x: 80, y: 40, click: true, delay: 300 },
+          { x: 40, y: 70, delay: 800 },
+          { x: 40, y: 70, click: true, delay: 300 },
+          { x: 60, y: 60, delay: 800 },
+          { x: 60, y: 60, click: true, delay: 2000 },
+      ];
+
+      let currentStep = 0;
+      let timeoutId: NodeJS.Timeout;
+
+      const runSequence = () => {
+          const step = sequence[currentStep];
+          setCursorPos({ x: step.x, y: step.y });
+          if (step.click) {
+              setIsClicking(true);
+              setTimeout(() => {
+                  setIsClicking(false);
+                  setOldStep(prev => prev + 1);
+              }, 150);
+          }
+          timeoutId = setTimeout(() => {
+              currentStep++;
+              if (currentStep >= sequence.length) {
+                  currentStep = 0;
+                  setOldStep(0);
+              }
+              runSequence();
+          }, step.delay);
+      };
+
+      runSequence();
+      return () => clearTimeout(timeoutId);
+  }, []);
+
+  // --- New Approach Animation Loop ---
+  useEffect(() => {
+      let timeoutId: NodeJS.Timeout;
+
+      const typeCharacter = (text: string, index: number) => {
+          if (index <= text.length) {
+              setTypingText(text.slice(0, index));
+              setIsTyping(true);
+              timeoutId = setTimeout(() => typeCharacter(text, index + 1), 30 + Math.random() * 50);
+          } else {
+              setIsTyping(false);
+              timeoutId = setTimeout(() => {
+                  setShowResponse(true);
+                  timeoutId = setTimeout(() => {
+                      setConvoIndex(prev => (prev + 1) % CONVERSATIONS.length);
+                      setTypingText("");
+                      setShowResponse(false);
+                  }, 3000);
+              }, 800);
+          }
+      };
+
+      const startConversation = () => {
+          const currentConvo = CONVERSATIONS[convoIndex];
+          timeoutId = setTimeout(() => {
+              typeCharacter(currentConvo.query, 0);
+          }, 500);
+      };
+
+      startConversation();
+      return () => clearTimeout(timeoutId);
+  }, [convoIndex]);
+
+  const currentConvo = CONVERSATIONS[convoIndex];
+
   return (
     <section className={sectionClassName}>
-      {/* Background gradient orbs (hero style) */}
+      {/* Background gradient orbs */}
       <div className="absolute left-1/4 top-1/4 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-blue-600/30 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
       <div className="absolute bottom-1/4 right-1/4 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-purple-600/30 blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
 
@@ -259,129 +242,239 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
           </p>
         </div>
 
-        {/* Hub Layout - Reduced height for tighter spacing */}
-        <div className={hubClassName}>
+        {/* Before/After Slider Visual Block */}
+        <div className="mt-6 sm:mt-8">
+          <div
+            ref={containerRef}
+            className="relative w-full max-w-5xl mx-auto aspect-[4/3] sm:aspect-video rounded-3xl overflow-hidden shadow-2xl select-none cursor-ew-resize ring-1 ring-white/20"
+            onMouseDown={handleMouseDown}
+            onTouchMove={handleTouchMove}
+          >
+            {/* RIGHT SIDE - NEW APPROACH */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex flex-col">
+              <div className="absolute top-8 right-0 w-1/2 text-center z-10">
+                <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 font-bold text-sm tracking-wider">
+                  {t('difference.newApproach')}
+                </span>
+              </div>
 
-          {/* Central Logo Circle */}
-          <div className="relative z-20">
-            <div className="relative">
-              {/* Animated pulse rings */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-400/30 blur-xl" style={{
-                width: '140%',
-                height: '140%',
-                left: '-20%',
-                top: '-20%',
-                animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-              }} />
+              <div className="flex-1 p-8 sm:p-12 flex flex-col justify-center items-center">
+                <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden flex flex-col h-[400px]">
+                  {/* Chat Header */}
+                  <div className="bg-white border-b border-gray-100 p-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                        <Bot className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 text-sm">DealoAgent AI</div>
+                        <div className="text-xs text-green-500 flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                          Online
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
+                      <Globe className="w-4 h-4" />
+                      <span className="text-xs font-medium w-4 text-center inline-block">{currentConvo.lang}</span>
+                    </div>
+                  </div>
 
-              {/* Main circle with gradient border */}
-              <div className="relative p-1 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
-                <div className="w-44 h-44 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 flex items-center justify-center shadow-2xl p-3 sm:p-4 overflow-hidden">
-                  {/* Logo + Text Group - Centered Together, moved up more */}
-                  <div className="flex flex-col items-center justify-center -mt-6 sm:-mt-10 lg:-mt-12">
-                    {/* Logo - Larger Size */}
-                    <img
-                      src={dealoAgentLogo}
-                      alt="DealoAgent AI"
-                      className="w-32 h-32 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-2xl"
-                    />
+                  {/* Chat Messages */}
+                  <div className="p-4 space-y-4 bg-gray-50/50 flex-1 overflow-y-auto">
+                    <div className="flex justify-end min-h-[40px]">
+                      <div className="bg-blue-600 text-white rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] text-sm shadow-sm">
+                        {typingText}
+                        {isTyping && <span className="animate-pulse">|</span>}
+                      </div>
+                    </div>
 
-                    {/* DealoAgent AI text - match header font styling */}
-                    <div className="flex items-center gap-2 -mt-4 sm:-mt-8 scale-75 sm:scale-80 lg:scale-90 origin-center">
-                      <span className="text-white font-semibold tracking-tight inline-flex items-center text-xl sm:text-2xl lg:text-[36px]" style={{ height: '48px' }}>
-                        DealoAgent
-                      </span>
-                      <span className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600" style={{ width: '40px', height: '40px', flexShrink: 0 }}>
-                        <span className="font-semibold text-white text-xl sm:text-2xl lg:text-[36px]">AI</span>
-                      </span>
+                    <div className={`flex justify-start transition-all duration-500 ${showResponse ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                      <div className="bg-white border border-gray-200 text-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-sm shadow-sm space-y-3 w-full">
+                        <div className="flex items-center gap-2 text-blue-600 font-medium text-xs uppercase tracking-wide">
+                          <Sparkles className="w-3 h-3" />
+                          {currentConvo.lang === 'EN' ? 'Analysis Complete' :
+                           currentConvo.lang === 'ES' ? 'Borrador Listo' : 'Analyse Abgeschlossen'}
+                        </div>
+
+                        {currentConvo.responseType === 'list' && (
+                          <>
+                            <p>I found 3 companies matching your criteria:</p>
+                            <div className="space-y-2">
+                              {currentConvo.responseContent.map((item: any, i: number) => (
+                                <div key={i} className="flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                                  <div className="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">
+                                    {item.name[0]}
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <div className="font-medium text-gray-900 truncate">{item.name}</div>
+                                    <div className="text-xs text-gray-500">{item.detail}</div>
+                                  </div>
+                                  <ArrowRight className="w-4 h-4 text-gray-400" />
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        )}
+
+                        {currentConvo.responseType === 'email' && (
+                          <>
+                            <p>Aquí tienes el borrador solicitado:</p>
+                            <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 text-xs font-mono text-gray-600">
+                              <div className="mb-2 border-b border-gray-200 pb-1">Subject: {currentConvo.responseContent.subject}</div>
+                              <div>{currentConvo.responseContent.body}</div>
+                            </div>
+                          </>
+                        )}
+
+                        {currentConvo.responseType === 'status' && (
+                          <>
+                            <p>Hier ist der aktuelle Status:</p>
+                            <div className="grid grid-cols-2 gap-2">
+                              <div className="bg-blue-50 p-2 rounded border border-blue-100">
+                                <div className="text-[10px] text-blue-500 uppercase">Phase</div>
+                                <div className="font-medium">{currentConvo.responseContent.stage}</div>
+                              </div>
+                              <div className="bg-green-50 p-2 rounded border border-green-100">
+                                <div className="text-[10px] text-green-500 uppercase">Wahrscheinlichkeit</div>
+                                <div className="font-medium">{currentConvo.responseContent.probability}</div>
+                              </div>
+                            </div>
+                          </>
+                        )}
+
+                        <div className="flex gap-2 mt-2">
+                          <button className="text-xs bg-blue-50 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors font-medium">
+                            {currentConvo.lang === 'EN' ? 'Action' : currentConvo.lang === 'ES' ? 'Enviar' : 'Details'}
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* SVG Connection Lines */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
-            <defs>
-              <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style={{ stopColor: '#3b82f6', stopOpacity: 0.6 }} />
-                <stop offset="100%" style={{ stopColor: '#93c5fd', stopOpacity: 0.3 }} />
-              </linearGradient>
-              <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style={{ stopColor: '#8b5cf6', stopOpacity: 0.6 }} />
-                <stop offset="100%" style={{ stopColor: '#c4b5fd', stopOpacity: 0.3 }} />
-              </linearGradient>
-              <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{ stopColor: '#10b981', stopOpacity: 0.6 }} />
-                <stop offset="100%" style={{ stopColor: '#6ee7b7', stopOpacity: 0.3 }} />
-              </linearGradient>
-            </defs>
-
-            {/* Lines to all blocks */}
-            {/* Top - You and Your team (shorter for wide screens) */}
-            <line x1="50%" y1="50%" x2="40%" y2="18%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '0.1s' }} />
-            <line x1="50%" y1="50%" x2="60%" y2="18%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
-
-            {/* Left side - Connectors - adjusted for mobile to stay within bounds */}
-            <line x1="50%" y1="50%" x2="14%" y2="20%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" />
-            <line x1="50%" y1="50%" x2="14%" y2="35%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.3s' }} />
-            <line x1="50%" y1="50%" x2="14%" y2="50%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.6s' }} />
-            <line x1="50%" y1="50%" x2="14%" y2="65%" stroke="url(#blueGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.9s' }} />
-
-            {/* Mobile - shorter left lines */}
-            <line x1="50%" y1="50%" x2="20%" y2="20%" stroke="url(#blueGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" />
-            <line x1="50%" y1="50%" x2="20%" y2="35%" stroke="url(#blueGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.3s' }} />
-            <line x1="50%" y1="50%" x2="20%" y2="50%" stroke="url(#blueGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.6s' }} />
-            <line x1="50%" y1="50%" x2="20%" y2="65%" stroke="url(#blueGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.9s' }} />
-
-            {/* Right side - External Data - adjusted for mobile */}
-            <line x1="50%" y1="50%" x2="86%" y2="27%" stroke="url(#purpleGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.2s' }} />
-            <line x1="50%" y1="50%" x2="86%" y2="45%" stroke="url(#purpleGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.5s' }} />
-            <line x1="50%" y1="50%" x2="86%" y2="63%" stroke="url(#purpleGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse hidden sm:block" style={{ animationDelay: '0.8s' }} />
-
-            {/* Mobile - shorter right lines */}
-            <line x1="50%" y1="50%" x2="80%" y2="27%" stroke="url(#purpleGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.2s' }} />
-            <line x1="50%" y1="50%" x2="80%" y2="45%" stroke="url(#purpleGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.5s' }} />
-            <line x1="50%" y1="50%" x2="80%" y2="63%" stroke="url(#purpleGrad)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-pulse sm:hidden" style={{ animationDelay: '0.8s' }} />
-
-            {/* Bottom - Agents (4 blocks) */}
-            <line x1="50%" y1="50%" x2="25%" y2="90%" stroke="url(#greenGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
-            <line x1="50%" y1="50%" x2="40%" y2="90%" stroke="url(#greenGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
-            <line x1="50%" y1="50%" x2="60%" y2="90%" stroke="url(#greenGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '0.9s' }} />
-            <line x1="50%" y1="50%" x2="75%" y2="90%" stroke="url(#greenGrad)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{ animationDelay: '1.2s' }} />
-          </svg>
-
-          {/* TOP - YOU AND YOUR TEAM (2 blocks horizontally) - Closer to center */}
-          <div className={topBlockClassName}>
-            {topUserItems.map((item, idx) => (
-              <div key={idx} className={topBlockItemClassName}>
-                <IntegrationItem {...item} />
+            {/* LEFT SIDE - OLD APPROACH */}
+            <div
+              className="absolute inset-0 bg-[#FDF6E3] flex flex-col"
+              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+            >
+              <div className="absolute top-8 left-0 w-1/2 text-center z-10">
+                <span className="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-sm tracking-wider">
+                  {t('difference.oldApproach')}
+                </span>
               </div>
-            ))}
-          </div>
 
-          {/* LEFT SIDE - CONNECTORS (4 blocks vertically stacked) */}
-          <div className={leftBlockClassName}>
-            {connectorItems.map((item, idx) => (
-              <IntegrationItem key={idx} {...item} />
-            ))}
-          </div>
+              <div className="flex-1 p-8 sm:p-12 flex flex-col justify-center items-center opacity-80 relative">
+                <div className="w-full max-w-2xl h-[400px] bg-white border border-gray-300 rounded shadow-sm relative overflow-hidden">
+                  {/* Sidebar */}
+                  <div className="absolute left-0 top-0 bottom-0 w-16 bg-gray-100 border-r border-gray-200 flex flex-col items-center py-4 gap-4 z-20">
+                    <div className="w-8 h-8 bg-gray-300 rounded"></div>
+                    <div className="w-full h-px bg-gray-200"></div>
+                    <Database className={`w-5 h-5 transition-colors ${oldStep >= 1 ? 'text-blue-600' : 'text-gray-400'}`} />
+                    <Users className={`w-5 h-5 transition-colors ${oldStep >= 2 ? 'text-blue-600' : 'text-gray-400'}`} />
+                    <Mail className={`w-5 h-5 transition-colors ${oldStep >= 3 ? 'text-blue-600' : 'text-gray-400'}`} />
+                    <Settings className="w-5 h-5 text-gray-400 mt-auto" />
+                  </div>
 
-          {/* RIGHT SIDE - EXTERNAL DATA (3 blocks vertically stacked) */}
-          <div className={rightBlockClassName}>
-            {externalDataItems.map((item, idx) => (
-              <IntegrationItem key={idx} {...item} />
-            ))}
-          </div>
+                  <div className="absolute left-16 top-0 right-0 bottom-0 p-4 bg-gray-50 overflow-hidden">
+                    <div className="flex gap-2 mb-4 border-b border-gray-200 pb-2">
+                      <div className="text-xs font-bold text-gray-600 px-2 py-1 bg-white border border-gray-300 rounded-t">Dashboard</div>
+                      <div className="text-xs text-gray-400 px-2 py-1">Leads</div>
+                      <div className="text-xs text-gray-400 px-2 py-1">Reports</div>
+                    </div>
 
-          {/* BOTTOM - AGENTS (4 blocks horizontally) - Closer to center */}
-          <div className={bottomBlockClassName}>
-            {agentItems.map((item, idx) => (
-              <div key={idx} className={bottomBlockItemClassName}>
-                <IntegrationItem {...item} />
+                    <div className="relative w-full h-full">
+                      <div className={`absolute top-0 left-0 w-64 bg-white border border-gray-300 rounded shadow-sm p-3 transition-all duration-300 ${oldStep >= 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                        <div className="flex items-center justify-between border-b border-gray-200 pb-2 mb-2">
+                          <div className="flex items-center gap-2">
+                            <Search className="w-3 h-3 text-gray-400" />
+                            <span className="text-[10px] font-bold text-gray-600">Advanced Search</span>
+                          </div>
+                          <X className="w-3 h-3 text-gray-300" />
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-4 bg-gray-100 rounded w-full"></div>
+                          <div className="h-4 bg-gray-100 rounded w-3/4"></div>
+                          <div className="flex gap-1">
+                            <div className="h-4 bg-gray-100 rounded w-1/2"></div>
+                            <div className="h-4 bg-blue-600/20 rounded w-1/2"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`absolute top-12 left-24 w-64 bg-white border border-gray-300 rounded shadow-md p-3 transition-all duration-300 ${oldStep >= 2 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                        <div className="flex items-center justify-between border-b border-gray-200 pb-2 mb-2">
+                          <div className="flex items-center gap-2">
+                            <Database className="w-3 h-3 text-gray-400" />
+                            <span className="text-[10px] font-bold text-gray-600">Data View #102</span>
+                          </div>
+                          <X className="w-3 h-3 text-gray-300" />
+                        </div>
+                        <div className="space-y-1">
+                          {[1, 2, 3, 4].map(i => (
+                            <div key={i} className="h-2 bg-gray-100 rounded w-full"></div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className={`absolute top-24 left-12 w-72 bg-white border border-gray-300 rounded shadow-lg p-3 transition-all duration-300 ${oldStep >= 3 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                        <div className="flex items-center justify-between border-b border-gray-200 pb-2 mb-2">
+                          <div className="flex items-center gap-2">
+                            <Mail className="w-3 h-3 text-gray-400" />
+                            <span className="text-[10px] font-bold text-gray-600">Email Editor</span>
+                          </div>
+                          <X className="w-3 h-3 text-gray-300" />
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-16 border border-gray-200 rounded w-full bg-gray-50"></div>
+                          <div className="flex justify-end gap-2">
+                            <div className="h-4 bg-gray-200 rounded w-12"></div>
+                            <div className="h-4 bg-blue-600 rounded w-12"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 bg-red-50 border border-red-200 rounded-lg shadow-xl p-4 transition-all duration-200 ${oldStep >= 4 ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                        <div className="flex flex-col items-center text-center gap-2">
+                          <AlertCircle className="w-8 h-8 text-red-500" />
+                          <span className="text-xs font-bold text-red-800">Connection Timeout</span>
+                          <p className="text-[10px] text-red-600">Please refresh the page and try again.</p>
+                          <div className="h-6 bg-red-200 rounded w-20 mt-2"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Animated Cursor */}
+                  <div
+                    className="absolute pointer-events-none transition-all duration-500 ease-in-out z-50"
+                    style={{
+                      left: `${cursorPos.x}%`,
+                      top: `${cursorPos.y}%`,
+                      transform: `translate(-50%, -50%) scale(${isClicking ? 0.8 : 1})`
+                    }}
+                  >
+                    <MousePointer2 className="w-6 h-6 text-black fill-white drop-shadow-md" />
+                    {isClicking && (
+                      <div className="absolute -top-2 -left-2 w-10 h-10 rounded-full border-2 border-blue-400 animate-ping opacity-50"></div>
+                    )}
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* SLIDER HANDLE */}
+            <div
+              className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-20 shadow-[0_0_10px_rgba(0,0,0,0.2)]"
+              style={{ left: `${sliderPosition}%` }}
+            >
+              <div className="absolute top-0 bottom-0 -left-[1px] w-[3px] bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-50"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+                <GripVertical className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -391,7 +484,6 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
             {t('integrationHub.footer')}
           </p>
 
-          {/* G2 Widget & Product Hunt Widget Integration */}
           {!isOnePager && (
             <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
               <G2Widget />
@@ -415,3 +507,6 @@ export function IntegrationHub({ variant = 'default' }: IntegrationHubProps) {
     </section>
   );
 }
+
+// Keep these exports for the onepager variant if needed elsewhere
+export { };

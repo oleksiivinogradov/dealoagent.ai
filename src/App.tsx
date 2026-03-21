@@ -260,7 +260,6 @@ export default function App() {
       {/* Integration Hub - AI‑Native Workflow Hub */}
       <IntegrationHub />
 
-
       {/* Before/After Slider Section */}
       <BeforeAfterSlider />
 
