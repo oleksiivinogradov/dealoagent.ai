@@ -162,10 +162,13 @@
         "title": "Results that speak for themselves",
         "subtitle": "Join thousands of sales teams achieving unprecedented growth",
         "stats": {
-            "researchTime": "Time saved on research",
-            "dealVelocity": "Faster deal velocity",
-            "responseRate": "Increase in response rate",
-            "dealsClosed": "Total deals closed"
+            "users": "Active Users",
+            "companies": "Companies in CRM",
+            "leads": "Leads Tracked",
+            "documents": "Documents Analyzed",
+            "threads": "Email Threads",
+            "emailMessages": "Email Messages",
+            "messengerMessages": "Messenger Messages"
         }
     },
     "pricing": {

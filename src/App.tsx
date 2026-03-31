@@ -1,10 +1,8 @@
 import { Logo, AIBadge } from "./components/Logo";
 
-import { ChatBubble } from "./components/FloatingCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
-import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { IndustryUseCases } from "./components/IndustryUseCases";
@@ -65,7 +63,6 @@ import { useTranslation, Trans } from "react-i18next";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeBubble, setActiveBubble] = useState(0);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -374,31 +371,23 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:gap-8 grid-cols-2 md:grid-cols-4">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
-              <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
-                85%
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+            {[
+              { value: "25", label: t('results.stats.users') },
+              { value: "2,057", label: t('results.stats.companies') },
+              { value: "200", label: t('results.stats.leads') },
+              { value: "12", label: t('results.stats.documents') },
+              { value: "142,547", label: t('results.stats.threads') },
+              { value: "109,373", label: t('results.stats.emailMessages') },
+              { value: "470", label: t('results.stats.messengerMessages') }
+            ].map((stat, i) => (
+              <div key={i} className="flex-1 min-w-[200px] max-w-[280px] rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
+                <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
+                  {stat.value}
+                </div>
+                <p className="text-xs sm:text-base text-blue-100/80">{stat.label}</p>
               </div>
-              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.researchTime')}</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
-              <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
-                3.2x
-              </div>
-              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.dealVelocity')}</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
-              <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
-                127%
-              </div>
-              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.responseRate')}</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-8 text-center backdrop-blur-sm">
-              <div className="mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl">
-                $2.5M+
-              </div>
-              <p className="text-xs sm:text-base text-blue-100/80">{t('results.stats.dealsClosed')}</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

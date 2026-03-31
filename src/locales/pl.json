@@ -162,10 +162,13 @@
         "title": "Wyniki mówią same za siebie",
         "subtitle": "Dołącz do tysięcy zespołów sprzedażowych osiągających bezprecedensowy wzrost",
         "stats": {
-            "researchTime": "Czas zaoszczędzony na badaniach",
-            "dealVelocity": "Szybsze zamykanie transakcji",
-            "responseRate": "Wzrost wskaźnika odpowiedzi",
-            "dealsClosed": "Łącznie zamkniętych transakcji"
+            "users": "Aktywnych użytkowników",
+            "companies": "Firm w CRM",
+            "leads": "Śledzone leady",
+            "documents": "Przeanalizowane dokumenty",
+            "threads": "Wątki e-mail",
+            "emailMessages": "Wiadomości e-mail",
+            "messengerMessages": "Wiadomości w komunikatorach"
         }
     },
     "pricing": {
