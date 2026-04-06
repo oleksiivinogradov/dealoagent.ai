@@ -1,5 +1,171 @@
 [
   {
+    "id": "how-meg-cortezi-teksystems-scales-sales-with-ai",
+    "slug": "how-meg-cortezi-teksystems-scales-sales-with-ai",
+    "title": "How Meg Cortezi (SVP of Sales at TEKsystems) Could Scale Staffing Revenue with AI",
+    "subtitle": "A hypothetical deep dive: Moving from manual prospecting and generic outreach to 100% personalized, AI-driven deal targeting at a global IT staffing firm.",
+    "author": "DealoAgent Team",
+    "publishDate": "2026-04-06",
+    "readTime": "11 min read",
+    "category": "Case Study",
+    "featured": true,
+    "coverImage": "/images/blog/meg_cortezi_teksystems.png",
+    "excerpt": "Scaling enterprise sales at a top IT staffing and services firm requires incredible precision and speed. In this hypothetical case study, we explore how Meg Cortezi could leverage DealoAgent to unlock hyper-personalized outreach, unify lead intelligence, and empower every account executive.",
+    "tags": [
+      "Case Study",
+      "Recruiting",
+      "TEKsystems",
+      "AI",
+      "Sales Leadership",
+      "Staffing"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "NOTE: This is a hypothetical case study exploring how Meg Cortezi, Senior Vice President of Sales at TEKsystems, could leverage DealoAgent.AI. TEKsystems is a real, global IT services and staffing leader, and Meg Cortezi is its real SVP of Sales, but this scenario is imagined to illustrate DealoAgent's capabilities."
+      },
+      {
+        "type": "paragraph",
+        "text": "**TEKsystems** provides leading IT staffing and services, acting as a critical partner for enterprises worldwide. For a Senior Vice President of Sales driving revenue across massive, complex accounts, the goal is straightforward but incredibly challenging: equip hundreds of account executives with the intelligence they need to book qualified meetings and close deals at scale, while keeping personalization sky-high."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Challenge: Manual Prospecting and Lost Context"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meet **Meg Cortezi**, SVP of Sales at TEKsystems. Having navigated leadership roles and massive growth initiatives, she knows that the modern staffing sales motion cannot rely purely on volume; it demands extreme relevance. However, typical sales processes naturally degrade."
+      },
+      {
+        "type": "paragraph",
+        "text": "Her primary pain points in this hypothetical scenario stem from disconnected workflows and the scale of the sales organization:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Manual Prospecting**: Account teams spend hours manually hunting for companies hiring for specific tech roles instead of actually selling. It is a slow, hit-or-miss process.",
+          "**Generic Outreach**: To hit aggressive quotas, reps are often forced to send generic 'spray and pray' emails. Personalization at scale becomes impossible, driving down response rates.",
+          "**Lost Context**: When a lead finally replies, reps often scramble to dig up past notes or emails. They frequently walk into calls blindly, forgetting key details discussed months ago.",
+          "**Missed Follow-ups**: Without automation, valuable leads constantly slip through the cracks, relying on individual memory or messy sticky notes to track re-engagement."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Our sellers need to focus on what they do best—building deep relationships. We cannot have them spending half their day manually digging for context or writing generic emails.",
+        "author": "Hypothetical scenario: Meg Cortezi, SVP of Sales at TEKsystems"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Enter DealoAgent: The Unified Intelligence Advantage"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this hypothetical transformation, Meg deploys **DealoAgent** to act as a 24/7 AI-powered sales assistant for every rep in her organization. Rather than adding another tool to the stack, DealoAgent seamlessly ingests unstructured communication to drive revenue."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. AI-Driven Targeting"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meg's sales teams no longer shoot in the dark."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Transformation**: DealoAgent identifies high-intent leads automatically using its integrated database of 750M+ verified emails, constantly tracking companies matching TEKsystems' niche that just posted relevant tech jobs. The pipeline builds itself with qualified, high-intent prospects."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Hyper-Personalization at Scale"
+      },
+      {
+        "type": "paragraph",
+        "text": "The era of the generic cold email is over."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Insight**: AI uses 'hidden facts' search to uncover obscure lead mentions online, instantly generating 100% personalized messages that reference specific roles, exact company news, and perfectly-aligned candidate profiles from the TEKsystems network."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Unified Intelligence Cheat Sheets"
+      },
+      {
+        "type": "paragraph",
+        "text": "Account Executives walk into every meeting armed with perfect recall."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Effect**: Every email, call, and LinkedIn interaction is analyzed by the system. Before an interaction, the rep receives an automated 'cheat sheet' containing full context, past objections, and suggested talking points—ensuring they always act as a trusted advisor."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Smart Re-engagement"
+      },
+      {
+        "type": "paragraph",
+        "text": "Opportunities are no longer lost to time."
+      },
+      {
+        "type": "paragraph",
+        "text": "**The Result**: The system actively monitors dormant accounts. It instantly alerts the team when a lead shows buying signals (like visiting the site or posting a new job) and drafts the perfect, context-aware re-opening email to secure the meeting."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Hypothetical Impact"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Prospecting Efficiency",
+            "value": "+40%",
+            "description": "Reduction in manual sourcing hours for AE teams"
+          },
+          {
+            "label": "Meeting Book Rate",
+            "value": "2.5x",
+            "description": "Increase in booked meetings due to hyper-personalized outreach"
+          },
+          {
+            "label": "Pipeline Visibility",
+            "value": "100%",
+            "description": "Total recall of context across all accounts"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a sales leader like Meg Cortezi steering an enormous revenue generation machine at a top-tier firm like TEKsystems, precision execution is the difference between missing out and achieving record growth. By integrating DealoAgent, a staffing organization replaces slow, manual outreach and fragmented knowledge with proactive, AI-driven pipeline generation. Reps are finally free to focus on closing, empowered by intelligence."
+      },
+      {
+        "type": "cta",
+        "title": "Scale Your Staffing Sales Team",
+        "description": "See how DealoAgent can give your team hyper-personalized outreach and smart re-engagement.",
+        "primaryButton": {
+          "text": "Get a Demo",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "View Pricing",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "how-eric-petty-transparentbpo-scales-qa-with-ai",
     "slug": "how-eric-petty-transparentbpo-scales-qa-with-ai",
     "title": "How Eric Petty (COO at Transparent BPO) Could Transform Quality Operations with AI",

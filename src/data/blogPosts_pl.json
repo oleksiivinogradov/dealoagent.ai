@@ -1,5 +1,171 @@
 [
   {
+    "id": "how-meg-cortezi-teksystems-scales-sales-with-ai",
+    "slug": "how-meg-cortezi-teksystems-scales-sales-with-ai",
+    "title": "Jak Meg Cortezi (SVP ds. Sprzedaży w TEKsystems) mogłaby skalować przychody z rekrutacji dzięki AI",
+    "subtitle": "Hipotetyczna głęboka analiza: Przejście od ręcznego poszukiwania kontaktów i masowej wysyłki do 100% spersonalizowanego, napędzanego przez AI targetowania w globalnej firmie usług IT.",
+    "author": "Zespół DealoAgent",
+    "publishDate": "2026-04-06",
+    "readTime": "11 min czytania",
+    "category": "Studium Przypadku",
+    "featured": true,
+    "coverImage": "/images/blog/meg_cortezi_teksystems.png",
+    "excerpt": "Skalowanie sprzedaży korporacyjnej w czołowej firmie świadczącej usługi IT i rekrutacyjne wymaga niesamowitej precyzji i szybkości. W tym hipotetycznym studium przypadku badamy, w jaki sposób Meg Cortezi mogłaby wykorzystać DealoAgent do odblokowania hiper-spersonalizowanego zasięgu, ujednolicenia analizy leadów i wzmocnienia zespołów sprzedażowych.",
+    "tags": [
+      "Studium Przypadku",
+      "Rekrutacja",
+      "TEKsystems",
+      "AI",
+      "Przywództwo w sprzedaży",
+      "Poszukiwanie personelu"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "UWAGA: Poniższe studium przypadku jest hipotetyczne i bada jak Meg Cortezi, Senior Vice President ds. Sprzedaży w TEKsystems, mogłaby wykorzystać DealoAgent.AI. TEKsystems to rzeczywisty, globalny lider w usługach i rekrutacji IT, a Meg Cortezi jest ich prawdziwym SVP ds. Sprzedaży, jednak poniższy scenariusz ma na celu zilustrowanie możliwości platformy DealoAgent."
+      },
+      {
+        "type": "paragraph",
+        "text": "**TEKsystems** zapewnia wiodące usługi informatyczne i wsparcie kadrowe, pełniąc rolę kluczowego partnera dla globalnych korporacji. Dla Starszego Wiceprezesa ds. Sprzedaży zarządzającego niezwykle rozbudowanymi kluczowymi kontami, cel jest jasny, choć niezwykle trudny: wyposażyć setki przedstawicieli handlowych w inteligencję potrzebną do rezerwowania kwalifikowanych spotkań na ogromną skalę, a to wszystko przy zachowaniu hiper-personalizacji."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Wyzwanie: Ręczne wyszukiwanie i utracony kontekst"
+      },
+      {
+        "type": "paragraph",
+        "text": "Oto **Meg Cortezi**, SVP ds. Sprzedaży w TEKsystems. Dzięki cennemu doświadczeniu na najwyższych szczeblach kierowniczych, Meg wie, że nowoczesna sprzedaż rekrutacyjna to nie tylko masowy kontakt i ślepe wyszukiwanie. Niemniej jednak typowe procesy sprzedażowe z czasem mogą stać się uciążliwe i przestarzałe."
+      },
+      {
+        "type": "paragraph",
+        "text": "Główne problemy utrudniające zrównoważony rozwój, jakie Meg napotyka w tej hipotetycznej wizji to:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Ręczne prospektowanie**: Setki account managerów traci cenne godziny na ręczne przeszukiwanie sieci, w nadziei na odnalezienie firm rekrutujących nowych kandydatów zamiast po prostu zamknąć transakcję. Proces ten bywa powolny i frustrujący, a ryzyko odrzucenia jest bardzo wysokie.",
+          "**Brak personalizacji w dużej skali**: Przedstawiciele muszą realizować wysokie normy w związku z powyższym muszą wykorzystywać standardowe pakiety mailowe. Personalizowany kontakt na szeroką skale staje się uciążliwy. Masowa korespondencja bywa wysoce nieefektywna i znacznie spada współczynnik odpowiedzi.",
+          "**Kontekst gubi się w silosach**: Jeśli docelowy odbiorca w końcu pozytywnie odpowiedział to najczęściej zespół próbuje rozpaczliwie odszukać przeszłe notatki i raporty. Wielokrotnie idą zatem na tak istotne spotkania bez ważnego zaplecza edukacyjnego marnując świetną szansę biznesową.",
+          "**Przeoczone \"follow-up\"**: Bez wbudowanych mechanizmów powiadamiających o dalszym biegu interesów, ważne interakcje i zgłoszenia giną w morzu setek różnych powiadomień lub w zagraconych kalendarzach przedstawicieli handlowych."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Nasza sprzedaż powinna skupić się na tym co robią najlepiej ze wszystkich - budowaniu relacji na wysokim poziomie partnerskim. Nie możemy pozwolić na marnowanie połowy dnia przez ręczne dobieranie kontekstu z zaledwie ogólnych standardów tworzonych e-maili.",
+        "author": "Hipotetyczny scenariusz: Meg Cortezi, Senior Vice President ds. Sprzedaży, TEKsystems"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Rozwiązanie: DealoAgent i Wywiad Centralny"
+      },
+      {
+        "type": "paragraph",
+        "text": "Prowadząc ten innowacyjny wehikuł sprzedaży, Meg rozważa implementację **DealoAgent** i włączenie zintegrowanej sztucznej inteligencji, pełniącej nadzór sprzedaży 24/7 dla całej organizacji w skali globalnej. DealoAgent funkcjonuje niesłychanie przejrzyście obrobienie każdego bez wyjątku materiału informacyjnego pod jeden, konkretny przychód o wysokim wskaźniku sprawności."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Celowanie Oparte na AI"
+      },
+      {
+        "type": "paragraph",
+        "text": "Od tej potyczki zespół wsparcia ds. sprzedaży nie będzie więcej uciekał się do działań strzałów z zamkniętymi oczami."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Innowacyjna zmiana**: Platforma z AI operatywnie analizuje intencje leadów automatycznie wykorzystując ogromne pokłady informacji dla zweryfikowanej już sieci o blisko 750M kontaktów oraz natychmiast filtruje przedsiębiorstwa idealnie powiązane ze strukturami niszowych standardów dla wymagań samej rekrutacji dla usług TEKsystem. Zespół operuje pipeline'nem już zbudowanego systemu, nie ma żadnych ślepych rzutów kostką tylko precyzja do z góry upatrzonych stanowisk w wytypowanym idealnym kandydatem."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Prekurostka Złotej Ery Bez Konkurencji"
+      },
+      {
+        "type": "paragraph",
+        "text": "Konwersacyjna era zwykłego wiadomego dla wszystkich e-maila jest już za Nami i nie działa prawidłowo."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Istotniejsze informacje zaplecza**: Program AI inteligentnie posługuje się najmniej dotąd obserwowanymi wzmiankowanymi powiązaniami z branży technologicznej dla odgórnych szerszych informacji online a także by uzyskać informacje najnowsze. Działa z niesamowitą personalizacją tworząc perfekcyjny referencyjny mail skierowany nie tylko przez zaszablonowania słowa jako ogólny cel lecz dla wybranego docelowo rekrutera powiązanego od strony klienta sieci kandydata z firmy."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3. Spersonalizowania Skarbnicy Połączeń C-Level (Ściągawka)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Już teraz handlowcy idą na decydującą rozprawę rozmów z ułożoną całą skarbnicą najdrobniejszych wiedzy by po mistrzowsku zaprezentować siłę usług sieci rekrutacyjnej."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Skalowana Wiedza dla Konsultantów**: System rejestruje wszystkie e-maile i LinkedIn z dotychczasowej korespondencji dla poszczególnej operacji analizy, jeszcze przed spotkaniem pracownik widzi na panelu podsumowanie całej relacji zwanej \"Ściągawką\". Aplikacja ta posiada wady i zalety oraz odpowiednie porady do zaproponowania do wykorzystania na rozmowie co kreuje pracownika z roli doradcy i profesjonalisty."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4. Inteligentne Skłanianie do Odnowy Handlu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Przeszłość mroczności by ucieczka w cień z zablokowanych leadów, już w niepamięci bywa teraz na uwadze bezustannych procesów odnowy."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Wyniki pracy na operacji AI**: Platforma stale prowadzi aktywny monitoring przy rzekomo bezczelnym martwym koncie z utraty zysku od dawno. Platforma generuje znak po wykonanej odpowiedniej poszukiwanej reelekcji ze starym celem gdy klient na poszukiwane stanowisko opublikował otwartą wakat w innej sieci lub znów obserwuje usługowe witryny. Przystosowany AI kreuje list i dba natychmiastowym komunikacji zapisu relacyjnej po co to ponownie by móc negocjować pomyślne finały relacji."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hipotetyczny Wpływ w Skali"
+      },
+      {
+        "type": "metrics",
+        "data": [
+          {
+            "label": "Wydajność Poszukiwanego Leadu",
+            "value": "+40%",
+            "description": "Ogromna oszczędność na godzinach ręcznie przygotowanego wyszukiwania do zespołów Account Managerów"
+          },
+          {
+            "label": "Skuteczność Potwierdzonych Bookingów spotkań",
+            "value": "2.5x",
+            "description": "Zwiększenie potwierdzonych i otwartych zorganizowanych negocjacyj z personalizowanym podejściem inteligentnej wysyłki AI"
+          },
+          {
+            "label": "Pełna Wizualizacja Operacji w Pipelin-ach Handlowych.",
+            "value": "100%",
+            "description": "Absolutny wymiar kontekstu we wiedze we wszystkich zaplanowanych kont bankowych do transakcji dla zysków sprzedażnych."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Zwieńczenie Wyników Projektu w Spojrzeniu w Przyszłości Konkurencyjnej AI"
+      },
+      {
+        "type": "paragraph",
+        "text": "Menedżer decyzyjnie zarządzając pod nadzorem na stopniu Senior Vice Presidentu przy ogromie obciążeń tak na poziomie odpowiedzialność do skalowań na wzrost generowanej dochodowości. Jak pokazała w ujęciu wizjonerskim w hipotetycznym założenia, samo istnienie maszyny DealoAgent ma decydujący udział na zmianie u podstaw ręcznego spowalnianiąjącego dotychczasowo rekrutacje na poczet wsparcia i nieomylnych analityk AI do procesowania leadowych kont co tworzy wolny zespół zajmujący wyłącznie sprzedawaniem do zarobków pod wpływem twardych fakturalnych liczb wspartą i prowadzoną technologią."
+      },
+      {
+        "type": "cta",
+        "title": "Rozskaluj Mądrze Swoje Ramię Rekrutacyjnej Odnogi Firmowej ze Swoją Sprzedaż",
+        "description": "Sprawdź jakim ogromnym rzetelnym i skalowalnym systemem DealoAgent potrafi podkręcić Twoje zespoły spenalizowanym przekazem inteligentnym operacji AI we własnej spółce biznesu.",
+        "primaryButton": {
+          "text": "Prośba O Realizacje Spotkania By Pokażać Demko.",
+          "url": "https://app.dealoagent.ai"
+        },
+        "secondaryButton": {
+          "text": "Zweryfiku Sam Nasz Zyskownie Dobre Ceny Programu",
+          "url": "https://app.dealoagent.ai"
+        }
+      }
+    ]
+  },
+  {
     "id": "how-eric-petty-transparentbpo-scales-qa-with-ai",
     "slug": "how-eric-petty-transparentbpo-scales-qa-with-ai",
     "title": "Jak Eric Petty (COO w Transparent BPO) mógłby przekształcić operacje jakościowe dzięki AI",
